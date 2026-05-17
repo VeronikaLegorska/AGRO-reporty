@@ -631,12 +631,12 @@ function renderFinance() {
       <td>${b.name}</td>
       <td>${fmt.czk(b.budget_annual)}</td>
       <td>${fmt.czk(b.reserve)}</td>
-      <td>${spend > 0 ? fmt.czk(spend) : '<span style="color:var(--muted)">null</span>'}</td>
+      <td>${fmt.czk(spend)}</td>
       <td>
         ${spend > 0 ? `<span>${pct.toFixed(2).replace('.',',')} %</span>
-        <div class="pct-bar-wrap"><div class="pct-bar" style="width:${pctBar}%"></div></div>` : '<span style="color:var(--muted)">null</span>'}
+        <div class="pct-bar-wrap"><div class="pct-bar" style="width:${pctBar}%"></div></div>` : '<span style="color:var(--muted)">0,00 %</span>'}
       </td>
-      <td>${spend > 0 ? fmt.czk(left) : '<span style="color:var(--muted)">null</span>'}</td>
+      <td>${fmt.czk(left)}</td>
     </tr>`;
   });
 
