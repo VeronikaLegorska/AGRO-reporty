@@ -1,0 +1,2691 @@
+{
+  "updated": "2026-05-17",
+  "period": {
+    "from": "2026-01-01",
+    "to": "2026-05-16"
+  },
+  "campaigns": [
+    {
+      "id": "120238635715950685",
+      "name": "VL | FLORIA | Příspěvky | projevený zájem | 3/26",
+      "daily": [
+        {
+          "date": "2026-03-03",
+          "clicks": 1,
+          "impressions": 500,
+          "spend_czk": 211.52
+        },
+        {
+          "date": "2026-03-04",
+          "clicks": 2,
+          "impressions": 647,
+          "spend_czk": 219.27
+        },
+        {
+          "date": "2026-03-05",
+          "clicks": 89,
+          "impressions": 2775,
+          "spend_czk": 462.67
+        },
+        {
+          "date": "2026-03-06",
+          "clicks": 110,
+          "impressions": 3428,
+          "spend_czk": 495.69
+        },
+        {
+          "date": "2026-03-07",
+          "clicks": 75,
+          "impressions": 5194,
+          "spend_czk": 514.08
+        },
+        {
+          "date": "2026-03-08",
+          "clicks": 54,
+          "impressions": 3044,
+          "spend_czk": 510.43
+        },
+        {
+          "date": "2026-03-09",
+          "clicks": 111,
+          "impressions": 4244,
+          "spend_czk": 1040.05
+        },
+        {
+          "date": "2026-03-10",
+          "clicks": 121,
+          "impressions": 5569,
+          "spend_czk": 1174.79
+        },
+        {
+          "date": "2026-03-11",
+          "clicks": 110,
+          "impressions": 6577,
+          "spend_czk": 1158.51
+        },
+        {
+          "date": "2026-03-12",
+          "clicks": 133,
+          "impressions": 7961,
+          "spend_czk": 1226.91
+        },
+        {
+          "date": "2026-03-13",
+          "clicks": 124,
+          "impressions": 7878,
+          "spend_czk": 1237.98
+        },
+        {
+          "date": "2026-03-14",
+          "clicks": 112,
+          "impressions": 8246,
+          "spend_czk": 1328.44
+        },
+        {
+          "date": "2026-03-15",
+          "clicks": 123,
+          "impressions": 8464,
+          "spend_czk": 1334.91
+        },
+        {
+          "date": "2026-03-16",
+          "clicks": 92,
+          "impressions": 6936,
+          "spend_czk": 990.86
+        },
+        {
+          "date": "2026-03-17",
+          "clicks": 60,
+          "impressions": 5279,
+          "spend_czk": 746.59
+        },
+        {
+          "date": "2026-03-18",
+          "clicks": 49,
+          "impressions": 4298,
+          "spend_czk": 708.02
+        },
+        {
+          "date": "2026-03-19",
+          "clicks": 55,
+          "impressions": 4060,
+          "spend_czk": 692.48
+        },
+        {
+          "date": "2026-03-20",
+          "clicks": 651,
+          "impressions": 14087,
+          "spend_czk": 1139.6
+        },
+        {
+          "date": "2026-03-21",
+          "clicks": 386,
+          "impressions": 7778,
+          "spend_czk": 526.25
+        },
+        {
+          "date": "2026-03-25",
+          "clicks": 1111,
+          "impressions": 21738,
+          "spend_czk": 2144.27
+        },
+        {
+          "date": "2026-03-26",
+          "clicks": 1025,
+          "impressions": 19292,
+          "spend_czk": 1976.43
+        },
+        {
+          "date": "2026-03-27",
+          "clicks": 998,
+          "impressions": 21049,
+          "spend_czk": 1964.41
+        },
+        {
+          "date": "2026-03-28",
+          "clicks": 1294,
+          "impressions": 22013,
+          "spend_czk": 2010.95
+        },
+        {
+          "date": "2026-03-29",
+          "clicks": 309,
+          "impressions": 4935,
+          "spend_czk": 505.38
+        },
+        {
+          "date": "2026-03-31",
+          "clicks": 961,
+          "impressions": 19629,
+          "spend_czk": 2474.01
+        },
+        {
+          "date": "2026-04-01",
+          "clicks": 584,
+          "impressions": 15461,
+          "spend_czk": 1969.6
+        },
+        {
+          "date": "2026-04-02",
+          "clicks": 360,
+          "impressions": 13716,
+          "spend_czk": 1843.64
+        },
+        {
+          "date": "2026-04-03",
+          "clicks": 657,
+          "impressions": 22098,
+          "spend_czk": 2275.14
+        },
+        {
+          "date": "2026-04-04",
+          "clicks": 180,
+          "impressions": 10108,
+          "spend_czk": 1404.94
+        },
+        {
+          "date": "2026-04-05",
+          "clicks": 178,
+          "impressions": 9772,
+          "spend_czk": 1271.01
+        },
+        {
+          "date": "2026-04-06",
+          "clicks": 133,
+          "impressions": 8396,
+          "spend_czk": 801.36
+        },
+        {
+          "date": "2026-04-07",
+          "clicks": 134,
+          "impressions": 7081,
+          "spend_czk": 656.4
+        },
+        {
+          "date": "2026-04-08",
+          "clicks": 115,
+          "impressions": 6966,
+          "spend_czk": 670.35
+        },
+        {
+          "date": "2026-04-09",
+          "clicks": 124,
+          "impressions": 6879,
+          "spend_czk": 635.84
+        },
+        {
+          "date": "2026-04-10",
+          "clicks": 114,
+          "impressions": 6333,
+          "spend_czk": 661.86
+        },
+        {
+          "date": "2026-04-11",
+          "clicks": 32,
+          "impressions": 2181,
+          "spend_czk": 235.53
+        },
+        {
+          "date": "2026-04-13",
+          "clicks": 125,
+          "impressions": 7242,
+          "spend_czk": 823.41
+        },
+        {
+          "date": "2026-04-14",
+          "clicks": 112,
+          "impressions": 6787,
+          "spend_czk": 812.78
+        },
+        {
+          "date": "2026-04-15",
+          "clicks": 188,
+          "impressions": 10719,
+          "spend_czk": 1001.68
+        },
+        {
+          "date": "2026-04-16",
+          "clicks": 810,
+          "impressions": 30735,
+          "spend_czk": 2921.57
+        },
+        {
+          "date": "2026-04-17",
+          "clicks": 400,
+          "impressions": 12504,
+          "spend_czk": 1370.15
+        },
+        {
+          "date": "2026-04-20",
+          "clicks": 893,
+          "impressions": 30791,
+          "spend_czk": 3289.85
+        },
+        {
+          "date": "2026-04-21",
+          "clicks": 679,
+          "impressions": 22496,
+          "spend_czk": 2170.03
+        },
+        {
+          "date": "2026-04-22",
+          "clicks": 720,
+          "impressions": 30060,
+          "spend_czk": 2433.82
+        },
+        {
+          "date": "2026-04-23",
+          "clicks": 230,
+          "impressions": 7239,
+          "spend_czk": 1109.59
+        },
+        {
+          "date": "2026-04-25",
+          "clicks": 678,
+          "impressions": 36746,
+          "spend_czk": 5471.03
+        },
+        {
+          "date": "2026-04-26",
+          "clicks": 1010,
+          "impressions": 36785,
+          "spend_czk": 4280.95
+        },
+        {
+          "date": "2026-04-27",
+          "clicks": 920,
+          "impressions": 31316,
+          "spend_czk": 3259.07
+        },
+        {
+          "date": "2026-04-28",
+          "clicks": 716,
+          "impressions": 27864,
+          "spend_czk": 2948.7
+        },
+        {
+          "date": "2026-04-29",
+          "clicks": 537,
+          "impressions": 14256,
+          "spend_czk": 2191.62
+        },
+        {
+          "date": "2026-04-30",
+          "clicks": 528,
+          "impressions": 14619,
+          "spend_czk": 2142.47
+        }
+      ]
+    },
+    {
+      "id": "120238623445790685",
+      "name": "VL | NATURA | Příspěvky | Projevený zájem | 3/26",
+      "daily": [
+        {
+          "date": "2026-03-04",
+          "clicks": 4,
+          "impressions": 718,
+          "spend_czk": 353.91
+        },
+        {
+          "date": "2026-03-05",
+          "clicks": 159,
+          "impressions": 4154,
+          "spend_czk": 562.23
+        },
+        {
+          "date": "2026-03-06",
+          "clicks": 117,
+          "impressions": 4061,
+          "spend_czk": 536.8
+        },
+        {
+          "date": "2026-03-07",
+          "clicks": 142,
+          "impressions": 4867,
+          "spend_czk": 563.93
+        },
+        {
+          "date": "2026-03-08",
+          "clicks": 150,
+          "impressions": 4469,
+          "spend_czk": 530.55
+        },
+        {
+          "date": "2026-03-09",
+          "clicks": 272,
+          "impressions": 8507,
+          "spend_czk": 997.61
+        },
+        {
+          "date": "2026-03-10",
+          "clicks": 269,
+          "impressions": 9256,
+          "spend_czk": 1328.5
+        },
+        {
+          "date": "2026-03-11",
+          "clicks": 269,
+          "impressions": 10140,
+          "spend_czk": 1644.52
+        },
+        {
+          "date": "2026-03-12",
+          "clicks": 309,
+          "impressions": 13384,
+          "spend_czk": 1687.22
+        },
+        {
+          "date": "2026-03-13",
+          "clicks": 265,
+          "impressions": 12969,
+          "spend_czk": 1753.08
+        },
+        {
+          "date": "2026-03-14",
+          "clicks": 298,
+          "impressions": 13992,
+          "spend_czk": 1803.4
+        },
+        {
+          "date": "2026-03-15",
+          "clicks": 347,
+          "impressions": 17017,
+          "spend_czk": 1890.94
+        },
+        {
+          "date": "2026-03-16",
+          "clicks": 273,
+          "impressions": 13437,
+          "spend_czk": 1461.01
+        },
+        {
+          "date": "2026-03-17",
+          "clicks": 157,
+          "impressions": 11193,
+          "spend_czk": 1608.53
+        },
+        {
+          "date": "2026-03-18",
+          "clicks": 631,
+          "impressions": 21770,
+          "spend_czk": 1928.72
+        },
+        {
+          "date": "2026-03-19",
+          "clicks": 527,
+          "impressions": 20151,
+          "spend_czk": 1941.28
+        },
+        {
+          "date": "2026-03-20",
+          "clicks": 573,
+          "impressions": 24000,
+          "spend_czk": 2382.23
+        },
+        {
+          "date": "2026-03-21",
+          "clicks": 353,
+          "impressions": 11372,
+          "spend_czk": 1128.37
+        },
+        {
+          "date": "2026-03-25",
+          "clicks": 1101,
+          "impressions": 41454,
+          "spend_czk": 4590.79
+        },
+        {
+          "date": "2026-03-26",
+          "clicks": 1329,
+          "impressions": 43140,
+          "spend_czk": 5238.4
+        },
+        {
+          "date": "2026-03-27",
+          "clicks": 1342,
+          "impressions": 43358,
+          "spend_czk": 5135.48
+        },
+        {
+          "date": "2026-03-28",
+          "clicks": 1390,
+          "impressions": 45767,
+          "spend_czk": 5160.09
+        },
+        {
+          "date": "2026-03-29",
+          "clicks": 391,
+          "impressions": 11013,
+          "spend_czk": 1291.8
+        },
+        {
+          "date": "2026-03-31",
+          "clicks": 1498,
+          "impressions": 43597,
+          "spend_czk": 5598.76
+        },
+        {
+          "date": "2026-04-01",
+          "clicks": 1207,
+          "impressions": 38684,
+          "spend_czk": 4843.83
+        },
+        {
+          "date": "2026-04-02",
+          "clicks": 1149,
+          "impressions": 38968,
+          "spend_czk": 4819.27
+        },
+        {
+          "date": "2026-04-03",
+          "clicks": 1090,
+          "impressions": 37941,
+          "spend_czk": 4728.37
+        },
+        {
+          "date": "2026-04-04",
+          "clicks": 1093,
+          "impressions": 37068,
+          "spend_czk": 3863.33
+        },
+        {
+          "date": "2026-04-05",
+          "clicks": 847,
+          "impressions": 32618,
+          "spend_czk": 3581.28
+        },
+        {
+          "date": "2026-04-06",
+          "clicks": 853,
+          "impressions": 32976,
+          "spend_czk": 2886.6
+        },
+        {
+          "date": "2026-04-07",
+          "clicks": 289,
+          "impressions": 17161,
+          "spend_czk": 2093.89
+        },
+        {
+          "date": "2026-04-08",
+          "clicks": 293,
+          "impressions": 15413,
+          "spend_czk": 2099.36
+        },
+        {
+          "date": "2026-04-09",
+          "clicks": 291,
+          "impressions": 15387,
+          "spend_czk": 2067.36
+        },
+        {
+          "date": "2026-04-10",
+          "clicks": 251,
+          "impressions": 15567,
+          "spend_czk": 2138.01
+        },
+        {
+          "date": "2026-04-11",
+          "clicks": 41,
+          "impressions": 3344,
+          "spend_czk": 410.02
+        },
+        {
+          "date": "2026-04-13",
+          "clicks": 236,
+          "impressions": 11661,
+          "spend_czk": 1711.03
+        },
+        {
+          "date": "2026-04-14",
+          "clicks": 196,
+          "impressions": 10851,
+          "spend_czk": 1595.82
+        },
+        {
+          "date": "2026-04-15",
+          "clicks": 74,
+          "impressions": 5325,
+          "spend_czk": 660.19
+        },
+        {
+          "date": "2026-04-16",
+          "clicks": 428,
+          "impressions": 14753,
+          "spend_czk": 1601.98
+        },
+        {
+          "date": "2026-04-17",
+          "clicks": 257,
+          "impressions": 6804,
+          "spend_czk": 1052.73
+        },
+        {
+          "date": "2026-04-20",
+          "clicks": 511,
+          "impressions": 17554,
+          "spend_czk": 2184.02
+        },
+        {
+          "date": "2026-04-21",
+          "clicks": 544,
+          "impressions": 17833,
+          "spend_czk": 2391.24
+        },
+        {
+          "date": "2026-04-22",
+          "clicks": 593,
+          "impressions": 21105,
+          "spend_czk": 2915.58
+        },
+        {
+          "date": "2026-04-23",
+          "clicks": 188,
+          "impressions": 5647,
+          "spend_czk": 899.92
+        },
+        {
+          "date": "2026-04-25",
+          "clicks": 391,
+          "impressions": 22271,
+          "spend_czk": 2869.03
+        },
+        {
+          "date": "2026-04-26",
+          "clicks": 994,
+          "impressions": 39287,
+          "spend_czk": 4732.87
+        },
+        {
+          "date": "2026-04-27",
+          "clicks": 916,
+          "impressions": 32918,
+          "spend_czk": 4100.04
+        },
+        {
+          "date": "2026-04-28",
+          "clicks": 867,
+          "impressions": 31278,
+          "spend_czk": 4068.84
+        },
+        {
+          "date": "2026-04-29",
+          "clicks": 879,
+          "impressions": 32079,
+          "spend_czk": 4100.06
+        },
+        {
+          "date": "2026-04-30",
+          "clicks": 852,
+          "impressions": 32465,
+          "spend_czk": 4057.34
+        },
+        {
+          "date": "2026-05-01",
+          "clicks": 960,
+          "impressions": 38856,
+          "spend_czk": 4352.59
+        },
+        {
+          "date": "2026-05-02",
+          "clicks": 1101,
+          "impressions": 41849,
+          "spend_czk": 4129.17
+        },
+        {
+          "date": "2026-05-03",
+          "clicks": 1098,
+          "impressions": 48694,
+          "spend_czk": 4179.96
+        },
+        {
+          "date": "2026-05-04",
+          "clicks": 741,
+          "impressions": 34128,
+          "spend_czk": 3486.32
+        },
+        {
+          "date": "2026-05-05",
+          "clicks": 446,
+          "impressions": 23315,
+          "spend_czk": 2420.69
+        },
+        {
+          "date": "2026-05-06",
+          "clicks": 575,
+          "impressions": 26410,
+          "spend_czk": 2956.16
+        },
+        {
+          "date": "2026-05-07",
+          "clicks": 644,
+          "impressions": 27906,
+          "spend_czk": 3249.55
+        },
+        {
+          "date": "2026-05-08",
+          "clicks": 533,
+          "impressions": 23574,
+          "spend_czk": 2388.56
+        },
+        {
+          "date": "2026-05-09",
+          "clicks": 551,
+          "impressions": 26111,
+          "spend_czk": 2413.89
+        },
+        {
+          "date": "2026-05-10",
+          "clicks": 542,
+          "impressions": 26834,
+          "spend_czk": 2418.4
+        },
+        {
+          "date": "2026-05-11",
+          "clicks": 544,
+          "impressions": 24231,
+          "spend_czk": 2347.93
+        },
+        {
+          "date": "2026-05-12",
+          "clicks": 490,
+          "impressions": 24145,
+          "spend_czk": 2151.91
+        },
+        {
+          "date": "2026-05-13",
+          "clicks": 457,
+          "impressions": 22373,
+          "spend_czk": 2099.68
+        },
+        {
+          "date": "2026-05-14",
+          "clicks": 425,
+          "impressions": 15416,
+          "spend_czk": 1470.78
+        },
+        {
+          "date": "2026-05-15",
+          "clicks": 343,
+          "impressions": 14415,
+          "spend_czk": 1416.96
+        },
+        {
+          "date": "2026-05-16",
+          "clicks": 380,
+          "impressions": 15014,
+          "spend_czk": 1463.43
+        }
+      ]
+    },
+    {
+      "id": "120238709799980685",
+      "name": "VL | AGRO | Příspěvky | projevený zájem | 3/26",
+      "daily": [
+        {
+          "date": "2026-03-05",
+          "clicks": 2,
+          "impressions": 3727,
+          "spend_czk": 62.28
+        },
+        {
+          "date": "2026-03-06",
+          "clicks": 78,
+          "impressions": 10817,
+          "spend_czk": 414.91
+        },
+        {
+          "date": "2026-03-07",
+          "clicks": 112,
+          "impressions": 15855,
+          "spend_czk": 590.02
+        },
+        {
+          "date": "2026-03-08",
+          "clicks": 110,
+          "impressions": 17836,
+          "spend_czk": 644.96
+        },
+        {
+          "date": "2026-03-09",
+          "clicks": 112,
+          "impressions": 16274,
+          "spend_czk": 567.18
+        },
+        {
+          "date": "2026-03-10",
+          "clicks": 107,
+          "impressions": 15919,
+          "spend_czk": 587.85
+        },
+        {
+          "date": "2026-03-11",
+          "clicks": 107,
+          "impressions": 15055,
+          "spend_czk": 578.46
+        },
+        {
+          "date": "2026-03-12",
+          "clicks": 103,
+          "impressions": 15658,
+          "spend_czk": 603.88
+        },
+        {
+          "date": "2026-03-13",
+          "clicks": 88,
+          "impressions": 14776,
+          "spend_czk": 603.03
+        },
+        {
+          "date": "2026-03-14",
+          "clicks": 98,
+          "impressions": 15787,
+          "spend_czk": 611.27
+        },
+        {
+          "date": "2026-03-15",
+          "clicks": 106,
+          "impressions": 17213,
+          "spend_czk": 634.38
+        },
+        {
+          "date": "2026-03-16",
+          "clicks": 96,
+          "impressions": 16323,
+          "spend_czk": 574.43
+        },
+        {
+          "date": "2026-03-17",
+          "clicks": 74,
+          "impressions": 21386,
+          "spend_czk": 761.26
+        },
+        {
+          "date": "2026-03-18",
+          "clicks": 20,
+          "impressions": 11897,
+          "spend_czk": 398.35
+        },
+        {
+          "date": "2026-03-19",
+          "clicks": 16,
+          "impressions": 11664,
+          "spend_czk": 401.48
+        },
+        {
+          "date": "2026-03-20",
+          "clicks": 20,
+          "impressions": 11524,
+          "spend_czk": 406.83
+        },
+        {
+          "date": "2026-03-21",
+          "clicks": 9,
+          "impressions": 4703,
+          "spend_czk": 179.06
+        },
+        {
+          "date": "2026-03-25",
+          "clicks": 24,
+          "impressions": 18150,
+          "spend_czk": 601.22
+        },
+        {
+          "date": "2026-03-26",
+          "clicks": 24,
+          "impressions": 17841,
+          "spend_czk": 617.31
+        },
+        {
+          "date": "2026-03-27",
+          "clicks": 33,
+          "impressions": 18480,
+          "spend_czk": 666.16
+        },
+        {
+          "date": "2026-03-28",
+          "clicks": 19,
+          "impressions": 19464,
+          "spend_czk": 682.86
+        },
+        {
+          "date": "2026-04-10",
+          "clicks": 78,
+          "impressions": 3271,
+          "spend_czk": 253.47
+        },
+        {
+          "date": "2026-04-11",
+          "clicks": 32,
+          "impressions": 1084,
+          "spend_czk": 125.58
+        },
+        {
+          "date": "2026-04-13",
+          "clicks": 112,
+          "impressions": 4047,
+          "spend_czk": 373.91
+        },
+        {
+          "date": "2026-04-14",
+          "clicks": 220,
+          "impressions": 4738,
+          "spend_czk": 701.48
+        },
+        {
+          "date": "2026-04-15",
+          "clicks": 208,
+          "impressions": 4602,
+          "spend_czk": 782.63
+        },
+        {
+          "date": "2026-04-16",
+          "clicks": 293,
+          "impressions": 5044,
+          "spend_czk": 1514.14
+        },
+        {
+          "date": "2026-04-17",
+          "clicks": 189,
+          "impressions": 3757,
+          "spend_czk": 1086.8
+        },
+        {
+          "date": "2026-04-20",
+          "clicks": 497,
+          "impressions": 8469,
+          "spend_czk": 2283.75
+        },
+        {
+          "date": "2026-04-21",
+          "clicks": 464,
+          "impressions": 10304,
+          "spend_czk": 2418.38
+        },
+        {
+          "date": "2026-04-22",
+          "clicks": 517,
+          "impressions": 16312,
+          "spend_czk": 3548.69
+        },
+        {
+          "date": "2026-04-23",
+          "clicks": 351,
+          "impressions": 12206,
+          "spend_czk": 1661.21
+        },
+        {
+          "date": "2026-04-25",
+          "clicks": 572,
+          "impressions": 27468,
+          "spend_czk": 3237.07
+        },
+        {
+          "date": "2026-04-26",
+          "clicks": 1218,
+          "impressions": 44545,
+          "spend_czk": 6355.14
+        },
+        {
+          "date": "2026-04-27",
+          "clicks": 1098,
+          "impressions": 41182,
+          "spend_czk": 5995.92
+        },
+        {
+          "date": "2026-04-28",
+          "clicks": 861,
+          "impressions": 34258,
+          "spend_czk": 5213.93
+        },
+        {
+          "date": "2026-04-29",
+          "clicks": 796,
+          "impressions": 32006,
+          "spend_czk": 4988.6
+        },
+        {
+          "date": "2026-04-30",
+          "clicks": 688,
+          "impressions": 29646,
+          "spend_czk": 4517.22
+        },
+        {
+          "date": "2026-05-01",
+          "clicks": 620,
+          "impressions": 29315,
+          "spend_czk": 4919.92
+        },
+        {
+          "date": "2026-05-02",
+          "clicks": 691,
+          "impressions": 36648,
+          "spend_czk": 3912.75
+        },
+        {
+          "date": "2026-05-03",
+          "clicks": 740,
+          "impressions": 41947,
+          "spend_czk": 4271.11
+        },
+        {
+          "date": "2026-05-04",
+          "clicks": 692,
+          "impressions": 33269,
+          "spend_czk": 3455.79
+        },
+        {
+          "date": "2026-05-05",
+          "clicks": 443,
+          "impressions": 23615,
+          "spend_czk": 2391.28
+        },
+        {
+          "date": "2026-05-06",
+          "clicks": 356,
+          "impressions": 12676,
+          "spend_czk": 1605.09
+        },
+        {
+          "date": "2026-05-07",
+          "clicks": 326,
+          "impressions": 13302,
+          "spend_czk": 1634.93
+        },
+        {
+          "date": "2026-05-08",
+          "clicks": 443,
+          "impressions": 17452,
+          "spend_czk": 2559.82
+        },
+        {
+          "date": "2026-05-09",
+          "clicks": 696,
+          "impressions": 21908,
+          "spend_czk": 2952.82
+        },
+        {
+          "date": "2026-05-10",
+          "clicks": 1019,
+          "impressions": 28903,
+          "spend_czk": 3107.02
+        },
+        {
+          "date": "2026-05-11",
+          "clicks": 776,
+          "impressions": 22428,
+          "spend_czk": 2653.21
+        },
+        {
+          "date": "2026-05-12",
+          "clicks": 691,
+          "impressions": 18653,
+          "spend_czk": 2261.27
+        },
+        {
+          "date": "2026-05-13",
+          "clicks": 490,
+          "impressions": 15239,
+          "spend_czk": 2045.55
+        },
+        {
+          "date": "2026-05-14",
+          "clicks": 828,
+          "impressions": 26611,
+          "spend_czk": 4784.33
+        },
+        {
+          "date": "2026-05-15",
+          "clicks": 764,
+          "impressions": 23532,
+          "spend_czk": 4107.27
+        },
+        {
+          "date": "2026-05-16",
+          "clicks": 858,
+          "impressions": 29281,
+          "spend_czk": 4811.57
+        }
+      ]
+    },
+    {
+      "id": "120238895095960685",
+      "name": "VL | KRISTALON | Příspěvky | Projevený zájem | 3/26",
+      "daily": [
+        {
+          "date": "2026-03-09",
+          "clicks": 67,
+          "impressions": 1620,
+          "spend_czk": 276.33
+        },
+        {
+          "date": "2026-03-10",
+          "clicks": 92,
+          "impressions": 2632,
+          "spend_czk": 442.5
+        },
+        {
+          "date": "2026-03-11",
+          "clicks": 93,
+          "impressions": 3508,
+          "spend_czk": 584.11
+        },
+        {
+          "date": "2026-03-12",
+          "clicks": 101,
+          "impressions": 3783,
+          "spend_czk": 588.88
+        },
+        {
+          "date": "2026-03-13",
+          "clicks": 117,
+          "impressions": 4609,
+          "spend_czk": 588.2
+        },
+        {
+          "date": "2026-03-14",
+          "clicks": 106,
+          "impressions": 6144,
+          "spend_czk": 593.67
+        },
+        {
+          "date": "2026-03-15",
+          "clicks": 144,
+          "impressions": 7102,
+          "spend_czk": 653.7
+        },
+        {
+          "date": "2026-03-16",
+          "clicks": 121,
+          "impressions": 5802,
+          "spend_czk": 554.24
+        },
+        {
+          "date": "2026-03-17",
+          "clicks": 116,
+          "impressions": 6458,
+          "spend_czk": 625.74
+        },
+        {
+          "date": "2026-03-18",
+          "clicks": 110,
+          "impressions": 5724,
+          "spend_czk": 573.46
+        },
+        {
+          "date": "2026-03-19",
+          "clicks": 38,
+          "impressions": 3287,
+          "spend_czk": 180.62
+        }
+      ]
+    },
+    {
+      "id": "120240089466820685",
+      "name": "VL | NATURA | Příspěvek | Substrát pro vyvýšené záhony",
+      "daily": [
+        {
+          "date": "2026-03-28",
+          "clicks": 11,
+          "impressions": 14123,
+          "spend_czk": 172.1
+        },
+        {
+          "date": "2026-03-29",
+          "clicks": 19,
+          "impressions": 8371,
+          "spend_czk": 116.51
+        },
+        {
+          "date": "2026-03-31",
+          "clicks": 56,
+          "impressions": 31946,
+          "spend_czk": 459.93
+        },
+        {
+          "date": "2026-04-01",
+          "clicks": 40,
+          "impressions": 34088,
+          "spend_czk": 459.27
+        },
+        {
+          "date": "2026-04-02",
+          "clicks": 39,
+          "impressions": 32489,
+          "spend_czk": 455.63
+        },
+        {
+          "date": "2026-04-03",
+          "clicks": 36,
+          "impressions": 34420,
+          "spend_czk": 481.48
+        },
+        {
+          "date": "2026-04-04",
+          "clicks": 45,
+          "impressions": 36616,
+          "spend_czk": 475.41
+        },
+        {
+          "date": "2026-04-05",
+          "clicks": 45,
+          "impressions": 32068,
+          "spend_czk": 379.93
+        },
+        {
+          "date": "2026-04-06",
+          "clicks": 43,
+          "impressions": 36948,
+          "spend_czk": 380.77
+        },
+        {
+          "date": "2026-04-07",
+          "clicks": 29,
+          "impressions": 31161,
+          "spend_czk": 320.7
+        },
+        {
+          "date": "2026-04-08",
+          "clicks": 51,
+          "impressions": 30794,
+          "spend_czk": 314.56
+        },
+        {
+          "date": "2026-04-09",
+          "clicks": 54,
+          "impressions": 31167,
+          "spend_czk": 344.05
+        },
+        {
+          "date": "2026-04-10",
+          "clicks": 49,
+          "impressions": 30372,
+          "spend_czk": 348.36
+        },
+        {
+          "date": "2026-04-11",
+          "clicks": 24,
+          "impressions": 11075,
+          "spend_czk": 135.26
+        },
+        {
+          "date": "2026-04-13",
+          "clicks": 37,
+          "impressions": 40428,
+          "spend_czk": 507.39
+        },
+        {
+          "date": "2026-04-14",
+          "clicks": 54,
+          "impressions": 41314,
+          "spend_czk": 542.13
+        }
+      ]
+    },
+    {
+      "id": "120240091339870685",
+      "name": "VL | FLORIA | Příspěvek | Zahradnický substrát",
+      "daily": [
+        {
+          "date": "2026-03-28",
+          "clicks": 6,
+          "impressions": 8905,
+          "spend_czk": 116.04
+        },
+        {
+          "date": "2026-03-29",
+          "clicks": 7,
+          "impressions": 5164,
+          "spend_czk": 74.18
+        },
+        {
+          "date": "2026-03-31",
+          "clicks": 23,
+          "impressions": 20671,
+          "spend_czk": 303.38
+        },
+        {
+          "date": "2026-04-01",
+          "clicks": 26,
+          "impressions": 25497,
+          "spend_czk": 343.04
+        },
+        {
+          "date": "2026-04-02",
+          "clicks": 23,
+          "impressions": 22971,
+          "spend_czk": 317.69
+        },
+        {
+          "date": "2026-04-03",
+          "clicks": 19,
+          "impressions": 24953,
+          "spend_czk": 357.0
+        },
+        {
+          "date": "2026-04-04",
+          "clicks": 21,
+          "impressions": 27193,
+          "spend_czk": 352.12
+        },
+        {
+          "date": "2026-04-05",
+          "clicks": 13,
+          "impressions": 22141,
+          "spend_czk": 269.03
+        },
+        {
+          "date": "2026-04-06",
+          "clicks": 20,
+          "impressions": 25504,
+          "spend_czk": 268.38
+        },
+        {
+          "date": "2026-04-07",
+          "clicks": 12,
+          "impressions": 21625,
+          "spend_czk": 231.1
+        },
+        {
+          "date": "2026-04-08",
+          "clicks": 9,
+          "impressions": 19743,
+          "spend_czk": 224.98
+        },
+        {
+          "date": "2026-04-09",
+          "clicks": 16,
+          "impressions": 18686,
+          "spend_czk": 234.22
+        },
+        {
+          "date": "2026-04-10",
+          "clicks": 6,
+          "impressions": 18631,
+          "spend_czk": 244.66
+        },
+        {
+          "date": "2026-04-11",
+          "clicks": 5,
+          "impressions": 6174,
+          "spend_czk": 83.74
+        },
+        {
+          "date": "2026-04-13",
+          "clicks": 16,
+          "impressions": 20456,
+          "spend_czk": 262.34
+        },
+        {
+          "date": "2026-04-14",
+          "clicks": 16,
+          "impressions": 20276,
+          "spend_czk": 281.76
+        },
+        {
+          "date": "2026-04-15",
+          "clicks": 14,
+          "impressions": 19538,
+          "spend_czk": 284.37
+        },
+        {
+          "date": "2026-04-16",
+          "clicks": 16,
+          "impressions": 23584,
+          "spend_czk": 314.91
+        },
+        {
+          "date": "2026-04-17",
+          "clicks": 6,
+          "impressions": 8006,
+          "spend_czk": 128.48
+        },
+        {
+          "date": "2026-04-20",
+          "clicks": 16,
+          "impressions": 18367,
+          "spend_czk": 269.24
+        },
+        {
+          "date": "2026-04-21",
+          "clicks": 17,
+          "impressions": 18445,
+          "spend_czk": 283.88
+        },
+        {
+          "date": "2026-04-22",
+          "clicks": 14,
+          "impressions": 20595,
+          "spend_czk": 314.67
+        },
+        {
+          "date": "2026-04-23",
+          "clicks": 4,
+          "impressions": 5143,
+          "spend_czk": 81.3
+        },
+        {
+          "date": "2026-04-25",
+          "clicks": 7,
+          "impressions": 4456,
+          "spend_czk": 437.5
+        }
+      ]
+    },
+    {
+      "id": "120240293477430685",
+      "name": "VL | FLORIA | CAROUSEL | TS + TH pro robotické sekání | Povědomí",
+      "daily": [
+        {
+          "date": "2026-03-31",
+          "clicks": 110,
+          "impressions": 6771,
+          "spend_czk": 376.15
+        },
+        {
+          "date": "2026-04-01",
+          "clicks": 172,
+          "impressions": 9569,
+          "spend_czk": 483.54
+        },
+        {
+          "date": "2026-04-02",
+          "clicks": 123,
+          "impressions": 8411,
+          "spend_czk": 476.42
+        },
+        {
+          "date": "2026-04-03",
+          "clicks": 137,
+          "impressions": 9103,
+          "spend_czk": 512.31
+        },
+        {
+          "date": "2026-04-04",
+          "clicks": 118,
+          "impressions": 9375,
+          "spend_czk": 496.71
+        },
+        {
+          "date": "2026-04-05",
+          "clicks": 163,
+          "impressions": 11066,
+          "spend_czk": 548.81
+        },
+        {
+          "date": "2026-04-06",
+          "clicks": 180,
+          "impressions": 11192,
+          "spend_czk": 526.09
+        },
+        {
+          "date": "2026-04-07",
+          "clicks": 163,
+          "impressions": 9460,
+          "spend_czk": 457.93
+        },
+        {
+          "date": "2026-04-08",
+          "clicks": 148,
+          "impressions": 9239,
+          "spend_czk": 484.7
+        },
+        {
+          "date": "2026-04-09",
+          "clicks": 215,
+          "impressions": 13330,
+          "spend_czk": 796.07
+        },
+        {
+          "date": "2026-04-10",
+          "clicks": 117,
+          "impressions": 7282,
+          "spend_czk": 417.02
+        },
+        {
+          "date": "2026-04-11",
+          "clicks": 16,
+          "impressions": 1342,
+          "spend_czk": 81.64
+        },
+        {
+          "date": "2026-04-13",
+          "clicks": 255,
+          "impressions": 16036,
+          "spend_czk": 853.91
+        }
+      ]
+    },
+    {
+      "id": "120240514772510685",
+      "name": "VL | AGRO | Pokojovky | Banner | Povědomí",
+      "daily": [
+        {
+          "date": "2026-04-02",
+          "clicks": 3,
+          "impressions": 7673,
+          "spend_czk": 114.03
+        },
+        {
+          "date": "2026-04-03",
+          "clicks": 9,
+          "impressions": 16521,
+          "spend_czk": 260.27
+        },
+        {
+          "date": "2026-04-04",
+          "clicks": 9,
+          "impressions": 19132,
+          "spend_czk": 272.98
+        },
+        {
+          "date": "2026-04-05",
+          "clicks": 9,
+          "impressions": 20558,
+          "spend_czk": 279.23
+        },
+        {
+          "date": "2026-04-06",
+          "clicks": 9,
+          "impressions": 22264,
+          "spend_czk": 268.94
+        },
+        {
+          "date": "2026-04-07",
+          "clicks": 10,
+          "impressions": 20293,
+          "spend_czk": 247.59
+        },
+        {
+          "date": "2026-04-08",
+          "clicks": 9,
+          "impressions": 19116,
+          "spend_czk": 242.93
+        },
+        {
+          "date": "2026-04-09",
+          "clicks": 6,
+          "impressions": 17939,
+          "spend_czk": 247.67
+        },
+        {
+          "date": "2026-04-10",
+          "clicks": 8,
+          "impressions": 17454,
+          "spend_czk": 249.63
+        },
+        {
+          "date": "2026-04-11",
+          "clicks": 0,
+          "impressions": 6374,
+          "spend_czk": 84.32
+        },
+        {
+          "date": "2026-04-13",
+          "clicks": 5,
+          "impressions": 19373,
+          "spend_czk": 275.3
+        },
+        {
+          "date": "2026-04-14",
+          "clicks": 10,
+          "impressions": 20030,
+          "spend_czk": 302.15
+        },
+        {
+          "date": "2026-04-15",
+          "clicks": 9,
+          "impressions": 18243,
+          "spend_czk": 293.1
+        },
+        {
+          "date": "2026-04-16",
+          "clicks": 6,
+          "impressions": 19574,
+          "spend_czk": 308.65
+        },
+        {
+          "date": "2026-04-17",
+          "clicks": 6,
+          "impressions": 7866,
+          "spend_czk": 139.5
+        },
+        {
+          "date": "2026-04-20",
+          "clicks": 26,
+          "impressions": 39088,
+          "spend_czk": 665.97
+        },
+        {
+          "date": "2026-04-21",
+          "clicks": 28,
+          "impressions": 41793,
+          "spend_czk": 743.06
+        }
+      ]
+    },
+    {
+      "id": "120240517277390685",
+      "name": "VL | FLORIA | Příspěvek | Substrát pro rajčata a papriky | Povědomí",
+      "daily": [
+        {
+          "date": "2026-04-02",
+          "clicks": 18,
+          "impressions": 18008,
+          "spend_czk": 303.93
+        },
+        {
+          "date": "2026-04-03",
+          "clicks": 38,
+          "impressions": 44852,
+          "spend_czk": 732.98
+        },
+        {
+          "date": "2026-04-04",
+          "clicks": 32,
+          "impressions": 49382,
+          "spend_czk": 745.97
+        },
+        {
+          "date": "2026-04-05",
+          "clicks": 32,
+          "impressions": 54521,
+          "spend_czk": 780.59
+        },
+        {
+          "date": "2026-04-06",
+          "clicks": 45,
+          "impressions": 59157,
+          "spend_czk": 742.3
+        },
+        {
+          "date": "2026-04-07",
+          "clicks": 25,
+          "impressions": 54399,
+          "spend_czk": 686.33
+        },
+        {
+          "date": "2026-04-08",
+          "clicks": 27,
+          "impressions": 50185,
+          "spend_czk": 669.38
+        },
+        {
+          "date": "2026-04-09",
+          "clicks": 32,
+          "impressions": 47306,
+          "spend_czk": 684.44
+        },
+        {
+          "date": "2026-04-10",
+          "clicks": 34,
+          "impressions": 46132,
+          "spend_czk": 693.08
+        },
+        {
+          "date": "2026-04-11",
+          "clicks": 7,
+          "impressions": 15548,
+          "spend_czk": 241.22
+        },
+        {
+          "date": "2026-04-13",
+          "clicks": 24,
+          "impressions": 46484,
+          "spend_czk": 681.14
+        },
+        {
+          "date": "2026-04-14",
+          "clicks": 32,
+          "impressions": 48634,
+          "spend_czk": 771.63
+        },
+        {
+          "date": "2026-04-15",
+          "clicks": 33,
+          "impressions": 45608,
+          "spend_czk": 759.19
+        },
+        {
+          "date": "2026-04-16",
+          "clicks": 24,
+          "impressions": 47079,
+          "spend_czk": 776.96
+        },
+        {
+          "date": "2026-04-17",
+          "clicks": 22,
+          "impressions": 20874,
+          "spend_czk": 374.99
+        },
+        {
+          "date": "2026-04-20",
+          "clicks": 34,
+          "impressions": 52467,
+          "spend_czk": 904.81
+        },
+        {
+          "date": "2026-04-21",
+          "clicks": 51,
+          "impressions": 56689,
+          "spend_czk": 1038.88
+        },
+        {
+          "date": "2026-04-22",
+          "clicks": 45,
+          "impressions": 60165,
+          "spend_czk": 1070.28
+        },
+        {
+          "date": "2026-04-23",
+          "clicks": 14,
+          "impressions": 15474,
+          "spend_czk": 285.94
+        },
+        {
+          "date": "2026-04-25",
+          "clicks": 29,
+          "impressions": 40173,
+          "spend_czk": 1167.86
+        },
+        {
+          "date": "2026-04-26",
+          "clicks": 55,
+          "impressions": 88628,
+          "spend_czk": 1525.4
+        },
+        {
+          "date": "2026-04-27",
+          "clicks": 51,
+          "impressions": 76968,
+          "spend_czk": 1336.76
+        },
+        {
+          "date": "2026-04-28",
+          "clicks": 52,
+          "impressions": 71887,
+          "spend_czk": 1304.79
+        },
+        {
+          "date": "2026-04-29",
+          "clicks": 44,
+          "impressions": 69362,
+          "spend_czk": 1314.0
+        }
+      ]
+    },
+    {
+      "id": "120240703068250685",
+      "name": "VL | FLORIA | Příspěvek |  Substrát pro středomořské rostliny | Povědomí",
+      "daily": [
+        {
+          "date": "2026-04-06",
+          "clicks": 29,
+          "impressions": 41851,
+          "spend_czk": 506.3
+        },
+        {
+          "date": "2026-04-07",
+          "clicks": 22,
+          "impressions": 57162,
+          "spend_czk": 683.14
+        },
+        {
+          "date": "2026-04-08",
+          "clicks": 27,
+          "impressions": 51772,
+          "spend_czk": 661.19
+        },
+        {
+          "date": "2026-04-09",
+          "clicks": 29,
+          "impressions": 49624,
+          "spend_czk": 685.29
+        },
+        {
+          "date": "2026-04-10",
+          "clicks": 20,
+          "impressions": 47264,
+          "spend_czk": 688.57
+        },
+        {
+          "date": "2026-04-11",
+          "clicks": 7,
+          "impressions": 16008,
+          "spend_czk": 242.5
+        },
+        {
+          "date": "2026-04-13",
+          "clicks": 26,
+          "impressions": 46728,
+          "spend_czk": 672.47
+        },
+        {
+          "date": "2026-04-14",
+          "clicks": 28,
+          "impressions": 48498,
+          "spend_czk": 752.45
+        },
+        {
+          "date": "2026-04-15",
+          "clicks": 23,
+          "impressions": 45871,
+          "spend_czk": 742.89
+        },
+        {
+          "date": "2026-04-16",
+          "clicks": 22,
+          "impressions": 47220,
+          "spend_czk": 755.75
+        },
+        {
+          "date": "2026-04-17",
+          "clicks": 11,
+          "impressions": 20704,
+          "spend_czk": 365.39
+        },
+        {
+          "date": "2026-04-20",
+          "clicks": 27,
+          "impressions": 49503,
+          "spend_czk": 827.53
+        },
+        {
+          "date": "2026-04-21",
+          "clicks": 36,
+          "impressions": 52358,
+          "spend_czk": 917.82
+        },
+        {
+          "date": "2026-04-22",
+          "clicks": 27,
+          "impressions": 58180,
+          "spend_czk": 1014.3
+        },
+        {
+          "date": "2026-04-23",
+          "clicks": 12,
+          "impressions": 14123,
+          "spend_czk": 257.46
+        },
+        {
+          "date": "2026-04-25",
+          "clicks": 29,
+          "impressions": 30347,
+          "spend_czk": 1855.03
+        },
+        {
+          "date": "2026-04-26",
+          "clicks": 38,
+          "impressions": 50249,
+          "spend_czk": 1563.85
+        },
+        {
+          "date": "2026-04-27",
+          "clicks": 30,
+          "impressions": 56329,
+          "spend_czk": 952.58
+        },
+        {
+          "date": "2026-04-28",
+          "clicks": 28,
+          "impressions": 49146,
+          "spend_czk": 872.28
+        },
+        {
+          "date": "2026-04-29",
+          "clicks": 24,
+          "impressions": 47515,
+          "spend_czk": 880.5
+        },
+        {
+          "date": "2026-04-30",
+          "clicks": 28,
+          "impressions": 49008,
+          "spend_czk": 917.84
+        },
+        {
+          "date": "2026-05-01",
+          "clicks": 28,
+          "impressions": 57176,
+          "spend_czk": 941.56
+        },
+        {
+          "date": "2026-05-02",
+          "clicks": 46,
+          "impressions": 62030,
+          "spend_czk": 918.37
+        },
+        {
+          "date": "2026-05-03",
+          "clicks": 32,
+          "impressions": 66981,
+          "spend_czk": 914.63
+        }
+      ]
+    },
+    {
+      "id": "120240704437660685",
+      "name": "VL | NATURA | Příspěvek |  Substrát bylinková zahrádka | Povědomí",
+      "daily": [
+        {
+          "date": "2026-04-06",
+          "clicks": 2,
+          "impressions": 13792,
+          "spend_czk": 183.93
+        },
+        {
+          "date": "2026-04-07",
+          "clicks": 2,
+          "impressions": 19196,
+          "spend_czk": 249.36
+        },
+        {
+          "date": "2026-04-08",
+          "clicks": 0,
+          "impressions": 18171,
+          "spend_czk": 243.83
+        },
+        {
+          "date": "2026-04-09",
+          "clicks": 18,
+          "impressions": 33952,
+          "spend_czk": 458.39
+        },
+        {
+          "date": "2026-04-10",
+          "clicks": 25,
+          "impressions": 36986,
+          "spend_czk": 527.05
+        },
+        {
+          "date": "2026-04-11",
+          "clicks": 2,
+          "impressions": 12235,
+          "spend_czk": 180.86
+        },
+        {
+          "date": "2026-04-13",
+          "clicks": 18,
+          "impressions": 37165,
+          "spend_czk": 518.95
+        },
+        {
+          "date": "2026-04-14",
+          "clicks": 25,
+          "impressions": 39423,
+          "spend_czk": 595.84
+        },
+        {
+          "date": "2026-04-15",
+          "clicks": 36,
+          "impressions": 36335,
+          "spend_czk": 572.61
+        },
+        {
+          "date": "2026-04-16",
+          "clicks": 23,
+          "impressions": 38119,
+          "spend_czk": 590.39
+        },
+        {
+          "date": "2026-04-17",
+          "clicks": 9,
+          "impressions": 16703,
+          "spend_czk": 285.41
+        },
+        {
+          "date": "2026-04-20",
+          "clicks": 29,
+          "impressions": 41176,
+          "spend_czk": 660.82
+        },
+        {
+          "date": "2026-04-21",
+          "clicks": 28,
+          "impressions": 43617,
+          "spend_czk": 735.43
+        },
+        {
+          "date": "2026-04-22",
+          "clicks": 28,
+          "impressions": 46712,
+          "spend_czk": 787.96
+        },
+        {
+          "date": "2026-04-23",
+          "clicks": 7,
+          "impressions": 11965,
+          "spend_czk": 210.63
+        },
+        {
+          "date": "2026-04-25",
+          "clicks": 39,
+          "impressions": 26616,
+          "spend_czk": 1803.99
+        },
+        {
+          "date": "2026-04-26",
+          "clicks": 41,
+          "impressions": 40481,
+          "spend_czk": 1402.61
+        },
+        {
+          "date": "2026-04-27",
+          "clicks": 32,
+          "impressions": 37342,
+          "spend_czk": 608.23
+        },
+        {
+          "date": "2026-04-28",
+          "clicks": 28,
+          "impressions": 36639,
+          "spend_czk": 622.1
+        },
+        {
+          "date": "2026-04-29",
+          "clicks": 25,
+          "impressions": 35072,
+          "spend_czk": 618.87
+        },
+        {
+          "date": "2026-04-30",
+          "clicks": 26,
+          "impressions": 35770,
+          "spend_czk": 641.48
+        }
+      ]
+    },
+    {
+      "id": "120240704635390685",
+      "name": "VL | FLORIA | Vertikutační směs |  Substrát pro středomořské rostliny | Povědomí",
+      "daily": [
+        {
+          "date": "2026-04-06",
+          "clicks": 23,
+          "impressions": 21042,
+          "spend_czk": 245.07
+        },
+        {
+          "date": "2026-04-07",
+          "clicks": 34,
+          "impressions": 28941,
+          "spend_czk": 341.02
+        },
+        {
+          "date": "2026-04-08",
+          "clicks": 40,
+          "impressions": 26884,
+          "spend_czk": 332.75
+        },
+        {
+          "date": "2026-04-09",
+          "clicks": 35,
+          "impressions": 44178,
+          "spend_czk": 637.71
+        },
+        {
+          "date": "2026-04-10",
+          "clicks": 28,
+          "impressions": 48897,
+          "spend_czk": 735.09
+        },
+        {
+          "date": "2026-04-11",
+          "clicks": 9,
+          "impressions": 16741,
+          "spend_czk": 259.63
+        },
+        {
+          "date": "2026-04-13",
+          "clicks": 23,
+          "impressions": 49069,
+          "spend_czk": 725.19
+        },
+        {
+          "date": "2026-04-14",
+          "clicks": 31,
+          "impressions": 51027,
+          "spend_czk": 810.35
+        },
+        {
+          "date": "2026-04-15",
+          "clicks": 27,
+          "impressions": 48108,
+          "spend_czk": 797.0
+        },
+        {
+          "date": "2026-04-16",
+          "clicks": 21,
+          "impressions": 50034,
+          "spend_czk": 824.91
+        },
+        {
+          "date": "2026-04-17",
+          "clicks": 15,
+          "impressions": 21644,
+          "spend_czk": 389.67
+        },
+        {
+          "date": "2026-04-20",
+          "clicks": 28,
+          "impressions": 52438,
+          "spend_czk": 906.87
+        },
+        {
+          "date": "2026-04-21",
+          "clicks": 32,
+          "impressions": 55139,
+          "spend_czk": 1008.43
+        },
+        {
+          "date": "2026-04-22",
+          "clicks": 36,
+          "impressions": 69763,
+          "spend_czk": 1239.25
+        },
+        {
+          "date": "2026-04-23",
+          "clicks": 8,
+          "impressions": 14537,
+          "spend_czk": 273.06
+        },
+        {
+          "date": "2026-04-25",
+          "clicks": 52,
+          "impressions": 35544,
+          "spend_czk": 2140.22
+        },
+        {
+          "date": "2026-04-26",
+          "clicks": 59,
+          "impressions": 55853,
+          "spend_czk": 1724.6
+        },
+        {
+          "date": "2026-04-27",
+          "clicks": 28,
+          "impressions": 53637,
+          "spend_czk": 953.54
+        },
+        {
+          "date": "2026-04-28",
+          "clicks": 27,
+          "impressions": 51722,
+          "spend_czk": 956.94
+        },
+        {
+          "date": "2026-04-29",
+          "clicks": 27,
+          "impressions": 49387,
+          "spend_czk": 948.42
+        },
+        {
+          "date": "2026-04-30",
+          "clicks": 28,
+          "impressions": 50916,
+          "spend_czk": 983.6
+        },
+        {
+          "date": "2026-05-01",
+          "clicks": 33,
+          "impressions": 55890,
+          "spend_czk": 963.2
+        }
+      ]
+    },
+    {
+      "id": "120240915012560685",
+      "name": "VL | AGRO | TH Start | Banner | Povědomí",
+      "daily": [
+        {
+          "date": "2026-04-10",
+          "clicks": 8,
+          "impressions": 15475,
+          "spend_czk": 222.05
+        },
+        {
+          "date": "2026-04-11",
+          "clicks": 0,
+          "impressions": 5350,
+          "spend_czk": 78.93
+        },
+        {
+          "date": "2026-04-13",
+          "clicks": 13,
+          "impressions": 19782,
+          "spend_czk": 281.39
+        },
+        {
+          "date": "2026-04-14",
+          "clicks": 16,
+          "impressions": 20450,
+          "spend_czk": 310.71
+        },
+        {
+          "date": "2026-04-15",
+          "clicks": 13,
+          "impressions": 18990,
+          "spend_czk": 305.31
+        },
+        {
+          "date": "2026-04-16",
+          "clicks": 8,
+          "impressions": 19516,
+          "spend_czk": 315.05
+        },
+        {
+          "date": "2026-04-17",
+          "clicks": 3,
+          "impressions": 7631,
+          "spend_czk": 136.58
+        }
+      ]
+    },
+    {
+      "id": "120240915448890685",
+      "name": "VL | AGRO | Příspěvek | Zahradnický kompost",
+      "daily": [
+        {
+          "date": "2026-04-10",
+          "clicks": 25,
+          "impressions": 22687,
+          "spend_czk": 317.12
+        },
+        {
+          "date": "2026-04-11",
+          "clicks": 5,
+          "impressions": 8306,
+          "spend_czk": 120.77
+        },
+        {
+          "date": "2026-04-13",
+          "clicks": 18,
+          "impressions": 25675,
+          "spend_czk": 363.51
+        },
+        {
+          "date": "2026-04-14",
+          "clicks": 15,
+          "impressions": 27186,
+          "spend_czk": 413.09
+        },
+        {
+          "date": "2026-04-15",
+          "clicks": 23,
+          "impressions": 25084,
+          "spend_czk": 403.68
+        },
+        {
+          "date": "2026-04-16",
+          "clicks": 7,
+          "impressions": 32469,
+          "spend_czk": 430.7
+        },
+        {
+          "date": "2026-04-17",
+          "clicks": 9,
+          "impressions": 10717,
+          "spend_czk": 189.12
+        },
+        {
+          "date": "2026-04-20",
+          "clicks": 12,
+          "impressions": 37388,
+          "spend_czk": 629.57
+        },
+        {
+          "date": "2026-04-21",
+          "clicks": 18,
+          "impressions": 40371,
+          "spend_czk": 715.73
+        },
+        {
+          "date": "2026-04-22",
+          "clicks": 21,
+          "impressions": 42419,
+          "spend_czk": 743.72
+        },
+        {
+          "date": "2026-04-23",
+          "clicks": 0,
+          "impressions": 10488,
+          "spend_czk": 192.31
+        }
+      ]
+    },
+    {
+      "id": "120240915793580685",
+      "name": "VL | NATURA | Příspěvek |  Substrát pro celou zahradu | Povědomí",
+      "daily": [
+        {
+          "date": "2026-04-10",
+          "clicks": 19,
+          "impressions": 46315,
+          "spend_czk": 628.63
+        },
+        {
+          "date": "2026-04-11",
+          "clicks": 6,
+          "impressions": 16688,
+          "spend_czk": 233.74
+        },
+        {
+          "date": "2026-04-13",
+          "clicks": 29,
+          "impressions": 49247,
+          "spend_czk": 649.99
+        },
+        {
+          "date": "2026-04-14",
+          "clicks": 21,
+          "impressions": 51210,
+          "spend_czk": 722.21
+        },
+        {
+          "date": "2026-04-15",
+          "clicks": 28,
+          "impressions": 47738,
+          "spend_czk": 713.96
+        },
+        {
+          "date": "2026-04-16",
+          "clicks": 16,
+          "impressions": 50244,
+          "spend_czk": 730.56
+        },
+        {
+          "date": "2026-04-17",
+          "clicks": 16,
+          "impressions": 21949,
+          "spend_czk": 354.62
+        },
+        {
+          "date": "2026-04-20",
+          "clicks": 32,
+          "impressions": 50117,
+          "spend_czk": 761.49
+        },
+        {
+          "date": "2026-04-21",
+          "clicks": 30,
+          "impressions": 51886,
+          "spend_czk": 823.38
+        },
+        {
+          "date": "2026-04-22",
+          "clicks": 29,
+          "impressions": 54758,
+          "spend_czk": 868.49
+        },
+        {
+          "date": "2026-04-23",
+          "clicks": 6,
+          "impressions": 13947,
+          "spend_czk": 232.77
+        },
+        {
+          "date": "2026-04-25",
+          "clicks": 49,
+          "impressions": 33493,
+          "spend_czk": 1698.01
+        },
+        {
+          "date": "2026-04-26",
+          "clicks": 36,
+          "impressions": 47114,
+          "spend_czk": 1473.68
+        },
+        {
+          "date": "2026-04-27",
+          "clicks": 22,
+          "impressions": 52173,
+          "spend_czk": 800.84
+        },
+        {
+          "date": "2026-04-28",
+          "clicks": 30,
+          "impressions": 49862,
+          "spend_czk": 806.97
+        },
+        {
+          "date": "2026-04-29",
+          "clicks": 30,
+          "impressions": 46913,
+          "spend_czk": 794.06
+        },
+        {
+          "date": "2026-04-30",
+          "clicks": 27,
+          "impressions": 48664,
+          "spend_czk": 840.15
+        },
+        {
+          "date": "2026-05-01",
+          "clicks": 35,
+          "impressions": 59006,
+          "spend_czk": 896.21
+        },
+        {
+          "date": "2026-05-02",
+          "clicks": 33,
+          "impressions": 63987,
+          "spend_czk": 880.71
+        },
+        {
+          "date": "2026-05-03",
+          "clicks": 37,
+          "impressions": 70262,
+          "spend_czk": 889.52
+        },
+        {
+          "date": "2026-05-04",
+          "clicks": 43,
+          "impressions": 67421,
+          "spend_czk": 832.95
+        },
+        {
+          "date": "2026-05-05",
+          "clicks": 27,
+          "impressions": 49018,
+          "spend_czk": 626.42
+        },
+        {
+          "date": "2026-05-06",
+          "clicks": 34,
+          "impressions": 54359,
+          "spend_czk": 712.88
+        },
+        {
+          "date": "2026-05-07",
+          "clicks": 29,
+          "impressions": 60924,
+          "spend_czk": 833.24
+        },
+        {
+          "date": "2026-05-08",
+          "clicks": 46,
+          "impressions": 62388,
+          "spend_czk": 883.4
+        },
+        {
+          "date": "2026-05-09",
+          "clicks": 35,
+          "impressions": 66418,
+          "spend_czk": 913.18
+        },
+        {
+          "date": "2026-05-10",
+          "clicks": 58,
+          "impressions": 71622,
+          "spend_czk": 927.25
+        },
+        {
+          "date": "2026-05-11",
+          "clicks": 32,
+          "impressions": 68460,
+          "spend_czk": 861.23
+        }
+      ]
+    },
+    {
+      "id": "120240915974330685",
+      "name": "VL | NATURA | Příspěvek |  Substrát pro jahody | Povědomí",
+      "daily": [
+        {
+          "date": "2026-04-10",
+          "clicks": 24,
+          "impressions": 43214,
+          "spend_czk": 623.99
+        },
+        {
+          "date": "2026-04-11",
+          "clicks": 13,
+          "impressions": 16346,
+          "spend_czk": 245.52
+        },
+        {
+          "date": "2026-04-13",
+          "clicks": 36,
+          "impressions": 47103,
+          "spend_czk": 666.43
+        },
+        {
+          "date": "2026-04-14",
+          "clicks": 35,
+          "impressions": 48790,
+          "spend_czk": 748.4
+        },
+        {
+          "date": "2026-04-15",
+          "clicks": 35,
+          "impressions": 45613,
+          "spend_czk": 733.14
+        },
+        {
+          "date": "2026-04-16",
+          "clicks": 25,
+          "impressions": 47370,
+          "spend_czk": 755.21
+        },
+        {
+          "date": "2026-04-17",
+          "clicks": 18,
+          "impressions": 21340,
+          "spend_czk": 373.55
+        },
+        {
+          "date": "2026-04-20",
+          "clicks": 41,
+          "impressions": 49478,
+          "spend_czk": 826.46
+        },
+        {
+          "date": "2026-04-21",
+          "clicks": 43,
+          "impressions": 51617,
+          "spend_czk": 914.74
+        },
+        {
+          "date": "2026-04-22",
+          "clicks": 40,
+          "impressions": 56338,
+          "spend_czk": 988.62
+        },
+        {
+          "date": "2026-04-23",
+          "clicks": 14,
+          "impressions": 14687,
+          "spend_czk": 268.91
+        },
+        {
+          "date": "2026-04-25",
+          "clicks": 46,
+          "impressions": 34105,
+          "spend_czk": 1999.36
+        },
+        {
+          "date": "2026-04-26",
+          "clicks": 64,
+          "impressions": 49519,
+          "spend_czk": 1490.31
+        },
+        {
+          "date": "2026-04-27",
+          "clicks": 45,
+          "impressions": 55006,
+          "spend_czk": 919.86
+        },
+        {
+          "date": "2026-04-28",
+          "clicks": 44,
+          "impressions": 51850,
+          "spend_czk": 891.51
+        },
+        {
+          "date": "2026-04-29",
+          "clicks": 37,
+          "impressions": 49201,
+          "spend_czk": 880.33
+        },
+        {
+          "date": "2026-04-30",
+          "clicks": 56,
+          "impressions": 50696,
+          "spend_czk": 917.72
+        },
+        {
+          "date": "2026-05-01",
+          "clicks": 49,
+          "impressions": 59569,
+          "spend_czk": 946.21
+        },
+        {
+          "date": "2026-05-02",
+          "clicks": 34,
+          "impressions": 64624,
+          "spend_czk": 900.73
+        }
+      ]
+    },
+    {
+      "id": "120240090774400685",
+      "name": "VL | AGRO | Příspěvek | Pokojovky",
+      "daily": [
+        {
+          "date": "2026-04-15",
+          "clicks": 0,
+          "impressions": 2199,
+          "spend_czk": 17.41
+        },
+        {
+          "date": "2026-04-16",
+          "clicks": 14,
+          "impressions": 20337,
+          "spend_czk": 340.43
+        },
+        {
+          "date": "2026-04-17",
+          "clicks": 2,
+          "impressions": 8430,
+          "spend_czk": 145.18
+        },
+        {
+          "date": "2026-04-20",
+          "clicks": 4,
+          "impressions": 15113,
+          "spend_czk": 261.41
+        },
+        {
+          "date": "2026-04-21",
+          "clicks": 10,
+          "impressions": 15543,
+          "spend_czk": 282.5
+        },
+        {
+          "date": "2026-04-22",
+          "clicks": 11,
+          "impressions": 18894,
+          "spend_czk": 333.42
+        },
+        {
+          "date": "2026-04-23",
+          "clicks": 2,
+          "impressions": 3740,
+          "spend_czk": 69.34
+        },
+        {
+          "date": "2026-04-25",
+          "clicks": 10,
+          "impressions": 15523,
+          "spend_czk": 398.31
+        },
+        {
+          "date": "2026-04-26",
+          "clicks": 16,
+          "impressions": 21706,
+          "spend_czk": 359.95
+        },
+        {
+          "date": "2026-04-27",
+          "clicks": 2,
+          "impressions": 9289,
+          "spend_czk": 153.6
+        },
+        {
+          "date": "2026-04-28",
+          "clicks": 5,
+          "impressions": 11156,
+          "spend_czk": 190.03
+        },
+        {
+          "date": "2026-04-29",
+          "clicks": 10,
+          "impressions": 10586,
+          "spend_czk": 188.8
+        },
+        {
+          "date": "2026-04-30",
+          "clicks": 5,
+          "impressions": 12849,
+          "spend_czk": 230.16
+        },
+        {
+          "date": "2026-05-01",
+          "clicks": 14,
+          "impressions": 23905,
+          "spend_czk": 385.9
+        },
+        {
+          "date": "2026-05-02",
+          "clicks": 3,
+          "impressions": 15617,
+          "spend_czk": 223.88
+        },
+        {
+          "date": "2026-05-03",
+          "clicks": 9,
+          "impressions": 18271,
+          "spend_czk": 246.56
+        },
+        {
+          "date": "2026-05-04",
+          "clicks": 9,
+          "impressions": 18841,
+          "spend_czk": 249.6
+        }
+      ]
+    },
+    {
+      "id": "120243236942900685",
+      "name": "VL | FLORIA | Příspěveky | Povědomí – kopie",
+      "daily": [
+        {
+          "date": "2026-05-13",
+          "clicks": 1,
+          "impressions": 2698,
+          "spend_czk": 42.94
+        },
+        {
+          "date": "2026-05-14",
+          "clicks": 3,
+          "impressions": 29662,
+          "spend_czk": 444.28
+        },
+        {
+          "date": "2026-05-15",
+          "clicks": 6,
+          "impressions": 28312,
+          "spend_czk": 437.38
+        },
+        {
+          "date": "2026-05-16",
+          "clicks": 177,
+          "impressions": 127015,
+          "spend_czk": 1761.79
+        }
+      ]
+    }
+  ]
+}

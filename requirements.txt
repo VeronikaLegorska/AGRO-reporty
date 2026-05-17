@@ -1,0 +1,2 @@
+facebook-business>=20.0.0
+google-ads>=24.0.0

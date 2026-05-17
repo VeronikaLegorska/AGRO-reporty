@@ -1,0 +1,773 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>AGRO CS – Dashboard</title>
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+<style>
+:root {
+  --bg:          #1a1a1a;
+  --card:        #242424;
+  --card2:       #2e2e2e;
+  --border:      #3a3a3a;
+  --text:        #ffffff;
+  --muted:       #888888;
+  --green:       #6AB04C;
+  --green-dark:  #1B4D2E;
+  --metric-bg:   #9DC840;
+  --metric-text: #111111;
+  --c-google:    #1a5c1a;
+  --c-meta:      #5aab3a;
+  --c-sklik:     #cce8aa;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { background: var(--bg); color: var(--text); font-family: 'Segoe UI', Arial, sans-serif; font-size: 14px; }
+
+/* HEADER */
+header {
+  background: var(--bg);
+  border-bottom: 3px solid var(--green);
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 0 1.5rem; height: 54px;
+}
+.logo { font-size: 1.2rem; font-weight: 700; letter-spacing: .05em; color: var(--text); }
+
+/* PERIOD PICKER */
+.period-btn {
+  background: var(--card2); border: 1px solid var(--border); color: var(--text);
+  padding: .45rem 1rem; border-radius: 4px; cursor: pointer; font-size: .85rem;
+  display: flex; align-items: center; gap: .5rem;
+}
+.period-btn:hover { border-color: var(--green); }
+.period-dropdown {
+  display: none; position: absolute; top: 58px; right: 1.5rem; z-index: 100;
+  background: var(--card2); border: 1px solid var(--border); border-radius: 6px;
+  padding: 1rem; min-width: 320px; box-shadow: 0 8px 24px rgba(0,0,0,.5);
+}
+.period-dropdown.open { display: block; }
+.period-presets { display: flex; gap: .5rem; flex-wrap: wrap; margin-bottom: .8rem; }
+.preset-btn {
+  background: var(--card); border: 1px solid var(--border); color: var(--muted);
+  padding: .3rem .7rem; border-radius: 4px; cursor: pointer; font-size: .8rem;
+}
+.preset-btn:hover, .preset-btn.active { border-color: var(--green); color: var(--text); }
+.period-inputs { display: flex; gap: .5rem; align-items: center; }
+.period-inputs input[type=date] {
+  background: var(--card); border: 1px solid var(--border); color: var(--text);
+  padding: .35rem .6rem; border-radius: 4px; font-size: .82rem; flex: 1;
+}
+.period-inputs input[type=date]:focus { outline: none; border-color: var(--green); }
+.apply-btn {
+  background: var(--green-dark); border: none; color: var(--text);
+  padding: .35rem .9rem; border-radius: 4px; cursor: pointer; font-size: .82rem;
+}
+.apply-btn:hover { background: var(--green); color: #111; }
+
+/* TABS */
+.tab-nav {
+  background: var(--card); border-bottom: 1px solid var(--border);
+  display: flex; overflow-x: auto; padding: 0 1rem;
+}
+.tab-nav::-webkit-scrollbar { height: 3px; }
+.tab-nav::-webkit-scrollbar-thumb { background: var(--border); }
+.tab-btn {
+  background: none; border: none; color: var(--muted);
+  padding: .75rem 1.1rem; cursor: pointer; white-space: nowrap;
+  border-bottom: 3px solid transparent; font-size: .85rem; transition: .15s;
+}
+.tab-btn:hover { color: var(--text); }
+.tab-btn.active { color: var(--text); border-bottom-color: var(--green); }
+
+/* TAB CONTENT */
+.tab-panel { display: none; padding: 1.5rem; }
+.tab-panel.active { display: block; }
+
+/* METRIC CARDS */
+.metric-row { display: flex; gap: .8rem; flex-wrap: wrap; margin-bottom: 1.5rem; }
+.metric-card {
+  background: var(--metric-bg); border-radius: 6px;
+  padding: .7rem 1.1rem; min-width: 140px;
+}
+.metric-card .lbl { font-size: .7rem; color: rgba(0,0,0,.55); margin-bottom: .15rem; }
+.metric-card .val { font-size: 1.35rem; font-weight: 700; color: var(--metric-text); }
+
+/* PIE CHARTS */
+.pie-row { display: flex; gap: 1rem; flex-wrap: wrap; }
+.pie-box {
+  background: var(--card); border: 1px solid var(--border); border-radius: 8px;
+  padding: 1.2rem; flex: 1; min-width: 280px;
+}
+.pie-box h3 { font-size: .85rem; color: var(--text); margin-bottom: 1rem; }
+.pie-box canvas { max-height: 260px; }
+
+/* SUMMARY LAYOUT – tabulka + grafy stejná šířka */
+.summary-wrap { max-width: 860px; }
+.summary-wrap .data-table-wrap { margin-bottom: 1rem; }
+
+/* BRAND TAB LAYOUT – karty + grafy stejná šířka */
+.brand-wrap { max-width: 1100px; }
+.brand-wrap .metric-row { margin-bottom: 1rem; }
+.brand-wrap .metric-card { flex: 1; min-width: 0; }
+
+/* SORT BAR pro kampaně */
+.sort-bar { display: flex; align-items: center; gap: .5rem; margin-bottom: 1rem; flex-wrap: wrap; }
+.sort-bar span { font-size: .78rem; color: var(--muted); }
+.sort-btn {
+  background: var(--card); border: 1px solid var(--border); color: var(--muted);
+  padding: .3rem .8rem; border-radius: 4px; cursor: pointer; font-size: .8rem;
+}
+.sort-btn:hover { border-color: var(--green); color: var(--text); }
+.sort-btn.active { background: var(--green-dark); border-color: var(--green); color: var(--text); }
+
+/* SUMMARY TABLE */
+.data-table-wrap {
+  background: var(--card); border: 1px solid var(--border); border-radius: 8px;
+  margin-bottom: 1.5rem; overflow: hidden;
+}
+table { width: 100%; border-collapse: collapse; }
+thead th {
+  background: var(--card2); color: var(--muted); font-weight: 400;
+  text-transform: uppercase; font-size: .72rem; letter-spacing: .06em;
+  padding: .6rem 1rem; text-align: right; border-bottom: 1px solid var(--border);
+}
+thead th:first-child { text-align: left; }
+tbody tr { border-bottom: 1px solid var(--border); }
+tbody tr:last-child { border-bottom: none; }
+tbody tr:hover { background: var(--card2); }
+tbody td { padding: .55rem 1rem; text-align: right; color: var(--text); }
+tbody td:first-child { text-align: left; }
+.row-num { color: var(--muted); margin-right: .5rem; }
+
+/* BRAND SECTION (přehled po kampaních) */
+.brand-section { margin-bottom: 1.8rem; }
+.brand-label {
+  font-size: .78rem; font-weight: 600; color: var(--muted);
+  text-transform: uppercase; letter-spacing: .08em; margin-bottom: .6rem;
+}
+
+/* CAMPAIGN TABLES */
+.platform-table-section { margin-bottom: 1.5rem; }
+.platform-label {
+  font-size: .8rem; color: var(--muted); text-transform: uppercase;
+  letter-spacing: .07em; margin-bottom: .5rem;
+}
+
+/* FINANCE TABLE */
+.finance-note { font-size: .8rem; color: var(--muted); margin-bottom: 1rem; }
+.pct-bar-wrap { background: var(--card2); border-radius: 3px; height: 6px; margin-top: 4px; }
+.pct-bar { background: var(--green); border-radius: 3px; height: 6px; }
+
+/* FOLLOWERS */
+.chart-section {
+  background: var(--card); border: 1px solid var(--border); border-radius: 8px;
+  padding: 1.2rem 1.5rem; margin-bottom: 1.5rem;
+}
+.chart-section h3 { font-size: .9rem; color: var(--text); margin-bottom: 1rem; }
+.chart-section canvas { max-height: 280px; }
+.followers-note {
+  background: var(--card2); border: 1px solid var(--border); border-radius: 6px;
+  padding: 1rem 1.2rem; color: var(--muted); font-size: .85rem; margin-bottom: 1.5rem;
+}
+
+/* NO DATA */
+.no-data { color: var(--muted); font-style: italic; padding: 1rem 0; font-size: .85rem; }
+
+/* PERIOD LABEL */
+#period-display { font-size: .82rem; color: var(--muted); margin-left: .6rem; }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="logo">AGRO CS</div>
+  <div style="display:flex;align-items:center;gap:.8rem;position:relative">
+    <span id="period-display"></span>
+    <button class="period-btn" id="period-btn">Vyberte období &nbsp;–</button>
+    <div class="period-dropdown" id="period-dropdown">
+      <div class="period-presets">
+        <button class="preset-btn" data-preset="month">Aktuální měsíc</button>
+        <button class="preset-btn" data-preset="lastmonth">Minulý měsíc</button>
+        <button class="preset-btn" data-preset="year">Tento rok</button>
+      </div>
+      <div class="period-inputs">
+        <input type="date" id="date-from">
+        <span style="color:var(--muted)">–</span>
+        <input type="date" id="date-to">
+        <button class="apply-btn" id="apply-period">OK</button>
+      </div>
+    </div>
+  </div>
+</header>
+
+<nav class="tab-nav">
+  <button class="tab-btn active" data-tab="summary">Souhrnný přehled</button>
+  <button class="tab-btn" data-tab="followers">Počet sledujících</button>
+  <button class="tab-btn" data-tab="campaigns">Jednotlivé kampaně</button>
+  <button class="tab-btn" data-tab="floria">Přehled FLORIA</button>
+  <button class="tab-btn" data-tab="natura">Přehled NATURA</button>
+  <button class="tab-btn" data-tab="agro">Přehled AGRO</button>
+  <button class="tab-btn" data-tab="kristalon">Přehled KRISTALON</button>
+  <button class="tab-btn" data-tab="overview">Přehled po kampaních</button>
+  <button class="tab-btn" data-tab="finance">Finance</button>
+</nav>
+
+<!-- ═══ SOUHRNNÝ PŘEHLED ═══ -->
+<div class="tab-panel active" id="tab-summary">
+  <div class="summary-wrap">
+    <div class="data-table-wrap">
+      <table id="summary-table">
+        <thead><tr><th>Source</th><th>Cena</th><th>Zobrazení</th><th>Prokliky</th></tr></thead>
+        <tbody id="summary-tbody"></tbody>
+      </table>
+    </div>
+    <div class="pie-row">
+      <div class="pie-box"><h3>Zobrazení</h3><canvas id="pie-sum-impressions"></canvas></div>
+      <div class="pie-box"><h3>Investice</h3><canvas id="pie-sum-spend"></canvas></div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══ SLEDUJÍCÍ ═══ -->
+<div class="tab-panel" id="tab-followers">
+  <div class="followers-note" id="followers-note" style="display:none">
+    ℹ️ Zatím nejsou k dispozici historická data sledujících.
+  </div>
+  <div class="chart-section">
+    <h3>Facebook – vývoj sledujících po dnech</h3>
+    <canvas id="chart-fb-followers"></canvas>
+  </div>
+  <div class="chart-section">
+    <h3>Instagram – vývoj sledujících po dnech</h3>
+    <canvas id="chart-ig-followers"></canvas>
+  </div>
+</div>
+
+<!-- ═══ JEDNOTLIVÉ KAMPANĚ ═══ -->
+<div class="tab-panel" id="tab-campaigns">
+  <div class="sort-bar">
+    <span>Řadit podle:</span>
+    <button class="sort-btn active" data-sort="spend_czk">Cena</button>
+    <button class="sort-btn" data-sort="clicks">Kliky</button>
+    <button class="sort-btn" data-sort="impressions">Zobrazení</button>
+    <button class="sort-btn" data-sort="ctr">CTR</button>
+    <button class="sort-btn" data-sort="cpc">CPC</button>
+  </div>
+  <div class="platform-table-section">
+    <div class="platform-label">Google Ads</div>
+    <div class="data-table-wrap"><table id="table-gads-campaigns">
+      <thead><tr><th>Kampaň</th><th>Cena</th><th>Kliky</th><th>Zobrazení</th><th>CTR</th><th>CPC</th></tr></thead>
+      <tbody id="tbody-gads-campaigns"></tbody>
+    </table></div>
+  </div>
+  <div class="platform-table-section">
+    <div class="platform-label">Sklik</div>
+    <div class="data-table-wrap"><table id="table-sklik-campaigns">
+      <thead><tr><th>Kampaň</th><th>Cena</th><th>Kliky</th><th>Zobrazení</th><th>CTR</th><th>CPC</th></tr></thead>
+      <tbody id="tbody-sklik-campaigns"></tbody>
+    </table></div>
+  </div>
+  <div class="platform-table-section">
+    <div class="platform-label">Meta (Facebook)</div>
+    <div class="data-table-wrap"><table id="table-meta-campaigns">
+      <thead><tr><th>Kampaň</th><th>Cena</th><th>Kliky</th><th>Zobrazení</th><th>CTR</th><th>CPC</th></tr></thead>
+      <tbody id="tbody-meta-campaigns"></tbody>
+    </table></div>
+  </div>
+</div>
+
+<!-- ═══ BRAND TABS ═══ -->
+<div class="tab-panel" id="tab-floria">
+  <div class="brand-wrap">
+    <div class="metric-row" id="metrics-floria"></div>
+    <div class="pie-row">
+      <div class="pie-box"><h3>Cena</h3><canvas id="pie-floria-spend"></canvas></div>
+      <div class="pie-box"><h3>Zobrazení</h3><canvas id="pie-floria-impressions"></canvas></div>
+      <div class="pie-box"><h3>Prokliky</h3><canvas id="pie-floria-clicks"></canvas></div>
+    </div>
+  </div>
+</div>
+
+<div class="tab-panel" id="tab-natura">
+  <div class="brand-wrap">
+    <div class="metric-row" id="metrics-natura"></div>
+    <div class="pie-row">
+      <div class="pie-box"><h3>Cena</h3><canvas id="pie-natura-spend"></canvas></div>
+      <div class="pie-box"><h3>Zobrazení</h3><canvas id="pie-natura-impressions"></canvas></div>
+      <div class="pie-box"><h3>Prokliky</h3><canvas id="pie-natura-clicks"></canvas></div>
+    </div>
+  </div>
+</div>
+
+<div class="tab-panel" id="tab-agro">
+  <div class="brand-wrap">
+    <div class="metric-row" id="metrics-agro"></div>
+    <div class="pie-row">
+      <div class="pie-box"><h3>Cena</h3><canvas id="pie-agro-spend"></canvas></div>
+      <div class="pie-box"><h3>Zobrazení</h3><canvas id="pie-agro-impressions"></canvas></div>
+      <div class="pie-box"><h3>Prokliky</h3><canvas id="pie-agro-clicks"></canvas></div>
+    </div>
+  </div>
+</div>
+
+<div class="tab-panel" id="tab-kristalon">
+  <div class="brand-wrap">
+    <div class="metric-row" id="metrics-kristalon"></div>
+    <div class="pie-row">
+      <div class="pie-box"><h3>Cena</h3><canvas id="pie-kristalon-spend"></canvas></div>
+      <div class="pie-box"><h3>Zobrazení</h3><canvas id="pie-kristalon-impressions"></canvas></div>
+      <div class="pie-box"><h3>Prokliky</h3><canvas id="pie-kristalon-clicks"></canvas></div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══ PŘEHLED PO KAMPANÍCH ═══ -->
+<div class="tab-panel" id="tab-overview">
+  <div id="overview-content"></div>
+</div>
+
+<!-- ═══ FINANCE ═══ -->
+<div class="tab-panel" id="tab-finance">
+  <p class="finance-note">Roční rozpočty a rezervy jsou zadány ručně v <code>data/budgets.json</code>. Cena je YTD (aktuální rok).</p>
+  <div class="data-table-wrap">
+    <table id="finance-table">
+      <thead><tr>
+        <th></th><th style="text-align:left">Značka</th>
+        <th>Roční rozpočet</th><th>Rezerva</th>
+        <th>Cena (YTD)</th><th>Vyčerpáno</th><th>Zbývá</th>
+      </tr></thead>
+      <tbody id="finance-tbody"></tbody>
+    </table>
+  </div>
+</div>
+
+<script>
+// ══════════════════════════════════════════════
+// STAV
+// ══════════════════════════════════════════════
+const state = {
+  dateFrom: '',
+  dateTo:   '',
+  activeTab: 'summary',
+  data: { meta: null, gads: null, sklik: null, budgets: null, followers: null },
+};
+
+const BRANDS  = ['FLORIA', 'NATURA', 'AGRO', 'KRISTALON'];
+const PIE_COLORS = ['#1a5c1a', '#5aab3a', '#cce8aa'];
+const PIE_LABELS = ['Google', 'Facebook', 'Sklik'];
+const charts  = {};
+
+// ══════════════════════════════════════════════
+// FORMÁTOVÁNÍ
+// ══════════════════════════════════════════════
+const fmt = {
+  czk: v => Math.round(v).toLocaleString('cs-CZ') + ' Kč',
+  num: v => Math.round(v).toLocaleString('cs-CZ'),
+  pct: v => (v || 0).toFixed(2).replace('.', ',') + ' %',
+  cpc: v => (v || 0).toFixed(1).replace('.', ',') + ' Kč',
+};
+
+function round2(v) { return Math.round(v * 100) / 100; }
+
+// ══════════════════════════════════════════════
+// DATUM
+// ══════════════════════════════════════════════
+function today()     { return new Date().toISOString().slice(0, 10); }
+function yesterday() { const d = new Date(); d.setDate(d.getDate()-1); return d.toISOString().slice(0,10); }
+function monthStart(){ const d = new Date(); d.setDate(1); return d.toISOString().slice(0,10); }
+function lastMonthStart() {
+  const d = new Date(); d.setDate(1); d.setMonth(d.getMonth()-1); return d.toISOString().slice(0,10);
+}
+function lastMonthEnd() {
+  const d = new Date(); d.setDate(0); return d.toISOString().slice(0,10);
+}
+function yearStart() { return new Date().getFullYear() + '-01-01'; }
+
+function fmtPeriod(from, to) {
+  const f = d => { const [y,m,dd] = d.split('-'); return `${+dd}.${+m}.${y}`; };
+  return `${f(from)} – ${f(to)}`;
+}
+
+// ══════════════════════════════════════════════
+// HELPERS: brand & stats
+// ══════════════════════════════════════════════
+function brandOf(name) {
+  const n = name.toUpperCase();
+  if (n.includes('FLORIA'))    return 'FLORIA';
+  if (n.includes('NATURA'))    return 'NATURA';
+  if (n.includes('KRISTALON')) return 'KRISTALON';
+  if (n.includes('AGRO'))      return 'AGRO';
+  return null;
+}
+
+function sumDailyRange(daily, from, to) {
+  let clicks = 0, impressions = 0, spend = 0;
+  for (const d of daily) {
+    if (d.date >= from && d.date <= to) {
+      clicks      += d.clicks;
+      impressions += d.impressions;
+      spend       += d.spend_czk;
+    }
+  }
+  return { clicks, impressions, spend_czk: round2(spend) };
+}
+
+// Agregace pro celou platformu (volitelně filtr značky)
+function platformStats(platformData, from, to, brand) {
+  if (!platformData?.campaigns) return { clicks:0, impressions:0, spend_czk:0 };
+  const campaigns = brand
+    ? platformData.campaigns.filter(c => brandOf(c.name) === brand)
+    : platformData.campaigns;
+  return campaigns.reduce((acc, c) => {
+    const s = sumDailyRange(c.daily, from, to);
+    acc.clicks      += s.clicks;
+    acc.impressions += s.impressions;
+    acc.spend_czk   += s.spend_czk;
+    return acc;
+  }, { clicks:0, impressions:0, spend_czk:0 });
+}
+
+// Per-kampaň stats pro tabulku
+function campaignStats(platformData, from, to, brand) {
+  if (!platformData?.campaigns) return [];
+  const campaigns = brand
+    ? platformData.campaigns.filter(c => brandOf(c.name) === brand)
+    : platformData.campaigns;
+  return campaigns.map(c => {
+    const s = sumDailyRange(c.daily, from, to);
+    const ctr = s.impressions > 0 ? s.clicks / s.impressions * 100 : 0;
+    const cpc = s.clicks > 0 ? s.spend_czk / s.clicks : 0;
+    return { name: c.name, ...s, ctr: round2(ctr), cpc: round2(cpc) };
+  }).filter(c => c.clicks > 0 || c.spend_czk > 0)
+    .sort((a, b) => b[campaignSortKey] - a[campaignSortKey]);
+}
+
+// Celkový YTD spend pro brand (pro Finance – vždy od začátku roku)
+function ytdBrandSpend(brand) {
+  const from = yearStart(), to = yesterday();
+  const g = platformStats(state.data.gads,  from, to, brand);
+  const m = platformStats(state.data.meta,  from, to, brand);
+  const s = platformStats(state.data.sklik, from, to, brand);
+  return round2(g.spend_czk + m.spend_czk + s.spend_czk);
+}
+
+// ══════════════════════════════════════════════
+// CHART HELPERS
+// ══════════════════════════════════════════════
+function makePie(id, labels, data, colors) {
+  if (charts[id]) charts[id].destroy();
+  const ctx = document.getElementById(id);
+  if (!ctx) return;
+  charts[id] = new Chart(ctx, {
+    type: 'pie',
+    data: { labels, datasets: [{ data, backgroundColor: colors, borderWidth: 1, borderColor: '#1a1a1a' }] },
+    options: {
+      plugins: {
+        legend: { position: 'right', labels: { color: '#ccc', font: { size: 11 }, boxWidth: 14, padding: 10 } },
+        tooltip: { callbacks: { label: ctx => ` ${ctx.label}: ${ctx.parsed.toLocaleString('cs-CZ')}` } }
+      },
+      responsive: true, maintainAspectRatio: true,
+    }
+  });
+}
+
+function makeLineChart(id, labels, datasets) {
+  if (charts[id]) charts[id].destroy();
+  const ctx = document.getElementById(id);
+  if (!ctx) return;
+  charts[id] = new Chart(ctx, {
+    type: 'line',
+    data: { labels, datasets },
+    options: {
+      responsive: true, maintainAspectRatio: false,
+      plugins: { legend: { labels: { color: '#ccc', font: { size: 11 } } } },
+      scales: {
+        x: { ticks: { color: '#888', font: { size: 10 }, maxTicksLimit: 12 }, grid: { color: '#2e2e2e' } },
+        y: { ticks: { color: '#888', font: { size: 10 } }, grid: { color: '#2e2e2e' } }
+      }
+    }
+  });
+}
+
+// ══════════════════════════════════════════════
+// RENDER FUNCTIONS
+// ══════════════════════════════════════════════
+function renderSummary() {
+  const { dateFrom: from, dateTo: to } = state;
+  const g = platformStats(state.data.gads,  from, to, null);
+  const m = platformStats(state.data.meta,  from, to, null);
+  const s = platformStats(state.data.sklik, from, to, null);
+
+  const rows = [
+    { name: 'google',   ...g },
+    { name: 'facebook', ...m },
+    { name: 'seznam',   ...s },
+  ];
+
+  const tbody = document.getElementById('summary-tbody');
+  tbody.innerHTML = rows.map((r, i) => `
+    <tr>
+      <td><span class="row-num">${i+1}.</span>${r.name}</td>
+      <td>${fmt.czk(r.spend_czk)}</td>
+      <td>${fmt.num(r.impressions)}</td>
+      <td>${fmt.num(r.clicks)}</td>
+    </tr>`).join('');
+
+  const spends      = [g.spend_czk,   m.spend_czk,   s.spend_czk];
+  const impressions = [g.impressions,  m.impressions,  s.impressions];
+  const labels      = ['Google', 'Facebook', 'Seznam'];
+
+  makePie('pie-sum-impressions', labels, impressions, PIE_COLORS);
+  makePie('pie-sum-spend',       labels, spends,      PIE_COLORS);
+}
+
+function renderFollowers() {
+  const fol = state.data.followers;
+  const note = document.getElementById('followers-note');
+  if (!fol || (!fol.facebook?.length && !fol.instagram?.length)) {
+    if (note) note.style.display = '';
+    makeLineChart('chart-fb-followers', [], [{ label: 'Sledující', data: [], borderColor: '#5aab3a', backgroundColor: 'rgba(90,171,58,.15)', fill: true }]);
+    makeLineChart('chart-ig-followers', [], [{ label: 'Sledující', data: [], borderColor: '#9DC840', backgroundColor: 'rgba(157,200,64,.15)', fill: true }]);
+    return;
+  }
+  if (note) note.style.display = 'none';
+  const fbLabels = (fol.facebook || []).map(d => d.date);
+  const fbData   = (fol.facebook || []).map(d => d.count);
+  makeLineChart('chart-fb-followers', fbLabels, [{
+    label: 'FB sledující', data: fbData,
+    borderColor: '#5aab3a', backgroundColor: 'rgba(90,171,58,.15)', fill: true, tension: .3, pointRadius: 2,
+  }]);
+  const igLabels = (fol.instagram || []).map(d => d.date);
+  const igData   = (fol.instagram || []).map(d => d.count);
+  makeLineChart('chart-ig-followers', igLabels, [{
+    label: 'IG sledující', data: igData,
+    borderColor: '#9DC840', backgroundColor: 'rgba(157,200,64,.15)', fill: true, tension: .3, pointRadius: 2,
+  }]);
+}
+
+function renderCampaignTable(tbodyId, platformData) {
+  const { dateFrom: from, dateTo: to } = state;
+  const rows = campaignStats(platformData, from, to, null);
+  const tbody = document.getElementById(tbodyId);
+  if (!rows.length) { tbody.innerHTML = `<tr><td colspan="6" class="no-data" style="padding:.8rem 1rem">Žádná data pro toto období</td></tr>`; return; }
+  tbody.innerHTML = rows.map((r, i) => `
+    <tr>
+      <td><span class="row-num">${i+1}.</span>${r.name}</td>
+      <td>${fmt.czk(r.spend_czk)}</td>
+      <td>${fmt.num(r.clicks)}</td>
+      <td>${fmt.num(r.impressions)}</td>
+      <td>${fmt.pct(r.ctr)}</td>
+      <td>${fmt.cpc(r.cpc)}</td>
+    </tr>`).join('');
+}
+
+function renderCampaigns() {
+  renderCampaignTable('tbody-gads-campaigns',  state.data.gads);
+  renderCampaignTable('tbody-sklik-campaigns', state.data.sklik);
+  renderCampaignTable('tbody-meta-campaigns',  state.data.meta);
+}
+
+function metricCards(brand) {
+  const { dateFrom: from, dateTo: to } = state;
+  const g = platformStats(state.data.gads,  from, to, brand);
+  const m = platformStats(state.data.meta,  from, to, brand);
+  const s = platformStats(state.data.sklik, from, to, brand);
+  const tot = {
+    clicks:      g.clicks      + m.clicks      + s.clicks,
+    impressions: g.impressions + m.impressions + s.impressions,
+    spend_czk:   round2(g.spend_czk + m.spend_czk + s.spend_czk),
+  };
+  tot.ctr = tot.impressions > 0 ? tot.clicks / tot.impressions * 100 : 0;
+  tot.cpc = tot.clicks > 0 ? tot.spend_czk / tot.clicks : 0;
+  return { g, m, s, tot };
+}
+
+function renderBrandTab(brand) {
+  const low = brand.toLowerCase();
+  const { g, m, s, tot } = metricCards(brand);
+
+  document.getElementById(`metrics-${low}`).innerHTML = `
+    <div class="metric-card"><div class="lbl">Prokliky</div><div class="val">${fmt.num(tot.clicks)}</div></div>
+    <div class="metric-card"><div class="lbl">Zobrazení</div><div class="val">${fmt.num(tot.impressions)}</div></div>
+    <div class="metric-card"><div class="lbl">Cena</div><div class="val">${fmt.czk(tot.spend_czk)}</div></div>
+    <div class="metric-card"><div class="lbl">CTR</div><div class="val">${fmt.pct(tot.ctr)}</div></div>
+    <div class="metric-card"><div class="lbl">CPC</div><div class="val">${fmt.cpc(tot.cpc)}</div></div>`;
+
+  makePie(`pie-${low}-spend`,       PIE_LABELS, [g.spend_czk,   m.spend_czk,   s.spend_czk],   PIE_COLORS);
+  makePie(`pie-${low}-impressions`, PIE_LABELS, [g.impressions,  m.impressions,  s.impressions],  PIE_COLORS);
+  makePie(`pie-${low}-clicks`,      PIE_LABELS, [g.clicks,       m.clicks,       s.clicks],       PIE_COLORS);
+}
+
+function renderOverview() {
+  const { dateFrom: from, dateTo: to } = state;
+  const html = BRANDS.map(brand => {
+    const { tot } = metricCards(brand);
+    return `<div class="brand-section">
+      <div class="brand-label">${brand}</div>
+      <div class="metric-row">
+        <div class="metric-card"><div class="lbl">Prokliky</div><div class="val">${fmt.num(tot.clicks)}</div></div>
+        <div class="metric-card"><div class="lbl">Zobrazení</div><div class="val">${fmt.num(tot.impressions)}</div></div>
+        <div class="metric-card"><div class="lbl">Cena</div><div class="val">${fmt.czk(tot.spend_czk)}</div></div>
+        <div class="metric-card"><div class="lbl">CTR</div><div class="val">${fmt.pct(tot.ctr)}</div></div>
+        <div class="metric-card"><div class="lbl">CPC</div><div class="val">${fmt.cpc(tot.cpc)}</div></div>
+      </div>
+    </div>`;
+  }).join('');
+  document.getElementById('overview-content').innerHTML = html;
+}
+
+function renderFinance() {
+  const budgets = state.data.budgets?.brands || [];
+  let totalBudget = 0, totalSpend = 0;
+  const rows = budgets.map((b, i) => {
+    const spend = ytdBrandSpend(b.name);
+    const pct   = b.budget_annual > 0 ? spend / b.budget_annual * 100 : 0;
+    const left  = b.budget_annual - spend;
+    totalBudget += b.budget_annual;
+    totalSpend  += spend;
+    const pctBar = Math.min(pct, 100).toFixed(1);
+    return `<tr>
+      <td style="color:var(--muted)">${i+1}.</td>
+      <td>${b.name}</td>
+      <td>${fmt.czk(b.budget_annual)}</td>
+      <td>${fmt.czk(b.reserve)}</td>
+      <td>${spend > 0 ? fmt.czk(spend) : '<span style="color:var(--muted)">null</span>'}</td>
+      <td>
+        ${spend > 0 ? `<span>${pct.toFixed(2).replace('.',',')} %</span>
+        <div class="pct-bar-wrap"><div class="pct-bar" style="width:${pctBar}%"></div></div>` : '<span style="color:var(--muted)">null</span>'}
+      </td>
+      <td>${spend > 0 ? fmt.czk(left) : '<span style="color:var(--muted)">null</span>'}</td>
+    </tr>`;
+  });
+
+  // Celkem řádek
+  const totalLeft = totalBudget - totalSpend;
+  rows.push(`<tr style="font-weight:600;border-top:2px solid var(--border)">
+    <td style="color:var(--muted)">${budgets.length+1}.</td>
+    <td>CELKEM</td>
+    <td>${fmt.czk(totalBudget)}</td>
+    <td>–</td>
+    <td>${fmt.czk(totalSpend)}</td>
+    <td>${(totalSpend/totalBudget*100).toFixed(2).replace('.',',')} %</td>
+    <td>${fmt.czk(totalLeft)}</td>
+  </tr>`);
+
+  document.getElementById('finance-tbody').innerHTML = rows.join('');
+}
+
+// ══════════════════════════════════════════════
+// SORT PRO KAMPANĚ
+// ══════════════════════════════════════════════
+let campaignSortKey = 'spend_czk';
+
+document.querySelectorAll('.sort-btn').forEach(btn => {
+  btn.addEventListener('click', () => {
+    campaignSortKey = btn.dataset.sort;
+    document.querySelectorAll('.sort-btn').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    renderCampaigns();
+  });
+});
+
+// ══════════════════════════════════════════════
+// TAB SWITCHING & RE-RENDER
+// ══════════════════════════════════════════════
+function renderActive() {
+  const tab = state.activeTab;
+  if (tab === 'summary')   renderSummary();
+  if (tab === 'followers') renderFollowers();
+  if (tab === 'campaigns') renderCampaigns();
+  if (tab === 'floria')    renderBrandTab('FLORIA');
+  if (tab === 'natura')    renderBrandTab('NATURA');
+  if (tab === 'agro')      renderBrandTab('AGRO');
+  if (tab === 'kristalon') renderBrandTab('KRISTALON');
+  if (tab === 'overview')  renderOverview();
+  if (tab === 'finance')   renderFinance();
+}
+
+document.querySelectorAll('.tab-btn').forEach(btn => {
+  btn.addEventListener('click', () => {
+    document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+    document.querySelectorAll('.tab-panel').forEach(p => p.classList.remove('active'));
+    btn.classList.add('active');
+    document.getElementById('tab-' + btn.dataset.tab).classList.add('active');
+    state.activeTab = btn.dataset.tab;
+    renderActive();
+  });
+});
+
+// ══════════════════════════════════════════════
+// PERIOD PICKER
+// ══════════════════════════════════════════════
+const periodBtn  = document.getElementById('period-btn');
+const periodDrop = document.getElementById('period-dropdown');
+const inputFrom  = document.getElementById('date-from');
+const inputTo    = document.getElementById('date-to');
+
+periodBtn.addEventListener('click', e => {
+  e.stopPropagation();
+  periodDrop.classList.toggle('open');
+});
+document.addEventListener('click', () => periodDrop.classList.remove('open'));
+periodDrop.addEventListener('click', e => e.stopPropagation());
+
+function applyPeriod(from, to) {
+  state.dateFrom = from;
+  state.dateTo   = to;
+  inputFrom.value = from;
+  inputTo.value   = to;
+  document.getElementById('period-display').textContent = fmtPeriod(from, to);
+  document.querySelectorAll('.preset-btn').forEach(b => b.classList.remove('active'));
+  renderActive();
+  periodDrop.classList.remove('open');
+}
+
+document.querySelectorAll('.preset-btn').forEach(btn => {
+  btn.addEventListener('click', () => {
+    const p = btn.dataset.preset;
+    if (p === 'month')     applyPeriod(monthStart(),     yesterday());
+    if (p === 'lastmonth') applyPeriod(lastMonthStart(), lastMonthEnd());
+    if (p === 'year')      applyPeriod(yearStart(),       yesterday());
+    document.querySelectorAll('.preset-btn').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+  });
+});
+
+document.getElementById('apply-period').addEventListener('click', () => {
+  if (inputFrom.value && inputTo.value) applyPeriod(inputFrom.value, inputTo.value);
+});
+
+// ══════════════════════════════════════════════
+// DATA LOADING & INIT
+// ══════════════════════════════════════════════
+async function loadJSON(path) {
+  try { return await (await fetch(path)).json(); }
+  catch { return null; }
+}
+
+async function init() {
+  const [meta, gads, sklik, budgets, followers] = await Promise.all([
+    loadJSON('data/meta.json'),
+    loadJSON('data/gads.json'),
+    loadJSON('data/sklik.json'),
+    loadJSON('data/budgets.json'),
+    loadJSON('data/followers.json'),
+  ]);
+  state.data = { meta, gads, sklik, budgets, followers };
+
+  // Výchozí období = aktuální měsíc
+  const from = monthStart(), to = yesterday();
+  state.dateFrom = from;
+  state.dateTo   = to;
+  inputFrom.value = from;
+  inputTo.value   = to;
+  document.getElementById('period-display').textContent = fmtPeriod(from, to);
+  document.querySelector('[data-preset="month"]').classList.add('active');
+
+  renderActive();
+}
+
+init();
+</script>
+</body>
+</html>

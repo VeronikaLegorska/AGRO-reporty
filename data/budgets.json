@@ -1,0 +1,9 @@
+{
+  "brands": [
+    { "name": "NATURA",          "budget_annual": 1200000, "reserve": 120000 },
+    { "name": "AGRO",            "budget_annual": 600000,  "reserve": 60000  },
+    { "name": "FLORIA",          "budget_annual": 750000,  "reserve": 75000  },
+    { "name": "KRISTALON",       "budget_annual": 200000,  "reserve": 20000  },
+    { "name": "Vitality Komplex","budget_annual": 250000,  "reserve": 25000  }
+  ]
+}

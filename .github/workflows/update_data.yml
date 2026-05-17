@@ -1,0 +1,60 @@
+name: Aktualizace dat
+
+on:
+  schedule:
+    - cron: '0 6 * * *'   # každý den v 8:00 SEČ (6:00 UTC)
+  workflow_dispatch:        # možnost spustit ručně
+
+jobs:
+  fetch:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Instalace závislostí
+        run: pip install -r requirements.txt
+
+      - name: Fetch Meta
+        env:
+          META_ACCESS_TOKEN: ${{ secrets.META_ACCESS_TOKEN }}
+          META_APP_ID: ${{ secrets.META_APP_ID }}
+          META_APP_SECRET: ${{ secrets.META_APP_SECRET }}
+          META_AD_ACCOUNT_ID: ${{ secrets.META_AD_ACCOUNT_ID }}
+        run: python fetch/fetch_meta.py
+
+      - name: Fetch Google Ads
+        env:
+          GADS_DEVELOPER_TOKEN: ${{ secrets.GADS_DEVELOPER_TOKEN }}
+          GADS_CLIENT_ID: ${{ secrets.GADS_CLIENT_ID }}
+          GADS_CLIENT_SECRET: ${{ secrets.GADS_CLIENT_SECRET }}
+          GADS_REFRESH_TOKEN: ${{ secrets.GADS_REFRESH_TOKEN }}
+          GADS_CUSTOMER_ID: ${{ secrets.GADS_CUSTOMER_ID }}
+          GADS_LOGIN_CUSTOMER_ID: ${{ secrets.GADS_LOGIN_CUSTOMER_ID }}
+        run: python fetch/fetch_gads.py
+
+      - name: Fetch Sklik
+        env:
+          SKLIK_TOKEN_AGRO: ${{ secrets.SKLIK_TOKEN_AGRO }}   # starý AGRO klient token
+        run: python fetch/fetch_sklik.py
+
+      - name: Fetch Followers
+        env:
+          META_PAGE_ACCESS_TOKEN: ${{ secrets.META_PAGE_ACCESS_TOKEN }}
+          META_PAGE_ID: ${{ secrets.META_PAGE_ID }}
+          META_IG_USER_ID: ${{ secrets.META_IG_USER_ID }}
+        run: python fetch/fetch_followers.py || echo "Followers fetch selhal – pokracujeme"
+
+      - name: Commit dat
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add data/
+          git diff --cached --quiet || git commit -m "data: aktualizace $(date +'%Y-%m-%d')"
+          git push
