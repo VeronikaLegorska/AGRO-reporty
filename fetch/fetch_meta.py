@@ -25,9 +25,27 @@ def fetch():
         "time_range": {"since": date_from, "until": date_to},
         "time_increment": 1,
         "level": "campaign",
-        "fields": ["campaign_id", "campaign_name", "impressions", "clicks", "spend"],
+        "fields": ["campaign_id", "campaign_name", "impressions", "clicks", "spend", "actions"],
     }
     insights = account.get_insights(params=params)
+
+    # Priorita akci pro "výsledek" — první nalezená v seznamu se použije
+    RESULT_ACTIONS = [
+        "post_engagement", "page_engagement", "link_click",
+        "landing_page_view", "offsite_conversion.fb_pixel_lead",
+        "offsite_conversion.fb_pixel_purchase",
+    ]
+
+    def primary_result(actions_list):
+        """Vrátí počet výsledků pro primární akci z API."""
+        if not actions_list:
+            return 0
+        action_map = {a["action_type"]: int(a["value"]) for a in actions_list}
+        for key in RESULT_ACTIONS:
+            if key in action_map:
+                return action_map[key]
+        # Pokud nic z priority listu, vezmi první akci
+        return list(action_map.values())[0]
 
     campaigns = {}
     for row in insights:
@@ -37,11 +55,15 @@ def fetch():
         cid = row.get("campaign_id")
         if cid not in campaigns:
             campaigns[cid] = {"id": cid, "name": name, "daily": []}
+        spend = round(float(row.get("spend", 0)), 2)
+        results = primary_result(row.get("actions", []))
         campaigns[cid]["daily"].append({
-            "date":        row.get("date_start"),
-            "clicks":      int(row.get("clicks", 0)),
-            "impressions": int(row.get("impressions", 0)),
-            "spend_czk":   round(float(row.get("spend", 0)), 2),
+            "date":           row.get("date_start"),
+            "clicks":         int(row.get("clicks", 0)),
+            "impressions":    int(row.get("impressions", 0)),
+            "spend_czk":      spend,
+            "results":        results,
+            "cost_per_result": round(spend / results, 2) if results > 0 else 0,
         })
 
     result = list(campaigns.values())
