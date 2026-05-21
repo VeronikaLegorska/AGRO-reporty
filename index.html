@@ -494,8 +494,9 @@ function campaignStats(platformData, from, to, brand) {
     const s = sumDailyRange(c.daily, from, to);
     const ctr = s.impressions > 0 ? s.clicks / s.impressions * 100 : 0;
     const cpc = s.clicks > 0 ? s.spend_czk / s.clicks : 0;
-    const cpr = s.results > 0 ? s.spend_czk / s.results : 0;
-    return { name: c.name, ...s, ctr: round2(ctr), cpc: round2(cpc), cpr: round2(cpr) };
+    const isDosah = (c.result_type || '').includes('Dosah');
+    const cpr = s.results > 0 ? (isDosah ? s.spend_czk / s.results * 1000 : s.spend_czk / s.results) : 0;
+    return { name: c.name, result_type: c.result_type || '–', ...s, ctr: round2(ctr), cpc: round2(cpc), cpr: round2(cpr) };
   }).filter(c => c.clicks > 0 || c.spend_czk > 0)
     .sort((a, b) => b[campaignSortKey] - a[campaignSortKey]);
 }
@@ -632,8 +633,8 @@ function renderMetaCampaignTable(tbodyId, platformData) {
       <td>${fmt.num(r.impressions)}</td>
       <td>${fmt.pct(r.ctr)}</td>
       <td>${fmt.cpc(r.cpc)}</td>
-      <td>${fmt.num(r.results)}</td>
-      <td>${r.cpr > 0 ? fmt.czk(r.cpr) : '<span style="color:var(--muted)">–</span>'}</td>
+      <td>${r.results > 0 ? fmt.num(r.results) + '<br><span style="color:var(--muted);font-size:.75rem">' + (r.result_type || '') + '</span>' : '<span style="color:var(--muted)">–</span>'}</td>
+      <td>${r.cpr > 0 ? fmt.czk(r.cpr) + '<br><span style="color:var(--muted);font-size:.75rem">' + (r.result_type || '') + '</span>' : '<span style="color:var(--muted)">–</span>'}</td>
     </tr>`).join('');
 }
 
@@ -678,11 +679,20 @@ function renderOverview() {
   const { dateFrom: from, dateTo: to } = state;
   const html = BRANDS.map(brand => {
     const { tot } = metricCards(brand);
-    // Meta cena za výsledek pro tuto značku
+    // Meta cena za výsledek – seskupeno podle typu výsledku
     const metaCamps = campaignStats(state.data.meta, from, to, brand);
-    const metaResults = metaCamps.reduce((s, c) => s + (c.results || 0), 0);
-    const metaSpend   = metaCamps.reduce((s, c) => s + c.spend_czk, 0);
-    const metaCpr     = metaResults > 0 ? round2(metaSpend / metaResults) : 0;
+    // group by result_type
+    const metaGroups = {};
+    for (const c of metaCamps) {
+      const typ = c.result_type || '–';
+      if (!metaGroups[typ]) metaGroups[typ] = { results: 0, spend: 0, isDosah: typ.includes('Dosah') };
+      metaGroups[typ].results += c.results || 0;
+      metaGroups[typ].spend   += c.spend_czk;
+    }
+    const metaCards = Object.entries(metaGroups).filter(([t]) => t !== '–').map(([typ, g]) => {
+      const cpr = g.results > 0 ? round2(g.isDosah ? g.spend / g.results * 1000 : g.spend / g.results) : 0;
+      return `<div class="metric-card"><div class="lbl">${typ}</div><div class="val">${fmt.num(g.results)}<br><span style="font-size:.8rem;font-weight:400">${cpr > 0 ? fmt.czk(cpr) + '/výsl.' : ''}</span></div></div>`;
+    }).join('');
     return `<div class="brand-section">
       <div class="brand-label">${brand}</div>
       <div class="metric-row">
@@ -691,8 +701,7 @@ function renderOverview() {
         <div class="metric-card"><div class="lbl">Cena</div><div class="val">${fmt.czk(tot.spend_czk)}</div></div>
         <div class="metric-card"><div class="lbl">CTR</div><div class="val">${fmt.pct(tot.ctr)}</div></div>
         <div class="metric-card"><div class="lbl">CPC</div><div class="val">${fmt.cpc(tot.cpc)}</div></div>
-        <div class="metric-card"><div class="lbl">Meta výsledky</div><div class="val">${fmt.num(metaResults)}</div></div>
-        <div class="metric-card"><div class="lbl">Meta cena/výsledek</div><div class="val">${metaCpr > 0 ? fmt.czk(metaCpr) : '–'}</div></div>
+        ${metaCards}
       </div>
     </div>`;
   }).join('');
