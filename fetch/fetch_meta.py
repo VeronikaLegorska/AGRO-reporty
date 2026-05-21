@@ -25,45 +25,57 @@ def fetch():
         "time_range": {"since": date_from, "until": date_to},
         "time_increment": 1,
         "level": "campaign",
-        "fields": ["campaign_id", "campaign_name", "impressions", "clicks", "spend", "actions"],
+        "fields": ["campaign_id", "campaign_name", "impressions", "clicks", "spend", "reach", "actions"],
     }
     insights = account.get_insights(params=params)
 
-    # Priorita akci pro "výsledek" — první nalezená v seznamu se použije
-    RESULT_ACTIONS = [
-        "post_engagement", "page_engagement", "link_click",
-        "landing_page_view", "offsite_conversion.fb_pixel_lead",
-        "offsite_conversion.fb_pixel_purchase",
+    # Mapování action_type → český label (v pořadí priority)
+    RESULT_PRIORITY = [
+        ("post_engagement",                    "Zájem o příspěvek"),
+        ("page_engagement",                    "Zájem o příspěvek"),
+        ("landing_page_view",                  "Zobrazení cílové str."),
+        ("link_click",                         "Proklik"),
+        ("offsite_conversion.fb_pixel_lead",   "Lead"),
+        ("offsite_conversion.fb_pixel_purchase","Nákup"),
     ]
 
-    def primary_result(actions_list):
-        """Vrátí počet výsledků pro primární akci z API."""
-        if not actions_list:
-            return 0
-        action_map = {a["action_type"]: int(a["value"]) for a in actions_list}
-        for key in RESULT_ACTIONS:
-            if key in action_map:
-                return action_map[key]
-        # Pokud nic z priority listu, vezmi první akci
-        return list(action_map.values())[0]
+    def get_result(actions_list, reach):
+        """Vrátí (label, count). Pro dosah vrátí reach count se speciálním labelem."""
+        if actions_list:
+            action_map = {a["action_type"]: int(a["value"]) for a in actions_list}
+            for key, label in RESULT_PRIORITY:
+                if key in action_map:
+                    return label, action_map[key]
+        if reach > 0:
+            return "Dosah (za 1 000 úč.)", reach
+        return "–", 0
 
     campaigns = {}
     for row in insights:
         name = row.get("campaign_name", "")
         if not is_vl(name):
             continue
-        cid = row.get("campaign_id")
+        cid  = row.get("campaign_id")
         if cid not in campaigns:
-            campaigns[cid] = {"id": cid, "name": name, "daily": []}
+            campaigns[cid] = {"id": cid, "name": name, "result_type": None, "daily": []}
         spend = round(float(row.get("spend", 0)), 2)
-        results = primary_result(row.get("actions", []))
+        reach = int(row.get("reach", 0))
+        label, count = get_result(row.get("actions", []), reach)
+        # Cena za výsledek — dosah = CPM (spend/reach*1000), ostatní = spend/count
+        if label == "Dosah (za 1 000 úč.)" and count > 0:
+            cpr = round(spend / count * 1000, 2)
+        else:
+            cpr = round(spend / count, 2) if count > 0 else 0
+        # result_type uložíme na úrovni kampaně (první nenulový label)
+        if campaigns[cid]["result_type"] is None and label != "–":
+            campaigns[cid]["result_type"] = label
         campaigns[cid]["daily"].append({
-            "date":           row.get("date_start"),
-            "clicks":         int(row.get("clicks", 0)),
-            "impressions":    int(row.get("impressions", 0)),
-            "spend_czk":      spend,
-            "results":        results,
-            "cost_per_result": round(spend / results, 2) if results > 0 else 0,
+            "date":            row.get("date_start"),
+            "clicks":          int(row.get("clicks", 0)),
+            "impressions":     int(row.get("impressions", 0)),
+            "spend_czk":       spend,
+            "results":         count,
+            "cost_per_result": cpr,
         })
 
     result = list(campaigns.values())

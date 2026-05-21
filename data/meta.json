@@ -1,13 +1,14 @@
 {
-  "updated": "2026-05-20",
+  "updated": "2026-05-21",
   "period": {
     "from": "2026-01-01",
-    "to": "2026-05-19"
+    "to": "2026-05-20"
   },
   "campaigns": [
     {
       "id": "120238635715950685",
       "name": "VL | FLORIA | Příspěvky | projevený zájem | 3/26",
+      "result_type": "Zájem o příspěvek",
       "daily": [
         {
           "date": "2026-03-03",
@@ -446,6 +447,7 @@
     {
       "id": "120238623445790685",
       "name": "VL | NATURA | Příspěvky | Projevený zájem | 3/26",
+      "result_type": "Zájem o příspěvek",
       "daily": [
         {
           "date": "2026-03-04",
@@ -985,25 +987,34 @@
         },
         {
           "date": "2026-05-19",
-          "clicks": 130,
-          "impressions": 9223,
-          "spend_czk": 591.22,
-          "results": 3845,
+          "clicks": 131,
+          "impressions": 9233,
+          "spend_czk": 592.35,
+          "results": 3848,
           "cost_per_result": 0.15
+        },
+        {
+          "date": "2026-05-20",
+          "clicks": 469,
+          "impressions": 31375,
+          "spend_czk": 2144.46,
+          "results": 13757,
+          "cost_per_result": 0.16
         }
       ]
     },
     {
       "id": "120238709799980685",
       "name": "VL | AGRO | Příspěvky | projevený zájem | 3/26",
+      "result_type": "Dosah (za 1 000 úč.)",
       "daily": [
         {
           "date": "2026-03-05",
           "clicks": 2,
           "impressions": 3727,
           "spend_czk": 62.28,
-          "results": 0,
-          "cost_per_result": 0
+          "results": 3355,
+          "cost_per_result": 18.56
         },
         {
           "date": "2026-03-06",
@@ -1447,17 +1458,26 @@
         },
         {
           "date": "2026-05-19",
-          "clicks": 637,
-          "impressions": 20450,
-          "spend_czk": 3500.51,
+          "clicks": 638,
+          "impressions": 20460,
+          "spend_czk": 3500.97,
           "results": 674,
           "cost_per_result": 5.19
+        },
+        {
+          "date": "2026-05-20",
+          "clicks": 402,
+          "impressions": 17499,
+          "spend_czk": 2597.58,
+          "results": 458,
+          "cost_per_result": 5.67
         }
       ]
     },
     {
       "id": "120238895095960685",
       "name": "VL | KRISTALON | Příspěvky | Projevený zájem | 3/26",
+      "result_type": "Zájem o příspěvek",
       "daily": [
         {
           "date": "2026-03-09",
@@ -1552,6 +1572,7 @@
     {
       "id": "120240089466820685",
       "name": "VL | NATURA | Příspěvek | Substrát pro vyvýšené záhony",
+      "result_type": "Zájem o příspěvek",
       "daily": [
         {
           "date": "2026-03-28",
@@ -1686,6 +1707,7 @@
     {
       "id": "120240091339870685",
       "name": "VL | FLORIA | Příspěvek | Zahradnický substrát",
+      "result_type": "Zájem o příspěvek",
       "daily": [
         {
           "date": "2026-03-28",
@@ -1796,8 +1818,8 @@
           "clicks": 5,
           "impressions": 6174,
           "spend_czk": 83.74,
-          "results": 0,
-          "cost_per_result": 0
+          "results": 4653,
+          "cost_per_result": 18.0
         },
         {
           "date": "2026-04-13",
@@ -1884,6 +1906,7 @@
     {
       "id": "120240293477430685",
       "name": "VL | FLORIA | CAROUSEL | TS + TH pro robotické sekání | Povědomí",
+      "result_type": "Zájem o příspěvek",
       "daily": [
         {
           "date": "2026-03-31",
@@ -1994,6 +2017,7 @@
     {
       "id": "120240514772510685",
       "name": "VL | AGRO | Pokojovky | Banner | Povědomí",
+      "result_type": "Zájem o příspěvek",
       "daily": [
         {
           "date": "2026-04-02",
@@ -2136,6 +2160,7 @@
     {
       "id": "120240517277390685",
       "name": "VL | FLORIA | Příspěvek | Substrát pro rajčata a papriky | Povědomí",
+      "result_type": "Zájem o příspěvek",
       "daily": [
         {
           "date": "2026-04-02",
@@ -2334,6 +2359,7 @@
     {
       "id": "120240703068250685",
       "name": "VL | FLORIA | Příspěvek |  Substrát pro středomořské rostliny | Povědomí",
+      "result_type": "Zájem o příspěvek",
       "daily": [
         {
           "date": "2026-04-06",
@@ -2532,6 +2558,7 @@
     {
       "id": "120240704437660685",
       "name": "VL | NATURA | Příspěvek |  Substrát bylinková zahrádka | Povědomí",
+      "result_type": "Zájem o příspěvek",
       "daily": [
         {
           "date": "2026-04-06",
@@ -2554,8 +2581,8 @@
           "clicks": 0,
           "impressions": 18171,
           "spend_czk": 243.83,
-          "results": 0,
-          "cost_per_result": 0
+          "results": 15954,
+          "cost_per_result": 15.28
         },
         {
           "date": "2026-04-09",
@@ -2706,6 +2733,7 @@
     {
       "id": "120240704635390685",
       "name": "VL | FLORIA | Vertikutační směs |  Substrát pro středomořské rostliny | Povědomí",
+      "result_type": "Zájem o příspěvek",
       "daily": [
         {
           "date": "2026-04-06",
@@ -2888,6 +2916,7 @@
     {
       "id": "120240915012560685",
       "name": "VL | AGRO | TH Start | Banner | Povědomí",
+      "result_type": "Zájem o příspěvek",
       "daily": [
         {
           "date": "2026-04-10",
@@ -2902,8 +2931,8 @@
           "clicks": 0,
           "impressions": 5350,
           "spend_czk": 78.93,
-          "results": 0,
-          "cost_per_result": 0
+          "results": 4650,
+          "cost_per_result": 16.97
         },
         {
           "date": "2026-04-13",
@@ -2950,6 +2979,7 @@
     {
       "id": "120240915448890685",
       "name": "VL | AGRO | Příspěvek | Zahradnický kompost",
+      "result_type": "Zájem o příspěvek",
       "daily": [
         {
           "date": "2026-04-10",
@@ -3044,6 +3074,7 @@
     {
       "id": "120240915793580685",
       "name": "VL | NATURA | Příspěvek |  Substrát pro celou zahradu | Povědomí",
+      "result_type": "Zájem o příspěvek",
       "daily": [
         {
           "date": "2026-04-10",
@@ -3274,6 +3305,7 @@
     {
       "id": "120240915974330685",
       "name": "VL | NATURA | Příspěvek |  Substrát pro jahody | Povědomí",
+      "result_type": "Zájem o příspěvek",
       "daily": [
         {
           "date": "2026-04-10",
@@ -3432,14 +3464,15 @@
     {
       "id": "120240090774400685",
       "name": "VL | AGRO | Příspěvek | Pokojovky",
+      "result_type": "Dosah (za 1 000 úč.)",
       "daily": [
         {
           "date": "2026-04-15",
           "clicks": 0,
           "impressions": 2199,
           "spend_czk": 17.41,
-          "results": 0,
-          "cost_per_result": 0
+          "results": 2132,
+          "cost_per_result": 8.17
         },
         {
           "date": "2026-04-16",
@@ -3486,8 +3519,8 @@
           "clicks": 2,
           "impressions": 3740,
           "spend_czk": 69.34,
-          "results": 0,
-          "cost_per_result": 0
+          "results": 3281,
+          "cost_per_result": 21.13
         },
         {
           "date": "2026-04-25",
@@ -3550,8 +3583,8 @@
           "clicks": 3,
           "impressions": 15617,
           "spend_czk": 223.88,
-          "results": 1,
-          "cost_per_result": 223.88
+          "results": 12337,
+          "cost_per_result": 18.15
         },
         {
           "date": "2026-05-03",
@@ -3574,14 +3607,15 @@
     {
       "id": "120243236942900685",
       "name": "VL | FLORIA | Příspěveky | Povědomí – kopie",
+      "result_type": "Dosah (za 1 000 úč.)",
       "daily": [
         {
           "date": "2026-05-13",
           "clicks": 1,
           "impressions": 2698,
           "spend_czk": 42.94,
-          "results": 0,
-          "cost_per_result": 0
+          "results": 2597,
+          "cost_per_result": 16.53
         },
         {
           "date": "2026-05-14",
@@ -3626,24 +3660,41 @@
         {
           "date": "2026-05-19",
           "clicks": 198,
-          "impressions": 166454,
-          "spend_czk": 2333.79,
-          "results": 3328,
+          "impressions": 166637,
+          "spend_czk": 2336.01,
+          "results": 3330,
           "cost_per_result": 0.7
+        },
+        {
+          "date": "2026-05-20",
+          "clicks": 305,
+          "impressions": 204228,
+          "spend_czk": 3122.3,
+          "results": 3409,
+          "cost_per_result": 0.92
         }
       ]
     },
     {
       "id": "120243713150410685",
       "name": "VL | AGRO | Příspěvky | Projevený zájem | 5/26",
+      "result_type": "Zájem o příspěvek",
       "daily": [
         {
           "date": "2026-05-19",
           "clicks": 17,
-          "impressions": 335,
-          "spend_czk": 159.07,
+          "impressions": 336,
+          "spend_czk": 159.09,
           "results": 31,
           "cost_per_result": 5.13
+        },
+        {
+          "date": "2026-05-20",
+          "clicks": 87,
+          "impressions": 2551,
+          "spend_czk": 690.37,
+          "results": 137,
+          "cost_per_result": 5.04
         }
       ]
     }
