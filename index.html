@@ -634,7 +634,7 @@ function renderMetaCampaignTable(tbodyId, platformData) {
       <td>${fmt.pct(r.ctr)}</td>
       <td>${fmt.cpc(r.cpc)}</td>
       <td>${r.results > 0 ? fmt.num(r.results) + '<br><span style="color:var(--muted);font-size:.75rem">' + (r.result_type || '') + '</span>' : '<span style="color:var(--muted)">–</span>'}</td>
-      <td>${r.cpr > 0 ? fmt.czk(r.cpr) + '<br><span style="color:var(--muted);font-size:.75rem">' + (r.result_type || '') + '</span>' : '<span style="color:var(--muted)">–</span>'}</td>
+      <td>${r.cpr > 0 ? fmt.czk(r.cpr) : '<span style="color:var(--muted)">–</span>'}</td>
     </tr>`).join('');
 }
 
