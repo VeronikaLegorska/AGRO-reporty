@@ -496,9 +496,11 @@ function campaignStats(platformData, from, to, brand) {
     const ctr = s.impressions > 0 ? s.clicks / s.impressions * 100 : 0;
     const cpc = s.clicks > 0 ? s.spend_czk / s.clicks : 0;
     const isDosah = (c.result_type || '').includes('Dosah');
-    const cpr = s.results > 0 ? (isDosah ? s.spend_czk / s.results * 1000 : s.spend_czk / s.results) : 0;
+    // Pro Dosah kampaně: CPM z celkového unique reach (period_reach), ne ze sumy denního
+    const totalResults = (isDosah && c.period_reach) ? c.period_reach : s.results;
+    const cpr = totalResults > 0 ? (isDosah ? s.spend_czk / totalResults * 1000 : s.spend_czk / totalResults) : 0;
     return { name: c.name, result_type: c.result_type || '–',
-             adsets: c.adsets || [], ...s,
+             adsets: c.adsets || [], ...s, results: totalResults,
              ctr: round2(ctr), cpc: round2(cpc), cpr: round2(cpr) };
   }).filter(c => c.clicks > 0 || c.spend_czk > 0)
     .sort((a, b) => b[campaignSortKey] - a[campaignSortKey]);

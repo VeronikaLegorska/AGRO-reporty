@@ -82,7 +82,20 @@ def fetch():
         if not any(a["id"] == adset["id"] for a in camp_adsets[cid]):
             camp_adsets[cid].append({"id": adset["id"], "name": adset.get("name", "")})
 
-    # 3. Insights na úrovni kampaně (spolehlivější než adset-level)
+    # 3a. Agregovaný reach za celé období (pro správné CPM – bez time_increment)
+    #     sum(denní reach) > celkový reach kvůli opakované deduplicaci
+    period_reach = {}  # campaign_id → celkový reach za period
+    agg_params = {
+        "time_range": {"since": date_from, "until": date_to},
+        "level":      "campaign",
+        "fields":     ["campaign_id", "reach"],
+    }
+    for row in account.get_insights(params=agg_params):
+        cid = row.get("campaign_id")
+        if camp_objectives.get(cid) in ("OUTCOME_AWARENESS", "BRAND_AWARENESS", "REACH"):
+            period_reach[cid] = int(row.get("reach", 0))
+
+    # 3b. Denní insights na úrovni kampaně
     params = {
         "time_range":     {"since": date_from, "until": date_to},
         "time_increment": 1,
@@ -131,13 +144,15 @@ def fetch():
     result = []
     for cid, camp in campaigns.items():
         camp["daily"].sort(key=lambda x: x["date"])
+        pr = period_reach.get(cid)  # celkový unique reach za celé období (pro správné CPM)
         result.append({
-            "id":          cid,
-            "name":        camp["name"],
-            "objective":   camp["objective"],
-            "result_type": camp["result_type"] or "–",
-            "adsets":      camp_adsets.get(cid, []),
-            "daily":       camp["daily"],
+            "id":           cid,
+            "name":         camp["name"],
+            "objective":    camp["objective"],
+            "result_type":  camp["result_type"] or "–",
+            "period_reach": pr,  # pro Dosah kampaně: správné CPM = spend/period_reach*1000
+            "adsets":       camp_adsets.get(cid, []),
+            "daily":        camp["daily"],
         })
 
     return {
