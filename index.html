@@ -325,8 +325,9 @@ tbody td:first-child { text-align: left; }
   </div>
   <div class="platform-table-section">
     <div class="platform-label">Meta (Facebook)</div>
+    <div id="meta-result-cards" class="metric-row" style="margin-bottom:1rem"></div>
     <div class="data-table-wrap"><table id="table-meta-campaigns">
-      <thead><tr><th>Kampaň</th><th>Cena</th><th>Kliky</th><th>Zobrazení</th><th>CTR</th><th>CPC</th><th>Výsledky</th><th>Cena za výsledek</th></tr></thead>
+      <thead><tr><th>Kampaň / Sestavy</th><th>Cena</th><th>Kliky</th><th>Zobrazení</th><th>CTR</th><th>CPC</th><th>Výsledky</th><th>Cena za výsledek</th></tr></thead>
       <tbody id="tbody-meta-campaigns"></tbody>
     </table></div>
   </div>
@@ -496,7 +497,9 @@ function campaignStats(platformData, from, to, brand) {
     const cpc = s.clicks > 0 ? s.spend_czk / s.clicks : 0;
     const isDosah = (c.result_type || '').includes('Dosah');
     const cpr = s.results > 0 ? (isDosah ? s.spend_czk / s.results * 1000 : s.spend_czk / s.results) : 0;
-    return { name: c.name, result_type: c.result_type || '–', ...s, ctr: round2(ctr), cpc: round2(cpc), cpr: round2(cpr) };
+    return { name: c.name, result_type: c.result_type || '–',
+             adsets: c.adsets || [], ...s,
+             ctr: round2(ctr), cpc: round2(cpc), cpr: round2(cpr) };
   }).filter(c => c.clicks > 0 || c.spend_czk > 0)
     .sort((a, b) => b[campaignSortKey] - a[campaignSortKey]);
 }
@@ -624,10 +627,36 @@ function renderMetaCampaignTable(tbodyId, platformData) {
   const { dateFrom: from, dateTo: to } = state;
   const rows = campaignStats(platformData, from, to, null);
   const tbody = document.getElementById(tbodyId);
+
+  // 3 souhrnné karty nad tabulkou
+  const META_TYPES = [
+    { label: 'Zájem o příspěvek',        key: 'Zájem o příspěvek',      isDosah: false },
+    { label: 'Za 1 000 oslovených účtů', key: 'Dosah (za 1 000 úč.)',   isDosah: true  },
+    { label: 'Zobrazení cílové stránky', key: 'Zobrazení cílové str.',  isDosah: false },
+  ];
+  const cardsEl = document.getElementById('meta-result-cards');
+  if (cardsEl) {
+    cardsEl.innerHTML = META_TYPES.map(rt => {
+      const matching     = rows.filter(r => r.result_type === rt.key);
+      const totalResults = matching.reduce((s, r) => s + (r.results || 0), 0);
+      const totalSpend   = matching.reduce((s, r) => s + r.spend_czk, 0);
+      const cpr = totalResults > 0
+        ? round2(rt.isDosah ? totalSpend / totalResults * 1000 : totalSpend / totalResults) : 0;
+      return `<div class="metric-card">
+        <div class="lbl">${rt.label}</div>
+        <div class="val">${cpr > 0 ? fmt.czk(cpr) : '<span style="opacity:.35">–</span>'}</div>
+      </div>`;
+    }).join('');
+  }
+
   if (!rows.length) { tbody.innerHTML = `<tr><td colspan="8" class="no-data" style="padding:.8rem 1rem">Žádná data pro toto období</td></tr>`; return; }
-  tbody.innerHTML = rows.map((r, i) => `
+  tbody.innerHTML = rows.map((r, i) => {
+    const adsetNames = r.adsets.map(a =>
+      `<div style="font-size:.72rem;color:var(--muted);margin-top:.15rem">↳ ${a.name}</div>`
+    ).join('');
+    return `
     <tr>
-      <td><span class="row-num">${i+1}.</span>${r.name}</td>
+      <td><span class="row-num">${i+1}.</span>${r.name}${adsetNames}</td>
       <td>${fmt.czk(r.spend_czk)}</td>
       <td>${fmt.num(r.clicks)}</td>
       <td>${fmt.num(r.impressions)}</td>
@@ -635,7 +664,8 @@ function renderMetaCampaignTable(tbodyId, platformData) {
       <td>${fmt.cpc(r.cpc)}</td>
       <td>${r.results > 0 ? fmt.num(r.results) + '<br><span style="color:var(--muted);font-size:.75rem">' + (r.result_type || '') + '</span>' : '<span style="color:var(--muted)">–</span>'}</td>
       <td>${r.cpr > 0 ? fmt.czk(r.cpr) : '<span style="color:var(--muted)">–</span>'}</td>
-    </tr>`).join('');
+    </tr>`;
+  }).join('');
 }
 
 function renderCampaigns() {
