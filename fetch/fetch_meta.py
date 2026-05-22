@@ -23,7 +23,6 @@ OBJECTIVE_MAP = {
     "OUTCOME_LEADS":         ("Lead",                    "offsite_conversion.fb_pixel_lead"),
     "OUTCOME_SALES":         ("Nákup",                   "offsite_conversion.fb_pixel_purchase"),
     "OUTCOME_APP_PROMOTION": ("Instalace aplikace",      "app_install"),
-    # Legacy objectives
     "BRAND_AWARENESS":       ("Dosah (za 1 000 úč.)",   "reach"),
     "REACH":                 ("Dosah (za 1 000 úč.)",   "reach"),
     "POST_ENGAGEMENT":       ("Zájem o příspěvek",       "post_engagement"),
@@ -50,7 +49,6 @@ def get_result(actions_list, reach, objective):
     action_map = {a["action_type"]: int(a["value"]) for a in (actions_list or [])}
 
     if label == "–":
-        # Neznámý objective – heuristika podle akcí
         for key, lbl in FALLBACK_PRIORITY:
             if action_map.get(key, 0) > 0:
                 return lbl, action_map[key]
@@ -67,20 +65,30 @@ def fetch():
     date_to   = (date.today() - timedelta(days=1)).isoformat()
     account   = AdAccount(AD_ACCOUNT_ID)
 
-    # 1. Stáhnout objectives kampaní
+    # 1. Objectives kampaní
     camp_objectives = {}
     for camp in account.get_campaigns(fields=["id", "name", "objective"]):
         if is_vl(camp.get("name", "")):
             camp_objectives[camp["id"]] = camp.get("objective", "")
 
-    # 2. Insights na úrovni reklamní sestavy (adset)
+    # 2. Reklamní sestavy (adsets) – lehký listing, nikoli insights
+    camp_adsets = {}   # campaign_id → [{id, name}]
+    for adset in account.get_ad_sets(fields=["id", "name", "campaign_id"]):
+        cid = adset.get("campaign_id")
+        if cid not in camp_objectives:
+            continue
+        camp_adsets.setdefault(cid, [])
+        # přidat jen pokud ještě není (může se vrátit duplicitně)
+        if not any(a["id"] == adset["id"] for a in camp_adsets[cid]):
+            camp_adsets[cid].append({"id": adset["id"], "name": adset.get("name", "")})
+
+    # 3. Insights na úrovni kampaně (spolehlivější než adset-level)
     params = {
         "time_range":     {"since": date_from, "until": date_to},
         "time_increment": 1,
-        "level":          "adset",
+        "level":          "campaign",
         "fields": [
             "campaign_id", "campaign_name",
-            "adset_id", "adset_name",
             "impressions", "clicks", "spend", "reach", "actions",
         ],
     }
@@ -92,19 +100,15 @@ def fetch():
         if not is_vl(camp_name):
             continue
 
-        cid      = row.get("campaign_id")
-        aid      = row.get("adset_id")
-        adset_nm = row.get("adset_name", "")
+        cid       = row.get("campaign_id")
         objective = camp_objectives.get(cid, "")
 
         if cid not in campaigns:
             campaigns[cid] = {
                 "id": cid, "name": camp_name,
                 "objective": objective, "result_type": None,
-                "adsets": {},
+                "daily": [],
             }
-        if aid not in campaigns[cid]["adsets"]:
-            campaigns[cid]["adsets"][aid] = {"id": aid, "name": adset_nm, "daily": []}
 
         spend = round(float(row.get("spend", 0)), 2)
         reach = int(row.get("reach", 0))
@@ -115,7 +119,7 @@ def fetch():
         if campaigns[cid]["result_type"] is None and label != "–":
             campaigns[cid]["result_type"] = label
 
-        campaigns[cid]["adsets"][aid]["daily"].append({
+        campaigns[cid]["daily"].append({
             "date":            row.get("date_start"),
             "clicks":          int(row.get("clicks", 0)),
             "impressions":     int(row.get("impressions", 0)),
@@ -124,41 +128,16 @@ def fetch():
             "cost_per_result": cpr,
         })
 
-    # 3. Sestavit výsledek – agregovat adsets → campaign daily
     result = []
     for cid, camp in campaigns.items():
-        adsets_list = []
-        daily_agg   = {}
-
-        for aid, adset in camp["adsets"].items():
-            adset["daily"].sort(key=lambda x: x["date"])
-            adsets_list.append({"id": adset["id"], "name": adset["name"], "daily": adset["daily"]})
-            for d in adset["daily"]:
-                dt = d["date"]
-                if dt not in daily_agg:
-                    daily_agg[dt] = {"date": dt, "clicks": 0, "impressions": 0,
-                                     "spend_czk": 0.0, "results": 0, "cost_per_result": 0}
-                daily_agg[dt]["clicks"]      += d["clicks"]
-                daily_agg[dt]["impressions"] += d["impressions"]
-                daily_agg[dt]["spend_czk"]    = round(daily_agg[dt]["spend_czk"] + d["spend_czk"], 2)
-                daily_agg[dt]["results"]      += d["results"]
-
-        is_dosah = (camp["result_type"] or "").startswith("Dosah")
-        daily_list = sorted(daily_agg.values(), key=lambda x: x["date"])
-        for d in daily_list:
-            if d["results"] > 0:
-                d["cost_per_result"] = round(
-                    d["spend_czk"] / d["results"] * 1000 if is_dosah
-                    else d["spend_czk"] / d["results"], 2
-                )
-
+        camp["daily"].sort(key=lambda x: x["date"])
         result.append({
             "id":          cid,
             "name":        camp["name"],
             "objective":   camp["objective"],
             "result_type": camp["result_type"] or "–",
-            "adsets":      adsets_list,
-            "daily":       daily_list,
+            "adsets":      camp_adsets.get(cid, []),
+            "daily":       camp["daily"],
         })
 
     return {
