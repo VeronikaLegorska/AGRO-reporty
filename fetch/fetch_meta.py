@@ -5,7 +5,6 @@ from facebook_business.api import FacebookAdsApi
 from facebook_business.adobjects.adaccount import AdAccount
 
 AD_ACCOUNT_ID = os.environ["META_AD_ACCOUNT_ID"]
-
 FacebookAdsApi.init(
     app_id=os.environ["META_APP_ID"],
     app_secret=os.environ["META_APP_SECRET"],
@@ -16,60 +15,107 @@ def is_vl(name):
     n = name.upper()
     return "VL" in n and "COMARKETING" not in n
 
+# Objective → (český label, action_key nebo 'reach')
+OBJECTIVE_MAP = {
+    "OUTCOME_AWARENESS":     ("Dosah (za 1 000 úč.)",   "reach"),
+    "OUTCOME_ENGAGEMENT":    ("Zájem o příspěvek",       "post_engagement"),
+    "OUTCOME_TRAFFIC":       ("Zobrazení cílové str.",   "landing_page_view"),
+    "OUTCOME_LEADS":         ("Lead",                    "offsite_conversion.fb_pixel_lead"),
+    "OUTCOME_SALES":         ("Nákup",                   "offsite_conversion.fb_pixel_purchase"),
+    "OUTCOME_APP_PROMOTION": ("Instalace aplikace",      "app_install"),
+    # Legacy objectives
+    "BRAND_AWARENESS":       ("Dosah (za 1 000 úč.)",   "reach"),
+    "REACH":                 ("Dosah (za 1 000 úč.)",   "reach"),
+    "POST_ENGAGEMENT":       ("Zájem o příspěvek",       "post_engagement"),
+    "PAGE_LIKES":            ("Zájem o příspěvek",       "like"),
+    "LINK_CLICKS":           ("Proklik",                 "link_click"),
+    "LANDING_PAGE_VIEWS":    ("Zobrazení cílové str.",   "landing_page_view"),
+    "LEAD_GENERATION":       ("Lead",                    "offsite_conversion.fb_pixel_lead"),
+    "CONVERSIONS":           ("Nákup",                   "offsite_conversion.fb_pixel_purchase"),
+    "VIDEO_VIEWS":           ("Zhlédnutí videa",         "video_view"),
+    "MESSAGES":              ("Zprávy",                  "onsite_conversion.messaging_conversation_started_7d"),
+}
+
+FALLBACK_PRIORITY = [
+    ("post_engagement",                     "Zájem o příspěvek"),
+    ("page_engagement",                     "Zájem o příspěvek"),
+    ("landing_page_view",                   "Zobrazení cílové str."),
+    ("link_click",                          "Proklik"),
+    ("offsite_conversion.fb_pixel_lead",    "Lead"),
+    ("offsite_conversion.fb_pixel_purchase","Nákup"),
+]
+
+def get_result(actions_list, reach, objective):
+    label, action_key = OBJECTIVE_MAP.get(objective or "", ("–", None))
+    action_map = {a["action_type"]: int(a["value"]) for a in (actions_list or [])}
+
+    if label == "–":
+        # Neznámý objective – heuristika podle akcí
+        for key, lbl in FALLBACK_PRIORITY:
+            if action_map.get(key, 0) > 0:
+                return lbl, action_map[key]
+        return ("Dosah (za 1 000 úč.)", reach) if reach > 0 else ("–", 0)
+
+    if action_key == "reach":
+        return label, reach
+
+    return label, action_map.get(action_key, 0)
+
+
 def fetch():
     date_from = date.today().replace(month=1, day=1).isoformat()
     date_to   = (date.today() - timedelta(days=1)).isoformat()
+    account   = AdAccount(AD_ACCOUNT_ID)
 
-    account = AdAccount(AD_ACCOUNT_ID)
+    # 1. Stáhnout objectives kampaní
+    camp_objectives = {}
+    for camp in account.get_campaigns(fields=["id", "name", "objective"]):
+        if is_vl(camp.get("name", "")):
+            camp_objectives[camp["id"]] = camp.get("objective", "")
+
+    # 2. Insights na úrovni reklamní sestavy (adset)
     params = {
-        "time_range": {"since": date_from, "until": date_to},
+        "time_range":     {"since": date_from, "until": date_to},
         "time_increment": 1,
-        "level": "campaign",
-        "fields": ["campaign_id", "campaign_name", "impressions", "clicks", "spend", "reach", "actions"],
+        "level":          "adset",
+        "fields": [
+            "campaign_id", "campaign_name",
+            "adset_id", "adset_name",
+            "impressions", "clicks", "spend", "reach", "actions",
+        ],
     }
     insights = account.get_insights(params=params)
 
-    # Mapování action_type → český label (v pořadí priority)
-    RESULT_PRIORITY = [
-        ("post_engagement",                    "Zájem o příspěvek"),
-        ("page_engagement",                    "Zájem o příspěvek"),
-        ("landing_page_view",                  "Zobrazení cílové str."),
-        ("link_click",                         "Proklik"),
-        ("offsite_conversion.fb_pixel_lead",   "Lead"),
-        ("offsite_conversion.fb_pixel_purchase","Nákup"),
-    ]
-
-    def get_result(actions_list, reach):
-        """Vrátí (label, count). Pro dosah vrátí reach count se speciálním labelem."""
-        if actions_list:
-            action_map = {a["action_type"]: int(a["value"]) for a in actions_list}
-            for key, label in RESULT_PRIORITY:
-                if key in action_map:
-                    return label, action_map[key]
-        if reach > 0:
-            return "Dosah (za 1 000 úč.)", reach
-        return "–", 0
-
     campaigns = {}
     for row in insights:
-        name = row.get("campaign_name", "")
-        if not is_vl(name):
+        camp_name = row.get("campaign_name", "")
+        if not is_vl(camp_name):
             continue
-        cid  = row.get("campaign_id")
+
+        cid      = row.get("campaign_id")
+        aid      = row.get("adset_id")
+        adset_nm = row.get("adset_name", "")
+        objective = camp_objectives.get(cid, "")
+
         if cid not in campaigns:
-            campaigns[cid] = {"id": cid, "name": name, "result_type": None, "daily": []}
+            campaigns[cid] = {
+                "id": cid, "name": camp_name,
+                "objective": objective, "result_type": None,
+                "adsets": {},
+            }
+        if aid not in campaigns[cid]["adsets"]:
+            campaigns[cid]["adsets"][aid] = {"id": aid, "name": adset_nm, "daily": []}
+
         spend = round(float(row.get("spend", 0)), 2)
         reach = int(row.get("reach", 0))
-        label, count = get_result(row.get("actions", []), reach)
-        # Cena za výsledek — dosah = CPM (spend/reach*1000), ostatní = spend/count
-        if label == "Dosah (za 1 000 úč.)" and count > 0:
-            cpr = round(spend / count * 1000, 2)
-        else:
-            cpr = round(spend / count, 2) if count > 0 else 0
-        # result_type uložíme na úrovni kampaně (první nenulový label)
+        label, count = get_result(row.get("actions", []), reach, objective)
+        is_dosah = label == "Dosah (za 1 000 úč.)"
+        cpr = round(spend / count * 1000 if is_dosah else spend / count, 2) if count > 0 else 0
+
         if campaigns[cid]["result_type"] is None and label != "–":
             campaigns[cid]["result_type"] = label
-        campaigns[cid]["daily"].append({
+
+        campaigns[cid]["adsets"][aid]["daily"].append({
             "date":            row.get("date_start"),
             "clicks":          int(row.get("clicks", 0)),
             "impressions":     int(row.get("impressions", 0)),
@@ -78,15 +124,49 @@ def fetch():
             "cost_per_result": cpr,
         })
 
-    result = list(campaigns.values())
-    for c in result:
-        c["daily"].sort(key=lambda x: x["date"])
+    # 3. Sestavit výsledek – agregovat adsets → campaign daily
+    result = []
+    for cid, camp in campaigns.items():
+        adsets_list = []
+        daily_agg   = {}
+
+        for aid, adset in camp["adsets"].items():
+            adset["daily"].sort(key=lambda x: x["date"])
+            adsets_list.append({"id": adset["id"], "name": adset["name"], "daily": adset["daily"]})
+            for d in adset["daily"]:
+                dt = d["date"]
+                if dt not in daily_agg:
+                    daily_agg[dt] = {"date": dt, "clicks": 0, "impressions": 0,
+                                     "spend_czk": 0.0, "results": 0, "cost_per_result": 0}
+                daily_agg[dt]["clicks"]      += d["clicks"]
+                daily_agg[dt]["impressions"] += d["impressions"]
+                daily_agg[dt]["spend_czk"]    = round(daily_agg[dt]["spend_czk"] + d["spend_czk"], 2)
+                daily_agg[dt]["results"]      += d["results"]
+
+        is_dosah = (camp["result_type"] or "").startswith("Dosah")
+        daily_list = sorted(daily_agg.values(), key=lambda x: x["date"])
+        for d in daily_list:
+            if d["results"] > 0:
+                d["cost_per_result"] = round(
+                    d["spend_czk"] / d["results"] * 1000 if is_dosah
+                    else d["spend_czk"] / d["results"], 2
+                )
+
+        result.append({
+            "id":          cid,
+            "name":        camp["name"],
+            "objective":   camp["objective"],
+            "result_type": camp["result_type"] or "–",
+            "adsets":      adsets_list,
+            "daily":       daily_list,
+        })
 
     return {
-        "updated": date.today().isoformat(),
-        "period":  {"from": date_from, "to": date_to},
+        "updated":   date.today().isoformat(),
+        "period":    {"from": date_from, "to": date_to},
         "campaigns": result,
     }
+
 
 if __name__ == "__main__":
     data = fetch()
