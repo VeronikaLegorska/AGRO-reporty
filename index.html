@@ -677,22 +677,31 @@ function renderBrandTab(brand) {
 
 function renderOverview() {
   const { dateFrom: from, dateTo: to } = state;
+
+  // Vždy 3 pevné karty – label = co chce Veronika, key = co je v datech
+  const META_TYPES = [
+    { label: 'Zájem o příspěvek',        key: 'Zájem o příspěvek',       isDosah: false },
+    { label: 'Za 1 000 oslovených účtů', key: 'Dosah (za 1 000 úč.)',    isDosah: true  },
+    { label: 'Zobrazení cílové stránky', key: 'Zobrazení cílové str.',   isDosah: false },
+  ];
+
   const html = BRANDS.map(brand => {
     const { tot } = metricCards(brand);
-    // Meta cena za výsledek – seskupeno podle typu výsledku
     const metaCamps = campaignStats(state.data.meta, from, to, brand);
-    // group by result_type
-    const metaGroups = {};
-    for (const c of metaCamps) {
-      const typ = c.result_type || '–';
-      if (!metaGroups[typ]) metaGroups[typ] = { results: 0, spend: 0, isDosah: typ.includes('Dosah') };
-      metaGroups[typ].results += c.results || 0;
-      metaGroups[typ].spend   += c.spend_czk;
-    }
-    const metaCards = Object.entries(metaGroups).filter(([t]) => t !== '–').map(([typ, g]) => {
-      const cpr = g.results > 0 ? round2(g.isDosah ? g.spend / g.results * 1000 : g.spend / g.results) : 0;
-      return `<div class="metric-card"><div class="lbl">${typ}</div><div class="val">${fmt.num(g.results)}<br><span style="font-size:.8rem;font-weight:400">${cpr > 0 ? fmt.czk(cpr) + '/výsl.' : ''}</span></div></div>`;
+
+    const typeCards = META_TYPES.map(rt => {
+      const matching     = metaCamps.filter(c => c.result_type === rt.key);
+      const totalResults = matching.reduce((s, c) => s + (c.results || 0), 0);
+      const totalSpend   = matching.reduce((s, c) => s + c.spend_czk, 0);
+      const cpr = totalResults > 0
+        ? round2(rt.isDosah ? totalSpend / totalResults * 1000 : totalSpend / totalResults)
+        : 0;
+      return `<div class="metric-card">
+        <div class="lbl">${rt.label}</div>
+        <div class="val">${cpr > 0 ? fmt.czk(cpr) : '<span style="opacity:.35">–</span>'}</div>
+      </div>`;
     }).join('');
+
     return `<div class="brand-section">
       <div class="brand-label">${brand}</div>
       <div class="metric-row">
@@ -701,7 +710,7 @@ function renderOverview() {
         <div class="metric-card"><div class="lbl">Cena</div><div class="val">${fmt.czk(tot.spend_czk)}</div></div>
         <div class="metric-card"><div class="lbl">CTR</div><div class="val">${fmt.pct(tot.ctr)}</div></div>
         <div class="metric-card"><div class="lbl">CPC</div><div class="val">${fmt.cpc(tot.cpc)}</div></div>
-        ${metaCards}
+        ${typeCards}
       </div>
     </div>`;
   }).join('');
