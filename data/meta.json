@@ -1,8 +1,8 @@
 {
-  "updated": "2026-05-22",
+  "updated": "2026-05-23",
   "period": {
     "from": "2026-01-01",
-    "to": "2026-05-21"
+    "to": "2026-05-22"
   },
   "campaigns": [
     {
@@ -454,6 +454,10 @@
       "result_type": "Zájem o příspěvek",
       "period_reach": null,
       "adsets": [
+        {
+          "id": "120244031300130685",
+          "name": "WEB | IG+FB | CAROUSEL | PRESTO slimáci TV spot"
+        },
         {
           "id": "120243714480600685",
           "name": "WEB | IG+FB | CAROUSEL | PRESTO slimáci"
@@ -1130,11 +1134,19 @@
         },
         {
           "date": "2026-05-21",
-          "clicks": 456,
-          "impressions": 29902,
-          "spend_czk": 1880.23,
-          "results": 11951,
+          "clicks": 457,
+          "impressions": 29906,
+          "spend_czk": 1880.44,
+          "results": 11954,
           "cost_per_result": 0.16
+        },
+        {
+          "date": "2026-05-22",
+          "clicks": 455,
+          "impressions": 28222,
+          "spend_czk": 1896.67,
+          "results": 11199,
+          "cost_per_result": 0.17
         }
       ]
     },
@@ -1858,10 +1870,18 @@
         {
           "date": "2026-05-21",
           "clicks": 391,
-          "impressions": 16033,
-          "spend_czk": 2692.41,
+          "impressions": 16035,
+          "spend_czk": 2692.98,
           "results": 426,
           "cost_per_result": 6.32
+        },
+        {
+          "date": "2026-05-22",
+          "clicks": 336,
+          "impressions": 14875,
+          "spend_czk": 2517.78,
+          "results": 374,
+          "cost_per_result": 6.73
         }
       ]
     },
@@ -4168,8 +4188,12 @@
       "name": "VL | FLORIA | Příspěveky | Povědomí – kopie",
       "objective": "OUTCOME_AWARENESS",
       "result_type": "Dosah (za 1 000 úč.)",
-      "period_reach": 355182,
+      "period_reach": 399845,
       "adsets": [
+        {
+          "id": "120244029869970685",
+          "name": "WEB | IG+FB | CAROUSEL | Travin - TV spot"
+        },
         {
           "id": "120243715431030685",
           "name": "WEB | IG+FB | CAROUSEL | Travin"
@@ -4263,10 +4287,18 @@
         {
           "date": "2026-05-21",
           "clicks": 257,
-          "impressions": 200088,
-          "spend_czk": 3151.89,
+          "impressions": 200127,
+          "spend_czk": 3152.45,
           "results": 138778,
-          "cost_per_result": 22.71
+          "cost_per_result": 22.72
+        },
+        {
+          "date": "2026-05-22",
+          "clicks": 289,
+          "impressions": 195368,
+          "spend_czk": 3186.72,
+          "results": 131629,
+          "cost_per_result": 24.21
         }
       ]
     },
@@ -4430,6 +4462,14 @@
           "spend_czk": 692.68,
           "results": 150,
           "cost_per_result": 4.62
+        },
+        {
+          "date": "2026-05-22",
+          "clicks": 103,
+          "impressions": 4048,
+          "spend_czk": 633.92,
+          "results": 107,
+          "cost_per_result": 5.92
         }
       ]
     }
