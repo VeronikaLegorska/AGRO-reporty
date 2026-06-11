@@ -13,13 +13,14 @@ Pokud secret chybí → skript skončí s chybou, data se neaktualizují.
 import os
 import json
 import requests
-from datetime import date, timedelta
+from datetime import date, timedelta, datetime
 
 PAGE_TOKEN  = os.environ["META_PAGE_ACCESS_TOKEN"]
 PAGE_ID     = os.environ["META_PAGE_ID"]
 IG_USER_ID  = os.environ.get("META_IG_USER_ID", "")
 
 DATA_FILE = "data/followers.json"
+API_VER   = "v21.0"
 
 # ── helpers ──────────────────────────────────────────────────────────────────
 
@@ -41,21 +42,33 @@ def upsert(lst, date_str, count):
     lst.sort(key=lambda x: x["date"])
 
 
+def to_ts(d):
+    """Convert date to Unix timestamp (Meta API requires timestamps, not date strings)."""
+    return int(datetime(d.year, d.month, d.day).timestamp())
+
+
 def fetch_page_fans_history(since_days=90):
     """Fetch daily page_fans metric from FB Insights."""
     end   = date.today() - timedelta(days=1)
     start = end - timedelta(days=since_days)
+
+    # Meta Insights API requires Unix timestamps for since/until
     url = (
-        f"https://graph.facebook.com/v19.0/{PAGE_ID}/insights"
+        f"https://graph.facebook.com/{API_VER}/{PAGE_ID}/insights"
         f"?metric=page_fans&period=day"
-        f"&since={start}&until={end}"
+        f"&since={to_ts(start)}&until={to_ts(end)}"
         f"&access_token={PAGE_TOKEN}"
     )
     records = []
     while url:
         r = requests.get(url, timeout=30)
-        r.raise_for_status()
+        if r.status_code != 200:
+            print(f"  FB Insights error {r.status_code}: {r.text[:500]}")
+            break
         data = r.json()
+        if "error" in data:
+            print(f"  FB Insights API error: {data['error']}")
+            break
         for item in data.get("data", []):
             if item.get("name") == "page_fans":
                 for val in item.get("values", []):
@@ -70,13 +83,18 @@ def fetch_ig_followers_today():
     if not IG_USER_ID:
         return None
     url = (
-        f"https://graph.facebook.com/v19.0/{IG_USER_ID}"
+        f"https://graph.facebook.com/{API_VER}/{IG_USER_ID}"
         f"?fields=followers_count"
         f"&access_token={PAGE_TOKEN}"
     )
     r = requests.get(url, timeout=30)
-    r.raise_for_status()
+    if r.status_code != 200:
+        print(f"  IG followers_count error {r.status_code}: {r.text[:300]}")
+        return None
     data = r.json()
+    if "error" in data:
+        print(f"  IG followers_count API error: {data['error']}")
+        return None
     return data.get("followers_count")
 
 
@@ -86,19 +104,23 @@ def fetch_ig_followers_history(since_days=90):
         return []
     end   = date.today() - timedelta(days=1)
     start = end - timedelta(days=since_days)
+
     url = (
-        f"https://graph.facebook.com/v19.0/{IG_USER_ID}/insights"
+        f"https://graph.facebook.com/{API_VER}/{IG_USER_ID}/insights"
         f"?metric=follower_count&period=day"
-        f"&since={start}&until={end}"
+        f"&since={to_ts(start)}&until={to_ts(end)}"
         f"&access_token={PAGE_TOKEN}"
     )
     records = []
     while url:
         r = requests.get(url, timeout=30)
         if r.status_code != 200:
-            print(f"IG Insights error: {r.text}")
+            print(f"  IG Insights error {r.status_code}: {r.text[:300]}")
             break
         data = r.json()
+        if "error" in data:
+            print(f"  IG Insights API error: {data['error']}")
+            break
         for item in data.get("data", []):
             if item.get("name") == "follower_count":
                 for val in item.get("values", []):
