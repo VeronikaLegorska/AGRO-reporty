@@ -27,7 +27,7 @@ jobs:
           META_APP_ID: ${{ secrets.META_APP_ID }}
           META_APP_SECRET: ${{ secrets.META_APP_SECRET }}
           META_AD_ACCOUNT_ID: ${{ secrets.META_AD_ACCOUNT_ID }}
-        run: python fetch/fetch_meta.py
+        run: python fetch/fetch_meta.py || echo "Meta fetch selhal – pokracujeme"
 
       - name: Fetch Google Ads
         env:
@@ -37,12 +37,12 @@ jobs:
           GADS_REFRESH_TOKEN: ${{ secrets.GADS_REFRESH_TOKEN }}
           GADS_CUSTOMER_ID: ${{ secrets.GADS_CUSTOMER_ID }}
           GADS_LOGIN_CUSTOMER_ID: ${{ secrets.GADS_LOGIN_CUSTOMER_ID }}
-        run: python fetch/fetch_gads.py
+        run: python fetch/fetch_gads.py || echo "Google Ads fetch selhal – pokracujeme"
 
       - name: Fetch Sklik
         env:
           SKLIK_TOKEN_AGRO: ${{ secrets.SKLIK_TOKEN_AGRO }}   # starý AGRO klient token
-        run: python fetch/fetch_sklik.py
+        run: python fetch/fetch_sklik.py || echo "Sklik fetch selhal – pokracujeme"
 
       - name: Fetch Followers
         env:
