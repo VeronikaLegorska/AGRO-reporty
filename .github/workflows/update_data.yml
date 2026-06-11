@@ -2,7 +2,7 @@ name: Aktualizace dat
 
 on:
   schedule:
-    - cron: '0 6 * * *'   # každý den v 8:00 SEČ (6:00 UTC)
+    - cron: '0 4 * * *'   # každý den v 6:00 SELČ (4:00 UTC)
   workflow_dispatch:        # možnost spustit ručně
 
 jobs:
