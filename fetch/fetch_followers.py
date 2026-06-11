@@ -6,8 +6,6 @@ Potřebné GitHub Secrets:
                             pages_read_engagement, instagram_basic
   META_PAGE_ID            – ID Facebook stránky (číslo)
   META_IG_USER_ID         – ID Instagram Business Account (číslo)
-
-Pokud secret chybí → skript skončí s chybou, data se neaktualizují.
 """
 
 import os
@@ -20,7 +18,10 @@ PAGE_ID     = os.environ["META_PAGE_ID"]
 IG_USER_ID  = os.environ.get("META_IG_USER_ID", "")
 
 DATA_FILE = "data/followers.json"
-API_VER   = "v21.0"
+
+# page_fans funguje jen do v17; IG insights funguje v21+
+API_VER_FB = "v17.0"
+API_VER_IG = "v21.0"
 
 # ── helpers ──────────────────────────────────────────────────────────────────
 
@@ -33,7 +34,6 @@ def load_existing():
 
 
 def upsert(lst, date_str, count):
-    """Insert or update record for date_str in list sorted by date."""
     for item in lst:
         if item["date"] == date_str:
             item["count"] = count
@@ -43,18 +43,16 @@ def upsert(lst, date_str, count):
 
 
 def to_ts(d):
-    """Convert date to Unix timestamp (Meta API requires timestamps, not date strings)."""
+    """Převod date na Unix timestamp (Meta API vyžaduje timestamp, ne string)."""
     return int(datetime(d.year, d.month, d.day).timestamp())
 
 
 def fetch_page_fans_history(since_days=90):
-    """Fetch daily page_fans metric from FB Insights."""
+    """Fetch daily page_fans metric z FB Insights (API v17 – v21+ tuto metriku nepodporuje)."""
     end   = date.today() - timedelta(days=1)
     start = end - timedelta(days=since_days)
-
-    # Meta Insights API requires Unix timestamps for since/until
     url = (
-        f"https://graph.facebook.com/{API_VER}/{PAGE_ID}/insights"
+        f"https://graph.facebook.com/{API_VER_FB}/{PAGE_ID}/insights"
         f"?metric=page_fans&period=day"
         f"&since={to_ts(start)}&until={to_ts(end)}"
         f"&access_token={PAGE_TOKEN}"
@@ -63,7 +61,7 @@ def fetch_page_fans_history(since_days=90):
     while url:
         r = requests.get(url, timeout=30)
         if r.status_code != 200:
-            print(f"  FB Insights error {r.status_code}: {r.text[:500]}")
+            print(f"  FB Insights error {r.status_code}: {r.text[:400]}")
             break
         data = r.json()
         if "error" in data:
@@ -79,11 +77,11 @@ def fetch_page_fans_history(since_days=90):
 
 
 def fetch_ig_followers_today():
-    """Fetch current IG follower count."""
+    """Fetch aktuální počet IG followers."""
     if not IG_USER_ID:
         return None
     url = (
-        f"https://graph.facebook.com/{API_VER}/{IG_USER_ID}"
+        f"https://graph.facebook.com/{API_VER_IG}/{IG_USER_ID}"
         f"?fields=followers_count"
         f"&access_token={PAGE_TOKEN}"
     )
@@ -99,34 +97,41 @@ def fetch_ig_followers_today():
 
 
 def fetch_ig_followers_history(since_days=90):
-    """Fetch daily IG followers via IG Insights."""
+    """Fetch daily IG followers via IG Insights. Max 30 dní na dotaz → loop po 30denních blocích."""
     if not IG_USER_ID:
         return []
     end   = date.today() - timedelta(days=1)
     start = end - timedelta(days=since_days)
 
-    url = (
-        f"https://graph.facebook.com/{API_VER}/{IG_USER_ID}/insights"
-        f"?metric=follower_count&period=day"
-        f"&since={to_ts(start)}&until={to_ts(end)}"
-        f"&access_token={PAGE_TOKEN}"
-    )
     records = []
-    while url:
-        r = requests.get(url, timeout=30)
-        if r.status_code != 200:
-            print(f"  IG Insights error {r.status_code}: {r.text[:300]}")
-            break
-        data = r.json()
-        if "error" in data:
-            print(f"  IG Insights API error: {data['error']}")
-            break
-        for item in data.get("data", []):
-            if item.get("name") == "follower_count":
-                for val in item.get("values", []):
-                    d = val["end_time"][:10]
-                    records.append({"date": d, "count": int(val["value"])})
-        url = data.get("paging", {}).get("next")
+    chunk_end = end
+    while chunk_end >= start:
+        chunk_start = max(start, chunk_end - timedelta(days=29))
+        url = (
+            f"https://graph.facebook.com/{API_VER_IG}/{IG_USER_ID}/insights"
+            f"?metric=follower_count&period=day"
+            f"&since={to_ts(chunk_start)}&until={to_ts(chunk_end)}"
+            f"&access_token={PAGE_TOKEN}"
+        )
+        while url:
+            r = requests.get(url, timeout=30)
+            if r.status_code != 200:
+                print(f"  IG Insights error {r.status_code} [{chunk_start}–{chunk_end}]: {r.text[:300]}")
+                url = None
+                break
+            data = r.json()
+            if "error" in data:
+                print(f"  IG Insights API error: {data['error']}")
+                url = None
+                break
+            for item in data.get("data", []):
+                if item.get("name") == "follower_count":
+                    for val in item.get("values", []):
+                        d = val["end_time"][:10]
+                        records.append({"date": d, "count": int(val["value"])})
+            url = data.get("paging", {}).get("next")
+        chunk_end = chunk_start - timedelta(days=1)
+
     return records
 
 
@@ -147,7 +152,6 @@ ig_records = fetch_ig_followers_history(since_days=90)
 for rec in ig_records:
     upsert(existing["instagram"], rec["date"], rec["count"])
 
-# přidej dnešek pokud chybí
 today_str = str(date.today())
 ig_today = fetch_ig_followers_today()
 if ig_today is not None:
