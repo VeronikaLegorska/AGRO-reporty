@@ -7439,9 +7439,9 @@
         },
         {
           "date": "2026-06-10",
-          "clicks": 45,
-          "impressions": 28191,
-          "spend_czk": 803.51
+          "clicks": 44,
+          "impressions": 28190,
+          "spend_czk": 803.5
         }
       ]
     },
@@ -7584,7 +7584,7 @@
         {
           "date": "2026-06-09",
           "clicks": 8,
-          "impressions": 26652,
+          "impressions": 26651,
           "spend_czk": 304.81
         },
         {
@@ -8136,7 +8136,7 @@
         {
           "date": "2026-06-10",
           "clicks": 8,
-          "impressions": 22025,
+          "impressions": 22024,
           "spend_czk": 282.67
         }
       ]
@@ -9252,7 +9252,7 @@
         {
           "date": "2026-06-10",
           "clicks": 10,
-          "impressions": 20281,
+          "impressions": 20282,
           "spend_czk": 249.74
         }
       ]
