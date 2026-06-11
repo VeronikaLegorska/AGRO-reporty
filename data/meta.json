@@ -455,6 +455,14 @@
       "period_reach": null,
       "adsets": [
         {
+          "id": "120245758720020685",
+          "name": "Příspěvek | engagement | IG | vlastní cílení | Přírodní hnojivo pro rajčata a papriky"
+        },
+        {
+          "id": "120245758665670685",
+          "name": "Příspěvek | engagement | FB | vlastní cílení | Přírodní hnojivo pro rajčata a papriky"
+        },
+        {
           "id": "120245357128920685",
           "name": "Příspěvek | engagement | FB | vlastní cílení | Bylinková směs na plísně"
         },
@@ -1314,10 +1322,10 @@
         },
         {
           "date": "2026-06-10",
-          "clicks": 1083,
-          "impressions": 53078,
-          "spend_czk": 4244.2,
-          "results": 11352,
+          "clicks": 1085,
+          "impressions": 53170,
+          "spend_czk": 4251.49,
+          "results": 11372,
           "cost_per_result": 0.37
         }
       ]
@@ -2349,8 +2357,8 @@
         {
           "date": "2026-06-10",
           "clicks": 318,
-          "impressions": 177622,
-          "spend_czk": 2172.31,
+          "impressions": 177669,
+          "spend_czk": 2174.76,
           "results": 448,
           "cost_per_result": 4.85
         }
@@ -4547,6 +4555,14 @@
       "period_reach": 963716,
       "adsets": [
         {
+          "id": "120245758944360685",
+          "name": "Okyselovač a KH kyselomilné | IG | Max počet zobrazení"
+        },
+        {
+          "id": "120245758890910685",
+          "name": "Okyselovač a KH kyselomilné | FB | Max počet zobrazení – kopie"
+        },
+        {
           "id": "120245356023070685",
           "name": "WEB | IG+FB | CAROUSEL | Produktová řada celá zahrada"
         },
@@ -4814,11 +4830,11 @@
         },
         {
           "date": "2026-06-10",
-          "clicks": 402,
-          "impressions": 271611,
-          "spend_czk": 4122.22,
-          "results": 200999,
-          "cost_per_result": 20.51
+          "clicks": 407,
+          "impressions": 272197,
+          "spend_czk": 4130.81,
+          "results": 201234,
+          "cost_per_result": 20.53
         }
       ]
     },
@@ -5182,10 +5198,10 @@
         {
           "date": "2026-06-10",
           "clicks": 168,
-          "impressions": 7036,
-          "spend_czk": 867.36,
+          "impressions": 7048,
+          "spend_czk": 867.98,
           "results": 214,
-          "cost_per_result": 4.05
+          "cost_per_result": 4.06
         }
       ]
     },
@@ -5334,11 +5350,11 @@
         },
         {
           "date": "2026-06-10",
-          "clicks": 122,
-          "impressions": 185578,
-          "spend_czk": 1254.16,
-          "results": 159,
-          "cost_per_result": 7.89
+          "clicks": 123,
+          "impressions": 185622,
+          "spend_czk": 1255.49,
+          "results": 160,
+          "cost_per_result": 7.85
         }
       ]
     }
