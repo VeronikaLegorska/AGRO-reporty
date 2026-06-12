@@ -87,13 +87,13 @@ def fetch_ig_followers_today():
     return data.get("followers_count")
 
 
-def fetch_ig_followers_history(since_days=30):
-    """Fetch daily IG followers via IG Insights. API limit: max 30 dní."""
+def fetch_ig_followers_history(since_days=28):
+    """Fetch daily IG followers via IG Insights. API limit: max posledních 30 dní bez dneška."""
     if not IG_USER_ID:
         return []
-    since_days = min(since_days, 30)  # API omezení
+    since_days = min(since_days, 28)  # safe margin – API: [today-30, today-1] max
     end   = date.today() - timedelta(days=1)
-    start = end - timedelta(days=since_days)
+    start = date.today() - timedelta(days=since_days)  # počítáme od dneška, ne od end
     url = (
         f"https://graph.facebook.com/{API_VER}/{IG_USER_ID}/insights"
         f"?metric=follower_count&period=day"
