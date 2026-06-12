@@ -27,10 +27,18 @@ def fetch():
         SELECT
             campaign.id,
             campaign.name,
+            campaign.advertising_channel_type,
             segments.date,
             metrics.impressions,
             metrics.clicks,
-            metrics.cost_micros
+            metrics.cost_micros,
+            metrics.video_views,
+            metrics.average_cpv,
+            metrics.video_view_rate,
+            metrics.video_quartile_p25_rate,
+            metrics.video_quartile_p50_rate,
+            metrics.video_quartile_p75_rate,
+            metrics.video_quartile_p100_rate
         FROM campaign
         WHERE
             campaign.name LIKE '%VL%'
@@ -48,13 +56,21 @@ def fetch():
         cid  = str(row.campaign.id)
         name = row.campaign.name
         day  = row.segments.date
+        channel_type = row.campaign.advertising_channel_type.name
         if cid not in campaigns:
-            campaigns[cid] = {"id": cid, "name": name, "daily": []}
+            campaigns[cid] = {"id": cid, "name": name, "channel_type": channel_type, "daily": []}
         campaigns[cid]["daily"].append({
             "date":        day,
             "clicks":      row.metrics.clicks,
             "impressions": row.metrics.impressions,
             "spend_czk":   round(row.metrics.cost_micros / 1_000_000, 2),
+            "video_views": row.metrics.video_views,
+            "average_cpv": round(row.metrics.average_cpv / 1_000_000, 4) if row.metrics.average_cpv else 0,
+            "view_rate":   round(row.metrics.video_view_rate * 100, 2) if row.metrics.video_view_rate else 0,
+            "q25":         round(row.metrics.video_quartile_p25_rate * 100, 1) if row.metrics.video_quartile_p25_rate else 0,
+            "q50":         round(row.metrics.video_quartile_p50_rate * 100, 1) if row.metrics.video_quartile_p50_rate else 0,
+            "q75":         round(row.metrics.video_quartile_p75_rate * 100, 1) if row.metrics.video_quartile_p75_rate else 0,
+            "q100":        round(row.metrics.video_quartile_p100_rate * 100, 1) if row.metrics.video_quartile_p100_rate else 0,
         })
 
     result = list(campaigns.values())

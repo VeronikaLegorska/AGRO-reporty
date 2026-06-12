@@ -264,6 +264,8 @@ tbody td:first-child { text-align: left; }
   <button class="tab-btn" data-tab="natura">Přehled NATURA</button>
   <button class="tab-btn" data-tab="agro">Přehled AGRO</button>
   <button class="tab-btn" data-tab="kristalon">Přehled KRISTALON</button>
+  <button class="tab-btn" data-tab="vitality">Přehled VITALITY</button>
+  <button class="tab-btn" data-tab="youtube">YouTube</button>
   <button class="tab-btn" data-tab="overview">Přehled po kampaních</button>
   <button class="tab-btn" data-tab="finance">Finance</button>
 </nav>
@@ -378,6 +380,39 @@ tbody td:first-child { text-align: left; }
   </div>
 </div>
 
+<div class="tab-panel" id="tab-vitality">
+  <div class="brand-wrap">
+    <div class="metric-row" id="metrics-vitality-komplex"></div>
+    <div class="pie-row">
+      <div class="pie-box"><h3>Cena</h3><canvas id="pie-vitality-komplex-spend"></canvas></div>
+      <div class="pie-box"><h3>Zobrazení</h3><canvas id="pie-vitality-komplex-impressions"></canvas></div>
+      <div class="pie-box"><h3>Prokliky</h3><canvas id="pie-vitality-komplex-clicks"></canvas></div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══ YOUTUBE ═══ -->
+<div class="tab-panel" id="tab-youtube">
+  <div id="youtube-summary" class="metric-row" style="margin-bottom:1.5rem"></div>
+  <div class="data-table-wrap">
+    <table id="table-yt-campaigns">
+      <thead><tr>
+        <th>Kampaň</th>
+        <th>Cena</th>
+        <th>Zobrazení</th>
+        <th>Zhlédnutí</th>
+        <th>View Rate</th>
+        <th>CPV</th>
+        <th>25 %</th>
+        <th>50 %</th>
+        <th>75 %</th>
+        <th>100 %</th>
+      </tr></thead>
+      <tbody id="tbody-yt-campaigns"></tbody>
+    </table>
+  </div>
+</div>
+
 <!-- ═══ PŘEHLED PO KAMPANÍCH ═══ -->
 <div class="tab-panel" id="tab-overview">
   <div id="overview-content"></div>
@@ -409,7 +444,7 @@ const state = {
   data: { meta: null, gads: null, sklik: null, budgets: null, followers: null },
 };
 
-const BRANDS  = ['FLORIA', 'NATURA', 'AGRO', 'KRISTALON'];
+const BRANDS  = ['FLORIA', 'NATURA', 'AGRO', 'KRISTALON', 'VITALITY KOMPLEX'];
 const PIE_COLORS = ['#1a5c1a', '#5aab3a', '#cce8aa'];
 const PIE_LABELS = ['Google', 'Facebook', 'Sklik'];
 const charts  = {};
@@ -453,6 +488,7 @@ function brandOf(name) {
   if (n.includes('FLORIA'))    return 'FLORIA';
   if (n.includes('NATURA'))    return 'NATURA';
   if (n.includes('KRISTALON')) return 'KRISTALON';
+  if (n.includes('VITALITY'))  return 'VITALITY KOMPLEX';
   if (n.includes('AGRO'))      return 'AGRO';
   return null;
 }
@@ -691,20 +727,83 @@ function metricCards(brand) {
   return { g, m, s, tot };
 }
 
+function brandSlug(brand) { return brand.toLowerCase().replace(/\s+/g, '-'); }
+
 function renderBrandTab(brand) {
-  const low = brand.toLowerCase();
+  const slug = brandSlug(brand);
   const { g, m, s, tot } = metricCards(brand);
 
-  document.getElementById(`metrics-${low}`).innerHTML = `
+  document.getElementById(`metrics-${slug}`).innerHTML = `
     <div class="metric-card"><div class="lbl">Prokliky</div><div class="val">${fmt.num(tot.clicks)}</div></div>
     <div class="metric-card"><div class="lbl">Zobrazení</div><div class="val">${fmt.num(tot.impressions)}</div></div>
     <div class="metric-card"><div class="lbl">Cena</div><div class="val">${fmt.czk(tot.spend_czk)}</div></div>
     <div class="metric-card"><div class="lbl">CTR</div><div class="val">${fmt.pct(tot.ctr)}</div></div>
     <div class="metric-card"><div class="lbl">CPC</div><div class="val">${fmt.cpc(tot.cpc)}</div></div>`;
 
-  makePie(`pie-${low}-spend`,       PIE_LABELS, [g.spend_czk,   m.spend_czk,   s.spend_czk],   PIE_COLORS);
-  makePie(`pie-${low}-impressions`, PIE_LABELS, [g.impressions,  m.impressions,  s.impressions],  PIE_COLORS);
-  makePie(`pie-${low}-clicks`,      PIE_LABELS, [g.clicks,       m.clicks,       s.clicks],       PIE_COLORS);
+  makePie(`pie-${slug}-spend`,       PIE_LABELS, [g.spend_czk,   m.spend_czk,   s.spend_czk],   PIE_COLORS);
+  makePie(`pie-${slug}-impressions`, PIE_LABELS, [g.impressions,  m.impressions,  s.impressions],  PIE_COLORS);
+  makePie(`pie-${slug}-clicks`,      PIE_LABELS, [g.clicks,       m.clicks,       s.clicks],       PIE_COLORS);
+}
+
+function renderYouTube() {
+  const { dateFrom: from, dateTo: to } = state;
+  if (!state.data.gads?.campaigns) return;
+
+  const ytCamps = state.data.gads.campaigns.filter(c =>
+    c.channel_type === 'VIDEO' || c.name.toUpperCase().includes('| YT |')
+  );
+
+  let totSpend = 0, totViews = 0, totImpr = 0;
+  const rows = ytCamps.map(c => {
+    let spend = 0, views = 0, impr = 0, cpvSum = 0, vrSum = 0;
+    let q25 = 0, q50 = 0, q75 = 0, q100 = 0, days = 0;
+    for (const d of c.daily) {
+      if (d.date < from || d.date > to) continue;
+      spend += d.spend_czk;
+      views += d.video_views || 0;
+      impr  += d.impressions;
+      if (d.view_rate) { vrSum += d.view_rate; days++; }
+      q25  += d.q25  || 0;
+      q50  += d.q50  || 0;
+      q75  += d.q75  || 0;
+      q100 += d.q100 || 0;
+    }
+    totSpend += spend; totViews += views; totImpr += impr;
+    const cpv    = views > 0 ? round2(spend / views) : 0;
+    const vr     = days  > 0 ? round2(vrSum / days)  : 0;
+    const dCnt   = Math.max(days, 1);
+    return `<tr>
+      <td>${c.name}</td>
+      <td>${fmt.czk(spend)}</td>
+      <td>${fmt.num(impr)}</td>
+      <td>${fmt.num(views)}</td>
+      <td>${fmt.pct(vr)}</td>
+      <td>${cpv > 0 ? fmt.czk(cpv) : '<span style="opacity:.35">–</span>'}</td>
+      <td>${fmt.pct(round2(q25/dCnt))}</td>
+      <td>${fmt.pct(round2(q50/dCnt))}</td>
+      <td>${fmt.pct(round2(q75/dCnt))}</td>
+      <td>${fmt.pct(round2(q100/dCnt))}</td>
+    </tr>`;
+  });
+
+  const avgCpv = totViews > 0 ? round2(totSpend / totViews) : 0;
+  const avgVr  = ytCamps.length > 0
+    ? round2(ytCamps.reduce((s, c) => {
+        let vrS = 0, d = 0;
+        for (const day of c.daily) { if (day.date >= from && day.date <= to && day.view_rate) { vrS += day.view_rate; d++; } }
+        return s + (d > 0 ? vrS/d : 0);
+      }, 0) / ytCamps.filter(c => c.daily.some(d => d.date >= from && d.date <= to)).length)
+    : 0;
+
+  document.getElementById('youtube-summary').innerHTML = `
+    <div class="metric-card"><div class="lbl">Celková cena</div><div class="val">${fmt.czk(totSpend)}</div></div>
+    <div class="metric-card"><div class="lbl">Zobrazení</div><div class="val">${fmt.num(totImpr)}</div></div>
+    <div class="metric-card"><div class="lbl">Zhlédnutí</div><div class="val">${fmt.num(totViews)}</div></div>
+    <div class="metric-card"><div class="lbl">Průměrné CPV</div><div class="val">${avgCpv > 0 ? fmt.czk(avgCpv) : '–'}</div></div>
+    <div class="metric-card"><div class="lbl">Průměrný View Rate</div><div class="val">${fmt.pct(avgVr)}</div></div>`;
+
+  document.getElementById('tbody-yt-campaigns').innerHTML =
+    rows.length ? rows.join('') : '<tr><td colspan="10" style="text-align:center;color:var(--muted)">Žádné YT kampaně v tomto období</td></tr>';
 }
 
 function renderOverview() {
@@ -814,6 +913,8 @@ function renderActive() {
   if (tab === 'natura')    renderBrandTab('NATURA');
   if (tab === 'agro')      renderBrandTab('AGRO');
   if (tab === 'kristalon') renderBrandTab('KRISTALON');
+  if (tab === 'vitality')  renderBrandTab('VITALITY KOMPLEX');
+  if (tab === 'youtube')   renderYouTube();
   if (tab === 'overview')  renderOverview();
   if (tab === 'finance')   renderFinance();
 }
