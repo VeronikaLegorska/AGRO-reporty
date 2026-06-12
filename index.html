@@ -394,19 +394,18 @@ tbody td:first-child { text-align: left; }
 <!-- ═══ YOUTUBE ═══ -->
 <div class="tab-panel" id="tab-youtube">
   <div id="youtube-summary" class="metric-row" style="margin-bottom:1.5rem"></div>
-  <p id="yt-api-note" style="font-size:.78rem;color:var(--muted);margin:-.5rem 0 1rem">
-    * Viditelná zobrazení, True View zhlédnutí, frekvence a průměrná doba sledování nejsou dostupné přes aktuální konfiguraci Google Ads API (omezení developer tokenu).
-  </p>
-  <div class="data-table-wrap">
+  <div class="data-table-wrap" style="overflow-x:auto">
     <table id="table-yt-campaigns">
       <thead><tr>
         <th>Kampaň</th>
         <th>Typ</th>
         <th>Cena</th>
         <th>Zobrazení</th>
-        <th>Prokliky</th>
-        <th>CPM</th>
-        <th>CTR</th>
+        <th title="Viditelná zobrazení (active view)">Vid. zobr.*</th>
+        <th title="True View – zhlédnutí (placená zhlédnutí u přeskočitelných)">True View*</th>
+        <th title="View Rate = zhlédnutí / zobrazení">View Rate*</th>
+        <th title="Průměrná frekvence zobrazení na uživatele">Frekvence*</th>
+        <th title="Průměrné CPV (cena za zhlédnutí)">CPV*</th>
         <th title="% přehrání do 25 %">25 %</th>
         <th title="% přehrání do 50 %">50 %</th>
         <th title="% přehrání do 75 %">75 %</th>
@@ -415,6 +414,9 @@ tbody td:first-child { text-align: left; }
       <tbody id="tbody-yt-campaigns"></tbody>
     </table>
   </div>
+  <p id="yt-api-note" style="font-size:.75rem;color:var(--muted);margin:.6rem 0 0">
+    * Metriky označené hvězdičkou (Viditelná zobrazení, True View, View Rate, Frekvence, CPV) vyžadují rozšířené oprávnění Google Ads API. Pokud zobrazují „–", kontaktuj Google pro Standard Access developer token.
+  </p>
 </div>
 
 <!-- ═══ PŘEHLED PO KAMPANÍCH ═══ -->
@@ -772,23 +774,35 @@ function renderYouTube() {
     const typ = c.name.toLowerCase().includes('nepřesko') || c.name.toLowerCase().includes('nepresko')
       ? 'Nepřeskočitelná' : c.name.toLowerCase().includes('přesko') || c.name.toLowerCase().includes('presko')
       ? 'Přeskočitelná' : '–';
-    // agreguj quartily za období
-    let q25s = 0, q50s = 0, q75s = 0, q100s = 0, qcnt = 0;
+    // agreguj YT metriky za období
+    let q25s=0,q50s=0,q75s=0,q100s=0,qcnt=0;
+    let views=0, vrSum=0, vrCnt=0, activeImpr=0, freqSum=0, freqCnt=0, cpvCost=0;
     for (const d of c.daily) {
       if (d.date < from || d.date > to) continue;
-      if (d.q25 != null) { q25s += d.q25; q50s += d.q50; q75s += d.q75; q100s += d.q100; qcnt++; }
+      if (d.q25  != null) { q25s+=d.q25; q50s+=d.q50; q75s+=d.q75; q100s+=d.q100; qcnt++; }
+      views      += d.video_views       || 0;
+      activeImpr += d.active_view_impr  || 0;
+      if (d.view_rate)    { vrSum  += d.view_rate;    vrCnt++;   }
+      if (d.avg_frequency){ freqSum += d.avg_frequency; freqCnt++; }
+      cpvCost    += d.average_cpv       || 0;
     }
-    const q = qcnt > 0
-      ? [q25s/qcnt, q50s/qcnt, q75s/qcnt, q100s/qcnt].map(v => fmt.pct(round2(v)))
-      : ['–','–','–','–'];
+    const nd = '<span style="opacity:.35">–</span>';
+    const q   = qcnt>0 ? [q25s/qcnt,q50s/qcnt,q75s/qcnt,q100s/qcnt].map(v=>fmt.pct(round2(v))) : [nd,nd,nd,nd];
+    const vr  = vrCnt>0   ? fmt.pct(round2(vrSum/vrCnt))       : nd;
+    const frq = freqCnt>0 ? (freqSum/freqCnt).toFixed(2).replace('.',',') : nd;
+    const cpv = views>0   ? fmt.czk(round2(spend/views))        : nd;
+    const trv = views>0   ? fmt.num(views)                      : nd;
+    const avi = activeImpr>0 ? fmt.num(activeImpr)              : nd;
     return `<tr>
       <td>${c.name}</td>
       <td style="white-space:nowrap">${typ}</td>
       <td>${fmt.czk(spend)}</td>
       <td>${fmt.num(impr)}</td>
-      <td>${fmt.num(clicks)}</td>
-      <td>${cpm > 0 ? fmt.czk(cpm) : '<span style="opacity:.35">–</span>'}</td>
-      <td>${fmt.pct(ctr)}</td>
+      <td>${avi}</td>
+      <td>${trv}</td>
+      <td>${vr}</td>
+      <td>${frq}</td>
+      <td>${cpv}</td>
       <td>${q[0]}</td><td>${q[1]}</td><td>${q[2]}</td><td>${q[3]}</td>
     </tr>`;
   });
@@ -801,7 +815,7 @@ function renderYouTube() {
     <div class="metric-card"><div class="lbl">Průměrné CPM</div><div class="val">${avgCpm > 0 ? fmt.czk(avgCpm) : '–'}</div></div>`;
 
   document.getElementById('tbody-yt-campaigns').innerHTML =
-    rows.length ? rows.join('') : '<tr><td colspan="11" style="text-align:center;color:var(--muted)">Žádné YT kampaně v tomto období</td></tr>';
+    rows.length ? rows.join('') : '<tr><td colspan="13" style="text-align:center;color:var(--muted)">Žádné YT kampaně v tomto období</td></tr>';
 }
 
 function renderOverview() {
