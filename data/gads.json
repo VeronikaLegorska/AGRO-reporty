@@ -7380,12 +7380,12 @@
         {
           "date": "2026-06-09",
           "clicks": 0,
-          "impressions": 24207,
-          "spend_czk": 874.68,
-          "q25_sum": 93.17186079193188,
-          "q50_sum": 91.46069273373564,
-          "q75_sum": 90.74150615855172,
-          "q100_sum": 90.3240472844507,
+          "impressions": 24206,
+          "spend_czk": 874.65,
+          "q25_sum": 93.1715785557806,
+          "q50_sum": 91.4603397677014,
+          "q75_sum": 90.74112346546521,
+          "q100_sum": 90.32364733600629,
           "q_cnt": 1,
           "active_view_impr": 22224,
           "freq_sum": 0,
@@ -7429,7 +7429,7 @@
           "q25_sum": 93.08922124806601,
           "q50_sum": 91.64947567474643,
           "q75_sum": 90.85009455045557,
-          "q100_sum": 90.38164002062919,
+          "q100_sum": 90.38593776860925,
           "q_cnt": 1,
           "active_view_impr": 21236,
           "freq_sum": 0,
@@ -7939,10 +7939,10 @@
           "clicks": 73,
           "impressions": 34243,
           "spend_czk": 1228.12,
-          "q25_sum": 58.35952339837679,
-          "q50_sum": 51.524779830771884,
-          "q75_sum": 34.43964772923502,
-          "q100_sum": 21.965118286997065,
+          "q25_sum": 58.361538992885265,
+          "q50_sum": 51.52655937003523,
+          "q75_sum": 34.44083719002556,
+          "q100_sum": 21.965876908199213,
           "q_cnt": 1,
           "active_view_impr": 16109,
           "freq_sum": 0,
@@ -7959,14 +7959,14 @@
         {
           "date": "2026-06-09",
           "clicks": 68,
-          "impressions": 33740,
-          "spend_czk": 1230.0,
-          "q25_sum": 58.737423554941806,
-          "q50_sum": 52.45610574077727,
-          "q75_sum": 35.079897415663844,
-          "q100_sum": 22.655356086013022,
+          "impressions": 33736,
+          "spend_czk": 1229.81,
+          "q25_sum": 58.7325388682819,
+          "q50_sum": 52.45836950516929,
+          "q75_sum": 35.08010417488754,
+          "q100_sum": 22.658038039618024,
           "q_cnt": 1,
-          "active_view_impr": 16089,
+          "active_view_impr": 16087,
           "freq_sum": 0,
           "freq_cnt": 0,
           "q25": 58.7,
@@ -7981,12 +7981,12 @@
         {
           "date": "2026-06-10",
           "clicks": 61,
-          "impressions": 31116,
-          "spend_czk": 1232.42,
-          "q25_sum": 66.92646315941401,
-          "q50_sum": 59.03514469221333,
-          "q75_sum": 40.00505159847009,
-          "q100_sum": 27.069351230425053,
+          "impressions": 31114,
+          "spend_czk": 1232.3,
+          "q25_sum": 66.92526972900805,
+          "q50_sum": 59.03366651030203,
+          "q75_sum": 40.00649514668206,
+          "q100_sum": 27.066719590084077,
           "q_cnt": 1,
           "active_view_impr": 16134,
           "freq_sum": 0,
@@ -8005,8 +8005,8 @@
           "clicks": 113,
           "impressions": 31587,
           "spend_czk": 1229.35,
-          "q25_sum": 69.99436545026681,
-          "q50_sum": 59.13957111133208,
+          "q25_sum": 69.9910510092473,
+          "q50_sum": 59.1428855523516,
           "q75_sum": 40.5256703456962,
           "q100_sum": 29.382519638063044,
           "q_cnt": 1,
@@ -8516,8 +8516,8 @@
         {
           "date": "2026-06-08",
           "clicks": 1,
-          "impressions": 28931,
-          "spend_czk": 1498.14,
+          "impressions": 28929,
+          "spend_czk": 1498.03,
           "q25_sum": 99.19418986685112,
           "q50_sum": 98.67542797855783,
           "q75_sum": 97.98028704824485,
@@ -8582,14 +8582,14 @@
         {
           "date": "2026-06-11",
           "clicks": 1,
-          "impressions": 29796,
-          "spend_czk": 1622.08,
-          "q25_sum": 98.84829762944061,
-          "q50_sum": 98.34799543348332,
-          "q75_sum": 96.70942179840172,
-          "q100_sum": 96.4945268954402,
+          "impressions": 29795,
+          "spend_czk": 1622.03,
+          "q25_sum": 98.84825895705316,
+          "q50_sum": 98.34793996172057,
+          "q75_sum": 96.70931130586615,
+          "q100_sum": 96.49440918706557,
           "q_cnt": 1,
-          "active_view_impr": 13912,
+          "active_view_impr": 13911,
           "freq_sum": 0,
           "freq_cnt": 0,
           "q25": 98.8,
@@ -9073,8 +9073,8 @@
         {
           "date": "2026-06-07",
           "clicks": 29,
-          "impressions": 27957,
-          "spend_czk": 800.54,
+          "impressions": 27956,
+          "spend_czk": 800.47,
           "q25_sum": 59.462759462759465,
           "q50_sum": 50.34314344659172,
           "q75_sum": 30.30609237505789,
@@ -9097,7 +9097,7 @@
           "clicks": 27,
           "impressions": 24913,
           "spend_czk": 792.37,
-          "q25_sum": 58.69293308317699,
+          "q25_sum": 58.688466005539176,
           "q50_sum": 49.1423210935406,
           "q75_sum": 29.80880907710176,
           "q100_sum": 21.084606450460107,
@@ -9117,14 +9117,14 @@
         {
           "date": "2026-06-09",
           "clicks": 48,
-          "impressions": 24769,
-          "spend_czk": 803.77,
-          "q25_sum": 61.60209375146049,
-          "q50_sum": 51.21278683927654,
-          "q75_sum": 31.004346403701454,
-          "q100_sum": 22.04514651586671,
+          "impressions": 24766,
+          "spend_czk": 803.67,
+          "q25_sum": 61.60067318030947,
+          "q50_sum": 51.213127016034775,
+          "q75_sum": 31.003693141975596,
+          "q100_sum": 22.04198027207704,
           "q_cnt": 1,
-          "active_view_impr": 11510,
+          "active_view_impr": 11508,
           "freq_sum": 0,
           "freq_cnt": 0,
           "q25": 61.6,
@@ -9163,10 +9163,10 @@
           "clicks": 33,
           "impressions": 25372,
           "spend_czk": 801.3,
-          "q25_sum": 63.8147768086198,
-          "q50_sum": 52.75354882845904,
-          "q75_sum": 32.28578758337609,
-          "q100_sum": 23.57619291944587,
+          "q25_sum": 63.81750545174669,
+          "q50_sum": 52.755804506777274,
+          "q75_sum": 32.28716808483345,
+          "q100_sum": 23.577201009107622,
           "q_cnt": 1,
           "active_view_impr": 10159,
           "freq_sum": 0,
@@ -9310,26 +9310,26 @@
         {
           "date": "2026-06-07",
           "clicks": 7,
-          "impressions": 28468,
-          "spend_czk": 311.41
+          "impressions": 28460,
+          "spend_czk": 311.37
         },
         {
           "date": "2026-06-08",
           "clicks": 13,
-          "impressions": 26440,
-          "spend_czk": 305.7
+          "impressions": 26439,
+          "spend_czk": 305.69
         },
         {
           "date": "2026-06-09",
           "clicks": 8,
-          "impressions": 26595,
-          "spend_czk": 304.55
+          "impressions": 26593,
+          "spend_czk": 304.5
         },
         {
           "date": "2026-06-10",
           "clicks": 10,
-          "impressions": 26176,
-          "spend_czk": 303.15
+          "impressions": 26175,
+          "spend_czk": 303.13
         },
         {
           "date": "2026-06-11",
@@ -9479,8 +9479,8 @@
         {
           "date": "2026-06-09",
           "clicks": 11,
-          "impressions": 25821,
-          "spend_czk": 306.79
+          "impressions": 25818,
+          "spend_czk": 306.75
         },
         {
           "date": "2026-06-10",
@@ -9606,19 +9606,19 @@
         {
           "date": "2026-06-07",
           "clicks": 7,
-          "impressions": 20752,
-          "spend_czk": 260.0
+          "impressions": 20747,
+          "spend_czk": 259.97
         },
         {
           "date": "2026-06-08",
           "clicks": 13,
-          "impressions": 20615,
-          "spend_czk": 255.69
+          "impressions": 20611,
+          "spend_czk": 255.66
         },
         {
           "date": "2026-06-09",
           "clicks": 8,
-          "impressions": 19414,
+          "impressions": 19413,
           "spend_czk": 255.92
         },
         {
@@ -9751,14 +9751,14 @@
         {
           "date": "2026-06-08",
           "clicks": 12,
-          "impressions": 21647,
+          "impressions": 21646,
           "spend_czk": 256.78
         },
         {
           "date": "2026-06-09",
           "clicks": 10,
-          "impressions": 20578,
-          "spend_czk": 255.1
+          "impressions": 20573,
+          "spend_czk": 255.06
         },
         {
           "date": "2026-06-10",
@@ -9896,8 +9896,8 @@
         {
           "date": "2026-06-09",
           "clicks": 6,
-          "impressions": 23887,
-          "spend_czk": 283.94
+          "impressions": 23865,
+          "spend_czk": 283.59
         },
         {
           "date": "2026-06-10",
@@ -10138,26 +10138,26 @@
         {
           "date": "2026-06-08",
           "clicks": 6,
-          "impressions": 22224,
-          "spend_czk": 285.79
+          "impressions": 22220,
+          "spend_czk": 285.76
         },
         {
           "date": "2026-06-09",
           "clicks": 6,
-          "impressions": 22642,
-          "spend_czk": 280.82
+          "impressions": 22641,
+          "spend_czk": 280.81
         },
         {
           "date": "2026-06-10",
           "clicks": 5,
-          "impressions": 21381,
-          "spend_czk": 279.9
+          "impressions": 21380,
+          "spend_czk": 279.88
         },
         {
           "date": "2026-06-11",
           "clicks": 5,
           "impressions": 21853,
-          "spend_czk": 283.85
+          "spend_czk": 283.87
         }
       ]
     },
@@ -10254,18 +10254,18 @@
           "date": "2026-06-08",
           "clicks": 8,
           "impressions": 22209,
-          "spend_czk": 284.06
+          "spend_czk": 284.04
         },
         {
           "date": "2026-06-09",
           "clicks": 11,
-          "impressions": 22403,
+          "impressions": 22402,
           "spend_czk": 283.2
         },
         {
           "date": "2026-06-10",
           "clicks": 6,
-          "impressions": 20740,
+          "impressions": 20739,
           "spend_czk": 282.4
         },
         {
@@ -10441,20 +10441,20 @@
         {
           "date": "2026-06-07",
           "clicks": 8,
-          "impressions": 17958,
+          "impressions": 17956,
           "spend_czk": 209.16
         },
         {
           "date": "2026-06-08",
           "clicks": 8,
-          "impressions": 17063,
+          "impressions": 17060,
           "spend_czk": 205.5
         },
         {
           "date": "2026-06-09",
           "clicks": 4,
-          "impressions": 17583,
-          "spend_czk": 202.79
+          "impressions": 17581,
+          "spend_czk": 202.77
         },
         {
           "date": "2026-06-10",
@@ -10465,8 +10465,8 @@
         {
           "date": "2026-06-11",
           "clicks": 7,
-          "impressions": 16855,
-          "spend_czk": 200.91
+          "impressions": 16857,
+          "spend_czk": 200.93
         }
       ]
     },
@@ -10624,8 +10624,8 @@
         {
           "date": "2026-06-07",
           "clicks": 9,
-          "impressions": 24163,
-          "spend_czk": 260.91
+          "impressions": 24161,
+          "spend_czk": 260.88
         },
         {
           "date": "2026-06-08",
@@ -10636,8 +10636,8 @@
         {
           "date": "2026-06-09",
           "clicks": 5,
-          "impressions": 22449,
-          "spend_czk": 255.64
+          "impressions": 22446,
+          "spend_czk": 255.55
         },
         {
           "date": "2026-06-10",
@@ -10722,7 +10722,7 @@
           "date": "2026-06-08",
           "clicks": 7,
           "impressions": 22012,
-          "spend_czk": 262.53
+          "spend_czk": 262.52
         },
         {
           "date": "2026-06-09",
@@ -10733,13 +10733,13 @@
         {
           "date": "2026-06-10",
           "clicks": 9,
-          "impressions": 21398,
-          "spend_czk": 262.27
+          "impressions": 21396,
+          "spend_czk": 262.25
         },
         {
           "date": "2026-06-11",
           "clicks": 3,
-          "impressions": 21040,
+          "impressions": 21039,
           "spend_czk": 260.73
         }
       ]
@@ -10794,7 +10794,7 @@
         {
           "date": "2026-06-08",
           "clicks": 9,
-          "impressions": 25378,
+          "impressions": 25377,
           "spend_czk": 304.36
         },
         {
@@ -10861,8 +10861,8 @@
         {
           "date": "2026-06-07",
           "clicks": 26,
-          "impressions": 24367,
-          "spend_czk": 308.78
+          "impressions": 24362,
+          "spend_czk": 308.77
         },
         {
           "date": "2026-06-08",
@@ -10873,14 +10873,14 @@
         {
           "date": "2026-06-09",
           "clicks": 8,
-          "impressions": 22938,
-          "spend_czk": 297.28
+          "impressions": 22934,
+          "spend_czk": 297.21
         },
         {
           "date": "2026-06-10",
           "clicks": 7,
-          "impressions": 23132,
-          "spend_czk": 300.48
+          "impressions": 23131,
+          "spend_czk": 300.45
         },
         {
           "date": "2026-06-11",
@@ -10935,18 +10935,18 @@
           "date": "2026-06-07",
           "clicks": 6,
           "impressions": 23040,
-          "spend_czk": 261.82
+          "spend_czk": 261.79
         },
         {
           "date": "2026-06-08",
           "clicks": 14,
-          "impressions": 20544,
+          "impressions": 20541,
           "spend_czk": 257.29
         },
         {
           "date": "2026-06-09",
           "clicks": 7,
-          "impressions": 20458,
+          "impressions": 20457,
           "spend_czk": 257.0
         },
         {
@@ -11007,7 +11007,7 @@
         {
           "date": "2026-06-07",
           "clicks": 12,
-          "impressions": 25001,
+          "impressions": 24998,
           "spend_czk": 290.12
         },
         {
@@ -11019,13 +11019,13 @@
         {
           "date": "2026-06-09",
           "clicks": 7,
-          "impressions": 23851,
+          "impressions": 23850,
           "spend_czk": 284.84
         },
         {
           "date": "2026-06-10",
           "clicks": 21,
-          "impressions": 23226,
+          "impressions": 23225,
           "spend_czk": 284.68
         },
         {
@@ -11080,8 +11080,8 @@
         {
           "date": "2026-06-07",
           "clicks": 8,
-          "impressions": 21652,
-          "spend_czk": 258.09
+          "impressions": 21650,
+          "spend_czk": 258.08
         },
         {
           "date": "2026-06-08",
@@ -11153,8 +11153,8 @@
         {
           "date": "2026-06-08",
           "clicks": 5,
-          "impressions": 12061,
-          "spend_czk": 154.63
+          "impressions": 12049,
+          "spend_czk": 154.59
         },
         {
           "date": "2026-06-09",
@@ -11208,14 +11208,14 @@
         {
           "date": "2026-06-09",
           "clicks": 8,
-          "impressions": 23331,
-          "spend_czk": 284.31
+          "impressions": 23330,
+          "spend_czk": 284.3
         },
         {
           "date": "2026-06-10",
           "clicks": 8,
-          "impressions": 23076,
-          "spend_czk": 286.25
+          "impressions": 23075,
+          "spend_czk": 286.22
         },
         {
           "date": "2026-06-11",
@@ -11251,14 +11251,14 @@
         {
           "date": "2026-06-08",
           "clicks": 9,
-          "impressions": 23312,
-          "spend_czk": 289.96
+          "impressions": 23305,
+          "spend_czk": 289.86
         },
         {
           "date": "2026-06-09",
           "clicks": 11,
-          "impressions": 22752,
-          "spend_czk": 283.98
+          "impressions": 22750,
+          "spend_czk": 283.95
         },
         {
           "date": "2026-06-10",
@@ -11283,13 +11283,13 @@
           "date": "2026-06-09",
           "clicks": 6,
           "impressions": 16868,
-          "spend_czk": 199.21
+          "spend_czk": 199.2
         },
         {
           "date": "2026-06-10",
           "clicks": 3,
-          "impressions": 16013,
-          "spend_czk": 208.58
+          "impressions": 16011,
+          "spend_czk": 208.56
         },
         {
           "date": "2026-06-11",
