@@ -398,15 +398,12 @@ tbody td:first-child { text-align: left; }
     <table id="table-yt-campaigns">
       <thead><tr>
         <th>Kampaň</th>
+        <th>Typ</th>
         <th>Cena</th>
         <th>Zobrazení</th>
-        <th>Zhlédnutí</th>
-        <th>View Rate</th>
-        <th>CPV</th>
-        <th>25 %</th>
-        <th>50 %</th>
-        <th>75 %</th>
-        <th>100 %</th>
+        <th>Prokliky</th>
+        <th>CPM</th>
+        <th>CTR</th>
       </tr></thead>
       <tbody id="tbody-yt-campaigns"></tbody>
     </table>
@@ -753,57 +750,41 @@ function renderYouTube() {
     c.channel_type === 'VIDEO' || c.name.toUpperCase().includes('| YT |')
   );
 
-  let totSpend = 0, totViews = 0, totImpr = 0;
+  let totSpend = 0, totImpr = 0, totClicks = 0;
   const rows = ytCamps.map(c => {
-    let spend = 0, views = 0, impr = 0, cpvSum = 0, vrSum = 0;
-    let q25 = 0, q50 = 0, q75 = 0, q100 = 0, days = 0;
+    let spend = 0, impr = 0, clicks = 0;
     for (const d of c.daily) {
       if (d.date < from || d.date > to) continue;
-      spend += d.spend_czk;
-      views += d.video_views || 0;
-      impr  += d.impressions;
-      if (d.view_rate) { vrSum += d.view_rate; days++; }
-      q25  += d.q25  || 0;
-      q50  += d.q50  || 0;
-      q75  += d.q75  || 0;
-      q100 += d.q100 || 0;
+      spend  += d.spend_czk;
+      impr   += d.impressions;
+      clicks += d.clicks;
     }
-    totSpend += spend; totViews += views; totImpr += impr;
-    const cpv    = views > 0 ? round2(spend / views) : 0;
-    const vr     = days  > 0 ? round2(vrSum / days)  : 0;
-    const dCnt   = Math.max(days, 1);
+    totSpend += spend; totImpr += impr; totClicks += clicks;
+    const cpm = impr > 0 ? round2(spend / impr * 1000) : 0;
+    const ctr = impr > 0 ? round2(clicks / impr * 100) : 0;
+    const typ = c.name.toLowerCase().includes('nepřesko') || c.name.toLowerCase().includes('nepresko')
+      ? 'Nepřeskočitelná' : c.name.toLowerCase().includes('přesko') || c.name.toLowerCase().includes('presko')
+      ? 'Přeskočitelná' : '–';
     return `<tr>
       <td>${c.name}</td>
+      <td style="white-space:nowrap">${typ}</td>
       <td>${fmt.czk(spend)}</td>
       <td>${fmt.num(impr)}</td>
-      <td>${fmt.num(views)}</td>
-      <td>${fmt.pct(vr)}</td>
-      <td>${cpv > 0 ? fmt.czk(cpv) : '<span style="opacity:.35">–</span>'}</td>
-      <td>${fmt.pct(round2(q25/dCnt))}</td>
-      <td>${fmt.pct(round2(q50/dCnt))}</td>
-      <td>${fmt.pct(round2(q75/dCnt))}</td>
-      <td>${fmt.pct(round2(q100/dCnt))}</td>
+      <td>${fmt.num(clicks)}</td>
+      <td>${cpm > 0 ? fmt.czk(cpm) : '<span style="opacity:.35">–</span>'}</td>
+      <td>${fmt.pct(ctr)}</td>
     </tr>`;
   });
 
-  const avgCpv = totViews > 0 ? round2(totSpend / totViews) : 0;
-  const avgVr  = ytCamps.length > 0
-    ? round2(ytCamps.reduce((s, c) => {
-        let vrS = 0, d = 0;
-        for (const day of c.daily) { if (day.date >= from && day.date <= to && day.view_rate) { vrS += day.view_rate; d++; } }
-        return s + (d > 0 ? vrS/d : 0);
-      }, 0) / ytCamps.filter(c => c.daily.some(d => d.date >= from && d.date <= to)).length)
-    : 0;
-
+  const avgCpm = totImpr > 0 ? round2(totSpend / totImpr * 1000) : 0;
   document.getElementById('youtube-summary').innerHTML = `
     <div class="metric-card"><div class="lbl">Celková cena</div><div class="val">${fmt.czk(totSpend)}</div></div>
     <div class="metric-card"><div class="lbl">Zobrazení</div><div class="val">${fmt.num(totImpr)}</div></div>
-    <div class="metric-card"><div class="lbl">Zhlédnutí</div><div class="val">${fmt.num(totViews)}</div></div>
-    <div class="metric-card"><div class="lbl">Průměrné CPV</div><div class="val">${avgCpv > 0 ? fmt.czk(avgCpv) : '–'}</div></div>
-    <div class="metric-card"><div class="lbl">Průměrný View Rate</div><div class="val">${fmt.pct(avgVr)}</div></div>`;
+    <div class="metric-card"><div class="lbl">Prokliky</div><div class="val">${fmt.num(totClicks)}</div></div>
+    <div class="metric-card"><div class="lbl">Průměrné CPM</div><div class="val">${avgCpm > 0 ? fmt.czk(avgCpm) : '–'}</div></div>`;
 
   document.getElementById('tbody-yt-campaigns').innerHTML =
-    rows.length ? rows.join('') : '<tr><td colspan="10" style="text-align:center;color:var(--muted)">Žádné YT kampaně v tomto období</td></tr>';
+    rows.length ? rows.join('') : '<tr><td colspan="7" style="text-align:center;color:var(--muted)">Žádné YT kampaně v tomto období</td></tr>';
 }
 
 function renderOverview() {
