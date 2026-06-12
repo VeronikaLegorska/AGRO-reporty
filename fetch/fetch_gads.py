@@ -43,7 +43,7 @@ def fetch():
         ORDER BY segments.date
     """
 
-    # Dotaz 2: pouze VIDEO kampaně – YT metriky (pouze dostupné pro VIDEO typ)
+    # Dotaz 2: YT metriky z ad_group resource (video_views apod. nejsou v campaign resource)
     query_yt = f"""
         SELECT
             campaign.id,
@@ -55,7 +55,7 @@ def fetch():
             metrics.video_quartile_p50_rate,
             metrics.video_quartile_p75_rate,
             metrics.video_quartile_p100_rate
-        FROM campaign
+        FROM ad_group
         WHERE
             campaign.advertising_channel_type = 'VIDEO'
             AND campaign.name LIKE '%VL%'
@@ -64,19 +64,35 @@ def fetch():
         ORDER BY segments.date
     """
 
-    # Načti YT metriky indexované (campaign_id, date)
+    # Načti YT metriky indexované (campaign_id, date) – agreguj přes ad_group na kampaň
     yt_metrics = {}
-    for row in service.search(customer_id=CUSTOMER_ID, query=query_yt):
-        key = (str(row.campaign.id), row.segments.date)
-        yt_metrics[key] = {
-            "video_views": row.metrics.video_views,
-            "average_cpv": round(row.metrics.average_cpv / 1_000_000, 4) if row.metrics.average_cpv else 0,
-            "view_rate":   round(row.metrics.video_view_rate * 100, 2) if row.metrics.video_view_rate else 0,
-            "q25":         round(row.metrics.video_quartile_p25_rate * 100, 1) if row.metrics.video_quartile_p25_rate else 0,
-            "q50":         round(row.metrics.video_quartile_p50_rate * 100, 1) if row.metrics.video_quartile_p50_rate else 0,
-            "q75":         round(row.metrics.video_quartile_p75_rate * 100, 1) if row.metrics.video_quartile_p75_rate else 0,
-            "q100":        round(row.metrics.video_quartile_p100_rate * 100, 1) if row.metrics.video_quartile_p100_rate else 0,
-        }
+    try:
+        for row in service.search(customer_id=CUSTOMER_ID, query=query_yt):
+            key = (str(row.campaign.id), row.segments.date)
+            if key not in yt_metrics:
+                yt_metrics[key] = {"video_views": 0, "cpv_cost": 0, "view_rate_sum": 0,
+                                   "q25": 0, "q50": 0, "q75": 0, "q100": 0, "count": 0}
+            yt_metrics[key]["video_views"] += row.metrics.video_views
+            yt_metrics[key]["cpv_cost"]    += row.metrics.cost_micros
+            if row.metrics.video_view_rate:
+                yt_metrics[key]["view_rate_sum"] += row.metrics.video_view_rate * 100
+                yt_metrics[key]["count"] += 1
+            yt_metrics[key]["q25"]  += row.metrics.video_quartile_p25_rate * 100 if row.metrics.video_quartile_p25_rate else 0
+            yt_metrics[key]["q50"]  += row.metrics.video_quartile_p50_rate * 100 if row.metrics.video_quartile_p50_rate else 0
+            yt_metrics[key]["q75"]  += row.metrics.video_quartile_p75_rate * 100 if row.metrics.video_quartile_p75_rate else 0
+            yt_metrics[key]["q100"] += row.metrics.video_quartile_p100_rate * 100 if row.metrics.video_quartile_p100_rate else 0
+        # Normalizuj průměry
+        for k, v in yt_metrics.items():
+            cnt = max(v["count"], 1)
+            v["view_rate"] = round(v["view_rate_sum"] / cnt, 2)
+            v["average_cpv"] = round(v["cpv_cost"] / 1_000_000 / v["video_views"], 4) if v["video_views"] > 0 else 0
+            v["q25"]  = round(v["q25"]  / cnt, 1)
+            v["q50"]  = round(v["q50"]  / cnt, 1)
+            v["q75"]  = round(v["q75"]  / cnt, 1)
+            v["q100"] = round(v["q100"] / cnt, 1)
+        print(f"  YT metriky: {len(yt_metrics)} záznamů")
+    except Exception as e:
+        print(f"  YT metriky nedostupné: {e}")
 
     campaigns = {}
     for row in service.search(customer_id=CUSTOMER_ID, query=query_all):
