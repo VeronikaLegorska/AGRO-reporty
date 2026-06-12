@@ -23,7 +23,8 @@ def fetch():
     client  = get_client()
     service = client.get_service("GoogleAdsService")
 
-    query = f"""
+    # Dotaz 1: všechny kampaně – základní metriky + typ kanálu
+    query_all = f"""
         SELECT
             campaign.id,
             campaign.name,
@@ -31,14 +32,7 @@ def fetch():
             segments.date,
             metrics.impressions,
             metrics.clicks,
-            metrics.cost_micros,
-            metrics.video_views,
-            metrics.average_cpv,
-            metrics.video_view_rate,
-            metrics.video_quartile_p25_rate,
-            metrics.video_quartile_p50_rate,
-            metrics.video_quartile_p75_rate,
-            metrics.video_quartile_p100_rate
+            metrics.cost_micros
         FROM campaign
         WHERE
             campaign.name LIKE '%VL%'
@@ -49,21 +43,32 @@ def fetch():
         ORDER BY segments.date
     """
 
-    response = service.search(customer_id=CUSTOMER_ID, query=query)
+    # Dotaz 2: pouze VIDEO kampaně – YT metriky (pouze dostupné pro VIDEO typ)
+    query_yt = f"""
+        SELECT
+            campaign.id,
+            segments.date,
+            metrics.video_views,
+            metrics.average_cpv,
+            metrics.video_view_rate,
+            metrics.video_quartile_p25_rate,
+            metrics.video_quartile_p50_rate,
+            metrics.video_quartile_p75_rate,
+            metrics.video_quartile_p100_rate
+        FROM campaign
+        WHERE
+            campaign.advertising_channel_type = 'VIDEO'
+            AND campaign.name LIKE '%VL%'
+            AND campaign.status != 'REMOVED'
+            AND segments.date BETWEEN '{date_from}' AND '{date_to}'
+        ORDER BY segments.date
+    """
 
-    campaigns = {}
-    for row in response:
-        cid  = str(row.campaign.id)
-        name = row.campaign.name
-        day  = row.segments.date
-        channel_type = row.campaign.advertising_channel_type.name
-        if cid not in campaigns:
-            campaigns[cid] = {"id": cid, "name": name, "channel_type": channel_type, "daily": []}
-        campaigns[cid]["daily"].append({
-            "date":        day,
-            "clicks":      row.metrics.clicks,
-            "impressions": row.metrics.impressions,
-            "spend_czk":   round(row.metrics.cost_micros / 1_000_000, 2),
+    # Načti YT metriky indexované (campaign_id, date)
+    yt_metrics = {}
+    for row in service.search(customer_id=CUSTOMER_ID, query=query_yt):
+        key = (str(row.campaign.id), row.segments.date)
+        yt_metrics[key] = {
             "video_views": row.metrics.video_views,
             "average_cpv": round(row.metrics.average_cpv / 1_000_000, 4) if row.metrics.average_cpv else 0,
             "view_rate":   round(row.metrics.video_view_rate * 100, 2) if row.metrics.video_view_rate else 0,
@@ -71,7 +76,26 @@ def fetch():
             "q50":         round(row.metrics.video_quartile_p50_rate * 100, 1) if row.metrics.video_quartile_p50_rate else 0,
             "q75":         round(row.metrics.video_quartile_p75_rate * 100, 1) if row.metrics.video_quartile_p75_rate else 0,
             "q100":        round(row.metrics.video_quartile_p100_rate * 100, 1) if row.metrics.video_quartile_p100_rate else 0,
-        })
+        }
+
+    campaigns = {}
+    for row in service.search(customer_id=CUSTOMER_ID, query=query_all):
+        cid  = str(row.campaign.id)
+        name = row.campaign.name
+        day  = row.segments.date
+        channel_type = row.campaign.advertising_channel_type.name
+        if cid not in campaigns:
+            campaigns[cid] = {"id": cid, "name": name, "channel_type": channel_type, "daily": []}
+        day_data = {
+            "date":        day,
+            "clicks":      row.metrics.clicks,
+            "impressions": row.metrics.impressions,
+            "spend_czk":   round(row.metrics.cost_micros / 1_000_000, 2),
+        }
+        yt = yt_metrics.get((cid, day))
+        if yt:
+            day_data.update(yt)
+        campaigns[cid]["daily"].append(day_data)
 
     result = list(campaigns.values())
     for c in result:
