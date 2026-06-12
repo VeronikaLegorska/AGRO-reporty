@@ -8,6 +8,7 @@
     {
       "id": "23622548380",
       "name": "VL | NATURA | OBS | Substrát orchideje",
+      "channel_type": "DISPLAY",
       "daily": [
         {
           "date": "2026-03-03",
@@ -92,6 +93,7 @@
     {
       "id": "23624437396",
       "name": "VL | NATURA | OBS | Smutnice  |  A",
+      "channel_type": "DISPLAY",
       "daily": [
         {
           "date": "2026-03-03",
@@ -176,6 +178,7 @@
     {
       "id": "23621671188",
       "name": "VL | AGRO | Výsev substrátu",
+      "channel_type": "DISPLAY",
       "daily": [
         {
           "date": "2026-03-05",
@@ -254,6 +257,7 @@
     {
       "id": "23636739118",
       "name": "VL | NATURA | OBS | Výsev | A/B",
+      "channel_type": "DISPLAY",
       "daily": [
         {
           "date": "2026-03-10",
@@ -452,6 +456,7 @@
     {
       "id": "23637021552",
       "name": "VL | FLORIA | OBS | TS pro robotické sekání | A/B",
+      "channel_type": "DISPLAY",
       "daily": [
         {
           "date": "2026-03-11",
@@ -626,6 +631,7 @@
     {
       "id": "23637062328",
       "name": "VL | NATURA | OBS | Čistič půdy",
+      "channel_type": "DISPLAY",
       "daily": [
         {
           "date": "2026-03-11",
@@ -800,6 +806,7 @@
     {
       "id": "23642532854",
       "name": "VL | NATURA | OBS | Přezimující škůdci | A/B",
+      "channel_type": "DISPLAY",
       "daily": [
         {
           "date": "2026-03-11",
@@ -998,6 +1005,7 @@
     {
       "id": "23647058071",
       "name": "VL | AGRO | OBS | TH Start",
+      "channel_type": "DISPLAY",
       "daily": [
         {
           "date": "2026-03-11",
@@ -1076,6 +1084,7 @@
     {
       "id": "23646479756",
       "name": "VL | NATURA | OBS | Stop mechu | A/B",
+      "channel_type": "DISPLAY",
       "daily": [
         {
           "date": "2026-03-12",
@@ -1250,6 +1259,7 @@
     {
       "id": "23649648167",
       "name": "VL | AGRO | OBS | Přírodní hnoje",
+      "channel_type": "DISPLAY",
       "daily": [
         {
           "date": "2026-03-13",
@@ -1328,6 +1338,7 @@
     {
       "id": "23644310526",
       "name": "VL | NATURA | OBS | Smutnice  | B",
+      "channel_type": "DISPLAY",
       "daily": [
         {
           "date": "2026-03-16",
@@ -1430,6 +1441,7 @@
     {
       "id": "23661497675",
       "name": "VL | NATURA | OBS | Substrát pro vyvýšené záhony",
+      "channel_type": "DISPLAY",
       "daily": [
         {
           "date": "2026-03-16",
@@ -1622,6 +1634,7 @@
     {
       "id": "23666372134",
       "name": "VL | NATURA | OBS | Kompost pro vyvýšené záhony",
+      "channel_type": "DISPLAY",
       "daily": [
         {
           "date": "2026-03-17",
@@ -1814,6 +1827,7 @@
     {
       "id": "23686481736",
       "name": "VL | FLORIA | OBS  |  Substrát pro rajčata a papriky",
+      "channel_type": "DISPLAY",
       "daily": [
         {
           "date": "2026-03-27",
@@ -1982,6 +1996,7 @@
     {
       "id": "23692281784",
       "name": "VL | NATURA | OBS | Společný banner Vyvýšené záhony",
+      "channel_type": "DISPLAY",
       "daily": [
         {
           "date": "2026-03-27",
@@ -2198,6 +2213,7 @@
     {
       "id": "23699550406",
       "name": "VL | FLORIA | OBS  |  Vertikulační směs",
+      "channel_type": "DISPLAY",
       "daily": [
         {
           "date": "2026-03-27",
@@ -2384,6 +2400,7 @@
     {
       "id": "23694972182",
       "name": "VL | FLORIA | OBS | Substrát pro středomořské rostliny",
+      "channel_type": "DISPLAY",
       "daily": [
         {
           "date": "2026-03-30",
@@ -2558,6 +2575,7 @@
     {
       "id": "23698172775",
       "name": "VL | FLORIA | OBS | Zahradnický substrát",
+      "channel_type": "DISPLAY",
       "daily": [
         {
           "date": "2026-03-30",
@@ -2738,6 +2756,7 @@
     {
       "id": "23701137282",
       "name": "VL | AGRO | OBS | Pokojovky",
+      "channel_type": "DISPLAY",
       "daily": [
         {
           "date": "2026-03-31",
@@ -2858,6 +2877,7 @@
     {
       "id": "23701455993",
       "name": "VL | NATURA | OBS |  Substrát bylinková zahrádka | A/B",
+      "channel_type": "DISPLAY",
       "daily": [
         {
           "date": "2026-03-31",
@@ -3008,6 +3028,7 @@
     {
       "id": "23706730970",
       "name": "VL  | AGRO | OBS | Substrát na borůvky",
+      "channel_type": "DISPLAY",
       "daily": [
         {
           "date": "2026-03-31",
@@ -3128,6 +3149,7 @@
     {
       "id": "23706981791",
       "name": "VL | NATURA | OBS |  Substrát pro celou zahradu | A/B",
+      "channel_type": "DISPLAY",
       "daily": [
         {
           "date": "2026-03-31",
@@ -3350,6 +3372,7 @@
     {
       "id": "23712483588",
       "name": "VL | NATURA | OBS |  Substrát pro jahody | A/B",
+      "channel_type": "DISPLAY",
       "daily": [
         {
           "date": "2026-04-03",
@@ -3512,6 +3535,7 @@
     {
       "id": "23712518625",
       "name": "VL | NATURA | OBS |  Substrát pro rajčata, okurky a papriky | A/B",
+      "channel_type": "DISPLAY",
       "daily": [
         {
           "date": "2026-04-03",
@@ -3674,6 +3698,7 @@
     {
       "id": "23722387852",
       "name": "VL | NATURA | OBS |  Substrát pro borůvky | A/B",
+      "channel_type": "DISPLAY",
       "daily": [
         {
           "date": "2026-04-03",
@@ -3836,6 +3861,7 @@
     {
       "id": "23722429570",
       "name": "VL | FLORIA | OBS | Trávníková náplast 3 v 1",
+      "channel_type": "DISPLAY",
       "daily": [
         {
           "date": "2026-04-03",
@@ -4010,6 +4036,7 @@
     {
       "id": "23730343339",
       "name": "VL | AGRO | OBS | Substrát výsev",
+      "channel_type": "DISPLAY",
       "daily": [
         {
           "date": "2026-04-06",
@@ -4130,6 +4157,7 @@
     {
       "id": "23727451812",
       "name": "VL | NATURA | OBS | na slimáky a plzáky",
+      "channel_type": "DISPLAY",
       "daily": [
         {
           "date": "2026-04-08",
@@ -4370,6 +4398,7 @@
     {
       "id": "23744356459",
       "name": "VL | AGRO | OBS | TH Start 1",
+      "channel_type": "DISPLAY",
       "daily": [
         {
           "date": "2026-04-10",
@@ -4430,6 +4459,7 @@
     {
       "id": "23720582835",
       "name": "VL | AGRO | OBS | Rašelina 1",
+      "channel_type": "DISPLAY",
       "daily": [
         {
           "date": "2026-04-13",
@@ -4514,6 +4544,7 @@
     {
       "id": "23747559974",
       "name": "VL | AGRO | OBS | Zahradnický substrát | A/B",
+      "channel_type": "DISPLAY",
       "daily": [
         {
           "date": "2026-04-15",
@@ -4640,6 +4671,7 @@
     {
       "id": "23759181106",
       "name": "VL | FLORIA | OBS |  Travin | B",
+      "channel_type": "DISPLAY",
       "daily": [
         {
           "date": "2026-04-15",
@@ -4808,6 +4840,7 @@
     {
       "id": "23730372850",
       "name": "VL | FLORIA | OBS | TH robotické sekání",
+      "channel_type": "DISPLAY",
       "daily": [
         {
           "date": "2026-04-18",
@@ -4988,6 +5021,7 @@
     {
       "id": "23762068757",
       "name": "VL | FLORIA | OBS |  Travin | A",
+      "channel_type": "DISPLAY",
       "daily": [
         {
           "date": "2026-04-20",
@@ -5144,6 +5178,7 @@
     {
       "id": "23782344919",
       "name": "VL | FLORIA | OBS | TS Sucho | A/B",
+      "channel_type": "DISPLAY",
       "daily": [
         {
           "date": "2026-04-22",
@@ -5420,6 +5455,7 @@
     {
       "id": "23772489765",
       "name": "VL | AGRO | OBS | Cererit Hobby Gold",
+      "channel_type": "DISPLAY",
       "daily": [
         {
           "date": "2026-04-23",
@@ -5594,6 +5630,7 @@
     {
       "id": "23772566100",
       "name": "VL | AGRO | OBS | Substrát na jahody",
+      "channel_type": "DISPLAY",
       "daily": [
         {
           "date": "2026-04-24",
@@ -5684,6 +5721,7 @@
     {
       "id": "23747551127",
       "name": "VL | AGRO | OBS | Cererit Hobby Gold s guánem",
+      "channel_type": "DISPLAY",
       "daily": [
         {
           "date": "2026-04-27",
@@ -5858,6 +5896,7 @@
     {
       "id": "23772542844",
       "name": "VL | AGRO | OBS | Černozemní - pro balkonovky",
+      "channel_type": "DISPLAY",
       "daily": [
         {
           "date": "2026-04-27",
@@ -6032,6 +6071,7 @@
     {
       "id": "23772596346",
       "name": "VL | AGRO | OBS | Substrát na rajčata",
+      "channel_type": "DISPLAY",
       "daily": [
         {
           "date": "2026-04-27",
@@ -6206,6 +6246,7 @@
     {
       "id": "23789471466",
       "name": "VL | AGRO | OBS | Trávníkové hnojivo",
+      "channel_type": "DISPLAY",
       "daily": [
         {
           "date": "2026-04-27",
@@ -6338,6 +6379,7 @@
     {
       "id": "23799344578",
       "name": "VL | AGRO | OBS | Černozemí - pro celou zahradu",
+      "channel_type": "DISPLAY",
       "daily": [
         {
           "date": "2026-04-27",
@@ -6470,6 +6512,7 @@
     {
       "id": "23816382229",
       "name": "VL | AGRO | OBS | Tradiční písek",
+      "channel_type": "DISPLAY",
       "daily": [
         {
           "date": "2026-05-03",
@@ -6602,6 +6645,7 @@
     {
       "id": "23825744335",
       "name": "VL | AGRO | OBS | Substrát pro muškáty",
+      "channel_type": "DISPLAY",
       "daily": [
         {
           "date": "2026-05-06",
@@ -6734,6 +6778,7 @@
     {
       "id": "23827546956",
       "name": "VL | AGRO | OBS | Trávníkový substrát",
+      "channel_type": "DISPLAY",
       "daily": [
         {
           "date": "2026-05-10",
@@ -6824,6 +6869,7 @@
     {
       "id": "23856356045",
       "name": "VL | Travin | YT | TV Sport nepřeskočitelná",
+      "channel_type": "VIDEO",
       "daily": [
         {
           "date": "2026-05-17",
@@ -6986,6 +7032,7 @@
     {
       "id": "23856437699",
       "name": "VL | PRESTO slimáci | YT | TV Sport přeskočitelná",
+      "channel_type": "VIDEO",
       "daily": [
         {
           "date": "2026-05-17",
@@ -7140,14 +7187,15 @@
         {
           "date": "2026-06-11",
           "clicks": 113,
-          "impressions": 31587,
-          "spend_czk": 1229.35
+          "impressions": 31589,
+          "spend_czk": 1229.42
         }
       ]
     },
     {
       "id": "23856459113",
       "name": "VL | PRESTO slimáci | YT | TV Sport nepřeskočitelná",
+      "channel_type": "VIDEO",
       "daily": [
         {
           "date": "2026-05-17",
@@ -7310,6 +7358,7 @@
     {
       "id": "23860854676",
       "name": "VL | Travin | YT | TV Sport přeskočitelná",
+      "channel_type": "VIDEO",
       "daily": [
         {
           "date": "2026-05-17",
@@ -7464,14 +7513,15 @@
         {
           "date": "2026-06-11",
           "clicks": 33,
-          "impressions": 25373,
-          "spend_czk": 801.32
+          "impressions": 25372,
+          "spend_czk": 801.3
         }
       ]
     },
     {
       "id": "23851176435",
       "name": "VL | NATURA | OBS | Organické trávníkové hnojivo",
+      "channel_type": "DISPLAY",
       "daily": [
         {
           "date": "2026-05-18",
@@ -7628,6 +7678,7 @@
     {
       "id": "23860980379",
       "name": "VL | FLORIA | OBS | Piniová dekorační kůra | A/B",
+      "channel_type": "DISPLAY",
       "daily": [
         {
           "date": "2026-05-18",
@@ -7784,6 +7835,7 @@
     {
       "id": "23866613726",
       "name": "VL | NATURA | OBS | PRESTO slimáci TV spot",
+      "channel_type": "DISPLAY",
       "daily": [
         {
           "date": "2026-05-21",
@@ -7922,6 +7974,7 @@
     {
       "id": "23871029404",
       "name": "VL | FLORIA | OBS | Travin - TV spot",
+      "channel_type": "DISPLAY",
       "daily": [
         {
           "date": "2026-05-21",
@@ -8052,7 +8105,7 @@
         {
           "date": "2026-06-11",
           "clicks": 6,
-          "impressions": 20516,
+          "impressions": 20515,
           "spend_czk": 256.16
         }
       ]
@@ -8060,6 +8113,7 @@
     {
       "id": "23871110797",
       "name": "VL | NATURA | OBS | Rock Effect NEW | A/B",
+      "channel_type": "DISPLAY",
       "daily": [
         {
           "date": "2026-05-21",
@@ -8198,6 +8252,7 @@
     {
       "id": "23864488014",
       "name": "VL | NATURA | OBS | Bylinková směs na plísně | A/B",
+      "channel_type": "DISPLAY",
       "daily": [
         {
           "date": "2026-05-22",
@@ -8316,7 +8371,7 @@
         {
           "date": "2026-06-10",
           "clicks": 8,
-          "impressions": 19936,
+          "impressions": 19935,
           "spend_czk": 255.38
         },
         {
@@ -8330,6 +8385,7 @@
     {
       "id": "23871733668",
       "name": "VL | FLORIA | OBS | Dlouhodobě působící TH| A/B",
+      "channel_type": "DISPLAY",
       "daily": [
         {
           "date": "2026-05-25",
@@ -8444,6 +8500,7 @@
     {
       "id": "23881388140",
       "name": "VL | FLORIA | OBS | Okyselovač a KH kyselomilné| A/B",
+      "channel_type": "DISPLAY",
       "daily": [
         {
           "date": "2026-05-25",
@@ -8558,6 +8615,7 @@
     {
       "id": "23877532005",
       "name": "VL | KRISTALON | OBS | GOLD| A/B",
+      "channel_type": "DISPLAY",
       "daily": [
         {
           "date": "2026-05-27",
@@ -8648,6 +8706,7 @@
     {
       "id": "23877639810",
       "name": "VL | AGRO | OBS | Plážový písek",
+      "channel_type": "DISPLAY",
       "daily": [
         {
           "date": "2026-05-27",
@@ -8750,6 +8809,7 @@
     {
       "id": "23882828285",
       "name": "VL | AGRO | OBS | Substrát pro hortenzie",
+      "channel_type": "DISPLAY",
       "daily": [
         {
           "date": "2026-05-27",
@@ -8816,6 +8876,7 @@
     {
       "id": "23882895965",
       "name": "VL | AGRO | OBS | Trávníkový písek",
+      "channel_type": "DISPLAY",
       "daily": [
         {
           "date": "2026-05-27",
@@ -8834,6 +8895,7 @@
     {
       "id": "23889238967",
       "name": "VL | VITALITY KOMPLEX | OBS | Univerzál",
+      "channel_type": "DISPLAY",
       "daily": [
         {
           "date": "2026-05-28",
@@ -8930,6 +8992,7 @@
     {
       "id": "23883966948",
       "name": "VL | NATURA | OBS | Přírodní substrát pro rajčata a papriky A/B",
+      "channel_type": "DISPLAY",
       "daily": [
         {
           "date": "2026-05-29",
@@ -9020,6 +9083,7 @@
     {
       "id": "23891436612",
       "name": "VL | KRISTALON | OBS | MUŠKÁT| A/B",
+      "channel_type": "DISPLAY",
       "daily": [
         {
           "date": "2026-06-01",
@@ -9066,7 +9130,7 @@
         {
           "date": "2026-06-08",
           "clicks": 9,
-          "impressions": 25381,
+          "impressions": 25380,
           "spend_czk": 304.37
         },
         {
@@ -9092,6 +9156,7 @@
     {
       "id": "23891473821",
       "name": "VL | KRISTALON | OBS | JAHODA A/B",
+      "channel_type": "DISPLAY",
       "daily": [
         {
           "date": "2026-06-01",
@@ -9164,6 +9229,7 @@
     {
       "id": "23891488290",
       "name": "VL | VITALITY KOMPLEX | OBS | Muškát a surfinie",
+      "channel_type": "DISPLAY",
       "daily": [
         {
           "date": "2026-06-01",
@@ -9236,6 +9302,7 @@
     {
       "id": "23891506008",
       "name": "VL | NATURA | OBS | Přírodní hnojivo pro jahody a drobné ovoce |  A/B",
+      "channel_type": "DISPLAY",
       "daily": [
         {
           "date": "2026-06-01",
@@ -9308,6 +9375,7 @@
     {
       "id": "23893179760",
       "name": "VL | KRISTALON | OBS | PLOD A KVĚT A/B",
+      "channel_type": "DISPLAY",
       "daily": [
         {
           "date": "2026-06-01",
@@ -9380,6 +9448,7 @@
     {
       "id": "23894523249",
       "name": "VL | VITALITY KOMPLEX | OBS | Borůvka",
+      "channel_type": "DISPLAY",
       "daily": [
         {
           "date": "2026-06-02",
@@ -9446,6 +9515,7 @@
     {
       "id": "23914475884",
       "name": "VL | NATURA | OBS | Kapalné hnojivo pro celou zahradu |  A/B",
+      "channel_type": "DISPLAY",
       "daily": [
         {
           "date": "2026-06-05",
@@ -9494,6 +9564,7 @@
     {
       "id": "23914508104",
       "name": "VL | NATURA | OBS | Přírodní hnojivo pro borůvky a brusinky |  A/B",
+      "channel_type": "DISPLAY",
       "daily": [
         {
           "date": "2026-06-05",
@@ -9528,20 +9599,21 @@
         {
           "date": "2026-06-10",
           "clicks": 8,
-          "impressions": 22956,
-          "spend_czk": 286.42
+          "impressions": 22955,
+          "spend_czk": 286.41
         },
         {
           "date": "2026-06-11",
           "clicks": 13,
-          "impressions": 22845,
-          "spend_czk": 287.2
+          "impressions": 22846,
+          "spend_czk": 287.22
         }
       ]
     },
     {
       "id": "23926170676",
       "name": "VL | KRISTALON | OBS | Rajče a paprika A/B",
+      "channel_type": "DISPLAY",
       "daily": [
         {
           "date": "2026-06-09",
@@ -9566,6 +9638,7 @@
     {
       "id": "23874141799",
       "name": "VL | NATURA | OBS | Bylinková směs na svilušky | A/B",
+      "channel_type": "DISPLAY",
       "daily": [
         {
           "date": "2026-06-10",
