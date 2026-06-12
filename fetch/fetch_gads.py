@@ -77,12 +77,14 @@ def fetch():
     except Exception as e:
         print(f"  YT quartile rates: FAIL – {str(e)[:100]}")
 
-    # B) video_views + view_rate + cpv z campaign resource (VIDEO filter)
+    # B) video_views + view_rate + cpv – zkus postupně různé zdroje
+    _vv_ok = False
+    # B1) FROM video resource (nejpřímější zdroj pro video metriky)
     try:
         v_query = f"""
             SELECT campaign.id, segments.date,
                 metrics.video_views, metrics.video_view_rate, metrics.average_cpv
-            FROM campaign
+            FROM video
             WHERE campaign.advertising_channel_type = 'VIDEO'
               AND campaign.name LIKE '%VL%'
               AND campaign.status != 'REMOVED'
@@ -98,9 +100,36 @@ def fetch():
                 vr_cnt      = 1 if row.metrics.video_view_rate else 0,
                 cpv_cost    = row.metrics.cost_micros or 0,
             )
-        print(f"  YT video_views/view_rate/cpv: OK")
+        _vv_ok = True
+        print(f"  YT video_views (FROM video): OK")
     except Exception as e:
-        print(f"  YT video_views/view_rate/cpv: FAIL – {str(e)[:100]}")
+        print(f"  YT video_views (FROM video): FAIL – {str(e)[:100]}")
+
+    # B2) FROM ad_group_ad resource
+    if not _vv_ok:
+        try:
+            v_query2 = f"""
+                SELECT campaign.id, segments.date,
+                    metrics.video_views, metrics.video_view_rate, metrics.average_cpv
+                FROM ad_group_ad
+                WHERE campaign.advertising_channel_type = 'VIDEO'
+                  AND campaign.name LIKE '%VL%'
+                  AND campaign.status != 'REMOVED'
+                  AND segments.date BETWEEN '{date_from}' AND '{date_to}'
+                ORDER BY segments.date
+            """
+            for row in service.search(customer_id=CUSTOMER_ID, query=v_query2):
+                key = (str(row.campaign.id), row.segments.date)
+                views = row.metrics.video_views or 0
+                yt_upsert(key,
+                    video_views = views,
+                    vr_sum      = (row.metrics.video_view_rate or 0) * 100,
+                    vr_cnt      = 1 if row.metrics.video_view_rate else 0,
+                    cpv_cost    = row.metrics.cost_micros or 0,
+                )
+            print(f"  YT video_views (FROM ad_group_ad): OK")
+        except Exception as e:
+            print(f"  YT video_views (FROM ad_group_ad): FAIL – {str(e)[:100]}")
 
     # C) active_view_impressions + avg frequency z campaign resource
     try:
