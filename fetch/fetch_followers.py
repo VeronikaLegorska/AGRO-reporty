@@ -87,36 +87,6 @@ def fetch_ig_followers_today():
     return data.get("followers_count")
 
 
-def fetch_ig_followers_history(since_days=28):
-    """Fetch daily IG followers via IG Insights. API limit: max posledních 30 dní bez dneška."""
-    if not IG_USER_ID:
-        return []
-    since_days = min(since_days, 28)  # safe margin – API: [today-30, today-1] max
-    end   = date.today() - timedelta(days=1)
-    start = date.today() - timedelta(days=since_days)  # počítáme od dneška, ne od end
-    url = (
-        f"https://graph.facebook.com/{API_VER}/{IG_USER_ID}/insights"
-        f"?metric=follower_count&period=day"
-        f"&since={to_ts(start)}&until={to_ts(end)}"
-        f"&access_token={PAGE_TOKEN}"
-    )
-    records = []
-    while url:
-        r = requests.get(url, timeout=30)
-        if r.status_code != 200:
-            print(f"  IG Insights error {r.status_code}: {r.text[:300]}")
-            break
-        data = r.json()
-        if "error" in data:
-            print(f"  IG Insights API error: {data['error']}")
-            break
-        for item in data.get("data", []):
-            if item.get("name") == "follower_count":
-                for val in item.get("values", []):
-                    d = val["end_time"][:10]
-                    records.append({"date": d, "count": int(val["value"])})
-        url = data.get("paging", {}).get("next")
-    return records
 
 
 # ── main ─────────────────────────────────────────────────────────────────────
@@ -132,18 +102,12 @@ if fb_today is not None:
     print(f"  → dnešní FB fans: {fb_today}")
 print(f"  → celkem {len(existing['facebook'])} FB záznamů v historii")
 
-# --- Instagram ---
+# --- Instagram (denní snapshot absolutního počtu, stejně jako FB) ---
 print("Fetching IG follower_count ...")
-ig_records = fetch_ig_followers_history(since_days=30)
-for rec in ig_records:
-    upsert(existing["instagram"], rec["date"], rec["count"])
-print(f"  → {len(ig_records)} hodnot z IG Insights (posl. 30 dní)")
-
 ig_today = fetch_ig_followers_today()
 if ig_today is not None:
     upsert(existing["instagram"], today_str, ig_today)
     print(f"  → dnešní IG sledující: {ig_today}")
-
 print(f"  → celkem {len(existing['instagram'])} IG záznamů v historii")
 
 # --- Save ---
