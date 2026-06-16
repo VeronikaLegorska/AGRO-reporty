@@ -1,8 +1,8 @@
 {
-  "updated": "2026-06-15",
+  "updated": "2026-06-16",
   "period": {
     "from": "2026-01-01",
-    "to": "2026-06-14"
+    "to": "2026-06-15"
   },
   "campaigns": [
     {
@@ -1347,18 +1347,26 @@
         {
           "date": "2026-06-13",
           "clicks": 1196,
-          "impressions": 61498,
-          "spend_czk": 5645.08,
-          "results": 11549,
+          "impressions": 61499,
+          "spend_czk": 5647.54,
+          "results": 11555,
           "cost_per_result": 0.49
         },
         {
           "date": "2026-06-14",
-          "clicks": 1167,
-          "impressions": 60975,
-          "spend_czk": 5310.59,
-          "results": 11869,
+          "clicks": 1170,
+          "impressions": 61036,
+          "spend_czk": 5318.13,
+          "results": 11876,
           "cost_per_result": 0.45
+        },
+        {
+          "date": "2026-06-15",
+          "clicks": 999,
+          "impressions": 45988,
+          "spend_czk": 4370.01,
+          "results": 3919,
+          "cost_per_result": 1.12
         }
       ]
     },
@@ -2145,6 +2153,10 @@
       "period_reach": null,
       "adsets": [
         {
+          "id": "120246135622270685",
+          "name": "Příspěvek | engagement | IG | Vlastní cílení | Plod a květ"
+        },
+        {
           "id": "120245356563490685",
           "name": "MAX počet \"To se mi líbí\" | IG+FB | Vlastní cílení | Muškát"
         },
@@ -2421,10 +2433,18 @@
         {
           "date": "2026-06-14",
           "clicks": 301,
-          "impressions": 247325,
-          "spend_czk": 1958.36,
+          "impressions": 247362,
+          "spend_czk": 1959.77,
           "results": 357,
           "cost_per_result": 5.49
+        },
+        {
+          "date": "2026-06-15",
+          "clicks": 237,
+          "impressions": 192808,
+          "spend_czk": 1632.54,
+          "results": 275,
+          "cost_per_result": 5.94
         }
       ]
     },
@@ -4616,7 +4636,7 @@
       "name": "VL | FLORIA | Příspěveky | Povědomí",
       "objective": "OUTCOME_AWARENESS",
       "result_type": "Dosah (za 1 000 úč.)",
-      "period_reach": 1070867,
+      "period_reach": 1080696,
       "adsets": [
         {
           "id": "120245758944360685",
@@ -4926,11 +4946,19 @@
         },
         {
           "date": "2026-06-14",
-          "clicks": 328,
-          "impressions": 243702,
-          "spend_czk": 3488.25,
-          "results": 158665,
-          "cost_per_result": 21.98
+          "clicks": 330,
+          "impressions": 244127,
+          "spend_czk": 3492.76,
+          "results": 158729,
+          "cost_per_result": 22.0
+        },
+        {
+          "date": "2026-06-15",
+          "clicks": 252,
+          "impressions": 194793,
+          "spend_czk": 2839.35,
+          "results": 136473,
+          "cost_per_result": 20.81
         }
       ]
     },
@@ -5338,10 +5366,18 @@
         {
           "date": "2026-06-14",
           "clicks": 212,
-          "impressions": 7323,
-          "spend_czk": 1149.18,
+          "impressions": 7330,
+          "spend_czk": 1150.0,
           "results": 263,
           "cost_per_result": 4.37
+        },
+        {
+          "date": "2026-06-15",
+          "clicks": 165,
+          "impressions": 6857,
+          "spend_czk": 1016.21,
+          "results": 217,
+          "cost_per_result": 4.68
         }
       ]
     },
@@ -5370,6 +5406,10 @@
       "result_type": "Zájem o příspěvek",
       "period_reach": null,
       "adsets": [
+        {
+          "id": "120246066684010685",
+          "name": "WEB | IG+FB | Banner | Muškát a surfinie"
+        },
         {
           "id": "120245934876050685",
           "name": "Příspěvek | engagement | FB | vlastní cílení | Muškát a surfinie"
@@ -5531,10 +5571,18 @@
         {
           "date": "2026-06-14",
           "clicks": 158,
-          "impressions": 139836,
-          "spend_czk": 1575.27,
+          "impressions": 139846,
+          "spend_czk": 1575.35,
           "results": 233,
           "cost_per_result": 6.76
+        },
+        {
+          "date": "2026-06-15",
+          "clicks": 151,
+          "impressions": 174364,
+          "spend_czk": 1655.35,
+          "results": 211,
+          "cost_per_result": 7.85
         }
       ]
     }
