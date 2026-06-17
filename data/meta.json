@@ -1,8 +1,8 @@
 {
-  "updated": "2026-06-16",
+  "updated": "2026-06-17",
   "period": {
     "from": "2026-01-01",
-    "to": "2026-06-15"
+    "to": "2026-06-16"
   },
   "campaigns": [
     {
@@ -454,6 +454,22 @@
       "result_type": "Zájem o příspěvek",
       "period_reach": null,
       "adsets": [
+        {
+          "id": "120246198916730685",
+          "name": "Příspěvek | engagement | FB | vlastní cílení | Přírodní hnojivo pro jahody a drobné ovoce"
+        },
+        {
+          "id": "120246198614610685",
+          "name": "Příspěvek | engagement | IG | vlastní cílení | Přírodní hnojivo pro jahody a drobné ovoce"
+        },
+        {
+          "id": "120246197898400685",
+          "name": "Příspěvek | engagement | FB | vlastní cílení | Bylinková směs na svilušky"
+        },
+        {
+          "id": "120246197625670685",
+          "name": "Příspěvek | engagement | IG | vlastní cílení | Bylinková směs na svilušky"
+        },
         {
           "id": "120245758720020685",
           "name": "Příspěvek | engagement | IG | vlastní cílení | Přírodní hnojivo pro rajčata a papriky"
@@ -1349,7 +1365,7 @@
           "clicks": 1196,
           "impressions": 61499,
           "spend_czk": 5647.54,
-          "results": 11555,
+          "results": 11558,
           "cost_per_result": 0.49
         },
         {
@@ -1357,16 +1373,24 @@
           "clicks": 1170,
           "impressions": 61036,
           "spend_czk": 5318.13,
-          "results": 11876,
+          "results": 11885,
           "cost_per_result": 0.45
         },
         {
           "date": "2026-06-15",
           "clicks": 999,
-          "impressions": 45988,
-          "spend_czk": 4370.01,
-          "results": 3919,
+          "impressions": 46041,
+          "spend_czk": 4377.0,
+          "results": 3923,
           "cost_per_result": 1.12
+        },
+        {
+          "date": "2026-06-16",
+          "clicks": 1042,
+          "impressions": 40308,
+          "spend_czk": 4923.56,
+          "results": 1219,
+          "cost_per_result": 4.04
         }
       ]
     },
@@ -2153,6 +2177,22 @@
       "period_reach": null,
       "adsets": [
         {
+          "id": "120246201208800685",
+          "name": "Příspěvek | engagement | FB | Vlastní cílení | Trávník"
+        },
+        {
+          "id": "120246201085100685",
+          "name": "Příspěvek | engagement | IG | Vlastní cílení | Trávník"
+        },
+        {
+          "id": "120246192390360685",
+          "name": "MAX počet \"To se mi líbí\" | IG+FB | Vlastní cílení | Plod a květ| A+B"
+        },
+        {
+          "id": "120246192330790685",
+          "name": "Příspěvek | engagement | FB | Vlastní cílení | Plod a květ"
+        },
+        {
           "id": "120246135622270685",
           "name": "Příspěvek | engagement | IG | Vlastní cílení | Plod a květ"
         },
@@ -2440,11 +2480,19 @@
         },
         {
           "date": "2026-06-15",
-          "clicks": 237,
-          "impressions": 192808,
-          "spend_czk": 1632.54,
-          "results": 275,
-          "cost_per_result": 5.94
+          "clicks": 239,
+          "impressions": 192837,
+          "spend_czk": 1633.61,
+          "results": 277,
+          "cost_per_result": 5.9
+        },
+        {
+          "date": "2026-06-16",
+          "clicks": 200,
+          "impressions": 202700,
+          "spend_czk": 1934.31,
+          "results": 321,
+          "cost_per_result": 6.03
         }
       ]
     },
@@ -4636,8 +4684,12 @@
       "name": "VL | FLORIA | Příspěveky | Povědomí",
       "objective": "OUTCOME_AWARENESS",
       "result_type": "Dosah (za 1 000 úč.)",
-      "period_reach": 1080696,
+      "period_reach": 1091770,
       "adsets": [
+        {
+          "id": "120246194939500685",
+          "name": "WEB | IG+FB | CAROUSEL | produktová řada substráty"
+        },
         {
           "id": "120245758944360685",
           "name": "Okyselovač a KH kyselomilné | IG | Max počet zobrazení"
@@ -4954,11 +5006,19 @@
         },
         {
           "date": "2026-06-15",
-          "clicks": 252,
-          "impressions": 194793,
-          "spend_czk": 2839.35,
-          "results": 136473,
-          "cost_per_result": 20.81
+          "clicks": 256,
+          "impressions": 195446,
+          "spend_czk": 2846.75,
+          "results": 136711,
+          "cost_per_result": 20.82
+        },
+        {
+          "date": "2026-06-16",
+          "clicks": 238,
+          "impressions": 207869,
+          "spend_czk": 3465.5,
+          "results": 165278,
+          "cost_per_result": 20.97
         }
       ]
     },
@@ -4969,6 +5029,22 @@
       "result_type": "Zájem o příspěvek",
       "period_reach": null,
       "adsets": [
+        {
+          "id": "120246200916780685",
+          "name": "Příspěvek | engagement | FB | vlastní cílení | OM na rajčata"
+        },
+        {
+          "id": "120246200857720685",
+          "name": "Příspěvek | engagement | IG | vlastní cílení | OM na rajčata"
+        },
+        {
+          "id": "120246194580960685",
+          "name": "Příspěvek | engagement | IG | vlastní cílení | OM na azalky"
+        },
+        {
+          "id": "120246194411750685",
+          "name": "Příspěvek | engagement | FB | vlastní cílení | OM na azalky"
+        },
         {
           "id": "120245930149560685",
           "name": "Příspěvek | engagement | FB | vlastní cílení | Kapalný vápník"
@@ -5374,10 +5450,18 @@
         {
           "date": "2026-06-15",
           "clicks": 165,
-          "impressions": 6857,
-          "spend_czk": 1016.21,
+          "impressions": 6866,
+          "spend_czk": 1016.83,
           "results": 217,
-          "cost_per_result": 4.68
+          "cost_per_result": 4.69
+        },
+        {
+          "date": "2026-06-16",
+          "clicks": 230,
+          "impressions": 8283,
+          "spend_czk": 1364.17,
+          "results": 308,
+          "cost_per_result": 4.43
         }
       ]
     },
@@ -5573,16 +5657,24 @@
           "clicks": 158,
           "impressions": 139846,
           "spend_czk": 1575.35,
-          "results": 233,
-          "cost_per_result": 6.76
+          "results": 234,
+          "cost_per_result": 6.73
         },
         {
           "date": "2026-06-15",
           "clicks": 151,
-          "impressions": 174364,
-          "spend_czk": 1655.35,
+          "impressions": 174396,
+          "spend_czk": 1655.68,
           "results": 211,
           "cost_per_result": 7.85
+        },
+        {
+          "date": "2026-06-16",
+          "clicks": 134,
+          "impressions": 221345,
+          "spend_czk": 1684.77,
+          "results": 189,
+          "cost_per_result": 8.91
         }
       ]
     }

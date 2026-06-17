@@ -1,8 +1,8 @@
 {
-  "updated": "2026-06-16",
+  "updated": "2026-06-17",
   "period": {
     "from": "2026-01-01",
-    "to": "2026-06-15"
+    "to": "2026-06-16"
   },
   "campaigns": [
     {
@@ -798,186 +798,6 @@
       ]
     },
     {
-      "id": "7799742",
-      "name": "VL | NATURA | OBS | Organické trávníkové hnojivo",
-      "daily": [
-        {
-          "date": "2026-05-18",
-          "clicks": 103,
-          "impressions": 5734,
-          "spend_czk": 300.58
-        },
-        {
-          "date": "2026-05-19",
-          "clicks": 101,
-          "impressions": 11079,
-          "spend_czk": 300.34
-        },
-        {
-          "date": "2026-05-20",
-          "clicks": 102,
-          "impressions": 6752,
-          "spend_czk": 303.7
-        },
-        {
-          "date": "2026-05-21",
-          "clicks": 99,
-          "impressions": 4695,
-          "spend_czk": 297.0
-        },
-        {
-          "date": "2026-05-22",
-          "clicks": 100,
-          "impressions": 4561,
-          "spend_czk": 300.0
-        },
-        {
-          "date": "2026-05-23",
-          "clicks": 100,
-          "impressions": 5660,
-          "spend_czk": 299.44
-        },
-        {
-          "date": "2026-05-24",
-          "clicks": 102,
-          "impressions": 3113,
-          "spend_czk": 305.7
-        },
-        {
-          "date": "2026-05-25",
-          "clicks": 98,
-          "impressions": 4219,
-          "spend_czk": 293.6
-        },
-        {
-          "date": "2026-05-26",
-          "clicks": 98,
-          "impressions": 5368,
-          "spend_czk": 293.8
-        },
-        {
-          "date": "2026-05-27",
-          "clicks": 101,
-          "impressions": 5171,
-          "spend_czk": 302.26
-        },
-        {
-          "date": "2026-05-28",
-          "clicks": 100,
-          "impressions": 5886,
-          "spend_czk": 299.34
-        },
-        {
-          "date": "2026-05-29",
-          "clicks": 100,
-          "impressions": 5235,
-          "spend_czk": 299.8
-        },
-        {
-          "date": "2026-05-30",
-          "clicks": 100,
-          "impressions": 6026,
-          "spend_czk": 299.3
-        },
-        {
-          "date": "2026-05-31",
-          "clicks": 100,
-          "impressions": 4496,
-          "spend_czk": 299.8
-        },
-        {
-          "date": "2026-06-01",
-          "clicks": 101,
-          "impressions": 5944,
-          "spend_czk": 302.7
-        },
-        {
-          "date": "2026-06-02",
-          "clicks": 98,
-          "impressions": 5969,
-          "spend_czk": 293.9
-        },
-        {
-          "date": "2026-06-03",
-          "clicks": 100,
-          "impressions": 4941,
-          "spend_czk": 300.0
-        },
-        {
-          "date": "2026-06-04",
-          "clicks": 100,
-          "impressions": 6188,
-          "spend_czk": 299.9
-        },
-        {
-          "date": "2026-06-05",
-          "clicks": 101,
-          "impressions": 6403,
-          "spend_czk": 302.9
-        },
-        {
-          "date": "2026-06-06",
-          "clicks": 96,
-          "impressions": 5334,
-          "spend_czk": 287.78
-        },
-        {
-          "date": "2026-06-07",
-          "clicks": 99,
-          "impressions": 6483,
-          "spend_czk": 296.88
-        },
-        {
-          "date": "2026-06-08",
-          "clicks": 100,
-          "impressions": 6141,
-          "spend_czk": 300.0
-        },
-        {
-          "date": "2026-06-09",
-          "clicks": 101,
-          "impressions": 6709,
-          "spend_czk": 303.0
-        },
-        {
-          "date": "2026-06-10",
-          "clicks": 99,
-          "impressions": 4916,
-          "spend_czk": 296.9
-        },
-        {
-          "date": "2026-06-11",
-          "clicks": 101,
-          "impressions": 5847,
-          "spend_czk": 302.9
-        },
-        {
-          "date": "2026-06-12",
-          "clicks": 100,
-          "impressions": 5788,
-          "spend_czk": 300.0
-        },
-        {
-          "date": "2026-06-13",
-          "clicks": 99,
-          "impressions": 5231,
-          "spend_czk": 296.78
-        },
-        {
-          "date": "2026-06-14",
-          "clicks": 102,
-          "impressions": 5252,
-          "spend_czk": 305.9
-        },
-        {
-          "date": "2026-06-15",
-          "clicks": 99,
-          "impressions": 6525,
-          "spend_czk": 296.9
-        }
-      ]
-    },
-    {
       "id": "7799736",
       "name": "VL | FLORIA | OBS | Piniová dekorační kůra | A/B",
       "daily": [
@@ -1154,6 +974,198 @@
           "clicks": 98,
           "impressions": 6109,
           "spend_czk": 294.0
+        },
+        {
+          "date": "2026-06-16",
+          "clicks": 106,
+          "impressions": 5745,
+          "spend_czk": 318.0
+        }
+      ]
+    },
+    {
+      "id": "7799742",
+      "name": "VL | NATURA | OBS | Organické trávníkové hnojivo",
+      "daily": [
+        {
+          "date": "2026-05-18",
+          "clicks": 103,
+          "impressions": 5734,
+          "spend_czk": 300.58
+        },
+        {
+          "date": "2026-05-19",
+          "clicks": 101,
+          "impressions": 11079,
+          "spend_czk": 300.34
+        },
+        {
+          "date": "2026-05-20",
+          "clicks": 102,
+          "impressions": 6752,
+          "spend_czk": 303.7
+        },
+        {
+          "date": "2026-05-21",
+          "clicks": 99,
+          "impressions": 4695,
+          "spend_czk": 297.0
+        },
+        {
+          "date": "2026-05-22",
+          "clicks": 100,
+          "impressions": 4561,
+          "spend_czk": 300.0
+        },
+        {
+          "date": "2026-05-23",
+          "clicks": 100,
+          "impressions": 5660,
+          "spend_czk": 299.44
+        },
+        {
+          "date": "2026-05-24",
+          "clicks": 102,
+          "impressions": 3113,
+          "spend_czk": 305.7
+        },
+        {
+          "date": "2026-05-25",
+          "clicks": 98,
+          "impressions": 4219,
+          "spend_czk": 293.6
+        },
+        {
+          "date": "2026-05-26",
+          "clicks": 98,
+          "impressions": 5368,
+          "spend_czk": 293.8
+        },
+        {
+          "date": "2026-05-27",
+          "clicks": 101,
+          "impressions": 5171,
+          "spend_czk": 302.26
+        },
+        {
+          "date": "2026-05-28",
+          "clicks": 100,
+          "impressions": 5886,
+          "spend_czk": 299.34
+        },
+        {
+          "date": "2026-05-29",
+          "clicks": 100,
+          "impressions": 5235,
+          "spend_czk": 299.8
+        },
+        {
+          "date": "2026-05-30",
+          "clicks": 100,
+          "impressions": 6026,
+          "spend_czk": 299.3
+        },
+        {
+          "date": "2026-05-31",
+          "clicks": 100,
+          "impressions": 4496,
+          "spend_czk": 299.8
+        },
+        {
+          "date": "2026-06-01",
+          "clicks": 101,
+          "impressions": 5944,
+          "spend_czk": 302.7
+        },
+        {
+          "date": "2026-06-02",
+          "clicks": 98,
+          "impressions": 5969,
+          "spend_czk": 293.9
+        },
+        {
+          "date": "2026-06-03",
+          "clicks": 100,
+          "impressions": 4941,
+          "spend_czk": 300.0
+        },
+        {
+          "date": "2026-06-04",
+          "clicks": 100,
+          "impressions": 6188,
+          "spend_czk": 299.9
+        },
+        {
+          "date": "2026-06-05",
+          "clicks": 101,
+          "impressions": 6403,
+          "spend_czk": 302.9
+        },
+        {
+          "date": "2026-06-06",
+          "clicks": 96,
+          "impressions": 5334,
+          "spend_czk": 287.78
+        },
+        {
+          "date": "2026-06-07",
+          "clicks": 99,
+          "impressions": 6483,
+          "spend_czk": 296.88
+        },
+        {
+          "date": "2026-06-08",
+          "clicks": 100,
+          "impressions": 6141,
+          "spend_czk": 300.0
+        },
+        {
+          "date": "2026-06-09",
+          "clicks": 101,
+          "impressions": 6709,
+          "spend_czk": 303.0
+        },
+        {
+          "date": "2026-06-10",
+          "clicks": 99,
+          "impressions": 4916,
+          "spend_czk": 296.9
+        },
+        {
+          "date": "2026-06-11",
+          "clicks": 101,
+          "impressions": 5847,
+          "spend_czk": 302.9
+        },
+        {
+          "date": "2026-06-12",
+          "clicks": 100,
+          "impressions": 5788,
+          "spend_czk": 300.0
+        },
+        {
+          "date": "2026-06-13",
+          "clicks": 99,
+          "impressions": 5231,
+          "spend_czk": 296.78
+        },
+        {
+          "date": "2026-06-14",
+          "clicks": 102,
+          "impressions": 5252,
+          "spend_czk": 305.9
+        },
+        {
+          "date": "2026-06-15",
+          "clicks": 99,
+          "impressions": 6525,
+          "spend_czk": 296.9
+        },
+        {
+          "date": "2026-06-16",
+          "clicks": 99,
+          "impressions": 4983,
+          "spend_czk": 297.0
         }
       ]
     },
@@ -2414,6 +2426,12 @@
           "clicks": 83,
           "impressions": 6312,
           "spend_czk": 249.0
+        },
+        {
+          "date": "2026-06-16",
+          "clicks": 82,
+          "impressions": 4535,
+          "spend_czk": 245.9
         }
       ]
     },
@@ -2576,6 +2594,12 @@
           "clicks": 78,
           "impressions": 5922,
           "spend_czk": 234.0
+        },
+        {
+          "date": "2026-06-16",
+          "clicks": 84,
+          "impressions": 6232,
+          "spend_czk": 252.0
         }
       ]
     },
@@ -2738,6 +2762,174 @@
           "clicks": 86,
           "impressions": 5417,
           "spend_czk": 258.0
+        },
+        {
+          "date": "2026-06-16",
+          "clicks": 85,
+          "impressions": 4151,
+          "spend_czk": 254.9
+        }
+      ]
+    },
+    {
+      "id": "7809753",
+      "name": "VL | NATURA | OBS | Bylinková směs na plísně | A/B",
+      "daily": [
+        {
+          "date": "2026-05-22",
+          "clicks": 87,
+          "impressions": 12408,
+          "spend_czk": 254.19
+        },
+        {
+          "date": "2026-05-23",
+          "clicks": 83,
+          "impressions": 4498,
+          "spend_czk": 245.98
+        },
+        {
+          "date": "2026-05-24",
+          "clicks": 85,
+          "impressions": 4318,
+          "spend_czk": 253.3
+        },
+        {
+          "date": "2026-05-25",
+          "clicks": 82,
+          "impressions": 5165,
+          "spend_czk": 245.68
+        },
+        {
+          "date": "2026-05-26",
+          "clicks": 86,
+          "impressions": 6966,
+          "spend_czk": 253.86
+        },
+        {
+          "date": "2026-05-27",
+          "clicks": 84,
+          "impressions": 4480,
+          "spend_czk": 251.4
+        },
+        {
+          "date": "2026-05-28",
+          "clicks": 85,
+          "impressions": 4939,
+          "spend_czk": 251.51
+        },
+        {
+          "date": "2026-05-29",
+          "clicks": 82,
+          "impressions": 2945,
+          "spend_czk": 245.9
+        },
+        {
+          "date": "2026-05-30",
+          "clicks": 87,
+          "impressions": 3451,
+          "spend_czk": 260.9
+        },
+        {
+          "date": "2026-05-31",
+          "clicks": 80,
+          "impressions": 2678,
+          "spend_czk": 239.9
+        },
+        {
+          "date": "2026-06-01",
+          "clicks": 82,
+          "impressions": 3183,
+          "spend_czk": 246.0
+        },
+        {
+          "date": "2026-06-02",
+          "clicks": 85,
+          "impressions": 4590,
+          "spend_czk": 253.7
+        },
+        {
+          "date": "2026-06-03",
+          "clicks": 84,
+          "impressions": 5057,
+          "spend_czk": 251.78
+        },
+        {
+          "date": "2026-06-04",
+          "clicks": 82,
+          "impressions": 6597,
+          "spend_czk": 245.8
+        },
+        {
+          "date": "2026-06-05",
+          "clicks": 83,
+          "impressions": 9080,
+          "spend_czk": 248.41
+        },
+        {
+          "date": "2026-06-06",
+          "clicks": 81,
+          "impressions": 6258,
+          "spend_czk": 243.0
+        },
+        {
+          "date": "2026-06-07",
+          "clicks": 86,
+          "impressions": 5171,
+          "spend_czk": 258.0
+        },
+        {
+          "date": "2026-06-08",
+          "clicks": 82,
+          "impressions": 5126,
+          "spend_czk": 245.9
+        },
+        {
+          "date": "2026-06-09",
+          "clicks": 82,
+          "impressions": 5269,
+          "spend_czk": 245.98
+        },
+        {
+          "date": "2026-06-10",
+          "clicks": 82,
+          "impressions": 4629,
+          "spend_czk": 245.58
+        },
+        {
+          "date": "2026-06-11",
+          "clicks": 81,
+          "impressions": 4282,
+          "spend_czk": 242.78
+        },
+        {
+          "date": "2026-06-12",
+          "clicks": 84,
+          "impressions": 4616,
+          "spend_czk": 252.0
+        },
+        {
+          "date": "2026-06-13",
+          "clicks": 81,
+          "impressions": 5778,
+          "spend_czk": 243.0
+        },
+        {
+          "date": "2026-06-14",
+          "clicks": 83,
+          "impressions": 4080,
+          "spend_czk": 249.0
+        },
+        {
+          "date": "2026-06-15",
+          "clicks": 85,
+          "impressions": 5560,
+          "spend_czk": 255.0
+        },
+        {
+          "date": "2026-06-16",
+          "clicks": 85,
+          "impressions": 4721,
+          "spend_czk": 254.6
         }
       ]
     },
@@ -3180,158 +3372,290 @@
       ]
     },
     {
-      "id": "7809753",
-      "name": "VL | NATURA | OBS | Bylinková směs na plísně | A/B",
+      "id": "7812246",
+      "name": "VL | FLORIA | OBS | Dlouhodobě působící TH | A+B",
       "daily": [
         {
-          "date": "2026-05-22",
-          "clicks": 87,
-          "impressions": 12408,
-          "spend_czk": 254.19
-        },
-        {
-          "date": "2026-05-23",
-          "clicks": 83,
-          "impressions": 4498,
-          "spend_czk": 245.98
-        },
-        {
-          "date": "2026-05-24",
-          "clicks": 85,
-          "impressions": 4318,
-          "spend_czk": 253.3
-        },
-        {
           "date": "2026-05-25",
-          "clicks": 82,
-          "impressions": 5165,
-          "spend_czk": 245.68
+          "clicks": 94,
+          "impressions": 6839,
+          "spend_czk": 278.32
         },
         {
           "date": "2026-05-26",
-          "clicks": 86,
-          "impressions": 6966,
-          "spend_czk": 253.86
+          "clicks": 92,
+          "impressions": 10137,
+          "spend_czk": 274.11
         },
         {
           "date": "2026-05-27",
-          "clicks": 84,
-          "impressions": 4480,
-          "spend_czk": 251.4
+          "clicks": 93,
+          "impressions": 6041,
+          "spend_czk": 278.08
         },
         {
           "date": "2026-05-28",
-          "clicks": 85,
-          "impressions": 4939,
-          "spend_czk": 251.51
+          "clicks": 89,
+          "impressions": 4933,
+          "spend_czk": 266.2
         },
         {
           "date": "2026-05-29",
-          "clicks": 82,
-          "impressions": 2945,
-          "spend_czk": 245.9
+          "clicks": 94,
+          "impressions": 4896,
+          "spend_czk": 281.18
         },
         {
           "date": "2026-05-30",
-          "clicks": 87,
-          "impressions": 3451,
-          "spend_czk": 260.9
+          "clicks": 94,
+          "impressions": 3895,
+          "spend_czk": 281.3
         },
         {
           "date": "2026-05-31",
-          "clicks": 80,
-          "impressions": 2678,
-          "spend_czk": 239.9
+          "clicks": 90,
+          "impressions": 4684,
+          "spend_czk": 270.0
         },
         {
           "date": "2026-06-01",
-          "clicks": 82,
-          "impressions": 3183,
-          "spend_czk": 246.0
+          "clicks": 91,
+          "impressions": 5205,
+          "spend_czk": 272.1
         },
         {
           "date": "2026-06-02",
-          "clicks": 85,
-          "impressions": 4590,
-          "spend_czk": 253.7
+          "clicks": 90,
+          "impressions": 5957,
+          "spend_czk": 269.9
         },
         {
           "date": "2026-06-03",
-          "clicks": 84,
-          "impressions": 5057,
-          "spend_czk": 251.78
+          "clicks": 94,
+          "impressions": 6432,
+          "spend_czk": 281.88
         },
         {
           "date": "2026-06-04",
-          "clicks": 82,
-          "impressions": 6597,
-          "spend_czk": 245.8
+          "clicks": 92,
+          "impressions": 7022,
+          "spend_czk": 275.9
         },
         {
           "date": "2026-06-05",
-          "clicks": 83,
-          "impressions": 9080,
-          "spend_czk": 248.41
+          "clicks": 93,
+          "impressions": 6650,
+          "spend_czk": 278.8
         },
         {
           "date": "2026-06-06",
-          "clicks": 81,
-          "impressions": 6258,
-          "spend_czk": 243.0
+          "clicks": 89,
+          "impressions": 6464,
+          "spend_czk": 266.8
         },
         {
           "date": "2026-06-07",
-          "clicks": 86,
-          "impressions": 5171,
-          "spend_czk": 258.0
+          "clicks": 90,
+          "impressions": 8406,
+          "spend_czk": 269.5
         },
         {
           "date": "2026-06-08",
-          "clicks": 82,
-          "impressions": 5126,
-          "spend_czk": 245.9
+          "clicks": 94,
+          "impressions": 6529,
+          "spend_czk": 281.7
         },
         {
           "date": "2026-06-09",
-          "clicks": 82,
-          "impressions": 5269,
-          "spend_czk": 245.98
+          "clicks": 90,
+          "impressions": 5021,
+          "spend_czk": 270.0
         },
         {
           "date": "2026-06-10",
-          "clicks": 82,
-          "impressions": 4629,
-          "spend_czk": 245.58
+          "clicks": 92,
+          "impressions": 4898,
+          "spend_czk": 276.0
         },
         {
           "date": "2026-06-11",
-          "clicks": 81,
-          "impressions": 4282,
-          "spend_czk": 242.78
+          "clicks": 89,
+          "impressions": 7109,
+          "spend_czk": 266.8
         },
         {
           "date": "2026-06-12",
-          "clicks": 84,
-          "impressions": 4616,
-          "spend_czk": 252.0
+          "clicks": 92,
+          "impressions": 6448,
+          "spend_czk": 276.0
         },
         {
           "date": "2026-06-13",
-          "clicks": 81,
-          "impressions": 5778,
-          "spend_czk": 243.0
+          "clicks": 91,
+          "impressions": 9404,
+          "spend_czk": 273.0
         },
         {
           "date": "2026-06-14",
-          "clicks": 83,
-          "impressions": 4080,
-          "spend_czk": 249.0
+          "clicks": 93,
+          "impressions": 5974,
+          "spend_czk": 279.0
         },
         {
           "date": "2026-06-15",
-          "clicks": 85,
-          "impressions": 5560,
-          "spend_czk": 255.0
+          "clicks": 91,
+          "impressions": 4317,
+          "spend_czk": 272.9
+        },
+        {
+          "date": "2026-06-16",
+          "clicks": 91,
+          "impressions": 6878,
+          "spend_czk": 272.98
+        }
+      ]
+    },
+    {
+      "id": "7812249",
+      "name": "VL | FLORIA | OBS | Okyselovač a KH kyselomilné | A+B",
+      "daily": [
+        {
+          "date": "2026-05-25",
+          "clicks": 92,
+          "impressions": 7140,
+          "spend_czk": 274.0
+        },
+        {
+          "date": "2026-05-26",
+          "clicks": 94,
+          "impressions": 9788,
+          "spend_czk": 279.85
+        },
+        {
+          "date": "2026-05-27",
+          "clicks": 95,
+          "impressions": 4937,
+          "spend_czk": 283.84
+        },
+        {
+          "date": "2026-05-28",
+          "clicks": 97,
+          "impressions": 5083,
+          "spend_czk": 290.08
+        },
+        {
+          "date": "2026-05-29",
+          "clicks": 86,
+          "impressions": 5099,
+          "spend_czk": 257.94
+        },
+        {
+          "date": "2026-05-30",
+          "clicks": 89,
+          "impressions": 4355,
+          "spend_czk": 266.9
+        },
+        {
+          "date": "2026-05-31",
+          "clicks": 96,
+          "impressions": 4146,
+          "spend_czk": 287.48
+        },
+        {
+          "date": "2026-06-01",
+          "clicks": 88,
+          "impressions": 4271,
+          "spend_czk": 264.0
+        },
+        {
+          "date": "2026-06-02",
+          "clicks": 93,
+          "impressions": 7277,
+          "spend_czk": 278.6
+        },
+        {
+          "date": "2026-06-03",
+          "clicks": 90,
+          "impressions": 7041,
+          "spend_czk": 269.8
+        },
+        {
+          "date": "2026-06-04",
+          "clicks": 92,
+          "impressions": 7050,
+          "spend_czk": 275.9
+        },
+        {
+          "date": "2026-06-05",
+          "clicks": 93,
+          "impressions": 6913,
+          "spend_czk": 278.6
+        },
+        {
+          "date": "2026-06-06",
+          "clicks": 93,
+          "impressions": 7446,
+          "spend_czk": 278.86
+        },
+        {
+          "date": "2026-06-07",
+          "clicks": 89,
+          "impressions": 5278,
+          "spend_czk": 267.0
+        },
+        {
+          "date": "2026-06-08",
+          "clicks": 93,
+          "impressions": 7172,
+          "spend_czk": 278.8
+        },
+        {
+          "date": "2026-06-09",
+          "clicks": 88,
+          "impressions": 6648,
+          "spend_czk": 264.0
+        },
+        {
+          "date": "2026-06-10",
+          "clicks": 83,
+          "impressions": 6573,
+          "spend_czk": 248.88
+        },
+        {
+          "date": "2026-06-11",
+          "clicks": 99,
+          "impressions": 7030,
+          "spend_czk": 297.0
+        },
+        {
+          "date": "2026-06-12",
+          "clicks": 86,
+          "impressions": 7992,
+          "spend_czk": 258.0
+        },
+        {
+          "date": "2026-06-13",
+          "clicks": 93,
+          "impressions": 6891,
+          "spend_czk": 279.0
+        },
+        {
+          "date": "2026-06-14",
+          "clicks": 93,
+          "impressions": 7832,
+          "spend_czk": 278.9
+        },
+        {
+          "date": "2026-06-15",
+          "clicks": 88,
+          "impressions": 6286,
+          "spend_czk": 264.0
+        },
+        {
+          "date": "2026-06-16",
+          "clicks": 92,
+          "impressions": 7034,
+          "spend_czk": 275.78
         }
       ]
     },
@@ -3488,282 +3812,6 @@
           "clicks": 84,
           "impressions": 8770,
           "spend_czk": 250.3
-        }
-      ]
-    },
-    {
-      "id": "7812246",
-      "name": "VL | FLORIA | OBS | Dlouhodobě působící TH | A+B",
-      "daily": [
-        {
-          "date": "2026-05-25",
-          "clicks": 94,
-          "impressions": 6839,
-          "spend_czk": 278.32
-        },
-        {
-          "date": "2026-05-26",
-          "clicks": 92,
-          "impressions": 10137,
-          "spend_czk": 274.11
-        },
-        {
-          "date": "2026-05-27",
-          "clicks": 93,
-          "impressions": 6041,
-          "spend_czk": 278.08
-        },
-        {
-          "date": "2026-05-28",
-          "clicks": 89,
-          "impressions": 4933,
-          "spend_czk": 266.2
-        },
-        {
-          "date": "2026-05-29",
-          "clicks": 94,
-          "impressions": 4896,
-          "spend_czk": 281.18
-        },
-        {
-          "date": "2026-05-30",
-          "clicks": 94,
-          "impressions": 3895,
-          "spend_czk": 281.3
-        },
-        {
-          "date": "2026-05-31",
-          "clicks": 90,
-          "impressions": 4684,
-          "spend_czk": 270.0
-        },
-        {
-          "date": "2026-06-01",
-          "clicks": 91,
-          "impressions": 5205,
-          "spend_czk": 272.1
-        },
-        {
-          "date": "2026-06-02",
-          "clicks": 90,
-          "impressions": 5957,
-          "spend_czk": 269.9
-        },
-        {
-          "date": "2026-06-03",
-          "clicks": 94,
-          "impressions": 6432,
-          "spend_czk": 281.88
-        },
-        {
-          "date": "2026-06-04",
-          "clicks": 92,
-          "impressions": 7022,
-          "spend_czk": 275.9
-        },
-        {
-          "date": "2026-06-05",
-          "clicks": 93,
-          "impressions": 6650,
-          "spend_czk": 278.8
-        },
-        {
-          "date": "2026-06-06",
-          "clicks": 89,
-          "impressions": 6464,
-          "spend_czk": 266.8
-        },
-        {
-          "date": "2026-06-07",
-          "clicks": 90,
-          "impressions": 8406,
-          "spend_czk": 269.5
-        },
-        {
-          "date": "2026-06-08",
-          "clicks": 94,
-          "impressions": 6529,
-          "spend_czk": 281.7
-        },
-        {
-          "date": "2026-06-09",
-          "clicks": 90,
-          "impressions": 5021,
-          "spend_czk": 270.0
-        },
-        {
-          "date": "2026-06-10",
-          "clicks": 92,
-          "impressions": 4898,
-          "spend_czk": 276.0
-        },
-        {
-          "date": "2026-06-11",
-          "clicks": 89,
-          "impressions": 7109,
-          "spend_czk": 266.8
-        },
-        {
-          "date": "2026-06-12",
-          "clicks": 92,
-          "impressions": 6448,
-          "spend_czk": 276.0
-        },
-        {
-          "date": "2026-06-13",
-          "clicks": 91,
-          "impressions": 9404,
-          "spend_czk": 273.0
-        },
-        {
-          "date": "2026-06-14",
-          "clicks": 93,
-          "impressions": 5974,
-          "spend_czk": 279.0
-        },
-        {
-          "date": "2026-06-15",
-          "clicks": 91,
-          "impressions": 4317,
-          "spend_czk": 272.9
-        }
-      ]
-    },
-    {
-      "id": "7812249",
-      "name": "VL | FLORIA | OBS | Okyselovač a KH kyselomilné | A+B",
-      "daily": [
-        {
-          "date": "2026-05-25",
-          "clicks": 92,
-          "impressions": 7140,
-          "spend_czk": 274.0
-        },
-        {
-          "date": "2026-05-26",
-          "clicks": 94,
-          "impressions": 9788,
-          "spend_czk": 279.85
-        },
-        {
-          "date": "2026-05-27",
-          "clicks": 95,
-          "impressions": 4937,
-          "spend_czk": 283.84
-        },
-        {
-          "date": "2026-05-28",
-          "clicks": 97,
-          "impressions": 5083,
-          "spend_czk": 290.08
-        },
-        {
-          "date": "2026-05-29",
-          "clicks": 86,
-          "impressions": 5099,
-          "spend_czk": 257.94
-        },
-        {
-          "date": "2026-05-30",
-          "clicks": 89,
-          "impressions": 4355,
-          "spend_czk": 266.9
-        },
-        {
-          "date": "2026-05-31",
-          "clicks": 96,
-          "impressions": 4146,
-          "spend_czk": 287.48
-        },
-        {
-          "date": "2026-06-01",
-          "clicks": 88,
-          "impressions": 4271,
-          "spend_czk": 264.0
-        },
-        {
-          "date": "2026-06-02",
-          "clicks": 93,
-          "impressions": 7277,
-          "spend_czk": 278.6
-        },
-        {
-          "date": "2026-06-03",
-          "clicks": 90,
-          "impressions": 7041,
-          "spend_czk": 269.8
-        },
-        {
-          "date": "2026-06-04",
-          "clicks": 92,
-          "impressions": 7050,
-          "spend_czk": 275.9
-        },
-        {
-          "date": "2026-06-05",
-          "clicks": 93,
-          "impressions": 6913,
-          "spend_czk": 278.6
-        },
-        {
-          "date": "2026-06-06",
-          "clicks": 93,
-          "impressions": 7446,
-          "spend_czk": 278.86
-        },
-        {
-          "date": "2026-06-07",
-          "clicks": 89,
-          "impressions": 5278,
-          "spend_czk": 267.0
-        },
-        {
-          "date": "2026-06-08",
-          "clicks": 93,
-          "impressions": 7172,
-          "spend_czk": 278.8
-        },
-        {
-          "date": "2026-06-09",
-          "clicks": 88,
-          "impressions": 6648,
-          "spend_czk": 264.0
-        },
-        {
-          "date": "2026-06-10",
-          "clicks": 83,
-          "impressions": 6573,
-          "spend_czk": 248.88
-        },
-        {
-          "date": "2026-06-11",
-          "clicks": 99,
-          "impressions": 7030,
-          "spend_czk": 297.0
-        },
-        {
-          "date": "2026-06-12",
-          "clicks": 86,
-          "impressions": 7992,
-          "spend_czk": 258.0
-        },
-        {
-          "date": "2026-06-13",
-          "clicks": 93,
-          "impressions": 6891,
-          "spend_czk": 279.0
-        },
-        {
-          "date": "2026-06-14",
-          "clicks": 93,
-          "impressions": 7832,
-          "spend_czk": 278.9
-        },
-        {
-          "date": "2026-06-15",
-          "clicks": 88,
-          "impressions": 6286,
-          "spend_czk": 264.0
         }
       ]
     },
@@ -4410,6 +4458,246 @@
       ]
     },
     {
+      "id": "7821045",
+      "name": "VL | NATURA | OBS | Přírodní hnojivo pro rajčata a papriky  | A+B",
+      "daily": [
+        {
+          "date": "2026-05-29",
+          "clicks": 85,
+          "impressions": 6744,
+          "spend_czk": 251.84
+        },
+        {
+          "date": "2026-05-30",
+          "clicks": 84,
+          "impressions": 4486,
+          "spend_czk": 251.08
+        },
+        {
+          "date": "2026-05-31",
+          "clicks": 85,
+          "impressions": 9629,
+          "spend_czk": 254.18
+        },
+        {
+          "date": "2026-06-01",
+          "clicks": 84,
+          "impressions": 4985,
+          "spend_czk": 251.1
+        },
+        {
+          "date": "2026-06-02",
+          "clicks": 81,
+          "impressions": 6690,
+          "spend_czk": 243.0
+        },
+        {
+          "date": "2026-06-03",
+          "clicks": 83,
+          "impressions": 8282,
+          "spend_czk": 248.7
+        },
+        {
+          "date": "2026-06-04",
+          "clicks": 83,
+          "impressions": 13424,
+          "spend_czk": 248.36
+        },
+        {
+          "date": "2026-06-05",
+          "clicks": 84,
+          "impressions": 12185,
+          "spend_czk": 250.12
+        },
+        {
+          "date": "2026-06-06",
+          "clicks": 87,
+          "impressions": 6324,
+          "spend_czk": 259.3
+        },
+        {
+          "date": "2026-06-07",
+          "clicks": 84,
+          "impressions": 7067,
+          "spend_czk": 252.0
+        },
+        {
+          "date": "2026-06-08",
+          "clicks": 78,
+          "impressions": 4220,
+          "spend_czk": 233.8
+        },
+        {
+          "date": "2026-06-09",
+          "clicks": 81,
+          "impressions": 7267,
+          "spend_czk": 242.9
+        },
+        {
+          "date": "2026-06-10",
+          "clicks": 86,
+          "impressions": 6219,
+          "spend_czk": 257.3
+        },
+        {
+          "date": "2026-06-11",
+          "clicks": 82,
+          "impressions": 5998,
+          "spend_czk": 245.18
+        },
+        {
+          "date": "2026-06-12",
+          "clicks": 87,
+          "impressions": 5866,
+          "spend_czk": 261.0
+        },
+        {
+          "date": "2026-06-13",
+          "clicks": 79,
+          "impressions": 5704,
+          "spend_czk": 237.0
+        },
+        {
+          "date": "2026-06-14",
+          "clicks": 85,
+          "impressions": 5728,
+          "spend_czk": 255.0
+        },
+        {
+          "date": "2026-06-15",
+          "clicks": 82,
+          "impressions": 5045,
+          "spend_czk": 245.9
+        },
+        {
+          "date": "2026-06-16",
+          "clicks": 83,
+          "impressions": 4450,
+          "spend_czk": 249.0
+        }
+      ]
+    },
+    {
+      "id": "7821046",
+      "name": "VL | VITALITY KOMPLEX | OBS | Univerzál",
+      "daily": [
+        {
+          "date": "2026-05-29",
+          "clicks": 85,
+          "impressions": 4134,
+          "spend_czk": 251.78
+        },
+        {
+          "date": "2026-05-30",
+          "clicks": 85,
+          "impressions": 5304,
+          "spend_czk": 254.3
+        },
+        {
+          "date": "2026-05-31",
+          "clicks": 83,
+          "impressions": 6075,
+          "spend_czk": 247.98
+        },
+        {
+          "date": "2026-06-01",
+          "clicks": 85,
+          "impressions": 4250,
+          "spend_czk": 254.58
+        },
+        {
+          "date": "2026-06-02",
+          "clicks": 83,
+          "impressions": 6557,
+          "spend_czk": 247.98
+        },
+        {
+          "date": "2026-06-03",
+          "clicks": 82,
+          "impressions": 5180,
+          "spend_czk": 245.8
+        },
+        {
+          "date": "2026-06-04",
+          "clicks": 84,
+          "impressions": 6339,
+          "spend_czk": 250.68
+        },
+        {
+          "date": "2026-06-05",
+          "clicks": 88,
+          "impressions": 7303,
+          "spend_czk": 263.8
+        },
+        {
+          "date": "2026-06-06",
+          "clicks": 78,
+          "impressions": 5219,
+          "spend_czk": 233.98
+        },
+        {
+          "date": "2026-06-07",
+          "clicks": 78,
+          "impressions": 6870,
+          "spend_czk": 233.3
+        },
+        {
+          "date": "2026-06-08",
+          "clicks": 84,
+          "impressions": 4746,
+          "spend_czk": 252.0
+        },
+        {
+          "date": "2026-06-09",
+          "clicks": 79,
+          "impressions": 3926,
+          "spend_czk": 237.0
+        },
+        {
+          "date": "2026-06-10",
+          "clicks": 82,
+          "impressions": 5164,
+          "spend_czk": 245.48
+        },
+        {
+          "date": "2026-06-11",
+          "clicks": 86,
+          "impressions": 6566,
+          "spend_czk": 257.5
+        },
+        {
+          "date": "2026-06-12",
+          "clicks": 80,
+          "impressions": 6776,
+          "spend_czk": 239.5
+        },
+        {
+          "date": "2026-06-13",
+          "clicks": 88,
+          "impressions": 5320,
+          "spend_czk": 263.5
+        },
+        {
+          "date": "2026-06-14",
+          "clicks": 79,
+          "impressions": 4965,
+          "spend_czk": 236.6
+        },
+        {
+          "date": "2026-06-15",
+          "clicks": 85,
+          "impressions": 4233,
+          "spend_czk": 253.6
+        },
+        {
+          "date": "2026-06-16",
+          "clicks": 85,
+          "impressions": 4884,
+          "spend_czk": 254.8
+        }
+      ]
+    },
+    {
       "id": "7733243",
       "name": "VL | FLORIA | OBS | Zahradnický substrát",
       "daily": [
@@ -4542,230 +4830,104 @@
       ]
     },
     {
-      "id": "7821045",
-      "name": "VL | NATURA | OBS | Přírodní hnojivo pro rajčata a papriky  | A+B",
+      "id": "7823360",
+      "name": "VL | NATURA | OBS | Přírodní hnojivo pro jahody a drobné ovoce | A+B",
       "daily": [
         {
-          "date": "2026-05-29",
-          "clicks": 85,
-          "impressions": 6744,
-          "spend_czk": 251.84
-        },
-        {
-          "date": "2026-05-30",
-          "clicks": 84,
-          "impressions": 4486,
-          "spend_czk": 251.08
-        },
-        {
-          "date": "2026-05-31",
-          "clicks": 85,
-          "impressions": 9629,
-          "spend_czk": 254.18
-        },
-        {
           "date": "2026-06-01",
-          "clicks": 84,
-          "impressions": 4985,
-          "spend_czk": 251.1
+          "clicks": 99,
+          "impressions": 6917,
+          "spend_czk": 291.65
         },
         {
           "date": "2026-06-02",
-          "clicks": 81,
-          "impressions": 6690,
-          "spend_czk": 243.0
+          "clicks": 87,
+          "impressions": 10403,
+          "spend_czk": 260.24
         },
         {
           "date": "2026-06-03",
-          "clicks": 83,
-          "impressions": 8282,
-          "spend_czk": 248.7
+          "clicks": 92,
+          "impressions": 6684,
+          "spend_czk": 274.94
         },
         {
           "date": "2026-06-04",
-          "clicks": 83,
-          "impressions": 13424,
-          "spend_czk": 248.36
+          "clicks": 92,
+          "impressions": 17392,
+          "spend_czk": 274.79
         },
         {
           "date": "2026-06-05",
-          "clicks": 84,
-          "impressions": 12185,
-          "spend_czk": 250.12
+          "clicks": 91,
+          "impressions": 6283,
+          "spend_czk": 272.9
         },
         {
           "date": "2026-06-06",
-          "clicks": 87,
-          "impressions": 6324,
-          "spend_czk": 259.3
+          "clicks": 91,
+          "impressions": 5556,
+          "spend_czk": 273.0
         },
         {
           "date": "2026-06-07",
-          "clicks": 84,
-          "impressions": 7067,
-          "spend_czk": 252.0
+          "clicks": 92,
+          "impressions": 4723,
+          "spend_czk": 276.0
         },
         {
           "date": "2026-06-08",
-          "clicks": 78,
-          "impressions": 4220,
-          "spend_czk": 233.8
+          "clicks": 90,
+          "impressions": 4612,
+          "spend_czk": 269.58
         },
         {
           "date": "2026-06-09",
-          "clicks": 81,
-          "impressions": 7267,
-          "spend_czk": 242.9
+          "clicks": 90,
+          "impressions": 5492,
+          "spend_czk": 269.8
         },
         {
           "date": "2026-06-10",
-          "clicks": 86,
-          "impressions": 6219,
-          "spend_czk": 257.3
+          "clicks": 92,
+          "impressions": 6668,
+          "spend_czk": 275.98
         },
         {
           "date": "2026-06-11",
-          "clicks": 82,
-          "impressions": 5998,
-          "spend_czk": 245.18
+          "clicks": 93,
+          "impressions": 8550,
+          "spend_czk": 279.0
         },
         {
           "date": "2026-06-12",
-          "clicks": 87,
-          "impressions": 5866,
-          "spend_czk": 261.0
+          "clicks": 100,
+          "impressions": 7063,
+          "spend_czk": 299.88
         },
         {
           "date": "2026-06-13",
-          "clicks": 79,
-          "impressions": 5704,
-          "spend_czk": 237.0
+          "clicks": 85,
+          "impressions": 5449,
+          "spend_czk": 254.9
         },
         {
           "date": "2026-06-14",
-          "clicks": 85,
-          "impressions": 5728,
-          "spend_czk": 255.0
+          "clicks": 92,
+          "impressions": 4670,
+          "spend_czk": 275.88
         },
         {
           "date": "2026-06-15",
-          "clicks": 82,
-          "impressions": 5045,
-          "spend_czk": 245.9
-        }
-      ]
-    },
-    {
-      "id": "7821046",
-      "name": "VL | VITALITY KOMPLEX | OBS | Univerzál",
-      "daily": [
-        {
-          "date": "2026-05-29",
-          "clicks": 85,
-          "impressions": 4134,
-          "spend_czk": 251.78
-        },
-        {
-          "date": "2026-05-30",
-          "clicks": 85,
-          "impressions": 5304,
-          "spend_czk": 254.3
-        },
-        {
-          "date": "2026-05-31",
-          "clicks": 83,
-          "impressions": 6075,
-          "spend_czk": 247.98
-        },
-        {
-          "date": "2026-06-01",
-          "clicks": 85,
-          "impressions": 4250,
-          "spend_czk": 254.58
-        },
-        {
-          "date": "2026-06-02",
-          "clicks": 83,
-          "impressions": 6557,
-          "spend_czk": 247.98
-        },
-        {
-          "date": "2026-06-03",
-          "clicks": 82,
-          "impressions": 5180,
-          "spend_czk": 245.8
-        },
-        {
-          "date": "2026-06-04",
-          "clicks": 84,
-          "impressions": 6339,
-          "spend_czk": 250.68
-        },
-        {
-          "date": "2026-06-05",
           "clicks": 88,
-          "impressions": 7303,
-          "spend_czk": 263.8
+          "impressions": 4387,
+          "spend_czk": 264.0
         },
         {
-          "date": "2026-06-06",
-          "clicks": 78,
-          "impressions": 5219,
-          "spend_czk": 233.98
-        },
-        {
-          "date": "2026-06-07",
-          "clicks": 78,
-          "impressions": 6870,
-          "spend_czk": 233.3
-        },
-        {
-          "date": "2026-06-08",
-          "clicks": 84,
-          "impressions": 4746,
-          "spend_czk": 252.0
-        },
-        {
-          "date": "2026-06-09",
-          "clicks": 79,
-          "impressions": 3926,
-          "spend_czk": 237.0
-        },
-        {
-          "date": "2026-06-10",
-          "clicks": 82,
-          "impressions": 5164,
-          "spend_czk": 245.48
-        },
-        {
-          "date": "2026-06-11",
-          "clicks": 86,
-          "impressions": 6566,
-          "spend_czk": 257.5
-        },
-        {
-          "date": "2026-06-12",
-          "clicks": 80,
-          "impressions": 6776,
-          "spend_czk": 239.5
-        },
-        {
-          "date": "2026-06-13",
-          "clicks": 88,
-          "impressions": 5320,
-          "spend_czk": 263.5
-        },
-        {
-          "date": "2026-06-14",
-          "clicks": 79,
-          "impressions": 4965,
-          "spend_czk": 236.6
-        },
-        {
-          "date": "2026-06-15",
-          "clicks": 85,
-          "impressions": 4233,
-          "spend_czk": 253.6
+          "date": "2026-06-16",
+          "clicks": 92,
+          "impressions": 3642,
+          "spend_czk": 275.9
         }
       ]
     },
@@ -4902,98 +5064,104 @@
       ]
     },
     {
-      "id": "7823360",
-      "name": "VL | NATURA | OBS | Přírodní hnojivo pro jahody a drobné ovoce | A+B",
+      "id": "7823359",
+      "name": "VL | VITALITY KOMPLEX | OBS | Muškát a surfinie",
       "daily": [
         {
           "date": "2026-06-01",
-          "clicks": 99,
-          "impressions": 6917,
-          "spend_czk": 291.65
+          "clicks": 88,
+          "impressions": 5262,
+          "spend_czk": 259.55
         },
         {
           "date": "2026-06-02",
-          "clicks": 87,
-          "impressions": 10403,
-          "spend_czk": 260.24
+          "clicks": 83,
+          "impressions": 9775,
+          "spend_czk": 248.25
         },
         {
           "date": "2026-06-03",
-          "clicks": 92,
-          "impressions": 6684,
-          "spend_czk": 274.94
+          "clicks": 82,
+          "impressions": 7700,
+          "spend_czk": 244.58
         },
         {
           "date": "2026-06-04",
-          "clicks": 92,
-          "impressions": 17392,
-          "spend_czk": 274.79
+          "clicks": 84,
+          "impressions": 4721,
+          "spend_czk": 252.0
         },
         {
           "date": "2026-06-05",
-          "clicks": 91,
-          "impressions": 6283,
-          "spend_czk": 272.9
+          "clicks": 82,
+          "impressions": 7171,
+          "spend_czk": 245.9
         },
         {
           "date": "2026-06-06",
-          "clicks": 91,
-          "impressions": 5556,
-          "spend_czk": 273.0
-        },
-        {
-          "date": "2026-06-07",
-          "clicks": 92,
-          "impressions": 4723,
-          "spend_czk": 276.0
-        },
-        {
-          "date": "2026-06-08",
-          "clicks": 90,
-          "impressions": 4612,
-          "spend_czk": 269.58
-        },
-        {
-          "date": "2026-06-09",
-          "clicks": 90,
-          "impressions": 5492,
-          "spend_czk": 269.8
-        },
-        {
-          "date": "2026-06-10",
-          "clicks": 92,
-          "impressions": 6668,
-          "spend_czk": 275.98
-        },
-        {
-          "date": "2026-06-11",
-          "clicks": 93,
-          "impressions": 8550,
-          "spend_czk": 279.0
-        },
-        {
-          "date": "2026-06-12",
-          "clicks": 100,
-          "impressions": 7063,
-          "spend_czk": 299.88
-        },
-        {
-          "date": "2026-06-13",
           "clicks": 85,
-          "impressions": 5449,
+          "impressions": 7140,
           "spend_czk": 254.9
         },
         {
+          "date": "2026-06-07",
+          "clicks": 75,
+          "impressions": 5020,
+          "spend_czk": 224.6
+        },
+        {
+          "date": "2026-06-08",
+          "clicks": 84,
+          "impressions": 6892,
+          "spend_czk": 251.88
+        },
+        {
+          "date": "2026-06-09",
+          "clicks": 84,
+          "impressions": 5826,
+          "spend_czk": 248.9
+        },
+        {
+          "date": "2026-06-10",
+          "clicks": 82,
+          "impressions": 4499,
+          "spend_czk": 245.6
+        },
+        {
+          "date": "2026-06-11",
+          "clicks": 82,
+          "impressions": 4891,
+          "spend_czk": 245.7
+        },
+        {
+          "date": "2026-06-12",
+          "clicks": 88,
+          "impressions": 6362,
+          "spend_czk": 263.28
+        },
+        {
+          "date": "2026-06-13",
+          "clicks": 79,
+          "impressions": 5501,
+          "spend_czk": 236.1
+        },
+        {
           "date": "2026-06-14",
-          "clicks": 92,
-          "impressions": 4670,
-          "spend_czk": 275.88
+          "clicks": 84,
+          "impressions": 4893,
+          "spend_czk": 251.0
         },
         {
           "date": "2026-06-15",
-          "clicks": 88,
-          "impressions": 4387,
-          "spend_czk": 264.0
+          "clicks": 83,
+          "impressions": 4660,
+          "spend_czk": 248.9
+        },
+        {
+          "date": "2026-06-16",
+          "clicks": 84,
+          "impressions": 4001,
+          "spend_czk": 252.0
         }
       ]
     },
@@ -5108,102 +5276,6 @@
           "clicks": 14,
           "impressions": 400,
           "spend_czk": 42.0
-        }
-      ]
-    },
-    {
-      "id": "7823359",
-      "name": "VL | VITALITY KOMPLEX | OBS | Muškát a surfinie",
-      "daily": [
-        {
-          "date": "2026-06-01",
-          "clicks": 88,
-          "impressions": 5262,
-          "spend_czk": 259.55
-        },
-        {
-          "date": "2026-06-02",
-          "clicks": 83,
-          "impressions": 9775,
-          "spend_czk": 248.25
-        },
-        {
-          "date": "2026-06-03",
-          "clicks": 82,
-          "impressions": 7700,
-          "spend_czk": 244.58
-        },
-        {
-          "date": "2026-06-04",
-          "clicks": 84,
-          "impressions": 4721,
-          "spend_czk": 252.0
-        },
-        {
-          "date": "2026-06-05",
-          "clicks": 82,
-          "impressions": 7171,
-          "spend_czk": 245.9
-        },
-        {
-          "date": "2026-06-06",
-          "clicks": 85,
-          "impressions": 7140,
-          "spend_czk": 254.9
-        },
-        {
-          "date": "2026-06-07",
-          "clicks": 75,
-          "impressions": 5020,
-          "spend_czk": 224.6
-        },
-        {
-          "date": "2026-06-08",
-          "clicks": 84,
-          "impressions": 6892,
-          "spend_czk": 251.88
-        },
-        {
-          "date": "2026-06-09",
-          "clicks": 84,
-          "impressions": 5826,
-          "spend_czk": 248.9
-        },
-        {
-          "date": "2026-06-10",
-          "clicks": 82,
-          "impressions": 4499,
-          "spend_czk": 245.6
-        },
-        {
-          "date": "2026-06-11",
-          "clicks": 82,
-          "impressions": 4891,
-          "spend_czk": 245.7
-        },
-        {
-          "date": "2026-06-12",
-          "clicks": 88,
-          "impressions": 6362,
-          "spend_czk": 263.28
-        },
-        {
-          "date": "2026-06-13",
-          "clicks": 79,
-          "impressions": 5501,
-          "spend_czk": 236.1
-        },
-        {
-          "date": "2026-06-14",
-          "clicks": 84,
-          "impressions": 4893,
-          "spend_czk": 251.0
-        },
-        {
-          "date": "2026-06-15",
-          "clicks": 83,
-          "impressions": 4660,
-          "spend_czk": 248.9
         }
       ]
     },
@@ -5534,6 +5606,162 @@
           "clicks": 83,
           "impressions": 3631,
           "spend_czk": 249.0
+        }
+      ]
+    },
+    {
+      "id": "7829369",
+      "name": "VL | NATURA | OBS | Kapalné hnojivo pro celou zahradu | A+B",
+      "daily": [
+        {
+          "date": "2026-06-05",
+          "clicks": 92,
+          "impressions": 13555,
+          "spend_czk": 271.93
+        },
+        {
+          "date": "2026-06-06",
+          "clicks": 92,
+          "impressions": 6491,
+          "spend_czk": 275.36
+        },
+        {
+          "date": "2026-06-07",
+          "clicks": 95,
+          "impressions": 11953,
+          "spend_czk": 282.76
+        },
+        {
+          "date": "2026-06-08",
+          "clicks": 87,
+          "impressions": 9140,
+          "spend_czk": 260.5
+        },
+        {
+          "date": "2026-06-09",
+          "clicks": 91,
+          "impressions": 6881,
+          "spend_czk": 272.86
+        },
+        {
+          "date": "2026-06-10",
+          "clicks": 94,
+          "impressions": 6187,
+          "spend_czk": 282.0
+        },
+        {
+          "date": "2026-06-11",
+          "clicks": 90,
+          "impressions": 7133,
+          "spend_czk": 269.98
+        },
+        {
+          "date": "2026-06-12",
+          "clicks": 90,
+          "impressions": 6189,
+          "spend_czk": 269.9
+        },
+        {
+          "date": "2026-06-13",
+          "clicks": 92,
+          "impressions": 7260,
+          "spend_czk": 275.78
+        },
+        {
+          "date": "2026-06-14",
+          "clicks": 94,
+          "impressions": 5889,
+          "spend_czk": 281.8
+        },
+        {
+          "date": "2026-06-15",
+          "clicks": 91,
+          "impressions": 5098,
+          "spend_czk": 272.9
+        },
+        {
+          "date": "2026-06-16",
+          "clicks": 90,
+          "impressions": 4866,
+          "spend_czk": 270.0
+        }
+      ]
+    },
+    {
+      "id": "7829372",
+      "name": "VL | NATURA | OBS | Přírodní hnojivo pro borůvky a brusinky | A+B",
+      "daily": [
+        {
+          "date": "2026-06-05",
+          "clicks": 91,
+          "impressions": 13360,
+          "spend_czk": 271.41
+        },
+        {
+          "date": "2026-06-06",
+          "clicks": 93,
+          "impressions": 7671,
+          "spend_czk": 278.3
+        },
+        {
+          "date": "2026-06-07",
+          "clicks": 91,
+          "impressions": 6217,
+          "spend_czk": 272.46
+        },
+        {
+          "date": "2026-06-08",
+          "clicks": 95,
+          "impressions": 6994,
+          "spend_czk": 284.9
+        },
+        {
+          "date": "2026-06-09",
+          "clicks": 88,
+          "impressions": 4546,
+          "spend_czk": 263.76
+        },
+        {
+          "date": "2026-06-10",
+          "clicks": 88,
+          "impressions": 5857,
+          "spend_czk": 263.7
+        },
+        {
+          "date": "2026-06-11",
+          "clicks": 90,
+          "impressions": 6141,
+          "spend_czk": 269.9
+        },
+        {
+          "date": "2026-06-12",
+          "clicks": 92,
+          "impressions": 6675,
+          "spend_czk": 275.86
+        },
+        {
+          "date": "2026-06-13",
+          "clicks": 91,
+          "impressions": 6732,
+          "spend_czk": 273.0
+        },
+        {
+          "date": "2026-06-14",
+          "clicks": 92,
+          "impressions": 5728,
+          "spend_czk": 275.78
+        },
+        {
+          "date": "2026-06-15",
+          "clicks": 92,
+          "impressions": 4458,
+          "spend_czk": 276.0
+        },
+        {
+          "date": "2026-06-16",
+          "clicks": 93,
+          "impressions": 5122,
+          "spend_czk": 279.0
         }
       ]
     },
@@ -5906,150 +6134,6 @@
           "clicks": 41,
           "impressions": 3201,
           "spend_czk": 122.7
-        }
-      ]
-    },
-    {
-      "id": "7829369",
-      "name": "VL | NATURA | OBS | Kapalné hnojivo pro celou zahradu | A+B",
-      "daily": [
-        {
-          "date": "2026-06-05",
-          "clicks": 92,
-          "impressions": 13555,
-          "spend_czk": 271.93
-        },
-        {
-          "date": "2026-06-06",
-          "clicks": 92,
-          "impressions": 6491,
-          "spend_czk": 275.36
-        },
-        {
-          "date": "2026-06-07",
-          "clicks": 95,
-          "impressions": 11953,
-          "spend_czk": 282.76
-        },
-        {
-          "date": "2026-06-08",
-          "clicks": 87,
-          "impressions": 9140,
-          "spend_czk": 260.5
-        },
-        {
-          "date": "2026-06-09",
-          "clicks": 91,
-          "impressions": 6881,
-          "spend_czk": 272.86
-        },
-        {
-          "date": "2026-06-10",
-          "clicks": 94,
-          "impressions": 6187,
-          "spend_czk": 282.0
-        },
-        {
-          "date": "2026-06-11",
-          "clicks": 90,
-          "impressions": 7133,
-          "spend_czk": 269.98
-        },
-        {
-          "date": "2026-06-12",
-          "clicks": 90,
-          "impressions": 6189,
-          "spend_czk": 269.9
-        },
-        {
-          "date": "2026-06-13",
-          "clicks": 92,
-          "impressions": 7260,
-          "spend_czk": 275.78
-        },
-        {
-          "date": "2026-06-14",
-          "clicks": 94,
-          "impressions": 5889,
-          "spend_czk": 281.8
-        },
-        {
-          "date": "2026-06-15",
-          "clicks": 91,
-          "impressions": 5098,
-          "spend_czk": 272.9
-        }
-      ]
-    },
-    {
-      "id": "7829372",
-      "name": "VL | NATURA | OBS | Přírodní hnojivo pro borůvky a brusinky | A+B",
-      "daily": [
-        {
-          "date": "2026-06-05",
-          "clicks": 91,
-          "impressions": 13360,
-          "spend_czk": 271.41
-        },
-        {
-          "date": "2026-06-06",
-          "clicks": 93,
-          "impressions": 7671,
-          "spend_czk": 278.3
-        },
-        {
-          "date": "2026-06-07",
-          "clicks": 91,
-          "impressions": 6217,
-          "spend_czk": 272.46
-        },
-        {
-          "date": "2026-06-08",
-          "clicks": 95,
-          "impressions": 6994,
-          "spend_czk": 284.9
-        },
-        {
-          "date": "2026-06-09",
-          "clicks": 88,
-          "impressions": 4546,
-          "spend_czk": 263.76
-        },
-        {
-          "date": "2026-06-10",
-          "clicks": 88,
-          "impressions": 5857,
-          "spend_czk": 263.7
-        },
-        {
-          "date": "2026-06-11",
-          "clicks": 90,
-          "impressions": 6141,
-          "spend_czk": 269.9
-        },
-        {
-          "date": "2026-06-12",
-          "clicks": 92,
-          "impressions": 6675,
-          "spend_czk": 275.86
-        },
-        {
-          "date": "2026-06-13",
-          "clicks": 91,
-          "impressions": 6732,
-          "spend_czk": 273.0
-        },
-        {
-          "date": "2026-06-14",
-          "clicks": 92,
-          "impressions": 5728,
-          "spend_czk": 275.78
-        },
-        {
-          "date": "2026-06-15",
-          "clicks": 92,
-          "impressions": 4458,
-          "spend_czk": 276.0
         }
       ]
     },
@@ -6630,72 +6714,6 @@
       ]
     },
     {
-      "id": "7709993",
-      "name": "VL | AGRO | OBS | Přírodní hnoje",
-      "daily": [
-        {
-          "date": "2026-03-16",
-          "clicks": 79,
-          "impressions": 11485,
-          "spend_czk": 228.39
-        },
-        {
-          "date": "2026-03-17",
-          "clicks": 76,
-          "impressions": 5683,
-          "spend_czk": 223.59
-        },
-        {
-          "date": "2026-03-18",
-          "clicks": 79,
-          "impressions": 5587,
-          "spend_czk": 236.9
-        },
-        {
-          "date": "2026-03-19",
-          "clicks": 72,
-          "impressions": 6605,
-          "spend_czk": 212.86
-        },
-        {
-          "date": "2026-03-20",
-          "clicks": 37,
-          "impressions": 2493,
-          "spend_czk": 111.0
-        },
-        {
-          "date": "2026-03-23",
-          "clicks": 75,
-          "impressions": 7267,
-          "spend_czk": 224.9
-        },
-        {
-          "date": "2026-03-24",
-          "clicks": 75,
-          "impressions": 5270,
-          "spend_czk": 224.2
-        },
-        {
-          "date": "2026-03-25",
-          "clicks": 75,
-          "impressions": 3355,
-          "spend_czk": 225.0
-        },
-        {
-          "date": "2026-03-26",
-          "clicks": 75,
-          "impressions": 3367,
-          "spend_czk": 224.6
-        },
-        {
-          "date": "2026-03-27",
-          "clicks": 75,
-          "impressions": 4871,
-          "spend_czk": 225.0
-        }
-      ]
-    },
-    {
       "id": "7824845",
       "name": "VL | VITALITY KOMPLEX | OBS | Borůvka",
       "daily": [
@@ -6782,6 +6800,78 @@
           "clicks": 53,
           "impressions": 3475,
           "spend_czk": 158.8
+        },
+        {
+          "date": "2026-06-16",
+          "clicks": 49,
+          "impressions": 3612,
+          "spend_czk": 146.5
+        }
+      ]
+    },
+    {
+      "id": "7709993",
+      "name": "VL | AGRO | OBS | Přírodní hnoje",
+      "daily": [
+        {
+          "date": "2026-03-16",
+          "clicks": 79,
+          "impressions": 11485,
+          "spend_czk": 228.39
+        },
+        {
+          "date": "2026-03-17",
+          "clicks": 76,
+          "impressions": 5683,
+          "spend_czk": 223.59
+        },
+        {
+          "date": "2026-03-18",
+          "clicks": 79,
+          "impressions": 5587,
+          "spend_czk": 236.9
+        },
+        {
+          "date": "2026-03-19",
+          "clicks": 72,
+          "impressions": 6605,
+          "spend_czk": 212.86
+        },
+        {
+          "date": "2026-03-20",
+          "clicks": 37,
+          "impressions": 2493,
+          "spend_czk": 111.0
+        },
+        {
+          "date": "2026-03-23",
+          "clicks": 75,
+          "impressions": 7267,
+          "spend_czk": 224.9
+        },
+        {
+          "date": "2026-03-24",
+          "clicks": 75,
+          "impressions": 5270,
+          "spend_czk": 224.2
+        },
+        {
+          "date": "2026-03-25",
+          "clicks": 75,
+          "impressions": 3355,
+          "spend_czk": 225.0
+        },
+        {
+          "date": "2026-03-26",
+          "clicks": 75,
+          "impressions": 3367,
+          "spend_czk": 224.6
+        },
+        {
+          "date": "2026-03-27",
+          "clicks": 75,
+          "impressions": 4871,
+          "spend_czk": 225.0
         }
       ]
     },
@@ -6866,6 +6956,54 @@
           "clicks": 6,
           "impressions": 354,
           "spend_czk": 18.0
+        }
+      ]
+    },
+    {
+      "id": "7809752",
+      "name": "VL | NATURA | OBS | Bylinková směs na svilušky | A/B",
+      "daily": [
+        {
+          "date": "2026-06-10",
+          "clicks": 85,
+          "impressions": 6106,
+          "spend_czk": 249.95
+        },
+        {
+          "date": "2026-06-11",
+          "clicks": 83,
+          "impressions": 12345,
+          "spend_czk": 246.36
+        },
+        {
+          "date": "2026-06-12",
+          "clicks": 88,
+          "impressions": 6841,
+          "spend_czk": 260.27
+        },
+        {
+          "date": "2026-06-13",
+          "clicks": 82,
+          "impressions": 10648,
+          "spend_czk": 243.14
+        },
+        {
+          "date": "2026-06-14",
+          "clicks": 83,
+          "impressions": 5666,
+          "spend_czk": 247.96
+        },
+        {
+          "date": "2026-06-15",
+          "clicks": 85,
+          "impressions": 5293,
+          "spend_czk": 253.92
+        },
+        {
+          "date": "2026-06-16",
+          "clicks": 84,
+          "impressions": 5085,
+          "spend_czk": 251.56
         }
       ]
     },
@@ -7022,48 +7160,6 @@
           "clicks": 59,
           "impressions": 4882,
           "spend_czk": 176.58
-        }
-      ]
-    },
-    {
-      "id": "7809752",
-      "name": "VL | NATURA | OBS | Bylinková směs na svilušky | A/B",
-      "daily": [
-        {
-          "date": "2026-06-10",
-          "clicks": 85,
-          "impressions": 6106,
-          "spend_czk": 249.95
-        },
-        {
-          "date": "2026-06-11",
-          "clicks": 83,
-          "impressions": 12345,
-          "spend_czk": 246.36
-        },
-        {
-          "date": "2026-06-12",
-          "clicks": 88,
-          "impressions": 6841,
-          "spend_czk": 260.27
-        },
-        {
-          "date": "2026-06-13",
-          "clicks": 82,
-          "impressions": 10648,
-          "spend_czk": 243.14
-        },
-        {
-          "date": "2026-06-14",
-          "clicks": 83,
-          "impressions": 5666,
-          "spend_czk": 247.96
-        },
-        {
-          "date": "2026-06-15",
-          "clicks": 85,
-          "impressions": 5293,
-          "spend_czk": 253.92
         }
       ]
     },
@@ -7494,6 +7590,30 @@
       ]
     },
     {
+      "id": "7839125",
+      "name": "VL | NATURA | OBS | Přírodní hnojivo pro okurky, cukety, dýně a melouny | A+B",
+      "daily": [
+        {
+          "date": "2026-06-14",
+          "clicks": 95,
+          "impressions": 11365,
+          "spend_czk": 279.66
+        },
+        {
+          "date": "2026-06-15",
+          "clicks": 94,
+          "impressions": 6535,
+          "spend_czk": 280.44
+        },
+        {
+          "date": "2026-06-16",
+          "clicks": 89,
+          "impressions": 8301,
+          "spend_czk": 265.68
+        }
+      ]
+    },
+    {
       "id": "7767873",
       "name": "VL | AGRO | OBS | Substrát na jahody",
       "daily": [
@@ -7568,24 +7688,6 @@
           "clicks": 16,
           "impressions": 795,
           "spend_czk": 48.0
-        }
-      ]
-    },
-    {
-      "id": "7839125",
-      "name": "VL | NATURA | OBS | Přírodní hnojivo pro okurky, cukety, dýně a melouny | A+B",
-      "daily": [
-        {
-          "date": "2026-06-14",
-          "clicks": 95,
-          "impressions": 11365,
-          "spend_czk": 279.66
-        },
-        {
-          "date": "2026-06-15",
-          "clicks": 94,
-          "impressions": 6535,
-          "spend_czk": 280.44
         }
       ]
     },
@@ -8167,6 +8269,12 @@
           "date": "2026-06-15",
           "clicks": 7,
           "impressions": 3496,
+          "spend_czk": 0.0
+        },
+        {
+          "date": "2026-06-16",
+          "clicks": 6,
+          "impressions": 3650,
           "spend_czk": 0.0
         }
       ]
