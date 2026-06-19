@@ -1,8 +1,8 @@
 {
-  "updated": "2026-06-18",
+  "updated": "2026-06-19",
   "period": {
     "from": "2026-01-01",
-    "to": "2026-06-17"
+    "to": "2026-06-18"
   },
   "campaigns": [
     {
@@ -454,6 +454,22 @@
       "result_type": "Zájem o příspěvek",
       "period_reach": null,
       "adsets": [
+        {
+          "id": "120246367727200685",
+          "name": "Příspěvek | engagement | FB | vlastní cílení | Přírodní hnojivo pro borůvky a brusinky"
+        },
+        {
+          "id": "120246364730890685",
+          "name": "Příspěvek | engagement | IG | vlastní cílení | Přírodní hnojivo pro borůvky a brusinky"
+        },
+        {
+          "id": "120246362185580685",
+          "name": "Příspěvek | engagement | IG | vlastní cílení | Přírodní hnojivo pro okurky, cukety, dýně a melouny"
+        },
+        {
+          "id": "120246362116310685",
+          "name": "Příspěvek | engagement | FB | vlastní cílení | Přírodní hnojivo pro okurky, cukety, dýně a melouny"
+        },
         {
           "id": "120246198916730685",
           "name": "Příspěvek | engagement | FB | vlastní cílení | Přírodní hnojivo pro jahody a drobné ovoce"
@@ -1394,11 +1410,19 @@
         },
         {
           "date": "2026-06-17",
-          "clicks": 989,
-          "impressions": 40907,
-          "spend_czk": 4937.66,
-          "results": 1185,
+          "clicks": 991,
+          "impressions": 41040,
+          "spend_czk": 4945.73,
+          "results": 1187,
           "cost_per_result": 4.17
+        },
+        {
+          "date": "2026-06-18",
+          "clicks": 1015,
+          "impressions": 48692,
+          "spend_czk": 5563.47,
+          "results": 5422,
+          "cost_per_result": 1.03
         }
       ]
     },
@@ -2185,8 +2209,28 @@
       "period_reach": null,
       "adsets": [
         {
+          "id": "120246362656200685",
+          "name": "MAX počet \"To se mi líbí\" | IG+FB | Vlastní cílení | Rajče a paprika"
+        },
+        {
+          "id": "120246362519040685",
+          "name": "Příspěvek | engagement | IG | Vlastní cílení | Rajče a paprika"
+        },
+        {
+          "id": "120246362451230685",
+          "name": "Příspěvek | engagement | FB | Vlastní cílení | Rajče a paprika"
+        },
+        {
+          "id": "120246361719180685",
+          "name": "MAX počet \"To se mi líbí\" | IG+FB | Vlastní cílení | Trávník"
+        },
+        {
           "id": "120246201208800685",
           "name": "Příspěvek | engagement | FB | Vlastní cílení | Trávník"
+        },
+        {
+          "id": "120246201208600685",
+          "name": "Příspěvek | engagement | FB | Vlastní cílení | Muškát – kopie"
         },
         {
           "id": "120246201085100685",
@@ -2497,18 +2541,26 @@
         {
           "date": "2026-06-16",
           "clicks": 200,
-          "impressions": 202731,
-          "spend_czk": 1934.6,
+          "impressions": 202732,
+          "spend_czk": 1934.87,
           "results": 322,
           "cost_per_result": 6.01
         },
         {
           "date": "2026-06-17",
-          "clicks": 253,
-          "impressions": 180905,
-          "spend_czk": 1907.85,
-          "results": 320,
-          "cost_per_result": 5.96
+          "clicks": 256,
+          "impressions": 180948,
+          "spend_czk": 1909.86,
+          "results": 321,
+          "cost_per_result": 5.95
+        },
+        {
+          "date": "2026-06-18",
+          "clicks": 703,
+          "impressions": 226023,
+          "spend_czk": 4141.91,
+          "results": 567,
+          "cost_per_result": 7.3
         }
       ]
     },
@@ -4700,8 +4752,16 @@
       "name": "VL | FLORIA | Příspěveky | Povědomí",
       "objective": "OUTCOME_AWARENESS",
       "result_type": "Dosah (za 1 000 úč.)",
-      "period_reach": 1127193,
+      "period_reach": 1152471,
       "adsets": [
+        {
+          "id": "120246368983760685",
+          "name": "WEB | IG+FB | CAROUSEL | Produktová řada kapalná hnojiva"
+        },
+        {
+          "id": "120246361914560685",
+          "name": "WEB | IG+FB | CAROUSEL | Produktová řada kyselomilné"
+        },
         {
           "id": "120246194939500685",
           "name": "WEB | IG+FB | CAROUSEL | produktová řada substráty"
@@ -5038,11 +5098,19 @@
         },
         {
           "date": "2026-06-17",
-          "clicks": 222,
-          "impressions": 203083,
-          "spend_czk": 3529.92,
+          "clicks": 223,
+          "impressions": 203321,
+          "spend_czk": 3534.17,
           "results": 162352,
-          "cost_per_result": 21.74
+          "cost_per_result": 21.77
+        },
+        {
+          "date": "2026-06-18",
+          "clicks": 296,
+          "impressions": 218173,
+          "spend_czk": 3806.21,
+          "results": 174593,
+          "cost_per_result": 21.8
         }
       ]
     },
@@ -5489,11 +5557,19 @@
         },
         {
           "date": "2026-06-17",
-          "clicks": 296,
-          "impressions": 11022,
-          "spend_czk": 1716.76,
+          "clicks": 297,
+          "impressions": 11048,
+          "spend_czk": 1721.06,
           "results": 368,
-          "cost_per_result": 4.67
+          "cost_per_result": 4.68
+        },
+        {
+          "date": "2026-06-18",
+          "clicks": 249,
+          "impressions": 10867,
+          "spend_czk": 1640.71,
+          "results": 327,
+          "cost_per_result": 5.02
         }
       ]
     },
@@ -5711,10 +5787,18 @@
         {
           "date": "2026-06-17",
           "clicks": 108,
-          "impressions": 203657,
-          "spend_czk": 1593.1,
+          "impressions": 203690,
+          "spend_czk": 1593.74,
           "results": 147,
           "cost_per_result": 10.84
+        },
+        {
+          "date": "2026-06-18",
+          "clicks": 103,
+          "impressions": 129506,
+          "spend_czk": 1236.46,
+          "results": 141,
+          "cost_per_result": 8.77
         }
       ]
     }
