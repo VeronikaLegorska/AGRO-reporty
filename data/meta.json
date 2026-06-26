@@ -1,8 +1,8 @@
 {
-  "updated": "2026-06-25",
+  "updated": "2026-06-26",
   "period": {
     "from": "2026-01-01",
-    "to": "2026-06-24"
+    "to": "2026-06-25"
   },
   "campaigns": [
     {
@@ -1475,18 +1475,26 @@
         {
           "date": "2026-06-23",
           "clicks": 1108,
-          "impressions": 60046,
-          "spend_czk": 6171.35,
+          "impressions": 60047,
+          "spend_czk": 6172.08,
           "results": 8095,
           "cost_per_result": 0.76
         },
         {
           "date": "2026-06-24",
-          "clicks": 1045,
-          "impressions": 58177,
-          "spend_czk": 6088.26,
-          "results": 7687,
+          "clicks": 1053,
+          "impressions": 58354,
+          "spend_czk": 6110.97,
+          "results": 7711,
           "cost_per_result": 0.79
+        },
+        {
+          "date": "2026-06-25",
+          "clicks": 1185,
+          "impressions": 65988,
+          "spend_czk": 6806.81,
+          "results": 7836,
+          "cost_per_result": 0.87
         }
       ]
     },
@@ -2273,6 +2281,18 @@
       "period_reach": null,
       "adsets": [
         {
+          "id": "120246992653760685",
+          "name": "MAX počet \"To se mi líbí\" | IG+FB | Vlastní cílení | Plod a květ kapalný"
+        },
+        {
+          "id": "120246991445570685",
+          "name": "Příspěvek | engagement | FB | Vlastní cílení | Plod a květ kapalný"
+        },
+        {
+          "id": "120246990637760685",
+          "name": "Příspěvek | engagement | IG | Vlastní cílení | Plod a květ kapalný"
+        },
+        {
           "id": "120246362656200685",
           "name": "MAX počet \"To se mi líbí\" | IG+FB | Vlastní cílení | Rajče a paprika"
         },
@@ -2669,10 +2689,18 @@
         {
           "date": "2026-06-24",
           "clicks": 181,
-          "impressions": 115969,
-          "spend_czk": 1468.51,
+          "impressions": 115999,
+          "spend_czk": 1469.15,
           "results": 219,
           "cost_per_result": 6.71
+        },
+        {
+          "date": "2026-06-25",
+          "clicks": 200,
+          "impressions": 162801,
+          "spend_czk": 1695.77,
+          "results": 265,
+          "cost_per_result": 6.4
         }
       ]
     },
@@ -4864,7 +4892,7 @@
       "name": "VL | FLORIA | Příspěveky | Povědomí",
       "objective": "OUTCOME_AWARENESS",
       "result_type": "Dosah (za 1 000 úč.)",
-      "period_reach": 1256815,
+      "period_reach": 1268472,
       "adsets": [
         {
           "id": "120246368983760685",
@@ -5266,11 +5294,19 @@
         },
         {
           "date": "2026-06-24",
-          "clicks": 248,
-          "impressions": 199975,
-          "spend_czk": 3226.85,
-          "results": 151306,
-          "cost_per_result": 21.33
+          "clicks": 251,
+          "impressions": 200521,
+          "spend_czk": 3235.1,
+          "results": 151758,
+          "cost_per_result": 21.32
+        },
+        {
+          "date": "2026-06-25",
+          "clicks": 233,
+          "impressions": 190848,
+          "spend_czk": 3138.64,
+          "results": 149701,
+          "cost_per_result": 20.97
         }
       ]
     },
@@ -5281,6 +5317,14 @@
       "result_type": "Zájem o příspěvek",
       "period_reach": null,
       "adsets": [
+        {
+          "id": "120246995321610685",
+          "name": "Příspěvek | engagement | IG | vlastní cílení | OM na muškáty"
+        },
+        {
+          "id": "120246994923540685",
+          "name": "Příspěvek | engagement | FB | vlastní cílení | OM na muškáty"
+        },
         {
           "id": "120246200916780685",
           "name": "Příspěvek | engagement | FB | vlastní cílení | OM na rajčata"
@@ -5765,19 +5809,27 @@
         },
         {
           "date": "2026-06-23",
-          "clicks": 146,
-          "impressions": 6875,
-          "spend_czk": 1019.14,
-          "results": 196,
-          "cost_per_result": 5.2
+          "clicks": 147,
+          "impressions": 6876,
+          "spend_czk": 1020.45,
+          "results": 197,
+          "cost_per_result": 5.18
         },
         {
           "date": "2026-06-24",
           "clicks": 146,
-          "impressions": 5165,
-          "spend_czk": 798.96,
+          "impressions": 5184,
+          "spend_czk": 800.28,
           "results": 167,
-          "cost_per_result": 4.78
+          "cost_per_result": 4.79
+        },
+        {
+          "date": "2026-06-25",
+          "clicks": 140,
+          "impressions": 5833,
+          "spend_czk": 862.64,
+          "results": 177,
+          "cost_per_result": 4.87
         }
       ]
     },
@@ -5806,6 +5858,18 @@
       "result_type": "Zájem o příspěvek",
       "period_reach": null,
       "adsets": [
+        {
+          "id": "120246996930080685",
+          "name": "WEB | IG+FB | Banner | Rajče a paprika"
+        },
+        {
+          "id": "120246996659980685",
+          "name": "Příspěvek | engagement | IG | Vlastní cílení | Rajče a paprika"
+        },
+        {
+          "id": "120246995728370685",
+          "name": "Příspěvek | engagement | FB | vlastní cílení | Rajče a paprika"
+        },
         {
           "id": "120246066684010685",
           "name": "WEB | IG+FB | Banner | Muškát a surfinie"
@@ -6051,10 +6115,18 @@
         {
           "date": "2026-06-24",
           "clicks": 27,
-          "impressions": 113683,
+          "impressions": 113699,
           "spend_czk": 540.35,
           "results": 27,
           "cost_per_result": 20.01
+        },
+        {
+          "date": "2026-06-25",
+          "clicks": 88,
+          "impressions": 80489,
+          "spend_czk": 730.77,
+          "results": 97,
+          "cost_per_result": 7.53
         }
       ]
     }
