@@ -1,8 +1,8 @@
 {
-  "updated": "2026-06-26",
+  "updated": "2026-06-27",
   "period": {
     "from": "2026-01-01",
-    "to": "2026-06-25"
+    "to": "2026-06-26"
   },
   "campaigns": [
     {
@@ -1483,18 +1483,26 @@
         {
           "date": "2026-06-24",
           "clicks": 1053,
-          "impressions": 58354,
-          "spend_czk": 6110.97,
+          "impressions": 58355,
+          "spend_czk": 6113.42,
           "results": 7711,
           "cost_per_result": 0.79
         },
         {
           "date": "2026-06-25",
-          "clicks": 1185,
-          "impressions": 65988,
-          "spend_czk": 6806.81,
-          "results": 7836,
+          "clicks": 1188,
+          "impressions": 66126,
+          "spend_czk": 6817.1,
+          "results": 7851,
           "cost_per_result": 0.87
+        },
+        {
+          "date": "2026-06-26",
+          "clicks": 1184,
+          "impressions": 64838,
+          "spend_czk": 6765.73,
+          "results": 7657,
+          "cost_per_result": 0.88
         }
       ]
     },
@@ -2281,6 +2289,18 @@
       "period_reach": null,
       "adsets": [
         {
+          "id": "120247160883460685",
+          "name": "MAX počet \"To se mi líbí\" | IG+FB | Vlastní cílení | Muškát kapalný"
+        },
+        {
+          "id": "120247160830800685",
+          "name": "Příspěvek | engagement | FB | Vlastní cílení | Muškát kapalný"
+        },
+        {
+          "id": "120247160721210685",
+          "name": "Příspěvek | engagement | IG | Vlastní cílení | Muškát kapalný"
+        },
+        {
           "id": "120246992653760685",
           "name": "MAX počet \"To se mi líbí\" | IG+FB | Vlastní cílení | Plod a květ kapalný"
         },
@@ -2697,10 +2717,18 @@
         {
           "date": "2026-06-25",
           "clicks": 200,
-          "impressions": 162801,
-          "spend_czk": 1695.77,
-          "results": 265,
-          "cost_per_result": 6.4
+          "impressions": 162840,
+          "spend_czk": 1698.69,
+          "results": 266,
+          "cost_per_result": 6.39
+        },
+        {
+          "date": "2026-06-26",
+          "clicks": 202,
+          "impressions": 157637,
+          "spend_czk": 1658.98,
+          "results": 240,
+          "cost_per_result": 6.91
         }
       ]
     },
@@ -4892,7 +4920,7 @@
       "name": "VL | FLORIA | Příspěveky | Povědomí",
       "objective": "OUTCOME_AWARENESS",
       "result_type": "Dosah (za 1 000 úč.)",
-      "period_reach": 1268472,
+      "period_reach": 1275888,
       "adsets": [
         {
           "id": "120246368983760685",
@@ -5303,10 +5331,18 @@
         {
           "date": "2026-06-25",
           "clicks": 233,
-          "impressions": 190848,
-          "spend_czk": 3138.64,
-          "results": 149701,
-          "cost_per_result": 20.97
+          "impressions": 191227,
+          "spend_czk": 3144.49,
+          "results": 150064,
+          "cost_per_result": 20.95
+        },
+        {
+          "date": "2026-06-26",
+          "clicks": 251,
+          "impressions": 190699,
+          "spend_czk": 3168.4,
+          "results": 141771,
+          "cost_per_result": 22.35
         }
       ]
     },
@@ -5818,18 +5854,26 @@
         {
           "date": "2026-06-24",
           "clicks": 146,
-          "impressions": 5184,
-          "spend_czk": 800.28,
+          "impressions": 5185,
+          "spend_czk": 801.07,
           "results": 167,
-          "cost_per_result": 4.79
+          "cost_per_result": 4.8
         },
         {
           "date": "2026-06-25",
           "clicks": 140,
-          "impressions": 5833,
-          "spend_czk": 862.64,
+          "impressions": 5851,
+          "spend_czk": 864.21,
           "results": 177,
-          "cost_per_result": 4.87
+          "cost_per_result": 4.88
+        },
+        {
+          "date": "2026-06-26",
+          "clicks": 152,
+          "impressions": 6497,
+          "spend_czk": 957.82,
+          "results": 194,
+          "cost_per_result": 4.94
         }
       ]
     },
@@ -6122,11 +6166,19 @@
         },
         {
           "date": "2026-06-25",
-          "clicks": 88,
-          "impressions": 80489,
-          "spend_czk": 730.77,
-          "results": 97,
-          "cost_per_result": 7.53
+          "clicks": 89,
+          "impressions": 80507,
+          "spend_czk": 730.97,
+          "results": 98,
+          "cost_per_result": 7.46
+        },
+        {
+          "date": "2026-06-26",
+          "clicks": 118,
+          "impressions": 122152,
+          "spend_czk": 1009.94,
+          "results": 146,
+          "cost_per_result": 6.92
         }
       ]
     }
