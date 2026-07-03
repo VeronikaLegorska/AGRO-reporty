@@ -1,8 +1,8 @@
 {
-  "updated": "2026-07-02",
+  "updated": "2026-07-03",
   "period": {
     "from": "2026-01-01",
-    "to": "2026-07-01"
+    "to": "2026-07-02"
   },
   "campaigns": [
     {
@@ -1538,11 +1538,19 @@
         },
         {
           "date": "2026-07-01",
-          "clicks": 1257,
-          "impressions": 74504,
-          "spend_czk": 6221.66,
-          "results": 9754,
+          "clicks": 1261,
+          "impressions": 74705,
+          "spend_czk": 6229.91,
+          "results": 9761,
           "cost_per_result": 0.64
+        },
+        {
+          "date": "2026-07-02",
+          "clicks": 1106,
+          "impressions": 64419,
+          "spend_czk": 5669.43,
+          "results": 8967,
+          "cost_per_result": 0.63
         }
       ]
     },
@@ -2329,6 +2337,26 @@
       "period_reach": null,
       "adsets": [
         {
+          "id": "120247601876610685",
+          "name": "Příspěvek | engagement | IG | Vlastní cílení | Muškát"
+        },
+        {
+          "id": "120247601778930685",
+          "name": "Příspěvek | engagement | FB | Vlastní cílení | Muškát"
+        },
+        {
+          "id": "120247601709740685",
+          "name": "MAX počet \"To se mi líbí\" | IG+FB | Vlastní cílení | GOLD"
+        },
+        {
+          "id": "120247601686100685",
+          "name": "Příspěvek | engagement | IG | Vlastní cílení | GOLD"
+        },
+        {
+          "id": "120247601662450685",
+          "name": "Příspěvek | engagement | FB | Vlastní cílení | GOLD"
+        },
+        {
           "id": "120247160883460685",
           "name": "MAX počet \"To se mi líbí\" | IG+FB | Vlastní cílení | Muškát kapalný"
         },
@@ -2339,6 +2367,14 @@
         {
           "id": "120247160721210685",
           "name": "Příspěvek | engagement | IG | Vlastní cílení | Muškát kapalný"
+        },
+        {
+          "id": "120247160709950685",
+          "name": "MAX počet \"To se mi líbí\" | IG+FB | Vlastní cílení | Plod a květ kapalný – kopie"
+        },
+        {
+          "id": "120247160709940685",
+          "name": "Příspěvek | engagement | IG | Vlastní cílení | Rajče a paprika – kopie"
         },
         {
           "id": "120246992653760685",
@@ -2374,7 +2410,7 @@
         },
         {
           "id": "120246201208600685",
-          "name": "Příspěvek | engagement | FB | Vlastní cílení | Muškát – kopie"
+          "name": "Příspěvek | engagement | FB | Vlastní cílení | Muškát"
         },
         {
           "id": "120246201085100685",
@@ -2804,11 +2840,19 @@
         },
         {
           "date": "2026-07-01",
-          "clicks": 217,
-          "impressions": 114968,
-          "spend_czk": 1110.06,
-          "results": 205,
-          "cost_per_result": 5.41
+          "clicks": 218,
+          "impressions": 115012,
+          "spend_czk": 1110.59,
+          "results": 206,
+          "cost_per_result": 5.39
+        },
+        {
+          "date": "2026-07-02",
+          "clicks": 226,
+          "impressions": 111558,
+          "spend_czk": 1075.16,
+          "results": 203,
+          "cost_per_result": 5.3
         }
       ]
     },
@@ -5000,8 +5044,12 @@
       "name": "VL | FLORIA | Příspěveky | Povědomí",
       "objective": "OUTCOME_AWARENESS",
       "result_type": "Dosah (za 1 000 úč.)",
-      "period_reach": 1332368,
+      "period_reach": 1343479,
       "adsets": [
+        {
+          "id": "120247601524140685",
+          "name": "WEB | IG+FB | CAROUSEL | produktová řada květinová"
+        },
         {
           "id": "120246368983760685",
           "name": "WEB | IG+FB | CAROUSEL | Produktová řada kapalná hnojiva"
@@ -5458,11 +5506,19 @@
         },
         {
           "date": "2026-07-01",
-          "clicks": 187,
-          "impressions": 156139,
-          "spend_czk": 1978.23,
-          "results": 100122,
+          "clicks": 189,
+          "impressions": 156476,
+          "spend_czk": 1981.51,
+          "results": 100297,
           "cost_per_result": 19.76
+        },
+        {
+          "date": "2026-07-02",
+          "clicks": 156,
+          "impressions": 130924,
+          "spend_czk": 1664.02,
+          "results": 96503,
+          "cost_per_result": 17.24
         }
       ]
     },
@@ -6037,11 +6093,19 @@
         },
         {
           "date": "2026-07-01",
-          "clicks": 132,
-          "impressions": 5011,
-          "spend_czk": 688.66,
-          "results": 175,
-          "cost_per_result": 3.94
+          "clicks": 133,
+          "impressions": 5037,
+          "spend_czk": 690.36,
+          "results": 176,
+          "cost_per_result": 3.92
+        },
+        {
+          "date": "2026-07-02",
+          "clicks": 175,
+          "impressions": 5168,
+          "spend_czk": 871.21,
+          "results": 242,
+          "cost_per_result": 3.6
         }
       ]
     },
@@ -6383,10 +6447,18 @@
         {
           "date": "2026-07-01",
           "clicks": 155,
-          "impressions": 111303,
-          "spend_czk": 881.02,
+          "impressions": 111333,
+          "spend_czk": 881.68,
           "results": 138,
-          "cost_per_result": 6.38
+          "cost_per_result": 6.39
+        },
+        {
+          "date": "2026-07-02",
+          "clicks": 166,
+          "impressions": 95979,
+          "spend_czk": 830.96,
+          "results": 129,
+          "cost_per_result": 6.44
         }
       ]
     }
