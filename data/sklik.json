@@ -1,8 +1,8 @@
 {
-  "updated": "2026-07-06",
+  "updated": "2026-07-07",
   "period": {
     "from": "2026-01-01",
-    "to": "2026-07-05"
+    "to": "2026-07-06"
   },
   "campaigns": [
     {
@@ -4424,6 +4424,12 @@
           "clicks": 83,
           "impressions": 4965,
           "spend_czk": 249.0
+        },
+        {
+          "date": "2026-07-06",
+          "clicks": 84,
+          "impressions": 3175,
+          "spend_czk": 252.0
         }
       ]
     },
@@ -5000,6 +5006,12 @@
           "clicks": 91,
           "impressions": 4985,
           "spend_czk": 272.26
+        },
+        {
+          "date": "2026-07-06",
+          "clicks": 93,
+          "impressions": 4762,
+          "spend_czk": 276.5
         }
       ]
     },
