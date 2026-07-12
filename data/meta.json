@@ -1,8 +1,8 @@
 {
-  "updated": "2026-07-11",
+  "updated": "2026-07-12",
   "period": {
     "from": "2026-01-01",
-    "to": "2026-07-10"
+    "to": "2026-07-11"
   },
   "campaigns": [
     {
@@ -1610,11 +1610,19 @@
         },
         {
           "date": "2026-07-10",
-          "clicks": 782,
-          "impressions": 49588,
-          "spend_czk": 4529.87,
-          "results": 7735,
+          "clicks": 784,
+          "impressions": 49707,
+          "spend_czk": 4535.5,
+          "results": 7749,
           "cost_per_result": 0.59
+        },
+        {
+          "date": "2026-07-11",
+          "clicks": 907,
+          "impressions": 53252,
+          "spend_czk": 4725.89,
+          "results": 8292,
+          "cost_per_result": 0.57
         }
       ]
     },
@@ -2976,11 +2984,19 @@
         },
         {
           "date": "2026-07-10",
-          "clicks": 112,
-          "impressions": 167626,
-          "spend_czk": 1125.79,
-          "results": 143,
-          "cost_per_result": 7.87
+          "clicks": 113,
+          "impressions": 167660,
+          "spend_czk": 1126.11,
+          "results": 144,
+          "cost_per_result": 7.82
+        },
+        {
+          "date": "2026-07-11",
+          "clicks": 129,
+          "impressions": 172622,
+          "spend_czk": 1122.9,
+          "results": 146,
+          "cost_per_result": 7.69
         }
       ]
     },
@@ -5172,7 +5188,7 @@
       "name": "VL | FLORIA | Příspěveky | Povědomí",
       "objective": "OUTCOME_AWARENESS",
       "result_type": "Dosah (za 1 000 úč.)",
-      "period_reach": 1395989,
+      "period_reach": 1402232,
       "adsets": [
         {
           "id": "120247601524140685",
@@ -5706,11 +5722,19 @@
         },
         {
           "date": "2026-07-10",
-          "clicks": 117,
-          "impressions": 67536,
-          "spend_czk": 959.12,
-          "results": 49758,
-          "cost_per_result": 19.28
+          "clicks": 118,
+          "impressions": 67637,
+          "spend_czk": 960.63,
+          "results": 49872,
+          "cost_per_result": 19.26
+        },
+        {
+          "date": "2026-07-11",
+          "clicks": 83,
+          "impressions": 71672,
+          "spend_czk": 1060.97,
+          "results": 55403,
+          "cost_per_result": 19.15
         }
       ]
     },
@@ -6358,10 +6382,18 @@
         {
           "date": "2026-07-10",
           "clicks": 105,
-          "impressions": 3705,
-          "spend_czk": 488.5,
+          "impressions": 3718,
+          "spend_czk": 488.94,
           "results": 118,
           "cost_per_result": 4.14
+        },
+        {
+          "date": "2026-07-11",
+          "clicks": 110,
+          "impressions": 4296,
+          "spend_czk": 475.15,
+          "results": 117,
+          "cost_per_result": 4.06
         }
       ]
     },
