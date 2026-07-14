@@ -1,8 +1,8 @@
 {
-  "updated": "2026-07-13",
+  "updated": "2026-07-14",
   "period": {
     "from": "2026-01-01",
-    "to": "2026-07-12"
+    "to": "2026-07-13"
   },
   "campaigns": [
     {
@@ -1626,11 +1626,19 @@
         },
         {
           "date": "2026-07-12",
-          "clicks": 884,
-          "impressions": 59616,
-          "spend_czk": 4348.32,
-          "results": 8714,
+          "clicks": 890,
+          "impressions": 59742,
+          "spend_czk": 4353.87,
+          "results": 8721,
           "cost_per_result": 0.5
+        },
+        {
+          "date": "2026-07-13",
+          "clicks": 740,
+          "impressions": 45960,
+          "spend_czk": 3717.52,
+          "results": 7712,
+          "cost_per_result": 0.48
         }
       ]
     },
@@ -3009,10 +3017,18 @@
         {
           "date": "2026-07-12",
           "clicks": 83,
-          "impressions": 86819,
-          "spend_czk": 548.88,
+          "impressions": 86835,
+          "spend_czk": 548.96,
           "results": 97,
           "cost_per_result": 5.66
+        },
+        {
+          "date": "2026-07-13",
+          "clicks": 52,
+          "impressions": 78134,
+          "spend_czk": 435.27,
+          "results": 64,
+          "cost_per_result": 6.8
         }
       ]
     },
@@ -5755,10 +5771,18 @@
         {
           "date": "2026-07-12",
           "clicks": 51,
-          "impressions": 53377,
-          "spend_czk": 771.09,
+          "impressions": 53409,
+          "spend_czk": 771.25,
           "results": 33465,
-          "cost_per_result": 23.04
+          "cost_per_result": 23.05
+        },
+        {
+          "date": "2026-07-13",
+          "clicks": 6,
+          "impressions": 8994,
+          "spend_czk": 131.0,
+          "results": 7103,
+          "cost_per_result": 18.44
         }
       ]
     },
@@ -6422,10 +6446,18 @@
         {
           "date": "2026-07-12",
           "clicks": 118,
-          "impressions": 3955,
-          "spend_czk": 382.61,
+          "impressions": 3975,
+          "spend_czk": 382.93,
           "results": 93,
-          "cost_per_result": 4.11
+          "cost_per_result": 4.12
+        },
+        {
+          "date": "2026-07-13",
+          "clicks": 91,
+          "impressions": 3548,
+          "spend_czk": 279.28,
+          "results": 62,
+          "cost_per_result": 4.5
         }
       ]
     },
