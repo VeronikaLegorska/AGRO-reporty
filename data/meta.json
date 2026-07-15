@@ -1,8 +1,8 @@
 {
-  "updated": "2026-07-14",
+  "updated": "2026-07-15",
   "period": {
     "from": "2026-01-01",
-    "to": "2026-07-13"
+    "to": "2026-07-14"
   },
   "campaigns": [
     {
@@ -1627,18 +1627,26 @@
         {
           "date": "2026-07-12",
           "clicks": 890,
-          "impressions": 59742,
-          "spend_czk": 4353.87,
+          "impressions": 59743,
+          "spend_czk": 4354.67,
           "results": 8721,
           "cost_per_result": 0.5
         },
         {
           "date": "2026-07-13",
-          "clicks": 740,
-          "impressions": 45960,
-          "spend_czk": 3717.52,
-          "results": 7712,
+          "clicks": 743,
+          "impressions": 46091,
+          "spend_czk": 3725.92,
+          "results": 7723,
           "cost_per_result": 0.48
+        },
+        {
+          "date": "2026-07-14",
+          "clicks": 632,
+          "impressions": 31744,
+          "spend_czk": 3166.58,
+          "results": 2788,
+          "cost_per_result": 1.14
         }
       ]
     },
@@ -3025,10 +3033,18 @@
         {
           "date": "2026-07-13",
           "clicks": 52,
-          "impressions": 78134,
-          "spend_czk": 435.27,
+          "impressions": 78151,
+          "spend_czk": 435.33,
           "results": 64,
           "cost_per_result": 6.8
+        },
+        {
+          "date": "2026-07-14",
+          "clicks": 43,
+          "impressions": 69382,
+          "spend_czk": 350.11,
+          "results": 43,
+          "cost_per_result": 8.14
         }
       ]
     },
@@ -6453,11 +6469,19 @@
         },
         {
           "date": "2026-07-13",
-          "clicks": 91,
-          "impressions": 3548,
-          "spend_czk": 279.28,
+          "clicks": 92,
+          "impressions": 3570,
+          "spend_czk": 280.46,
           "results": 62,
-          "cost_per_result": 4.5
+          "cost_per_result": 4.52
+        },
+        {
+          "date": "2026-07-14",
+          "clicks": 81,
+          "impressions": 2977,
+          "spend_czk": 272.17,
+          "results": 75,
+          "cost_per_result": 3.63
         }
       ]
     },
