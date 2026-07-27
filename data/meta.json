@@ -1,8 +1,8 @@
 {
-  "updated": "2026-07-26",
+  "updated": "2026-07-27",
   "period": {
     "from": "2026-01-01",
-    "to": "2026-07-25"
+    "to": "2026-07-26"
   },
   "campaigns": [
     {
@@ -5300,8 +5300,12 @@
       "name": "VL | FLORIA | Příspěveky | Povědomí",
       "objective": "OUTCOME_AWARENESS",
       "result_type": "Dosah (za 1 000 úč.)",
-      "period_reach": 1405654,
+      "period_reach": 1414816,
       "adsets": [
+        {
+          "id": "120248321530380685",
+          "name": "WEB | IG+FB | CAROUSEL | Produktová řada okrasná zahrada"
+        },
         {
           "id": "120247601524140685",
           "name": "WEB | IG+FB | CAROUSEL | produktová řada květinová"
@@ -5863,6 +5867,14 @@
           "spend_czk": 131.0,
           "results": 7103,
           "cost_per_result": 18.44
+        },
+        {
+          "date": "2026-07-26",
+          "clicks": 22,
+          "impressions": 16010,
+          "spend_czk": 75.26,
+          "results": 16010,
+          "cost_per_result": 4.7
         }
       ]
     },
