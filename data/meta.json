@@ -1,8 +1,8 @@
 {
-  "updated": "2026-07-27",
+  "updated": "2026-07-28",
   "period": {
     "from": "2026-01-01",
-    "to": "2026-07-26"
+    "to": "2026-07-27"
   },
   "campaigns": [
     {
@@ -2480,6 +2480,18 @@
       "result_type": "Zájem o příspěvek",
       "period_reach": null,
       "adsets": [
+        {
+          "id": "120248354504960685",
+          "name": "MAX počet \"To se mi líbí\" | IG+FB | Vlastní cílení | Rajče a paprika | červenec"
+        },
+        {
+          "id": "120248354496770685",
+          "name": "Příspěvek | engagement | IG | Vlastní cílení | Rajče a paprika"
+        },
+        {
+          "id": "120248354480700685",
+          "name": "Příspěvek | engagement | FB | Vlastní cílení | Rajče a paprika"
+        },
         {
           "id": "120247601876610685",
           "name": "Příspěvek | engagement | IG | Vlastní cílení | Muškát"
@@ -5300,7 +5312,7 @@
       "name": "VL | FLORIA | Příspěveky | Povědomí",
       "objective": "OUTCOME_AWARENESS",
       "result_type": "Dosah (za 1 000 úč.)",
-      "period_reach": 1414816,
+      "period_reach": 1417691,
       "adsets": [
         {
           "id": "120248321530380685",
@@ -5871,10 +5883,18 @@
         {
           "date": "2026-07-26",
           "clicks": 22,
-          "impressions": 16010,
+          "impressions": 16012,
           "spend_czk": 75.26,
-          "results": 16010,
+          "results": 16012,
           "cost_per_result": 4.7
+        },
+        {
+          "date": "2026-07-27",
+          "clicks": 101,
+          "impressions": 47190,
+          "spend_czk": 640.24,
+          "results": 47190,
+          "cost_per_result": 13.57
         }
       ]
     },
