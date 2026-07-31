@@ -1,8 +1,8 @@
 {
-  "updated": "2026-07-28",
+  "updated": "2026-07-31",
   "period": {
     "from": "2026-01-01",
-    "to": "2026-07-27"
+    "to": "2026-07-30"
   },
   "campaigns": [
     {
@@ -3121,6 +3121,30 @@
           "spend_czk": 116.99,
           "results": 14,
           "cost_per_result": 8.36
+        },
+        {
+          "date": "2026-07-28",
+          "clicks": 33,
+          "impressions": 43941,
+          "spend_czk": 243.37,
+          "results": 32,
+          "cost_per_result": 7.61
+        },
+        {
+          "date": "2026-07-29",
+          "clicks": 33,
+          "impressions": 58484,
+          "spend_czk": 321.94,
+          "results": 26,
+          "cost_per_result": 12.38
+        },
+        {
+          "date": "2026-07-30",
+          "clicks": 17,
+          "impressions": 37093,
+          "spend_czk": 260.42,
+          "results": 11,
+          "cost_per_result": 23.67
         }
       ]
     },
@@ -5312,7 +5336,7 @@
       "name": "VL | FLORIA | Příspěveky | Povědomí",
       "objective": "OUTCOME_AWARENESS",
       "result_type": "Dosah (za 1 000 úč.)",
-      "period_reach": 1417691,
+      "period_reach": 1432375,
       "adsets": [
         {
           "id": "120248321530380685",
@@ -5891,10 +5915,34 @@
         {
           "date": "2026-07-27",
           "clicks": 101,
-          "impressions": 47190,
-          "spend_czk": 640.24,
-          "results": 47190,
+          "impressions": 47245,
+          "spend_czk": 641.04,
+          "results": 47245,
           "cost_per_result": 13.57
+        },
+        {
+          "date": "2026-07-28",
+          "clicks": 95,
+          "impressions": 44583,
+          "spend_czk": 649.29,
+          "results": 44583,
+          "cost_per_result": 14.56
+        },
+        {
+          "date": "2026-07-29",
+          "clicks": 94,
+          "impressions": 42039,
+          "spend_czk": 638.45,
+          "results": 42039,
+          "cost_per_result": 15.19
+        },
+        {
+          "date": "2026-07-30",
+          "clicks": 108,
+          "impressions": 43747,
+          "spend_czk": 674.03,
+          "results": 43149,
+          "cost_per_result": 15.62
         }
       ]
     },
