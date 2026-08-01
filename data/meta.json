@@ -1,8 +1,8 @@
 {
-  "updated": "2026-07-31",
+  "updated": "2026-08-01",
   "period": {
     "from": "2026-01-01",
-    "to": "2026-07-30"
+    "to": "2026-07-31"
   },
   "campaigns": [
     {
@@ -3141,10 +3141,18 @@
         {
           "date": "2026-07-30",
           "clicks": 17,
-          "impressions": 37093,
-          "spend_czk": 260.42,
+          "impressions": 37102,
+          "spend_czk": 260.56,
           "results": 11,
-          "cost_per_result": 23.67
+          "cost_per_result": 23.69
+        },
+        {
+          "date": "2026-07-31",
+          "clicks": 28,
+          "impressions": 65154,
+          "spend_czk": 370.89,
+          "results": 30,
+          "cost_per_result": 12.36
         }
       ]
     },
@@ -5336,7 +5344,7 @@
       "name": "VL | FLORIA | Příspěveky | Povědomí",
       "objective": "OUTCOME_AWARENESS",
       "result_type": "Dosah (za 1 000 úč.)",
-      "period_reach": 1432375,
+      "period_reach": 1439346,
       "adsets": [
         {
           "id": "120248321530380685",
@@ -5939,10 +5947,18 @@
         {
           "date": "2026-07-30",
           "clicks": 108,
-          "impressions": 43747,
-          "spend_czk": 674.03,
-          "results": 43149,
-          "cost_per_result": 15.62
+          "impressions": 43817,
+          "spend_czk": 675.14,
+          "results": 43207,
+          "cost_per_result": 15.63
+        },
+        {
+          "date": "2026-07-31",
+          "clicks": 100,
+          "impressions": 45425,
+          "spend_czk": 702.23,
+          "results": 44046,
+          "cost_per_result": 15.94
         }
       ]
     },
