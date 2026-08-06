@@ -1,8 +1,8 @@
 {
-  "updated": "2026-08-04",
+  "updated": "2026-08-06",
   "period": {
     "from": "2026-01-01",
-    "to": "2026-08-03"
+    "to": "2026-08-05"
   },
   "campaigns": [
     {
@@ -3173,10 +3173,26 @@
         {
           "date": "2026-08-03",
           "clicks": 41,
-          "impressions": 57918,
-          "spend_czk": 331.95,
+          "impressions": 57936,
+          "spend_czk": 332.4,
           "results": 33,
-          "cost_per_result": 10.06
+          "cost_per_result": 10.07
+        },
+        {
+          "date": "2026-08-04",
+          "clicks": 28,
+          "impressions": 51998,
+          "spend_czk": 299.03,
+          "results": 23,
+          "cost_per_result": 13.0
+        },
+        {
+          "date": "2026-08-05",
+          "clicks": 29,
+          "impressions": 58175,
+          "spend_czk": 318.09,
+          "results": 29,
+          "cost_per_result": 10.97
         }
       ]
     },
