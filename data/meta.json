@@ -3189,8 +3189,8 @@
         {
           "date": "2026-08-05",
           "clicks": 29,
-          "impressions": 58175,
-          "spend_czk": 318.09,
+          "impressions": 58184,
+          "spend_czk": 318.24,
           "results": 29,
           "cost_per_result": 10.97
         }
@@ -5386,6 +5386,10 @@
       "result_type": "Dosah (za 1 000 úč.)",
       "period_reach": 1446997,
       "adsets": [
+        {
+          "id": "120248586173780685",
+          "name": "WEB | IG+FB | CAROUSEL | produktová řada interiér"
+        },
         {
           "id": "120248321530380685",
           "name": "WEB | IG+FB | CAROUSEL | Produktová řada okrasná zahrada"
