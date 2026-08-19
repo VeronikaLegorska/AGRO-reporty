@@ -1,0 +1,38 @@
+name: Fetch GAds A/B
+
+on:
+  workflow_dispatch:
+
+jobs:
+  fetch:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Instalace závislostí
+        run: pip install -r requirements.txt
+
+      - name: Fetch Google Ads A/B
+        env:
+          GADS_DEVELOPER_TOKEN: ${{ secrets.GADS_DEVELOPER_TOKEN }}
+          GADS_CLIENT_ID: ${{ secrets.GADS_CLIENT_ID }}
+          GADS_CLIENT_SECRET: ${{ secrets.GADS_CLIENT_SECRET }}
+          GADS_REFRESH_TOKEN: ${{ secrets.GADS_REFRESH_TOKEN }}
+          GADS_CUSTOMER_ID: ${{ secrets.GADS_CUSTOMER_ID }}
+          GADS_LOGIN_CUSTOMER_ID: ${{ secrets.GADS_LOGIN_CUSTOMER_ID }}
+        run: python fetch/fetch_gads_ab.py
+
+      - name: Commit dat
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add data/gads_ab.json
+          git diff --cached --quiet || git commit -m "data: GAds A/B fetch (ad-group + reklamy)"
+          git push
