@@ -16,8 +16,9 @@ LOGIN_CUSTOMER_ID = os.environ["GADS_LOGIN_CUSTOMER_ID"]
 DATE_FROM = "2026-01-01"
 DATE_TO   = (date.today() - timedelta(days=1)).isoformat()
 
-# A/B kampaně: v názvu 'A/B' nebo 'A+B'
-CAMP_FILTER = "(campaign.name LIKE '%A/B%' OR campaign.name LIKE '%A+B%')"
+# A/B kampaně: na Google Ads jsou všechny značené 'A/B' (A+B je jen na Skliku).
+# GAQL nepovoluje závorky/OR ve WHERE, proto jediný LIKE.
+CAMP_FILTER = "campaign.name LIKE '%A/B%'"
 
 
 def get_client():
