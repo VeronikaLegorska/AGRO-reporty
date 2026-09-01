@@ -1,8 +1,8 @@
 {
-  "updated": "2026-08-31",
+  "updated": "2026-09-01",
   "period": {
     "from": "2026-01-01",
-    "to": "2026-08-30"
+    "to": "2026-08-31"
   },
   "campaigns": [
     {
@@ -454,6 +454,14 @@
       "result_type": "Zájem o příspěvek",
       "period_reach": null,
       "adsets": [
+        {
+          "id": "120249117238170685",
+          "name": "Příspěvek | engagement | FB | vlastní cílení | Přírodní prostředek na moření česneku + cibuloviny"
+        },
+        {
+          "id": "120249049093320685",
+          "name": "Příspěvek | engagement | IG | vlastní cílení | Přírodní prostředek na moření česneku"
+        },
         {
           "id": "120246972093070685",
           "name": "Příspěvek | engagement | IG | vlastní cílení | Kapalné hnojivo pro celou zahradu"
