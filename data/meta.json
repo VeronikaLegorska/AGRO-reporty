@@ -1,8 +1,8 @@
 {
-  "updated": "2026-09-01",
+  "updated": "2026-09-05",
   "period": {
     "from": "2026-01-01",
-    "to": "2026-08-31"
+    "to": "2026-09-04"
   },
   "campaigns": [
     {
@@ -454,6 +454,22 @@
       "result_type": "Zájem o příspěvek",
       "period_reach": null,
       "adsets": [
+        {
+          "id": "120249176064950685",
+          "name": "Příspěvek | engagement | FB | vlastní cílení | Čistič půdy"
+        },
+        {
+          "id": "120249176034690685",
+          "name": "Příspěvek | engagement | IG | vlastní cílení | Čistič půdy"
+        },
+        {
+          "id": "120249176019150685",
+          "name": "Příspěvek | engagement | FB | vlastní cílení | Zelené hnojivo"
+        },
+        {
+          "id": "120249175992130685",
+          "name": "Příspěvek | engagement | IG | vlastní cílení | Zelené hnojivo"
+        },
         {
           "id": "120249117238170685",
           "name": "Příspěvek | engagement | FB | vlastní cílení | Přírodní prostředek na moření česneku + cibuloviny"
@@ -1703,6 +1719,38 @@
           "spend_czk": 68.41,
           "results": 25,
           "cost_per_result": 2.74
+        },
+        {
+          "date": "2026-09-01",
+          "clicks": 18,
+          "impressions": 6193,
+          "spend_czk": 385.08,
+          "results": 31,
+          "cost_per_result": 12.42
+        },
+        {
+          "date": "2026-09-02",
+          "clicks": 15,
+          "impressions": 7160,
+          "spend_czk": 440.6,
+          "results": 41,
+          "cost_per_result": 10.75
+        },
+        {
+          "date": "2026-09-03",
+          "clicks": 32,
+          "impressions": 6284,
+          "spend_czk": 605.64,
+          "results": 75,
+          "cost_per_result": 8.08
+        },
+        {
+          "date": "2026-09-04",
+          "clicks": 45,
+          "impressions": 22611,
+          "spend_czk": 1035.28,
+          "results": 64,
+          "cost_per_result": 16.18
         }
       ]
     },
