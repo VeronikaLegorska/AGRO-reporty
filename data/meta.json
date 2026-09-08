@@ -1,8 +1,8 @@
 {
-  "updated": "2026-09-07",
+  "updated": "2026-09-08",
   "period": {
     "from": "2026-01-01",
-    "to": "2026-09-06"
+    "to": "2026-09-07"
   },
   "campaigns": [
     {
@@ -1763,10 +1763,18 @@
         {
           "date": "2026-09-06",
           "clicks": 80,
-          "impressions": 25617,
-          "spend_czk": 1416.46,
+          "impressions": 25625,
+          "spend_czk": 1416.86,
           "results": 142,
           "cost_per_result": 9.98
+        },
+        {
+          "date": "2026-09-07",
+          "clicks": 67,
+          "impressions": 30425,
+          "spend_czk": 1453.39,
+          "results": 104,
+          "cost_per_result": 13.97
         }
       ]
     },
@@ -5498,6 +5506,22 @@
       "result_type": "Dosah (za 1 000 úč.)",
       "period_reach": 1493352,
       "adsets": [
+        {
+          "id": "120249240077710685",
+          "name": "Vertikutační směs | IG | Max počet zobrazení"
+        },
+        {
+          "id": "120249239915590685",
+          "name": "Vertikutační směs | FB | Max počet zobrazení"
+        },
+        {
+          "id": "120249239789810685",
+          "name": "Podzimní trávníkové hnojivo | IG | Max počet zobrazení"
+        },
+        {
+          "id": "120249239673380685",
+          "name": "Podzimní trávníkové hnojivo | FB | Max počet zobrazení"
+        },
         {
           "id": "120248586173780685",
           "name": "WEB | IG+FB | CAROUSEL | produktová řada interiér"
