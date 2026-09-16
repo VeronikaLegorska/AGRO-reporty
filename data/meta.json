@@ -1,8 +1,8 @@
 {
-  "updated": "2026-09-15",
+  "updated": "2026-09-16",
   "period": {
     "from": "2026-01-01",
-    "to": "2026-09-14"
+    "to": "2026-09-15"
   },
   "campaigns": [
     {
@@ -1831,18 +1831,26 @@
         {
           "date": "2026-09-13",
           "clicks": 280,
-          "impressions": 36486,
-          "spend_czk": 1946.86,
+          "impressions": 36487,
+          "spend_czk": 1947.04,
           "results": 301,
           "cost_per_result": 6.47
         },
         {
           "date": "2026-09-14",
-          "clicks": 246,
-          "impressions": 24908,
-          "spend_czk": 2105.13,
+          "clicks": 247,
+          "impressions": 24941,
+          "spend_czk": 2107.87,
           "results": 277,
-          "cost_per_result": 7.6
+          "cost_per_result": 7.61
+        },
+        {
+          "date": "2026-09-15",
+          "clicks": 255,
+          "impressions": 30681,
+          "spend_czk": 2071.76,
+          "results": 267,
+          "cost_per_result": 7.76
         }
       ]
     },
@@ -2629,6 +2637,14 @@
       "period_reach": null,
       "adsets": [
         {
+          "id": "120249365112080685",
+          "name": "Příspěvek | engagement | FB | Vlastní cílení | KRISTALON Podzim"
+        },
+        {
+          "id": "120249365056980685",
+          "name": "Příspěvek | engagement | IG | Vlastní cílení | KRISTALON Podzim"
+        },
+        {
           "id": "120248354504960685",
           "name": "MAX počet \"To se mi líbí\" | IG+FB | Vlastní cílení | Rajče a paprika | červenec"
         },
@@ -3381,6 +3397,14 @@
           "spend_czk": 129.99,
           "results": 10,
           "cost_per_result": 13.0
+        },
+        {
+          "date": "2026-09-15",
+          "clicks": 0,
+          "impressions": 1,
+          "spend_czk": 0.0,
+          "results": 0,
+          "cost_per_result": 0
         }
       ]
     },
@@ -5572,7 +5596,7 @@
       "name": "VL | FLORIA | Příspěveky | Povědomí",
       "objective": "OUTCOME_AWARENESS",
       "result_type": "Dosah (za 1 000 úč.)",
-      "period_reach": 1529232,
+      "period_reach": 1532070,
       "adsets": [
         {
           "id": "120249240077710685",
@@ -6362,11 +6386,19 @@
         },
         {
           "date": "2026-09-14",
-          "clicks": 72,
-          "impressions": 59680,
-          "spend_czk": 755.96,
+          "clicks": 73,
+          "impressions": 59765,
+          "spend_czk": 756.7,
           "results": 39122,
-          "cost_per_result": 19.32
+          "cost_per_result": 19.34
+        },
+        {
+          "date": "2026-09-15",
+          "clicks": 38,
+          "impressions": 49167,
+          "spend_czk": 744.27,
+          "results": 31476,
+          "cost_per_result": 23.65
         }
       ]
     },
@@ -6377,6 +6409,14 @@
       "result_type": "Zájem o příspěvek",
       "period_reach": null,
       "adsets": [
+        {
+          "id": "120249365242190685",
+          "name": "Příspěvek | engagement | FB | vlastní cílení | Trávníkový substrát"
+        },
+        {
+          "id": "120249365179360685",
+          "name": "Příspěvek | engagement | IG | vlastní cílení | Trávníkový substrát"
+        },
         {
           "id": "120247532724300685",
           "name": "Příspěvek | engagement | FB | vlastní cílení | OM na okurky"
