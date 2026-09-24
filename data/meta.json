@@ -1,8 +1,8 @@
 {
-  "updated": "2026-09-23",
+  "updated": "2026-09-24",
   "period": {
     "from": "2026-01-01",
-    "to": "2026-09-22"
+    "to": "2026-09-23"
   },
   "campaigns": [
     {
@@ -1903,10 +1903,18 @@
         {
           "date": "2026-09-22",
           "clicks": 201,
-          "impressions": 17974,
-          "spend_czk": 1768.61,
+          "impressions": 17994,
+          "spend_czk": 1771.33,
           "results": 221,
-          "cost_per_result": 8.0
+          "cost_per_result": 8.02
+        },
+        {
+          "date": "2026-09-23",
+          "clicks": 163,
+          "impressions": 12954,
+          "spend_czk": 1784.51,
+          "results": 206,
+          "cost_per_result": 8.66
         }
       ]
     },
@@ -3513,10 +3521,18 @@
         {
           "date": "2026-09-22",
           "clicks": 39,
-          "impressions": 8415,
-          "spend_czk": 450.51,
+          "impressions": 8416,
+          "spend_czk": 450.57,
           "results": 34,
           "cost_per_result": 13.25
+        },
+        {
+          "date": "2026-09-23",
+          "clicks": 54,
+          "impressions": 6653,
+          "spend_czk": 555.99,
+          "results": 50,
+          "cost_per_result": 11.12
         }
       ]
     },
@@ -5708,7 +5724,7 @@
       "name": "VL | FLORIA | Příspěveky | Povědomí",
       "objective": "OUTCOME_AWARENESS",
       "result_type": "Dosah (za 1 000 úč.)",
-      "period_reach": 1551550,
+      "period_reach": 1554033,
       "adsets": [
         {
           "id": "120249240077710685",
@@ -6562,11 +6578,19 @@
         },
         {
           "date": "2026-09-22",
-          "clicks": 42,
-          "impressions": 52091,
-          "spend_czk": 732.81,
+          "clicks": 44,
+          "impressions": 52212,
+          "spend_czk": 733.78,
           "results": 34367,
-          "cost_per_result": 21.32
+          "cost_per_result": 21.35
+        },
+        {
+          "date": "2026-09-23",
+          "clicks": 40,
+          "impressions": 47230,
+          "spend_czk": 731.19,
+          "results": 35156,
+          "cost_per_result": 20.8
         }
       ]
     },
