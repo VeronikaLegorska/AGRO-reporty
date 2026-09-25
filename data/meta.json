@@ -1,8 +1,8 @@
 {
-  "updated": "2026-09-24",
+  "updated": "2026-09-25",
   "period": {
     "from": "2026-01-01",
-    "to": "2026-09-23"
+    "to": "2026-09-24"
   },
   "campaigns": [
     {
@@ -454,6 +454,14 @@
       "result_type": "Zájem o příspěvek",
       "period_reach": null,
       "adsets": [
+        {
+          "id": "120249530822790685",
+          "name": "Příspěvek | engagement | FB | vlastní cílení | společný banner vyvýšené záhony"
+        },
+        {
+          "id": "120249530808520685",
+          "name": "Příspěvek | engagement | IG | vlastní cílení | společný banner vyvýšené záhony"
+        },
         {
           "id": "120249272582120685",
           "name": "WEB | IG+FB | CAROUSEL | společný banner vyvýšené záhony"
@@ -1910,11 +1918,19 @@
         },
         {
           "date": "2026-09-23",
-          "clicks": 163,
-          "impressions": 12954,
-          "spend_czk": 1784.51,
+          "clicks": 164,
+          "impressions": 12984,
+          "spend_czk": 1787.31,
           "results": 206,
-          "cost_per_result": 8.66
+          "cost_per_result": 8.68
+        },
+        {
+          "date": "2026-09-24",
+          "clicks": 218,
+          "impressions": 15866,
+          "spend_czk": 2046.44,
+          "results": 225,
+          "cost_per_result": 9.1
         }
       ]
     },
@@ -3529,10 +3545,18 @@
         {
           "date": "2026-09-23",
           "clicks": 54,
-          "impressions": 6653,
-          "spend_czk": 555.99,
+          "impressions": 6656,
+          "spend_czk": 556.18,
           "results": 50,
           "cost_per_result": 11.12
+        },
+        {
+          "date": "2026-09-24",
+          "clicks": 56,
+          "impressions": 7780,
+          "spend_czk": 615.86,
+          "results": 53,
+          "cost_per_result": 11.62
         }
       ]
     },
@@ -5724,8 +5748,16 @@
       "name": "VL | FLORIA | Příspěveky | Povědomí",
       "objective": "OUTCOME_AWARENESS",
       "result_type": "Dosah (za 1 000 úč.)",
-      "period_reach": 1554033,
+      "period_reach": 1554520,
       "adsets": [
+        {
+          "id": "120249530791680685",
+          "name": "Trávníková náplast 3 v 1 | FB | Max počet zobrazení"
+        },
+        {
+          "id": "120249530767480685",
+          "name": "Trávníková náplast 3 v 1 | IG | Max počet zobrazení"
+        },
         {
           "id": "120249240077710685",
           "name": "Vertikutační směs | IG | Max počet zobrazení"
@@ -6586,11 +6618,19 @@
         },
         {
           "date": "2026-09-23",
-          "clicks": 40,
-          "impressions": 47230,
-          "spend_czk": 731.19,
-          "results": 35156,
-          "cost_per_result": 20.8
+          "clicks": 41,
+          "impressions": 47319,
+          "spend_czk": 732.13,
+          "results": 35262,
+          "cost_per_result": 20.76
+        },
+        {
+          "date": "2026-09-24",
+          "clicks": 37,
+          "impressions": 47962,
+          "spend_czk": 776.06,
+          "results": 34592,
+          "cost_per_result": 22.43
         }
       ]
     },
@@ -6601,6 +6641,22 @@
       "result_type": "Zájem o příspěvek",
       "period_reach": null,
       "adsets": [
+        {
+          "id": "120249530856080685",
+          "name": "Příspěvek | engagement | IG | vlastní cílení | Trávníkové podzimní hnojivo"
+        },
+        {
+          "id": "120249530849260685",
+          "name": "Příspěvek | engagement | FB | vlastní cílení | Trávníkové podzimní hnojivo"
+        },
+        {
+          "id": "120249530844720685",
+          "name": "Příspěvek | engagement | IG | vlastní cílení | Substrát na vřesy"
+        },
+        {
+          "id": "120249530832060685",
+          "name": "Příspěvek | engagement | FB | vlastní cílení | Substrát na vřesy"
+        },
         {
           "id": "120249365242190685",
           "name": "Příspěvek | engagement | FB | vlastní cílení | Trávníkový substrát"
