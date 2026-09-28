@@ -1,8 +1,8 @@
 {
-  "updated": "2026-09-27",
+  "updated": "2026-09-28",
   "period": {
     "from": "2026-01-01",
-    "to": "2026-09-26"
+    "to": "2026-09-27"
   },
   "campaigns": [
     {
@@ -1943,10 +1943,18 @@
         {
           "date": "2026-09-26",
           "clicks": 253,
-          "impressions": 24490,
-          "spend_czk": 2896.95,
+          "impressions": 24535,
+          "spend_czk": 2900.48,
           "results": 302,
-          "cost_per_result": 9.59
+          "cost_per_result": 9.6
+        },
+        {
+          "date": "2026-09-27",
+          "clicks": 335,
+          "impressions": 20158,
+          "spend_czk": 3034.11,
+          "results": 428,
+          "cost_per_result": 7.09
         }
       ]
     },
@@ -3577,18 +3585,26 @@
         {
           "date": "2026-09-25",
           "clicks": 30,
-          "impressions": 6680,
-          "spend_czk": 532.96,
+          "impressions": 6681,
+          "spend_czk": 533.02,
           "results": 35,
           "cost_per_result": 15.23
         },
         {
           "date": "2026-09-26",
           "clicks": 65,
-          "impressions": 8786,
-          "spend_czk": 753.23,
+          "impressions": 8796,
+          "spend_czk": 754.07,
           "results": 48,
-          "cost_per_result": 15.69
+          "cost_per_result": 15.71
+        },
+        {
+          "date": "2026-09-27",
+          "clicks": 113,
+          "impressions": 6190,
+          "spend_czk": 762.53,
+          "results": 94,
+          "cost_per_result": 8.11
         }
       ]
     },
@@ -5780,8 +5796,16 @@
       "name": "VL | FLORIA | Příspěveky | Povědomí",
       "objective": "OUTCOME_AWARENESS",
       "result_type": "Dosah (za 1 000 úč.)",
-      "period_reach": 1564288,
+      "period_reach": 1567257,
       "adsets": [
+        {
+          "id": "120249562098430685",
+          "name": "Stop mechu | IG | Max počet zobrazení"
+        },
+        {
+          "id": "120249562085280685",
+          "name": "Stop mechu | FB | Max počet zobrazení"
+        },
         {
           "id": "120249530791680685",
           "name": "Trávníková náplast 3 v 1 | FB | Max počet zobrazení"
@@ -6674,11 +6698,19 @@
         },
         {
           "date": "2026-09-26",
-          "clicks": 89,
-          "impressions": 78467,
-          "spend_czk": 1376.28,
-          "results": 46747,
-          "cost_per_result": 29.44
+          "clicks": 90,
+          "impressions": 78616,
+          "spend_czk": 1378.54,
+          "results": 46883,
+          "cost_per_result": 29.4
+        },
+        {
+          "date": "2026-09-27",
+          "clicks": 123,
+          "impressions": 109218,
+          "spend_czk": 1772.49,
+          "results": 59775,
+          "cost_per_result": 29.65
         }
       ]
     },
@@ -6689,6 +6721,10 @@
       "result_type": "Zájem o příspěvek",
       "period_reach": null,
       "adsets": [
+        {
+          "id": "120249561994080685",
+          "name": "Reklama | IG+FB | Trávníkové podzimní hnojivo"
+        },
         {
           "id": "120249530856080685",
           "name": "Příspěvek | engagement | IG | vlastní cílení | Trávníkové podzimní hnojivo"
@@ -7418,6 +7454,14 @@
           "spend_czk": 105.09,
           "results": 38,
           "cost_per_result": 2.77
+        },
+        {
+          "date": "2026-09-27",
+          "clicks": 32,
+          "impressions": 103796,
+          "spend_czk": 447.58,
+          "results": 32,
+          "cost_per_result": 13.99
         }
       ]
     },
