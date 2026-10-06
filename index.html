@@ -137,6 +137,7 @@ tbody tr:last-child { border-bottom: none; }
 tbody tr:hover { background: var(--card2); }
 tbody td { padding: .55rem 1rem; text-align: right; color: var(--text); }
 tbody td:first-child { text-align: left; }
+tbody td:not(:first-child) { white-space: nowrap; }
 .row-num { color: var(--muted); margin-right: .5rem; }
 
 /* BRAND SECTION (přehled po kampaních) */
@@ -152,6 +153,17 @@ tbody td:first-child { text-align: left; }
   font-size: .8rem; color: var(--muted); text-transform: uppercase;
   letter-spacing: .07em; margin-bottom: .5rem;
 }
+
+.platform-label-row { display: flex; align-items: center; justify-content: space-between; gap: .5rem; }
+.platform-label-row .sort-btn { text-transform: none; letter-spacing: 0; }
+
+/* META: rozbalovací sestavy pod kampaní */
+tr.camp-row.expandable { cursor: pointer; }
+.exp-arrow { display: inline-block; width: 1rem; color: var(--green); }
+.adset-count { margin-left: .5rem; font-size: .72rem; color: var(--muted); }
+tr.adset-row { background: rgba(255,255,255,.02); }
+tr.adset-row td { font-size: .8rem; padding-top: .4rem; padding-bottom: .4rem; }
+tr.adset-row td:first-child { padding-left: 2.6rem; color: #ccc; }
 
 /* FINANCE TABLE */
 .finance-note { font-size: .8rem; color: var(--muted); margin-bottom: 1rem; }
@@ -326,7 +338,9 @@ tbody td:first-child { text-align: left; }
     </table></div>
   </div>
   <div class="platform-table-section">
-    <div class="platform-label">Meta (Facebook)</div>
+    <div class="platform-label platform-label-row">Meta (Facebook)
+      <button class="sort-btn" id="meta-expand-all">Rozbalit vše</button>
+    </div>
     <div id="meta-result-cards" class="metric-row" style="margin-bottom:1rem"></div>
     <div class="data-table-wrap"><table id="table-meta-campaigns">
       <thead><tr><th>Kampaň / Sestavy</th><th>Cena</th><th>Kliky</th><th>Zobrazení</th><th>CTR</th><th>CPC</th><th>Výsledky</th><th>Cena za výsledek</th></tr></thead>
@@ -534,19 +548,30 @@ function campaignStats(platformData, from, to, brand) {
   const campaigns = brand
     ? platformData.campaigns.filter(c => brandOf(c.name) === brand)
     : platformData.campaigns;
-  return campaigns.map(c => {
-    const s = sumDailyRange(c.daily, from, to);
+  const statsOf = (item, resultType) => {
+    const s = sumDailyRange(item.daily || [], from, to);
     const ctr = s.impressions > 0 ? s.clicks / s.impressions * 100 : 0;
     const cpc = s.clicks > 0 ? s.spend_czk / s.clicks : 0;
-    const isDosah = (c.result_type || '').includes('Dosah');
+    const isDosah = (resultType || '').includes('Dosah');
     // Pro Dosah kampaně: CPM z celkového unique reach (period_reach), ne ze sumy denního
-    const totalResults = (isDosah && c.period_reach) ? c.period_reach : s.results;
+    const totalResults = (isDosah && item.period_reach) ? item.period_reach : s.results;
     const cpr = totalResults > 0 ? (isDosah ? s.spend_czk / totalResults * 1000 : s.spend_czk / totalResults) : 0;
-    return { name: c.name, result_type: c.result_type || '–',
-             adsets: c.adsets || [], ...s, results: totalResults,
+    return { id: item.id, name: item.name, result_type: resultType || '–',
+             ...s, results: totalResults,
              ctr: round2(ctr), cpc: round2(cpc), cpr: round2(cpr) };
-  }).filter(c => c.clicks > 0 || c.spend_czk > 0)
-    .sort((a, b) => b[campaignSortKey] - a[campaignSortKey]);
+  };
+  const active  = r => r.clicks > 0 || r.spend_czk > 0;
+  const bySort  = (a, b) => b[campaignSortKey] - a[campaignSortKey];
+  return campaigns.map(c => {
+    const adsets = c.adsets || [];
+    // Sestavy s denními daty (nový formát meta.json) → plné statistiky po sestavách
+    const hasAdsetData = adsets.some(a => Array.isArray(a.daily));
+    const adsetRows = hasAdsetData
+      ? adsets.map(a => statsOf(a, c.result_type)).filter(active).sort(bySort)
+      : [];
+    return { ...statsOf(c, c.result_type), adsets, hasAdsetData, adsetRows };
+  }).filter(active)
+    .sort(bySort);
 }
 
 // Celkový YTD spend pro brand (pro Finance – vždy od začátku roku)
@@ -695,23 +720,62 @@ function renderMetaCampaignTable(tbodyId, platformData) {
   }
 
   if (!rows.length) { tbody.innerHTML = `<tr><td colspan="8" class="no-data" style="padding:.8rem 1rem">Žádná data pro toto období</td></tr>`; return; }
-  tbody.innerHTML = rows.map((r, i) => {
-    const adsetNames = r.adsets.map(a =>
-      `<div style="font-size:.72rem;color:var(--muted);margin-top:.15rem">↳ ${a.name}</div>`
-    ).join('');
-    return `
-    <tr>
-      <td><span class="row-num">${i+1}.</span>${r.name}${adsetNames}</td>
+  const muted = '<span style="color:var(--muted)">–</span>';
+  const metricCells = (r, showType) => `
       <td>${fmt.czk(r.spend_czk)}</td>
       <td>${fmt.num(r.clicks)}</td>
       <td>${fmt.num(r.impressions)}</td>
       <td>${fmt.pct(r.ctr)}</td>
       <td>${fmt.cpc(r.cpc)}</td>
-      <td>${r.results > 0 ? fmt.num(r.results) + '<br><span style="color:var(--muted);font-size:.75rem">' + (r.result_type || '') + '</span>' : '<span style="color:var(--muted)">–</span>'}</td>
-      <td>${r.cpr > 0 ? fmt.czk(r.cpr) : '<span style="color:var(--muted)">–</span>'}</td>
-    </tr>`;
+      <td>${r.results > 0 ? fmt.num(r.results) + (showType ? '<br><span style="color:var(--muted);font-size:.75rem">' + (r.result_type || '') + '</span>' : '') : muted}</td>
+      <td>${r.cpr > 0 ? fmt.czk(r.cpr) : muted}</td>`;
+
+  tbody.innerHTML = rows.map((r, i) => {
+    // Starý formát dat (sestavy bez čísel) → jen názvy pod kampaní
+    if (!r.hasAdsetData) {
+      const adsetNames = r.adsets.map(a =>
+        `<div style="font-size:.72rem;color:var(--muted);margin-top:.15rem">↳ ${a.name}</div>`
+      ).join('');
+      return `<tr><td><span class="row-num">${i+1}.</span>${r.name}${adsetNames}</td>${metricCells(r, true)}</tr>`;
+    }
+    const open = expandedMetaCampaigns.has(r.id);
+    const canExpand = r.adsetRows.length > 0;
+    const toggle = canExpand
+      ? `<span class="exp-arrow">${open ? '▾' : '▸'}</span>`
+      : '<span class="exp-arrow"></span>';
+    const count = canExpand
+      ? `<span class="adset-count">${r.adsetRows.length} ${r.adsetRows.length === 1 ? 'sestava' : r.adsetRows.length < 5 ? 'sestavy' : 'sestav'}</span>`
+      : '';
+    const subRows = r.adsetRows.map((a, j) => `
+    <tr class="adset-row" data-parent="${r.id}"${open ? '' : ' hidden'}>
+      <td><span class="row-num">${i+1}.${j+1}</span>${a.name}</td>${metricCells(a, false)}
+    </tr>`).join('');
+    return `
+    <tr class="${canExpand ? 'camp-row expandable' : 'camp-row'}" data-id="${r.id}">
+      <td>${toggle}<span class="row-num">${i+1}.</span>${r.name}${count}</td>${metricCells(r, true)}
+    </tr>${subRows}`;
   }).join('');
 }
+
+// Rozbalení sestav pod Meta kampaní (stav přežije změnu období / řazení)
+const expandedMetaCampaigns = new Set();
+function setMetaExpanded(id, open) {
+  if (open) expandedMetaCampaigns.add(id); else expandedMetaCampaigns.delete(id);
+  const tbody = document.getElementById('tbody-meta-campaigns');
+  tbody.querySelectorAll(`tr.adset-row[data-parent="${id}"]`).forEach(tr => tr.hidden = !open);
+  const arrow = tbody.querySelector(`tr.camp-row[data-id="${id}"] .exp-arrow`);
+  if (arrow) arrow.textContent = open ? '▾' : '▸';
+}
+document.getElementById('tbody-meta-campaigns').addEventListener('click', e => {
+  const row = e.target.closest('tr.camp-row.expandable');
+  if (row) setMetaExpanded(row.dataset.id, !expandedMetaCampaigns.has(row.dataset.id));
+});
+document.getElementById('meta-expand-all').addEventListener('click', () => {
+  const ids = [...document.querySelectorAll('#tbody-meta-campaigns tr.camp-row.expandable')].map(tr => tr.dataset.id);
+  const openAll = ids.some(id => !expandedMetaCampaigns.has(id));
+  ids.forEach(id => setMetaExpanded(id, openAll));
+  document.getElementById('meta-expand-all').textContent = openAll ? 'Sbalit vše' : 'Rozbalit vše';
+});
 
 function renderCampaigns() {
   renderCampaignTable('tbody-gads-campaigns',  state.data.gads);

@@ -141,17 +141,58 @@ def fetch():
             "cost_per_result": cpr,
         })
 
+    # 4a. Agregovaný reach za celé období na úrovni sestav (pro Dosah sestavy)
+    adset_period_reach = {}  # adset_id → celkový reach za period
+    agg_params_adset = {
+        "time_range": {"since": date_from, "until": date_to},
+        "level":      "adset",
+        "fields":     ["adset_id", "campaign_id", "reach"],
+    }
+    for row in account.get_insights(params=agg_params_adset):
+        if camp_objectives.get(row.get("campaign_id")) in ("OUTCOME_AWARENESS", "BRAND_AWARENESS", "REACH"):
+            adset_period_reach[row.get("adset_id")] = int(row.get("reach", 0))
+
+    # 4b. Denní insights na úrovni sestav (= jednotlivé produkty / kampaně v rámci značky)
+    adset_params = {
+        "time_range":     {"since": date_from, "until": date_to},
+        "time_increment": 1,
+        "level":          "adset",
+        "fields": [
+            "campaign_id", "adset_id", "adset_name",
+            "impressions", "clicks", "spend", "reach", "actions",
+        ],
+    }
+    adset_daily = {}  # adset_id → [daily]
+    for row in account.get_insights(params=adset_params):
+        cid = row.get("campaign_id")
+        if cid not in camp_objectives:
+            continue
+        spend = round(float(row.get("spend", 0)), 2)
+        reach = int(row.get("reach", 0))
+        _, count = get_result(row.get("actions", []), reach, camp_objectives[cid])
+        adset_daily.setdefault(row.get("adset_id"), []).append({
+            "date":        row.get("date_start"),
+            "clicks":      int(row.get("clicks", 0)),
+            "impressions": int(row.get("impressions", 0)),
+            "spend_czk":   spend,
+            "results":     count,
+        })
+
     result = []
     for cid, camp in campaigns.items():
         camp["daily"].sort(key=lambda x: x["date"])
         pr = period_reach.get(cid)  # celkový unique reach za celé období (pro správné CPM)
+        adsets = []
+        for a in camp_adsets.get(cid, []):
+            daily = sorted(adset_daily.get(a["id"], []), key=lambda x: x["date"])
+            adsets.append({**a, "period_reach": adset_period_reach.get(a["id"]), "daily": daily})
         result.append({
             "id":           cid,
             "name":         camp["name"],
             "objective":    camp["objective"],
             "result_type":  camp["result_type"] or "–",
             "period_reach": pr,  # pro Dosah kampaně: správné CPM = spend/period_reach*1000
-            "adsets":       camp_adsets.get(cid, []),
+            "adsets":       adsets,
             "daily":        camp["daily"],
         })
 
