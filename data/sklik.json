@@ -8,6 +8,8 @@
     {
       "id": "7807752",
       "name": "VL | NATURA | OBS | Rock Effect NEW | A/B",
+      "status": "ended",
+      "end_date": "2026-07-03",
       "daily": [
         {
           "date": "2026-05-21",
@@ -278,6 +280,8 @@
     {
       "id": "7756976",
       "name": "VL | FLORIA | OBS | Travin | A/B",
+      "status": "ended",
+      "end_date": "2026-05-12",
       "daily": [
         {
           "date": "2026-04-15",
@@ -422,6 +426,8 @@
     {
       "id": "7767850",
       "name": "VL | FLORIA | OBS | TS Sucho | A/B",
+      "status": "ended",
+      "end_date": "2026-06-05",
       "daily": [
         {
           "date": "2026-04-22",
@@ -680,6 +686,8 @@
     {
       "id": "7745985",
       "name": "VL | NATURA | OBS | na slimáky a plzáky",
+      "status": "ended",
+      "end_date": "2026-05-17",
       "daily": [
         {
           "date": "2026-04-08",
@@ -890,6 +898,8 @@
     {
       "id": "7799736",
       "name": "VL | FLORIA | OBS | Piniová dekorační kůra | A/B",
+      "status": "ended",
+      "end_date": "2026-06-18",
       "daily": [
         {
           "date": "2026-05-18",
@@ -1088,6 +1098,8 @@
     {
       "id": "7735284",
       "name": "VL | NATURA | OBS | Substrát pro celou zahradu | A/B",
+      "status": "ended",
+      "end_date": "2026-05-06",
       "daily": [
         {
           "date": "2026-03-31",
@@ -1268,6 +1280,8 @@
     {
       "id": "7821045",
       "name": "VL | NATURA | OBS | Přírodní hnojivo pro rajčata a papriky  | A+B",
+      "status": "ended",
+      "end_date": "2026-07-04",
       "daily": [
         {
           "date": "2026-05-29",
@@ -1496,6 +1510,8 @@
     {
       "id": "7799742",
       "name": "VL | NATURA | OBS | Organické trávníkové hnojivo",
+      "status": "ended",
+      "end_date": "2026-06-16",
       "daily": [
         {
           "date": "2026-05-18",
@@ -1682,6 +1698,8 @@
     {
       "id": "7715009",
       "name": "VL | NATURA | OBS | Substrát pro vyvýšené záhony",
+      "status": "ended",
+      "end_date": "2026-04-16",
       "daily": [
         {
           "date": "2026-03-17",
@@ -1844,6 +1862,8 @@
     {
       "id": "7839125",
       "name": "VL | NATURA | OBS | Přírodní hnojivo pro okurky, cukety, dýně a melouny | A+B",
+      "status": "ended",
+      "end_date": "2026-07-13",
       "daily": [
         {
           "date": "2026-06-14",
@@ -2030,6 +2050,8 @@
     {
       "id": "7823360",
       "name": "VL | NATURA | OBS | Přírodní hnojivo pro jahody a drobné ovoce | A+B",
+      "status": "ended",
+      "end_date": "2026-06-30",
       "daily": [
         {
           "date": "2026-06-01",
@@ -2216,6 +2238,8 @@
     {
       "id": "7829369",
       "name": "VL | NATURA | OBS | Kapalné hnojivo pro celou zahradu | A+B",
+      "status": "ended",
+      "end_date": "2026-07-04",
       "daily": [
         {
           "date": "2026-06-05",
@@ -2402,6 +2426,8 @@
     {
       "id": "7829372",
       "name": "VL | NATURA | OBS | Přírodní hnojivo pro borůvky a brusinky | A+B",
+      "status": "ended",
+      "end_date": "2026-07-04",
       "daily": [
         {
           "date": "2026-06-05",
@@ -2588,6 +2614,8 @@
     {
       "id": "7812246",
       "name": "VL | FLORIA | OBS | Dlouhodobě působící TH | A+B",
+      "status": "ended",
+      "end_date": "2026-06-23",
       "daily": [
         {
           "date": "2026-05-25",
@@ -2774,6 +2802,8 @@
     {
       "id": "7715111",
       "name": "VL | NATURA | OBS | Kompost pro vyvýšené záhony",
+      "status": "ended",
+      "end_date": "2026-04-16",
       "daily": [
         {
           "date": "2026-03-17",
@@ -2936,6 +2966,8 @@
     {
       "id": "7812249",
       "name": "VL | FLORIA | OBS | Okyselovač a KH kyselomilné | A+B",
+      "status": "ended",
+      "end_date": "2026-06-23",
       "daily": [
         {
           "date": "2026-05-25",
@@ -3122,6 +3154,8 @@
     {
       "id": "7707362",
       "name": "VL | FLORIA | OBS | Stop mechu | A+B",
+      "status": "ended",
+      "end_date": "2026-04-11",
       "daily": [
         {
           "date": "2026-03-12",
@@ -3272,6 +3306,8 @@
     {
       "id": "7809752",
       "name": "VL | NATURA | OBS | Bylinková směs na svilušky | A/B",
+      "status": "ended",
+      "end_date": "2026-07-09",
       "daily": [
         {
           "date": "2026-06-10",
@@ -3458,6 +3494,8 @@
     {
       "id": "7807746",
       "name": "VL | FLORIA | OBS | Travin - TV spot",
+      "status": "ended",
+      "end_date": "2026-06-19",
       "daily": [
         {
           "date": "2026-05-21",
@@ -3644,6 +3682,8 @@
     {
       "id": "7807748",
       "name": "VL | NATURA | OBS | PRESTO slimáci  TV spot",
+      "status": "ended",
+      "end_date": "2026-06-19",
       "daily": [
         {
           "date": "2026-05-21",
@@ -3830,6 +3870,8 @@
     {
       "id": "7809753",
       "name": "VL | NATURA | OBS | Bylinková směs na plísně | A/B",
+      "status": "ended",
+      "end_date": "2026-06-20",
       "daily": [
         {
           "date": "2026-05-22",
@@ -4016,6 +4058,8 @@
     {
       "id": "7704084",
       "name": "VL | NATURA | OBS | přezimující škůdci | A/B",
+      "status": "ended",
+      "end_date": "2026-04-14",
       "daily": [
         {
           "date": "2026-03-11",
@@ -4184,6 +4228,8 @@
     {
       "id": "7729320",
       "name": "VL | FLORIA | OBS | Vertikulační směs",
+      "status": "ended",
+      "end_date": "2026-04-26",
       "daily": [
         {
           "date": "2026-03-27",
@@ -4328,6 +4374,8 @@
     {
       "id": "7729318",
       "name": "VL | FLORIA | OBS | Substrát pro rajčata a papriky",
+      "status": "ended",
+      "end_date": "2026-04-24",
       "daily": [
         {
           "date": "2026-03-27",
@@ -4466,6 +4514,8 @@
     {
       "id": "7700186",
       "name": "VL | NATURA | OBS | výsev",
+      "status": "ended",
+      "end_date": "2026-04-10",
       "daily": [
         {
           "date": "2026-03-07",
@@ -4640,6 +4690,8 @@
     {
       "id": "7741741",
       "name": "VL | FLORIA | OBS | Trávníková náplast 3 v 1",
+      "status": "ended",
+      "end_date": "2026-05-01",
       "daily": [
         {
           "date": "2026-04-03",
@@ -4772,6 +4824,8 @@
     {
       "id": "7729321",
       "name": "VL | FLORIA | OBS | Substrát pro středomořské rostliny",
+      "status": "ended",
+      "end_date": "2026-04-27",
       "daily": [
         {
           "date": "2026-03-30",
@@ -4904,6 +4958,8 @@
     {
       "id": "7726928",
       "name": "VL | NATURA | OBS | Společný banner vyvýšené záhony",
+      "status": "ended",
+      "end_date": "2026-05-01",
       "daily": [
         {
           "date": "2026-03-27",
@@ -5078,6 +5134,8 @@
     {
       "id": "7743167",
       "name": "VL | FLORIA | OBS | TH robotické sekání",
+      "status": "ended",
+      "end_date": "2026-05-17",
       "daily": [
         {
           "date": "2026-04-20",
@@ -5234,6 +5292,8 @@
     {
       "id": "7741734",
       "name": "VL | NATURA | OBS | Substrát pro borůvky | A/B",
+      "status": "ended",
+      "end_date": "2026-04-29",
       "daily": [
         {
           "date": "2026-04-03",
@@ -5354,6 +5414,8 @@
     {
       "id": "7694777",
       "name": "VL | NATURA | OBS | Smutnice | A/B",
+      "status": "ended",
+      "end_date": "2026-03-31",
       "daily": [
         {
           "date": "2026-03-03",
@@ -5504,6 +5566,8 @@
     {
       "id": "7741740",
       "name": "VL | NATURA | OBS | Substrát pro rajčata, okurky a papriky | A/B",
+      "status": "ended",
+      "end_date": "2026-04-29",
       "daily": [
         {
           "date": "2026-04-03",
@@ -5624,6 +5688,8 @@
     {
       "id": "7741738",
       "name": "VL | NATURA | OBS | Substrát pro jahody | A/B",
+      "status": "ended",
+      "end_date": "2026-04-29",
       "daily": [
         {
           "date": "2026-04-03",
@@ -5744,6 +5810,8 @@
     {
       "id": "7773231",
       "name": "VL | AGRO | OBS | Černozemí - pro celou zahradu",
+      "status": "ended",
+      "end_date": "2026-05-17",
       "daily": [
         {
           "date": "2026-04-27",
@@ -5876,6 +5944,8 @@
     {
       "id": "7823359",
       "name": "VL | VITALITY KOMPLEX | OBS | Muškát a surfinie",
+      "status": "ended",
+      "end_date": "2026-06-21",
       "daily": [
         {
           "date": "2026-06-01",
@@ -6008,6 +6078,8 @@
     {
       "id": "7821046",
       "name": "VL | VITALITY KOMPLEX | OBS | Univerzál",
+      "status": "ended",
+      "end_date": "2026-06-18",
       "daily": [
         {
           "date": "2026-05-29",
@@ -6140,6 +6212,8 @@
     {
       "id": "7733243",
       "name": "VL | FLORIA | OBS | Zahradnický substrát",
+      "status": "ended",
+      "end_date": "2026-04-28",
       "daily": [
         {
           "date": "2026-03-31",
@@ -6272,6 +6346,8 @@
     {
       "id": "7777739",
       "name": "VL | AGRO | OBS | Tradiční písek",
+      "status": "ended",
+      "end_date": "2026-05-23",
       "daily": [
         {
           "date": "2026-05-03",
@@ -6404,6 +6480,8 @@
     {
       "id": "7735262",
       "name": "VL | NATURA | OBS | Substrát bylinková zahrádka | A/B",
+      "status": "ended",
+      "end_date": "2026-04-24",
       "daily": [
         {
           "date": "2026-03-31",
@@ -6518,6 +6596,8 @@
     {
       "id": "7773213",
       "name": "VL | AGRO | OBS | Cererit Hobby Gold s guánem",
+      "status": "ended",
+      "end_date": "2026-05-24",
       "daily": [
         {
           "date": "2026-04-27",
@@ -6692,6 +6772,8 @@
     {
       "id": "7700223",
       "name": "VL | NATURA | OBS | čistič půdy | A/B",
+      "status": "ended",
+      "end_date": "2026-03-25",
       "daily": [
         {
           "date": "2026-03-09",
@@ -6770,6 +6852,8 @@
     {
       "id": "7700314",
       "name": "VL | FLORIA | OBS | TS pro robotické sekání",
+      "status": "ended",
+      "end_date": "2026-03-25",
       "daily": [
         {
           "date": "2026-03-09",
@@ -6848,6 +6932,8 @@
     {
       "id": "7692629",
       "name": "VL | FLORIA | OBS | Substrát orchideje",
+      "status": "ended",
+      "end_date": "2026-03-18",
       "daily": [
         {
           "date": "2026-03-03",
@@ -6932,6 +7018,8 @@
     {
       "id": "7782935",
       "name": "VL | AGRO | OBS | Substrát pro muškáty",
+      "status": "ended",
+      "end_date": "2026-05-26",
       "daily": [
         {
           "date": "2026-05-06",
@@ -7064,6 +7152,8 @@
     {
       "id": "7824845",
       "name": "VL | VITALITY KOMPLEX | OBS | Borůvka",
+      "status": "ended",
+      "end_date": "2026-06-22",
       "daily": [
         {
           "date": "2026-06-02",
@@ -7196,6 +7286,8 @@
     {
       "id": "7767865",
       "name": "VL | AGRO | OBS | Cererit Hobby Gold",
+      "status": "ended",
+      "end_date": "2026-05-20",
       "daily": [
         {
           "date": "2026-04-26",
@@ -7352,6 +7444,8 @@
     {
       "id": "7767871",
       "name": "VL | AGRO | OBS | Černozemní pro balkonovky",
+      "status": "ended",
+      "end_date": "2026-05-24",
       "daily": [
         {
           "date": "2026-04-27",
@@ -7526,6 +7620,8 @@
     {
       "id": "7767876",
       "name": "VL | AGRO | OBS | Substrát na rajčata",
+      "status": "ended",
+      "end_date": "2026-05-24",
       "daily": [
         {
           "date": "2026-04-27",
@@ -7700,6 +7796,8 @@
     {
       "id": "7773217",
       "name": "VL | AGRO | OBS | Trávníkové hnojivo",
+      "status": "ended",
+      "end_date": "2026-05-17",
       "daily": [
         {
           "date": "2026-04-27",
@@ -7832,6 +7930,8 @@
     {
       "id": "7733333",
       "name": "VL | AGRO | OBS | Substrát na borůvky",
+      "status": "ended",
+      "end_date": "2026-04-19",
       "daily": [
         {
           "date": "2026-03-31",
@@ -7928,6 +8028,8 @@
     {
       "id": "7709993",
       "name": "VL | AGRO | OBS | Přírodní hnoje",
+      "status": "ended",
+      "end_date": "2026-03-27",
       "daily": [
         {
           "date": "2026-03-16",
@@ -7994,6 +8096,8 @@
     {
       "id": "7743164",
       "name": "VL | AGRO | OBS | Substrát výsev",
+      "status": "ended",
+      "end_date": "2026-04-25",
       "daily": [
         {
           "date": "2026-04-07",
@@ -8078,6 +8182,8 @@
     {
       "id": "7733335",
       "name": "VL | AGRO | OBS | Pokojovky",
+      "status": "ended",
+      "end_date": "2026-04-19",
       "daily": [
         {
           "date": "2026-03-31",
@@ -8174,6 +8280,8 @@
     {
       "id": "7698424",
       "name": "VL | AGRO | OBS | Substrát Výsev",
+      "status": "ended",
+      "end_date": "2026-03-17",
       "daily": [
         {
           "date": "2026-03-06",
@@ -8234,6 +8342,8 @@
     {
       "id": "7700178",
       "name": "VL | AGRO | OBS | TH Start",
+      "status": "ended",
+      "end_date": "2026-04-19",
       "daily": [
         {
           "date": "2026-03-07",
@@ -8306,6 +8416,8 @@
     {
       "id": "7743174",
       "name": "VL | AGRO | OBS | Rašelina 1",
+      "status": "ended",
+      "end_date": "2026-04-26",
       "daily": [
         {
           "date": "2026-04-13",
@@ -8366,6 +8478,8 @@
     {
       "id": "7786983",
       "name": "VL | AGRO | OBS | Trávníkový substrát",
+      "status": "ended",
+      "end_date": "2026-05-23",
       "daily": [
         {
           "date": "2026-05-10",
@@ -8456,6 +8570,8 @@
     {
       "id": "7704087",
       "name": "VL |FLORIA | Branding | TS pro robotické sekání",
+      "status": "ended",
+      "end_date": "2026-04-22",
       "daily": [
         {
           "date": "2026-03-11",
@@ -8660,6 +8776,8 @@
     {
       "id": "7767873",
       "name": "VL | AGRO | OBS | Substrát na jahody",
+      "status": "ended",
+      "end_date": "2026-05-07",
       "daily": [
         {
           "date": "2026-04-26",
@@ -8738,6 +8856,8 @@
     {
       "id": "7747825",
       "name": "VL | NATURA | Branding | Substrát pro celou zahradu",
+      "status": "ended",
+      "end_date": "2026-05-05",
       "daily": [
         {
           "date": "2026-04-09",
@@ -8870,6 +8990,8 @@
     {
       "id": "7692631",
       "name": "VL | NATURA | Branding | Zelené hnojení | zobrazení",
+      "status": "ended",
+      "end_date": "2026-04-21",
       "daily": [
         {
           "date": "2026-03-04",
@@ -9008,6 +9130,8 @@
     {
       "id": "7741720",
       "name": "VL |FLORIA | Branding | Zahradnický substrát",
+      "status": "ended",
+      "end_date": "2026-04-20",
       "daily": [
         {
           "date": "2026-04-03",
@@ -9092,6 +9216,8 @@
     {
       "id": "7704104",
       "name": "VL | FLORIA | Branding | Substrát Orchideje",
+      "status": "ended",
+      "end_date": "2026-04-12",
       "daily": [
         {
           "date": "2026-03-18",
@@ -9182,6 +9308,8 @@
     {
       "id": "7814516",
       "name": "VL | NATURA | Branding | Travin - TV spot",
+      "status": "ended",
+      "end_date": "2026-06-17",
       "daily": [
         {
           "date": "2026-05-25",
