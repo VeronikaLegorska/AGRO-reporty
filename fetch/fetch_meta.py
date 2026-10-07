@@ -60,6 +60,18 @@ def get_result(actions_list, reach, objective):
     return label, action_map.get(action_key, 0)
 
 
+# effective_status z Meta → active / paused / ended
+def norm_status(effective_status, end_time):
+    st = (effective_status or "").upper()
+    if end_time and end_time[:10] < date.today().isoformat():
+        return "ended"
+    if st in ("DELETED", "ARCHIVED"):
+        return "ended"
+    if "PAUSED" in st:
+        return "paused"
+    return "active"
+
+
 def fetch():
     date_from = date.today().replace(month=1, day=1).isoformat()
     date_to   = (date.today() - timedelta(days=1)).isoformat()
@@ -67,20 +79,26 @@ def fetch():
 
     # 1. Objectives kampaní
     camp_objectives = {}
-    for camp in account.get_campaigns(fields=["id", "name", "objective"]):
+    camp_status     = {}   # campaign_id → (status, end_date)
+    for camp in account.get_campaigns(fields=["id", "name", "objective", "effective_status", "stop_time"]):
         if is_vl(camp.get("name", "")):
             camp_objectives[camp["id"]] = camp.get("objective", "")
+            stop = camp.get("stop_time")
+            camp_status[camp["id"]] = (norm_status(camp.get("effective_status"), stop), stop[:10] if stop else None)
 
     # 2. Reklamní sestavy (adsets) – lehký listing, nikoli insights
     camp_adsets = {}   # campaign_id → [{id, name}]
-    for adset in account.get_ad_sets(fields=["id", "name", "campaign_id"]):
+    for adset in account.get_ad_sets(fields=["id", "name", "campaign_id", "effective_status", "end_time"]):
         cid = adset.get("campaign_id")
         if cid not in camp_objectives:
             continue
         camp_adsets.setdefault(cid, [])
         # přidat jen pokud ještě není (může se vrátit duplicitně)
         if not any(a["id"] == adset["id"] for a in camp_adsets[cid]):
-            camp_adsets[cid].append({"id": adset["id"], "name": adset.get("name", "")})
+            end = adset.get("end_time")
+            camp_adsets[cid].append({"id": adset["id"], "name": adset.get("name", ""),
+                                     "status": norm_status(adset.get("effective_status"), end),
+                                     "end_date": end[:10] if end else None})
 
     # 3a. Agregovaný reach za celé období (pro správné CPM – bez time_increment)
     #     sum(denní reach) > celkový reach kvůli opakované deduplicaci
@@ -186,9 +204,16 @@ def fetch():
         for a in camp_adsets.get(cid, []):
             daily = sorted(adset_daily.get(a["id"], []), key=lambda x: x["date"])
             adsets.append({**a, "period_reach": adset_period_reach.get(a["id"]), "daily": daily})
+        # Kampaň „běží", jen pokud běží aspoň jedna její sestava (kampaň bývá ACTIVE i po skončení sestav)
+        status, end_date = camp_status.get(cid, ("active", None))
+        if status == "active" and adsets:
+            sts = {a["status"] for a in adsets}
+            status = "active" if "active" in sts else "paused" if "paused" in sts else "ended"
         result.append({
             "id":           cid,
             "name":         camp["name"],
+            "status":       status,
+            "end_date":     end_date,
             "objective":    camp["objective"],
             "result_type":  camp["result_type"] or "–",
             "period_reach": pr,  # pro Dosah kampaně: správné CPM = spend/period_reach*1000

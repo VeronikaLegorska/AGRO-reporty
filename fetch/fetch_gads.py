@@ -29,6 +29,7 @@ def fetch():
             campaign.id,
             campaign.name,
             campaign.advertising_channel_type,
+            campaign.primary_status,
             segments.date,
             metrics.impressions,
             metrics.clicks,
@@ -151,7 +152,9 @@ def fetch():
         day  = row.segments.date
         channel_type = row.campaign.advertising_channel_type.name
         if cid not in campaigns:
-            campaigns[cid] = {"id": cid, "name": name, "channel_type": channel_type, "daily": []}
+            ps = row.campaign.primary_status.name   # ELIGIBLE / PAUSED / ENDED / LIMITED / ...
+            status = "ended" if ps in ("ENDED", "REMOVED") else "paused" if ps == "PAUSED" else "active"
+            campaigns[cid] = {"id": cid, "name": name, "channel_type": channel_type, "status": status, "daily": []}
         day_data = {
             "date":        day,
             "clicks":      row.metrics.clicks,

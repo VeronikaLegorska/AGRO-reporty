@@ -96,7 +96,13 @@ def fetch():
     proxy, session = get_proxy_session()
 
     # Seznam VL kampaní
-    camp_list = proxy.campaigns.list(session, {}, {"offset": 0, "limit": 500})
+    camp_list = proxy.campaigns.list(session, {}, {
+        "offset": 0, "limit": 500,
+        "displayColumns": ["id", "name", "status", "deleted", "endDate"],
+    })
+    if camp_list.get("status") != 200:
+        # starší chování API – bez displayColumns (stav pak dopočítá dashboard z aktivity)
+        camp_list = proxy.campaigns.list(session, {}, {"offset": 0, "limit": 500})
     if camp_list.get("status") != 200:
         raise RuntimeError(f"campaigns.list selhal: {camp_list}")
 
@@ -105,6 +111,21 @@ def fetch():
         for c in camp_list.get("campaigns", [])
         if is_vl(c.get("name", ""))
     }
+    camp_status = {}  # id → (active / paused / ended, end_date)
+    for c in camp_list.get("campaigns", []):
+        if c["id"] not in vl_campaigns or "status" not in c:
+            continue
+        end = c.get("endDate")
+        # endDate chodí jako int (20261231) nebo xmlrpc DateTime ("20261231T00:00:00")
+        digits = "".join(ch for ch in str(getattr(end, "value", end) or "")[:10] if ch.isdigit())[:8]
+        end = int_to_date(int(digits)) if len(digits) == 8 else None
+        if c.get("deleted") or (end and end < today_dt.isoformat()):
+            st = "ended"
+        elif c.get("status") == "active":
+            st = "active"
+        else:
+            st = "paused"
+        camp_status[c["id"]] = (st, end)
 
     if not vl_campaigns:
         print("Sklik: žádné VL kampaně")
@@ -143,7 +164,8 @@ def fetch():
     result = []
     for c in campaigns.values():
         daily_list = sorted(c["daily"].values(), key=lambda x: x["date"])
-        result.append({"id": c["id"], "name": c["name"], "daily": daily_list})
+        st, end = camp_status.get(int(c["id"]) if c["id"].isdigit() else c["id"], (None, None))
+        result.append({"id": c["id"], "name": c["name"], "status": st, "end_date": end, "daily": daily_list})
     result.sort(key=lambda x: sum(d["spend_czk"] for d in x["daily"]), reverse=True)
 
     return {

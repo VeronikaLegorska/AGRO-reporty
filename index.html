@@ -123,7 +123,7 @@ header {
 /* SUMMARY TABLE */
 .data-table-wrap {
   background: var(--card); border: 1px solid var(--border); border-radius: 8px;
-  margin-bottom: 1.5rem; overflow: hidden;
+  margin-bottom: 1.5rem; overflow-x: auto;
 }
 table { width: 100%; border-collapse: collapse; }
 thead th {
@@ -164,6 +164,21 @@ tr.camp-row.expandable { cursor: pointer; }
 tr.adset-row { background: rgba(255,255,255,.02); }
 tr.adset-row td { font-size: .8rem; padding-top: .4rem; padding-bottom: .4rem; }
 tr.adset-row td:first-child { padding-left: 2.6rem; color: #ccc; }
+
+/* ŘAZENÍ PODLE SLOUPCŮ + STAV KAMPANĚ */
+#tab-campaigns th[data-sort] { cursor: pointer; user-select: none; white-space: nowrap; }
+#tab-campaigns th[data-sort]:hover { color: var(--text); }
+#tab-campaigns th.sorted { color: var(--green); }
+#tab-campaigns th[data-sort]::after { content: attr(data-arrow); margin-left: .3rem; font-size: .6rem; }
+.sort-hint { margin-left: auto; }
+.status-badge {
+  display: inline-block; padding: .1rem .5rem; border-radius: 10px;
+  font-size: .72rem; white-space: nowrap; border: 1px solid transparent;
+}
+.st-active { background: rgba(106,176,76,.18); color: #9DC840; border-color: rgba(106,176,76,.45); }
+.st-paused { background: rgba(230,180,60,.12); color: #e6b43c; border-color: rgba(230,180,60,.4); }
+.st-ended  { background: rgba(255,255,255,.06); color: var(--muted); border-color: var(--border); }
+.status-sub { display: block; font-size: .68rem; color: var(--muted); margin-top: .15rem; }
 
 /* FINANCE TABLE */
 .finance-note { font-size: .8rem; color: var(--muted); margin-bottom: 1rem; }
@@ -316,24 +331,24 @@ tr.adset-row td:first-child { padding-left: 2.6rem; color: #ccc; }
 <!-- ═══ JEDNOTLIVÉ KAMPANĚ ═══ -->
 <div class="tab-panel" id="tab-campaigns">
   <div class="sort-bar">
-    <span>Řadit podle:</span>
-    <button class="sort-btn active" data-sort="spend_czk">Cena</button>
-    <button class="sort-btn" data-sort="clicks">Kliky</button>
-    <button class="sort-btn" data-sort="impressions">Zobrazení</button>
-    <button class="sort-btn" data-sort="ctr">CTR</button>
-    <button class="sort-btn" data-sort="cpc">CPC</button>
+    <span>Stav kampaně:</span>
+    <button class="sort-btn status-filter active" data-status="all">Vše</button>
+    <button class="sort-btn status-filter" data-status="active">Běží</button>
+    <button class="sort-btn status-filter" data-status="paused">Pozastavené</button>
+    <button class="sort-btn status-filter" data-status="ended">Dokončené</button>
+    <span class="sort-hint">Řazení: klikni na název sloupce</span>
   </div>
   <div class="platform-table-section">
     <div class="platform-label">Google Ads</div>
     <div class="data-table-wrap"><table id="table-gads-campaigns">
-      <thead><tr><th>Kampaň</th><th>Cena</th><th>Kliky</th><th>Zobrazení</th><th>CTR</th><th>CPC</th></tr></thead>
+      <thead><tr><th data-sort="name">Kampaň</th><th data-sort="status">Stav</th><th data-sort="spend_czk">Cena</th><th data-sort="clicks">Kliky</th><th data-sort="impressions">Zobrazení</th><th data-sort="ctr">CTR</th><th data-sort="cpc">CPC</th></tr></thead>
       <tbody id="tbody-gads-campaigns"></tbody>
     </table></div>
   </div>
   <div class="platform-table-section">
     <div class="platform-label">Sklik</div>
     <div class="data-table-wrap"><table id="table-sklik-campaigns">
-      <thead><tr><th>Kampaň</th><th>Cena</th><th>Kliky</th><th>Zobrazení</th><th>CTR</th><th>CPC</th></tr></thead>
+      <thead><tr><th data-sort="name">Kampaň</th><th data-sort="status">Stav</th><th data-sort="spend_czk">Cena</th><th data-sort="clicks">Kliky</th><th data-sort="impressions">Zobrazení</th><th data-sort="ctr">CTR</th><th data-sort="cpc">CPC</th></tr></thead>
       <tbody id="tbody-sklik-campaigns"></tbody>
     </table></div>
   </div>
@@ -343,7 +358,7 @@ tr.adset-row td:first-child { padding-left: 2.6rem; color: #ccc; }
     </div>
     <div id="meta-result-cards" class="metric-row" style="margin-bottom:1rem"></div>
     <div class="data-table-wrap"><table id="table-meta-campaigns">
-      <thead><tr><th>Kampaň / Sestavy</th><th>Cena</th><th>Kliky</th><th>Zobrazení</th><th>CTR</th><th>CPC</th><th>Výsledky</th><th>Cena za výsledek</th></tr></thead>
+      <thead><tr><th data-sort="name">Kampaň / Sestavy</th><th data-sort="status">Stav</th><th data-sort="spend_czk">Cena</th><th data-sort="clicks">Kliky</th><th data-sort="impressions">Zobrazení</th><th data-sort="ctr">CTR</th><th data-sort="cpc">CPC</th><th data-sort="results">Výsledky</th><th data-sort="cpr">Cena za výsledek</th></tr></thead>
       <tbody id="tbody-meta-campaigns"></tbody>
     </table></div>
   </div>
@@ -558,10 +573,11 @@ function campaignStats(platformData, from, to, brand) {
     const cpr = totalResults > 0 ? (isDosah ? s.spend_czk / totalResults * 1000 : s.spend_czk / totalResults) : 0;
     return { id: item.id, name: item.name, result_type: resultType || '–',
              ...s, results: totalResults,
-             ctr: round2(ctr), cpc: round2(cpc), cpr: round2(cpr) };
+             ctr: round2(ctr), cpc: round2(cpc), cpr: round2(cpr),
+             ...campaignStatus(item) };
   };
   const active  = r => r.clicks > 0 || r.spend_czk > 0;
-  const bySort  = (a, b) => b[campaignSortKey] - a[campaignSortKey];
+  const bySort  = compareRows;
   return campaigns.map(c => {
     const adsets = c.adsets || [];
     // Sestavy s denními daty (nový formát meta.json) → plné statistiky po sestavách
@@ -572,6 +588,32 @@ function campaignStats(platformData, from, to, brand) {
     return { ...statsOf(c, c.result_type), adsets, hasAdsetData, adsetRows };
   }).filter(active)
     .sort(bySort);
+}
+
+// Stav kampaně / sestavy: z API (status), jinak dopočet z poslední aktivity
+const STATUS_LABEL = { active: 'Běží', paused: 'Pozastavená', ended: 'Dokončená' };
+const STATUS_ORDER = { active: 0, paused: 1, ended: 2 };
+function campaignStatus(item) {
+  let last = null;
+  for (const d of item.daily || []) if ((d.spend_czk > 0 || d.impressions > 0) && (!last || d.date > last)) last = d.date;
+  let status = item.status;
+  if (!status) {
+    const ref = new Date(); ref.setDate(ref.getDate() - 3);
+    status = last && last >= ref.toISOString().slice(0, 10) ? 'active' : 'ended';
+  }
+  return { status, last_active: last, end_date: item.end_date || null };
+}
+
+// Řazení tabulek kampaní (klik na hlavičku sloupce)
+const campaignSort = { key: 'spend_czk', dir: -1 };
+function compareRows(a, b) {
+  const k = campaignSort.key;
+  if (k === 'status') {
+    // v rámci stejného stavu vždy podle ceny sestupně
+    return (STATUS_ORDER[a.status] - STATUS_ORDER[b.status]) * campaignSort.dir || b.spend_czk - a.spend_czk;
+  }
+  const r = k === 'name' ? a.name.localeCompare(b.name, 'cs') : (a[k] || 0) - (b[k] || 0);
+  return r * campaignSort.dir;
 }
 
 // Celkový YTD spend pro brand (pro Finance – vždy od začátku roku)
@@ -679,12 +721,13 @@ function renderFollowers() {
 
 function renderCampaignTable(tbodyId, platformData) {
   const { dateFrom: from, dateTo: to } = state;
-  const rows = campaignStats(platformData, from, to, null);
+  const rows = campaignStats(platformData, from, to, null).filter(matchesStatus);
   const tbody = document.getElementById(tbodyId);
-  if (!rows.length) { tbody.innerHTML = `<tr><td colspan="6" class="no-data" style="padding:.8rem 1rem">Žádná data pro toto období</td></tr>`; return; }
+  if (!rows.length) { tbody.innerHTML = `<tr><td colspan="7" class="no-data" style="padding:.8rem 1rem">Žádná data pro toto období</td></tr>`; return; }
   tbody.innerHTML = rows.map((r, i) => `
     <tr>
       <td><span class="row-num">${i+1}.</span>${r.name}</td>
+      <td>${statusBadge(r)}</td>
       <td>${fmt.czk(r.spend_czk)}</td>
       <td>${fmt.num(r.clicks)}</td>
       <td>${fmt.num(r.impressions)}</td>
@@ -695,7 +738,8 @@ function renderCampaignTable(tbodyId, platformData) {
 
 function renderMetaCampaignTable(tbodyId, platformData) {
   const { dateFrom: from, dateTo: to } = state;
-  const rows = campaignStats(platformData, from, to, null);
+  const rows = campaignStats(platformData, from, to, null).filter(matchesStatus);
+  rows.forEach(r => r.adsetRows = r.adsetRows.filter(matchesStatus));
   const tbody = document.getElementById(tbodyId);
 
   // 3 souhrnné karty nad tabulkou
@@ -719,9 +763,10 @@ function renderMetaCampaignTable(tbodyId, platformData) {
     }).join('');
   }
 
-  if (!rows.length) { tbody.innerHTML = `<tr><td colspan="8" class="no-data" style="padding:.8rem 1rem">Žádná data pro toto období</td></tr>`; return; }
+  if (!rows.length) { tbody.innerHTML = `<tr><td colspan="9" class="no-data" style="padding:.8rem 1rem">Žádná data pro toto období</td></tr>`; return; }
   const muted = '<span style="color:var(--muted)">–</span>';
   const metricCells = (r, showType) => `
+      <td>${statusBadge(r)}</td>
       <td>${fmt.czk(r.spend_czk)}</td>
       <td>${fmt.num(r.clicks)}</td>
       <td>${fmt.num(r.impressions)}</td>
@@ -967,16 +1012,43 @@ function renderFinance() {
 // ══════════════════════════════════════════════
 // SORT PRO KAMPANĚ
 // ══════════════════════════════════════════════
-let campaignSortKey = 'spend_czk';
+let statusFilter = 'all';
+function matchesStatus(r) { return statusFilter === 'all' || r.status === statusFilter; }
+function fmtDate(d) { const [y, m, dd] = d.split('-'); return `${+dd}. ${+m}. ${y}`; }
+function statusBadge(r) {
+  const tip = r.end_date && r.status === 'ended' ? `Konec: ${fmtDate(r.end_date)}`
+            : r.last_active ? `Poslední aktivita: ${fmtDate(r.last_active)}` : '';
+  const subDate = r.status === 'ended' ? (r.end_date || r.last_active) : null;
+  const sub = subDate ? `<span class="status-sub">${fmtDate(subDate)}</span>` : '';
+  return `<span class="status-badge st-${r.status}" title="${tip}">${STATUS_LABEL[r.status]}</span>${sub}`;
+}
 
-document.querySelectorAll('.sort-btn').forEach(btn => {
+document.querySelectorAll('.status-filter').forEach(btn => {
   btn.addEventListener('click', () => {
-    campaignSortKey = btn.dataset.sort;
-    document.querySelectorAll('.sort-btn').forEach(b => b.classList.remove('active'));
-    btn.classList.add('active');
+    statusFilter = btn.dataset.status;
+    document.querySelectorAll('.status-filter').forEach(b => b.classList.toggle('active', b === btn));
     renderCampaigns();
   });
 });
+
+function updateSortHeaders() {
+  document.querySelectorAll('#tab-campaigns th[data-sort]').forEach(th => {
+    const on = th.dataset.sort === campaignSort.key;
+    th.classList.toggle('sorted', on);
+    th.dataset.arrow = on ? (campaignSort.dir < 0 ? '▼' : '▲') : '';
+  });
+}
+document.querySelectorAll('#tab-campaigns th[data-sort]').forEach(th => {
+  th.addEventListener('click', () => {
+    const k = th.dataset.sort;
+    // stejný sloupec → otočit směr; nový sloupec → text/stav vzestupně, čísla sestupně
+    if (campaignSort.key === k) campaignSort.dir *= -1;
+    else { campaignSort.key = k; campaignSort.dir = (k === 'name' || k === 'status') ? 1 : -1; }
+    updateSortHeaders();
+    renderCampaigns();
+  });
+});
+updateSortHeaders();
 
 // ══════════════════════════════════════════════
 // TAB SWITCHING & RE-RENDER
