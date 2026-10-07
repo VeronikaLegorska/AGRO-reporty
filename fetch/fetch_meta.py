@@ -62,6 +62,10 @@ def get_result(actions_list, reach, objective):
     return label, action_map.get(action_key, 0)
 
 
+# Větší stránky = méně volání API (výchozích 25 řádků vyčerpá limit požadavků)
+PAGE = {"limit": 500}
+
+
 def month_ranges(date_from, date_to):
     """[(od, do)] po kalendářních měsících v rozsahu date_from–date_to (ISO stringy)."""
     d, end, out = date.fromisoformat(date_from), date.fromisoformat(date_to), []
@@ -76,7 +80,7 @@ def insights_with_retry(account, params, attempts=4):
     """Stáhne všechny řádky insights; při dočasné chybě Meta API to zkusí znovu."""
     for i in range(attempts):
         try:
-            return list(account.get_insights(params=params))
+            return list(account.get_insights(params={**PAGE, **params}))
         except FacebookRequestError as e:
             if i == attempts - 1:
                 raise
@@ -104,7 +108,7 @@ def fetch():
     # 1. Objectives kampaní
     camp_objectives = {}
     camp_status     = {}   # campaign_id → (status, end_date)
-    for camp in account.get_campaigns(fields=["id", "name", "objective", "effective_status", "stop_time"]):
+    for camp in account.get_campaigns(fields=["id", "name", "objective", "effective_status", "stop_time"], params=PAGE):
         if is_vl(camp.get("name", "")):
             camp_objectives[camp["id"]] = camp.get("objective", "")
             stop = camp.get("stop_time")
@@ -112,7 +116,7 @@ def fetch():
 
     # 2. Reklamní sestavy (adsets) – lehký listing, nikoli insights
     camp_adsets = {}   # campaign_id → [{id, name}]
-    for adset in account.get_ad_sets(fields=["id", "name", "campaign_id", "effective_status", "end_time"]):
+    for adset in account.get_ad_sets(fields=["id", "name", "campaign_id", "effective_status", "end_time"], params=PAGE):
         cid = adset.get("campaign_id")
         if cid not in camp_objectives:
             continue
@@ -132,7 +136,7 @@ def fetch():
         "level":      "campaign",
         "fields":     ["campaign_id", "reach"],
     }
-    for row in account.get_insights(params=agg_params):
+    for row in account.get_insights(params={**PAGE, **agg_params}):
         cid = row.get("campaign_id")
         if camp_objectives.get(cid) in ("OUTCOME_AWARENESS", "BRAND_AWARENESS", "REACH"):
             period_reach[cid] = int(row.get("reach", 0))
@@ -147,7 +151,7 @@ def fetch():
             "impressions", "clicks", "spend", "reach", "actions",
         ],
     }
-    insights = account.get_insights(params=params)
+    insights = account.get_insights(params={**PAGE, **params})
 
     campaigns = {}
     for row in insights:
@@ -190,7 +194,7 @@ def fetch():
         "level":      "adset",
         "fields":     ["adset_id", "campaign_id", "reach"],
     }
-    for row in account.get_insights(params=agg_params_adset):
+    for row in account.get_insights(params={**PAGE, **agg_params_adset}):
         if camp_objectives.get(row.get("campaign_id")) in ("OUTCOME_AWARENESS", "BRAND_AWARENESS", "REACH"):
             adset_period_reach[row.get("adset_id")] = int(row.get("reach", 0))
 
