@@ -178,6 +178,10 @@ tr.adset-row td:first-child { padding-left: 2.6rem; color: #ccc; }
 .st-active { background: rgba(106,176,76,.18); color: #9DC840; border-color: rgba(106,176,76,.45); }
 .st-paused { background: rgba(230,180,60,.12); color: #e6b43c; border-color: rgba(230,180,60,.4); }
 .st-ended  { background: rgba(255,255,255,.06); color: var(--muted); border-color: var(--border); }
+tr.idle-row td:first-child { color: var(--muted); }
+.idle-cell { color: var(--muted); opacity: .5; }
+.idle-note { display: block; font-size: .68rem; color: var(--muted); opacity: .8; margin-top: .1rem; }
+tr.adset-row .idle-note { display: inline; margin-left: .4rem; }
 .status-sub { display: block; font-size: .68rem; color: var(--muted); margin-top: .15rem; }
 
 /* FINANCE TABLE */
@@ -558,7 +562,7 @@ function platformStats(platformData, from, to, brand) {
 }
 
 // Per-kampaň stats pro tabulku
-function campaignStats(platformData, from, to, brand) {
+function campaignStats(platformData, from, to, brand, includeIdle = false) {
   if (!platformData?.campaigns) return [];
   const campaigns = brand
     ? platformData.campaigns.filter(c => brandOf(c.name) === brand)
@@ -577,16 +581,22 @@ function campaignStats(platformData, from, to, brand) {
              ...campaignStatus(item) };
   };
   const active  = r => r.clicks > 0 || r.spend_czk > 0;
-  const bySort  = compareRows;
+  // includeIdle: i kampaně bez aktivity ve zvoleném období (např. dokončené) – řadí se na konec
+  const keep    = r => active(r) || (includeIdle && r.last_active);
+  const bySort  = (a, b) => (b.idle ? 0 : 1) - (a.idle ? 0 : 1)
+    || (a.idle && b.idle && campaignSort.key !== 'name' && campaignSort.key !== 'status'
+          ? (b.last_active || '').localeCompare(a.last_active || '')
+          : compareRows(a, b));
+  const withIdle = r => ({ ...r, idle: !active(r) });
   return campaigns.map(c => {
     const adsets = c.adsets || [];
     // Sestavy s denními daty (nový formát meta.json) → plné statistiky po sestavách
     const hasAdsetData = adsets.some(a => Array.isArray(a.daily));
     const adsetRows = hasAdsetData
-      ? adsets.map(a => statsOf(a, c.result_type)).filter(active).sort(bySort)
+      ? adsets.map(a => withIdle(statsOf(a, c.result_type))).filter(keep).sort(bySort)
       : [];
-    return { ...statsOf(c, c.result_type), adsets, hasAdsetData, adsetRows };
-  }).filter(active)
+    return withIdle({ ...statsOf(c, c.result_type), adsets, hasAdsetData, adsetRows });
+  }).filter(keep)
     .sort(bySort);
 }
 
@@ -721,10 +731,14 @@ function renderFollowers() {
 
 function renderCampaignTable(tbodyId, platformData) {
   const { dateFrom: from, dateTo: to } = state;
-  const rows = campaignStats(platformData, from, to, null).filter(matchesStatus);
+  const rows = campaignStats(platformData, from, to, null, true).filter(matchesStatus);
   const tbody = document.getElementById(tbodyId);
   if (!rows.length) { tbody.innerHTML = `<tr><td colspan="7" class="no-data" style="padding:.8rem 1rem">Žádná data pro toto období</td></tr>`; return; }
-  tbody.innerHTML = rows.map((r, i) => `
+  tbody.innerHTML = rows.map((r, i) => r.idle ? `
+    <tr class="idle-row">
+      <td><span class="row-num">${i+1}.</span>${r.name}${IDLE_NOTE}</td>
+      <td>${statusBadge(r)}</td>${IDLE_CELLS(5)}
+    </tr>` : `
     <tr>
       <td><span class="row-num">${i+1}.</span>${r.name}</td>
       <td>${statusBadge(r)}</td>
@@ -736,9 +750,13 @@ function renderCampaignTable(tbodyId, platformData) {
     </tr>`).join('');
 }
 
+// Řádek kampaně bez aktivity ve zvoleném období
+const IDLE_NOTE  = '<span class="idle-note">bez aktivity ve zvoleném období</span>';
+const IDLE_CELLS = n => '<td class="idle-cell">–</td>'.repeat(n);
+
 function renderMetaCampaignTable(tbodyId, platformData) {
   const { dateFrom: from, dateTo: to } = state;
-  const rows = campaignStats(platformData, from, to, null).filter(matchesStatus);
+  const rows = campaignStats(platformData, from, to, null, true).filter(matchesStatus);
   rows.forEach(r => r.adsetRows = r.adsetRows.filter(matchesStatus));
   const tbody = document.getElementById(tbodyId);
 
@@ -765,7 +783,8 @@ function renderMetaCampaignTable(tbodyId, platformData) {
 
   if (!rows.length) { tbody.innerHTML = `<tr><td colspan="9" class="no-data" style="padding:.8rem 1rem">Žádná data pro toto období</td></tr>`; return; }
   const muted = '<span style="color:var(--muted)">–</span>';
-  const metricCells = (r, showType) => `
+  const metricCells = (r, showType) => r.idle ? `
+      <td>${statusBadge(r)}</td>${IDLE_CELLS(7)}` : `
       <td>${statusBadge(r)}</td>
       <td>${fmt.czk(r.spend_czk)}</td>
       <td>${fmt.num(r.clicks)}</td>
@@ -777,7 +796,7 @@ function renderMetaCampaignTable(tbodyId, platformData) {
 
   tbody.innerHTML = rows.map((r, i) => {
     // Starý formát dat (sestavy bez čísel) → jen názvy pod kampaní
-    if (!r.hasAdsetData) {
+    if (!r.hasAdsetData && r.adsets.length) {
       const adsetNames = r.adsets.map(a =>
         `<div style="font-size:.72rem;color:var(--muted);margin-top:.15rem">↳ ${a.name}</div>`
       ).join('');
@@ -792,12 +811,12 @@ function renderMetaCampaignTable(tbodyId, platformData) {
       ? `<span class="adset-count">${r.adsetRows.length} ${r.adsetRows.length === 1 ? 'sestava' : r.adsetRows.length < 5 ? 'sestavy' : 'sestav'}</span>`
       : '';
     const subRows = r.adsetRows.map((a, j) => `
-    <tr class="adset-row" data-parent="${r.id}"${open ? '' : ' hidden'}>
+    <tr class="adset-row${a.idle ? ' idle-row' : ''}" data-parent="${r.id}"${open ? '' : ' hidden'}>
       <td><span class="row-num">${i+1}.${j+1}</span>${a.name}</td>${metricCells(a, false)}
     </tr>`).join('');
     return `
-    <tr class="${canExpand ? 'camp-row expandable' : 'camp-row'}" data-id="${r.id}">
-      <td>${toggle}<span class="row-num">${i+1}.</span>${r.name}${count}</td>${metricCells(r, true)}
+    <tr class="${canExpand ? 'camp-row expandable' : 'camp-row'}${r.idle ? ' idle-row' : ''}" data-id="${r.id}">
+      <td>${toggle}<span class="row-num">${i+1}.</span>${r.name}${count}${r.idle ? IDLE_NOTE : ''}</td>${metricCells(r, true)}
     </tr>${subRows}`;
   }).join('');
 }

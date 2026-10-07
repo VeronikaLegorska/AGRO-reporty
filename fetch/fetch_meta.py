@@ -237,8 +237,8 @@ def fetch():
             adsets.append({**a, "period_reach": adset_period_reach.get(a["id"]), "daily": daily})
         # Kampaň „běží", jen pokud běží aspoň jedna její sestava (kampaň bývá ACTIVE i po skončení sestav)
         status, end_date = camp_status.get(cid, ("active", None))
-        if status == "active" and adsets:
-            sts = {a["status"] for a in adsets}
+        if status == "active":
+            sts = {a["status"] for a in adsets}   # bez sestav kampaň běžet nemůže → ended
             status = "active" if "active" in sts else "paused" if "paused" in sts else "ended"
         result.append({
             "id":           cid,
