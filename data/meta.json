@@ -1,13 +1,15 @@
 {
-  "updated": "2026-10-06",
+  "updated": "2026-10-07",
   "period": {
     "from": "2026-01-01",
-    "to": "2026-10-05"
+    "to": "2026-10-06"
   },
   "campaigns": [
     {
       "id": "120238635715950685",
       "name": "VL | FLORIA | Příspěvky | projevený zájem | 3/26",
+      "status": "active",
+      "end_date": null,
       "objective": "",
       "result_type": "Zájem o příspěvek",
       "period_reach": null,
@@ -450,13 +452,49 @@
     {
       "id": "120238623445790685",
       "name": "VL | NATURA | Příspěvky | Projevený zájem | 3/26",
+      "status": "active",
+      "end_date": null,
       "objective": "OUTCOME_ENGAGEMENT",
       "result_type": "Zájem o příspěvek",
       "period_reach": null,
       "adsets": [
         {
+          "id": "120249715023800685",
+          "name": "WEB | IG+FB | CAROUSEL | zelené hnojivo - karusel",
+          "status": "active",
+          "end_date": "2026-11-03",
+          "period_reach": null,
+          "daily": [
+            {
+              "date": "2026-10-06",
+              "clicks": 14,
+              "impressions": 946,
+              "spend_czk": 59.53,
+              "results": 14
+            }
+          ]
+        },
+        {
+          "id": "120249714996650685",
+          "name": "Příspěvek | engagement | FB | vlastní cílení | moření česneku",
+          "status": "active",
+          "end_date": "2026-11-05",
+          "period_reach": null,
+          "daily": []
+        },
+        {
+          "id": "120249714956730685",
+          "name": "Příspěvek | engagement | IG | vlastní cílení | moření česneku říjen",
+          "status": "active",
+          "end_date": "2026-11-05",
+          "period_reach": null,
+          "daily": []
+        },
+        {
           "id": "120249530822790685",
           "name": "Příspěvek | engagement | FB | vlastní cílení | společný banner vyvýšené záhony",
+          "status": "active",
+          "end_date": "2026-10-16",
           "period_reach": null,
           "daily": [
             {
@@ -531,16 +569,25 @@
             },
             {
               "date": "2026-10-05",
-              "clicks": 33,
+              "clicks": 34,
               "impressions": 5462,
               "spend_czk": 212.77,
-              "results": 26
+              "results": 27
+            },
+            {
+              "date": "2026-10-06",
+              "clicks": 31,
+              "impressions": 4627,
+              "spend_czk": 191.13,
+              "results": 20
             }
           ]
         },
         {
           "id": "120249530808520685",
           "name": "Příspěvek | engagement | IG | vlastní cílení | společný banner vyvýšené záhony",
+          "status": "active",
+          "end_date": "2026-10-16",
           "period_reach": null,
           "daily": [
             {
@@ -619,12 +666,21 @@
               "impressions": 3698,
               "spend_czk": 226.77,
               "results": 17
+            },
+            {
+              "date": "2026-10-06",
+              "clicks": 0,
+              "impressions": 3838,
+              "spend_czk": 201.42,
+              "results": 17
             }
           ]
         },
         {
           "id": "120249272582120685",
           "name": "WEB | IG+FB | CAROUSEL | společný banner vyvýšené záhony",
+          "status": "active",
+          "end_date": "2026-10-17",
           "period_reach": null,
           "daily": [
             {
@@ -808,12 +864,21 @@
               "impressions": 5718,
               "spend_czk": 303.84,
               "results": 120
+            },
+            {
+              "date": "2026-10-06",
+              "clicks": 126,
+              "impressions": 4810,
+              "spend_czk": 338.96,
+              "results": 120
             }
           ]
         },
         {
           "id": "120249272570820685",
           "name": "Příspěvek | engagement | IG | vlastní cílení | moření česneku",
+          "status": "active",
+          "end_date": "2026-10-07",
           "period_reach": null,
           "daily": [
             {
@@ -997,12 +1062,21 @@
               "impressions": 1169,
               "spend_czk": 134.72,
               "results": 15
+            },
+            {
+              "date": "2026-10-06",
+              "clicks": 4,
+              "impressions": 1325,
+              "spend_czk": 88.19,
+              "results": 9
             }
           ]
         },
         {
           "id": "120249272559160685",
           "name": "Příspěvek | engagement | FB | vlastní cílení | moření česneku",
+          "status": "active",
+          "end_date": "2026-10-07",
           "period_reach": null,
           "daily": [
             {
@@ -1186,12 +1260,21 @@
               "impressions": 1217,
               "spend_czk": 134.4,
               "results": 29
+            },
+            {
+              "date": "2026-10-06",
+              "clicks": 17,
+              "impressions": 1051,
+              "spend_czk": 101.89,
+              "results": 12
             }
           ]
         },
         {
           "id": "120249176064950685",
           "name": "Příspěvek | engagement | FB | vlastní cílení | Čistič půdy",
+          "status": "ended",
+          "end_date": "2026-10-06",
           "period_reach": null,
           "daily": [
             {
@@ -1417,12 +1500,21 @@
               "impressions": 1396,
               "spend_czk": 98.13,
               "results": 10
+            },
+            {
+              "date": "2026-10-06",
+              "clicks": 2,
+              "impressions": 252,
+              "spend_czk": 12.89,
+              "results": 0
             }
           ]
         },
         {
           "id": "120249176034690685",
           "name": "Příspěvek | engagement | IG | vlastní cílení | Čistič půdy",
+          "status": "ended",
+          "end_date": "2026-10-06",
           "period_reach": null,
           "daily": [
             {
@@ -1648,12 +1740,21 @@
               "impressions": 262,
               "spend_czk": 66.66,
               "results": 7
+            },
+            {
+              "date": "2026-10-06",
+              "clicks": 0,
+              "impressions": 14,
+              "spend_czk": 1.12,
+              "results": 2
             }
           ]
         },
         {
           "id": "120249176019150685",
           "name": "Příspěvek | engagement | FB | vlastní cílení | Zelené hnojivo",
+          "status": "ended",
+          "end_date": "2026-10-05",
           "period_reach": null,
           "daily": [
             {
@@ -1885,6 +1986,8 @@
         {
           "id": "120249175992130685",
           "name": "Příspěvek | engagement | IG | vlastní cílení | Zelené hnojivo",
+          "status": "ended",
+          "end_date": "2026-10-05",
           "period_reach": null,
           "daily": [
             {
@@ -2116,6 +2219,8 @@
         {
           "id": "120249117238170685",
           "name": "Příspěvek | engagement | FB | vlastní cílení | Přírodní prostředek na moření česneku + cibuloviny",
+          "status": "active",
+          "end_date": "2026-10-08",
           "period_reach": null,
           "daily": [
             {
@@ -2362,12 +2467,21 @@
               "impressions": 4741,
               "spend_czk": 260.94,
               "results": 34
+            },
+            {
+              "date": "2026-10-06",
+              "clicks": 36,
+              "impressions": 4337,
+              "spend_czk": 231.85,
+              "results": 26
             }
           ]
         },
         {
           "id": "120249049093320685",
           "name": "Příspěvek | engagement | IG | vlastní cílení | Přírodní prostředek na moření česneku",
+          "status": "active",
+          "end_date": "2026-10-08",
           "period_reach": null,
           "daily": [
             {
@@ -2614,12 +2728,21 @@
               "impressions": 5947,
               "spend_czk": 227.09,
               "results": 12
+            },
+            {
+              "date": "2026-10-06",
+              "clicks": 0,
+              "impressions": 6088,
+              "spend_czk": 191.47,
+              "results": 8
             }
           ]
         },
         {
           "id": "120246972093070685",
           "name": "Příspěvek | engagement | IG | vlastní cílení | Kapalné hnojivo pro celou zahradu",
+          "status": "ended",
+          "end_date": "2026-07-20",
           "period_reach": null,
           "daily": [
             {
@@ -2809,18 +2932,24 @@
         {
           "id": "120246972018050685",
           "name": "Příspěvek | engagement | IG | vlastní cílení | Přírodní hnojivo pro borůvky a brusinky – kopie",
+          "status": "ended",
+          "end_date": "2026-07-20",
           "period_reach": null,
           "daily": []
         },
         {
           "id": "120246972018040685",
           "name": "Příspěvek | engagement | FB | vlastní cílení | Kapalné hnojivo pro celou zahradu – kopie",
+          "status": "ended",
+          "end_date": "2026-07-20",
           "period_reach": null,
           "daily": []
         },
         {
           "id": "120246971971680685",
           "name": "Příspěvek | engagement | FB | vlastní cílení | Kapalné hnojivo pro celou zahradu",
+          "status": "ended",
+          "end_date": "2026-07-20",
           "period_reach": null,
           "daily": [
             {
@@ -3010,6 +3139,8 @@
         {
           "id": "120246367727200685",
           "name": "Příspěvek | engagement | FB | vlastní cílení | Přírodní hnojivo pro borůvky a brusinky",
+          "status": "ended",
+          "end_date": "2026-07-17",
           "period_reach": null,
           "daily": [
             {
@@ -3227,6 +3358,8 @@
         {
           "id": "120246364730890685",
           "name": "Příspěvek | engagement | IG | vlastní cílení | Přírodní hnojivo pro borůvky a brusinky",
+          "status": "ended",
+          "end_date": "2026-07-17",
           "period_reach": null,
           "daily": [
             {
@@ -3444,6 +3577,8 @@
         {
           "id": "120246362185580685",
           "name": "Příspěvek | engagement | IG | vlastní cílení | Přírodní hnojivo pro okurky, cukety, dýně a melouny",
+          "status": "ended",
+          "end_date": "2026-07-15",
           "period_reach": null,
           "daily": [
             {
@@ -3647,6 +3782,8 @@
         {
           "id": "120246362116310685",
           "name": "Příspěvek | engagement | FB | vlastní cílení | Přírodní hnojivo pro okurky, cukety, dýně a melouny",
+          "status": "ended",
+          "end_date": "2026-07-15",
           "period_reach": null,
           "daily": [
             {
@@ -3850,6 +3987,8 @@
         {
           "id": "120246198916730685",
           "name": "Příspěvek | engagement | FB | vlastní cílení | Přírodní hnojivo pro jahody a drobné ovoce",
+          "status": "ended",
+          "end_date": "2026-07-12",
           "period_reach": null,
           "daily": [
             {
@@ -4046,6 +4185,8 @@
         {
           "id": "120246198614610685",
           "name": "Příspěvek | engagement | IG | vlastní cílení | Přírodní hnojivo pro jahody a drobné ovoce",
+          "status": "ended",
+          "end_date": "2026-07-12",
           "period_reach": null,
           "daily": [
             {
@@ -4242,6 +4383,8 @@
         {
           "id": "120246197898400685",
           "name": "Příspěvek | engagement | FB | vlastní cílení | Bylinková směs na svilušky",
+          "status": "ended",
+          "end_date": "2026-07-19",
           "period_reach": null,
           "daily": [
             {
@@ -4487,6 +4630,8 @@
         {
           "id": "120246197625670685",
           "name": "Příspěvek | engagement | IG | vlastní cílení | Bylinková směs na svilušky",
+          "status": "ended",
+          "end_date": "2026-07-19",
           "period_reach": null,
           "daily": [
             {
@@ -4732,6 +4877,8 @@
         {
           "id": "120245758720020685",
           "name": "Příspěvek | engagement | IG | vlastní cílení | Přírodní hnojivo pro rajčata a papriky",
+          "status": "ended",
+          "end_date": "2026-07-07",
           "period_reach": null,
           "daily": [
             {
@@ -4921,6 +5068,8 @@
         {
           "id": "120245758665670685",
           "name": "Příspěvek | engagement | FB | vlastní cílení | Přírodní hnojivo pro rajčata a papriky",
+          "status": "ended",
+          "end_date": "2026-07-06",
           "period_reach": null,
           "daily": [
             {
@@ -5103,6 +5252,8 @@
         {
           "id": "120245357128920685",
           "name": "Příspěvek | engagement | FB | vlastní cílení | Bylinková směs na plísně",
+          "status": "ended",
+          "end_date": "2026-07-15",
           "period_reach": null,
           "daily": [
             {
@@ -5383,6 +5534,8 @@
         {
           "id": "120245357083470685",
           "name": "Příspěvek | engagement | IG | vlastní cílení | Bylinková směs na plísně",
+          "status": "ended",
+          "end_date": "2026-07-15",
           "period_reach": null,
           "daily": [
             {
@@ -5663,6 +5816,8 @@
         {
           "id": "120244783154320685",
           "name": "Příspěvek | engagement | IG | vlastní cílení | Rock Effect NEW",
+          "status": "ended",
+          "end_date": "2026-06-30",
           "period_reach": null,
           "daily": [
             {
@@ -5887,6 +6042,8 @@
         {
           "id": "120244782227410685",
           "name": "Příspěvek | engagement | FB | vlastní cílení | Rock Effect NEW",
+          "status": "ended",
+          "end_date": "2026-06-30",
           "period_reach": null,
           "daily": [
             {
@@ -6111,6 +6268,8 @@
         {
           "id": "120244249719710685",
           "name": "WEB | IG+FB | CAROUSEL | Rock Effect NEW",
+          "status": "ended",
+          "end_date": "2026-07-02",
           "period_reach": null,
           "daily": [
             {
@@ -6391,6 +6550,8 @@
         {
           "id": "120244031300130685",
           "name": "WEB | IG+FB | CAROUSEL | PRESTO slimáci TV spot",
+          "status": "ended",
+          "end_date": "2026-07-19",
           "period_reach": null,
           "daily": [
             {
@@ -6804,6 +6965,8 @@
         {
           "id": "120243714480600685",
           "name": "WEB | IG+FB | CAROUSEL | PRESTO slimáci",
+          "status": "ended",
+          "end_date": "2026-06-17",
           "period_reach": null,
           "daily": [
             {
@@ -7028,6 +7191,8 @@
         {
           "id": "120243714312710685",
           "name": "Příspěvek | engagement | FB | vlastní cílení | Organické trávníkové hnojivo",
+          "status": "ended",
+          "end_date": "2026-06-17",
           "period_reach": null,
           "daily": [
             {
@@ -7245,6 +7410,8 @@
         {
           "id": "120243714253650685",
           "name": "Příspěvek | engagement | IG | vlastní cílení | Organické trávníkové hnojivo",
+          "status": "ended",
+          "end_date": "2026-06-17",
           "period_reach": null,
           "daily": [
             {
@@ -7462,6 +7629,8 @@
         {
           "id": "120243712670890685",
           "name": "Příspěvek | engagement | IG | vlastní cílení | PRESTO slimáci TV spot",
+          "status": "ended",
+          "end_date": "2026-07-14",
           "period_reach": null,
           "daily": [
             {
@@ -7854,6 +8023,8 @@
         {
           "id": "120243712473640685",
           "name": "Příspěvek | engagement | FB | vlastní cílení | PRESTO slimáci TV spot",
+          "status": "ended",
+          "end_date": "2026-07-14",
           "period_reach": null,
           "daily": [
             {
@@ -8246,6 +8417,8 @@
         {
           "id": "120241999645270685",
           "name": "WEB | IG+FB | CAROUSEL | Substrát pro celou zahradu",
+          "status": "ended",
+          "end_date": "2026-05-17",
           "period_reach": null,
           "daily": [
             {
@@ -8407,6 +8580,8 @@
         {
           "id": "120241998998890685",
           "name": "Příspěvek | engagement | IG | vlastní cílení | PRESTO slimáci",
+          "status": "ended",
+          "end_date": "2026-05-16",
           "period_reach": null,
           "daily": [
             {
@@ -8561,6 +8736,8 @@
         {
           "id": "120241998968350685",
           "name": "Příspěvek | engagement | FB | vlastní cílení | PRESTO slimáci",
+          "status": "ended",
+          "end_date": "2026-05-16",
           "period_reach": null,
           "daily": [
             {
@@ -8715,6 +8892,8 @@
         {
           "id": "120241630856600685",
           "name": "Příspěvek | engagement | IG | vlastní cílení | Substrát pro rajčata, okurky a papriky",
+          "status": "ended",
+          "end_date": "2026-05-13",
           "period_reach": null,
           "daily": [
             {
@@ -8876,6 +9055,8 @@
         {
           "id": "120241627284530685",
           "name": "Příspěvek | engagement | FB | vlastní cílení | Substrát pro rajčata, okurky a papriky",
+          "status": "ended",
+          "end_date": "2026-05-13",
           "period_reach": null,
           "daily": [
             {
@@ -9037,6 +9218,8 @@
         {
           "id": "120241227779020685",
           "name": "Příspěvek | engagement | FB | vlastní cílení | Substrát pro borůvky",
+          "status": "ended",
+          "end_date": "2026-05-07",
           "period_reach": null,
           "daily": [
             {
@@ -9177,6 +9360,8 @@
         {
           "id": "120241227565550685",
           "name": "Příspěvek | engagement | IG | vlastní cílení | Substrát pro borůvky",
+          "status": "ended",
+          "end_date": "2026-05-07",
           "period_reach": null,
           "daily": [
             {
@@ -9317,6 +9502,8 @@
         {
           "id": "120241226792490685",
           "name": "WEB | IG+FB | CAROUSEL | Substrát bylinková zahrádka",
+          "status": "ended",
+          "end_date": "2026-05-04",
           "period_reach": null,
           "daily": [
             {
@@ -9443,6 +9630,8 @@
         {
           "id": "120239875935930685",
           "name": "Příspěvek | engagement | IG | vlastní cílení | Kompost pro vyvýšené záhony",
+          "status": "ended",
+          "end_date": "2026-04-14",
           "period_reach": null,
           "daily": [
             {
@@ -9583,6 +9772,8 @@
         {
           "id": "120239875593770685",
           "name": "Příspěvek | engagement | FB | vlastní cílení | Kompost pro vyvýšené záhony",
+          "status": "ended",
+          "end_date": "2026-04-14",
           "period_reach": null,
           "daily": [
             {
@@ -9723,6 +9914,8 @@
         {
           "id": "120239776912930685",
           "name": "WEB | IG+FB | CAROUSEL | Přezimující škůdci",
+          "status": "ended",
+          "end_date": "2026-04-06",
           "period_reach": null,
           "daily": [
             {
@@ -9821,6 +10014,8 @@
         {
           "id": "120239776668780685",
           "name": "Příspěvek | engagement | FB | vlastní cílení | společný banner vyvýšené záhony",
+          "status": "ended",
+          "end_date": "2026-04-26",
           "period_reach": null,
           "daily": [
             {
@@ -10024,6 +10219,8 @@
         {
           "id": "120239776194330685",
           "name": "Příspěvek | engagement | IG | vlastní cílení | společný banner vyvýšené záhony",
+          "status": "ended",
+          "end_date": "2026-04-26",
           "period_reach": null,
           "daily": [
             {
@@ -10227,6 +10424,8 @@
         {
           "id": "120239479887260685",
           "name": "WEB | IG | CAROUSEL | Smutnice",
+          "status": "ended",
+          "end_date": "2026-04-03",
           "period_reach": null,
           "daily": [
             {
@@ -10325,6 +10524,8 @@
         {
           "id": "120239437385780685",
           "name": "WEB | FB | CAROUSEL | Smutnice",
+          "status": "ended",
+          "end_date": "2026-04-02",
           "period_reach": null,
           "daily": [
             {
@@ -10423,18 +10624,24 @@
         {
           "id": "120239437257860685",
           "name": "TEST",
+          "status": "paused",
+          "end_date": null,
           "period_reach": null,
           "daily": []
         },
         {
           "id": "120239437030550685",
           "name": "Nová sada reklam pro účel Projevený zájem",
+          "status": "paused",
+          "end_date": null,
           "period_reach": null,
           "daily": []
         },
         {
           "id": "120239436379870685",
           "name": "Příspěvek | engagement | IG | vlastní cílení | přezimující škůdci",
+          "status": "ended",
+          "end_date": "2026-04-10",
           "period_reach": null,
           "daily": [
             {
@@ -10589,6 +10796,8 @@
         {
           "id": "120239436337140685",
           "name": "Příspěvek | engagement | FB | vlastní cílení | přezimující škůdci",
+          "status": "ended",
+          "end_date": "2026-04-10",
           "period_reach": null,
           "daily": [
             {
@@ -10743,6 +10952,8 @@
         {
           "id": "120239013293500685",
           "name": "Max počet to se mi líbí stránky | FB | Výsev",
+          "status": "ended",
+          "end_date": "2026-04-10",
           "period_reach": null,
           "daily": [
             {
@@ -10946,6 +11157,8 @@
         {
           "id": "120239012880700685",
           "name": "Příspěvek | engagement | IG | Vlastní cílení | výsev",
+          "status": "ended",
+          "end_date": "2026-04-10",
           "period_reach": null,
           "daily": [
             {
@@ -11149,6 +11362,8 @@
         {
           "id": "120238896136890685",
           "name": "Příspěvek | engagement | FB | vlastní cílení | čistič půdy",
+          "status": "ended",
+          "end_date": "2026-04-05",
           "period_reach": null,
           "daily": [
             {
@@ -11324,6 +11539,8 @@
         {
           "id": "120238896031110685",
           "name": "Příspěvek | engagement | IG | vlastní cílení | čistič půdy",
+          "status": "ended",
+          "end_date": "2026-04-05",
           "period_reach": null,
           "daily": [
             {
@@ -11499,6 +11716,8 @@
         {
           "id": "120238708611410685",
           "name": "Max počet to se mi líbí stránky | FB | Smutnice",
+          "status": "ended",
+          "end_date": "2026-03-16",
           "period_reach": null,
           "daily": [
             {
@@ -11590,6 +11809,8 @@
         {
           "id": "120238624185130685",
           "name": "Příspěvek | engagement | IG | vlastní cílení | Smutnice",
+          "status": "ended",
+          "end_date": "2026-03-15",
           "period_reach": null,
           "daily": [
             {
@@ -12994,17 +13215,27 @@
         },
         {
           "date": "2026-10-05",
-          "clicks": 255,
+          "clicks": 256,
           "impressions": 29870,
           "spend_czk": 1688.61,
-          "results": 271,
-          "cost_per_result": 6.23
+          "results": 272,
+          "cost_per_result": 6.21
+        },
+        {
+          "date": "2026-10-06",
+          "clicks": 230,
+          "impressions": 27288,
+          "spend_czk": 1418.45,
+          "results": 228,
+          "cost_per_result": 6.22
         }
       ]
     },
     {
       "id": "120238709799980685",
       "name": "VL | AGRO | Příspěvky | projevený zájem | 3/26",
+      "status": "paused",
+      "end_date": null,
       "objective": "OUTCOME_ENGAGEMENT",
       "result_type": "Zájem o příspěvek",
       "period_reach": null,
@@ -13012,6 +13243,8 @@
         {
           "id": "120243464272900685",
           "name": "Reklama | engagement | FB+IG | Vlastní cílení | Substrát pro hortenzie",
+          "status": "ended",
+          "end_date": "2026-05-24",
           "period_reach": null,
           "daily": [
             {
@@ -13075,6 +13308,8 @@
         {
           "id": "120243464224960685",
           "name": "Příspěvek | engagement | IG | Vlastní cílení | Substrát pro hortenzie",
+          "status": "ended",
+          "end_date": "2026-05-24",
           "period_reach": null,
           "daily": [
             {
@@ -13145,6 +13380,8 @@
         {
           "id": "120243464084210685",
           "name": "Příspěvek | engagement | FB | Vlastní cílení | Substrát pro hortenzie",
+          "status": "ended",
+          "end_date": "2026-05-24",
           "period_reach": null,
           "daily": [
             {
@@ -13215,6 +13452,8 @@
         {
           "id": "120243238169970685",
           "name": "Reklama | engagement | FB+IG | Vlastní cílení | Černozemní - pro balkonovky",
+          "status": "ended",
+          "end_date": "2026-05-24",
           "period_reach": null,
           "daily": [
             {
@@ -13292,6 +13531,8 @@
         {
           "id": "120243238123090685",
           "name": "Příspěvek | engagement | IG | Vlastní cílení | Černozemní - pro balkonovky",
+          "status": "ended",
+          "end_date": "2026-05-24",
           "period_reach": null,
           "daily": [
             {
@@ -13383,6 +13624,8 @@
         {
           "id": "120243238034970685",
           "name": "Příspěvek | engagement | FB | Vlastní cílení | Černozemní - pro balkonovky",
+          "status": "ended",
+          "end_date": "2026-05-24",
           "period_reach": null,
           "daily": [
             {
@@ -13474,6 +13717,8 @@
         {
           "id": "120243237954670685",
           "name": "Reklama | engagement | FB+IG | Vlastní cílení | Substrát na rajčata",
+          "status": "ended",
+          "end_date": "2026-05-24",
           "period_reach": null,
           "daily": [
             {
@@ -13558,6 +13803,8 @@
         {
           "id": "120243237919800685",
           "name": "Příspěvek | engagement | IG | Vlastní cílení | Substrát na rajčata",
+          "status": "ended",
+          "end_date": "2026-05-24",
           "period_reach": null,
           "daily": [
             {
@@ -13649,6 +13896,8 @@
         {
           "id": "120243237819180685",
           "name": "Příspěvek | engagement | FB | Vlastní cílení | Substrát na rajčata",
+          "status": "ended",
+          "end_date": "2026-05-24",
           "period_reach": null,
           "daily": [
             {
@@ -13740,6 +13989,8 @@
         {
           "id": "120243237742120685",
           "name": "Reklama | engagement | FB+IG | Vlastní cílení | Trávníkový substrát",
+          "status": "ended",
+          "end_date": "2026-05-24",
           "period_reach": null,
           "daily": [
             {
@@ -13824,6 +14075,8 @@
         {
           "id": "120243237535130685",
           "name": "Příspěvek | engagement | IG | Vlastní cílení | Trávníkový substrát",
+          "status": "ended",
+          "end_date": "2026-05-24",
           "period_reach": null,
           "daily": [
             {
@@ -13908,6 +14161,8 @@
         {
           "id": "120243237341230685",
           "name": "Příspěvek | engagement | FB | Vlastní cílení | Trávníkový substrát",
+          "status": "ended",
+          "end_date": "2026-05-24",
           "period_reach": null,
           "daily": [
             {
@@ -13992,6 +14247,8 @@
         {
           "id": "120243236821660685",
           "name": "Reklama | engagement | FB+IG | Vlastní cílení | Cererit Hobby GOLD",
+          "status": "ended",
+          "end_date": "2026-05-27",
           "period_reach": null,
           "daily": [
             {
@@ -14097,6 +14354,8 @@
         {
           "id": "120243236509150685",
           "name": "Příspěvek | engagement | IG | Vlastní cílení | Cererit Hobby GOLD",
+          "status": "ended",
+          "end_date": "2026-05-27",
           "period_reach": null,
           "daily": [
             {
@@ -14209,6 +14468,8 @@
         {
           "id": "120243236509120685",
           "name": "Příspěvek | engagement | IG | Vlastní cílení | Cererit Hobby GOLD",
+          "status": "ended",
+          "end_date": "2026-05-27",
           "period_reach": null,
           "daily": [
             {
@@ -14237,6 +14498,8 @@
         {
           "id": "120243236000440685",
           "name": "Příspěvek | engagement | FB | Vlastní cílení | Cererit Hobby GOLD",
+          "status": "ended",
+          "end_date": "2026-05-27",
           "period_reach": null,
           "daily": [
             {
@@ -14349,6 +14612,8 @@
         {
           "id": "120242812493120685",
           "name": "Reklama | engagement | FB+IG | Vlastní cílení | Tradiční písek",
+          "status": "ended",
+          "end_date": "2026-05-19",
           "period_reach": null,
           "daily": [
             {
@@ -14440,6 +14705,8 @@
         {
           "id": "120242802899230685",
           "name": "Příspěvek | engagement | FB | Vlastní cílení | Tradiční písek",
+          "status": "ended",
+          "end_date": "2026-05-19",
           "period_reach": null,
           "daily": [
             {
@@ -14531,6 +14798,8 @@
         {
           "id": "120242802722730685",
           "name": "Příspěvek | engagement | IG | Vlastní cílení | Tradiční písek",
+          "status": "ended",
+          "end_date": "2026-05-19",
           "period_reach": null,
           "daily": [
             {
@@ -14622,6 +14891,8 @@
         {
           "id": "120242801128160685",
           "name": "Reklama | engagement | FB+IG | Vlastní cílení | Substrát na muškáty",
+          "status": "ended",
+          "end_date": "2026-05-19",
           "period_reach": null,
           "daily": [
             {
@@ -14706,6 +14977,8 @@
         {
           "id": "120242799293630685",
           "name": "Příspěvek | engagement | FB | Vlastní cílení | Substrát na muškáty",
+          "status": "ended",
+          "end_date": "2026-05-19",
           "period_reach": null,
           "daily": [
             {
@@ -14797,6 +15070,8 @@
         {
           "id": "120242795344600685",
           "name": "Příspěvek | engagement | IG | Vlastní cílení | Substrát na muškáty",
+          "status": "ended",
+          "end_date": "2026-05-19",
           "period_reach": null,
           "daily": [
             {
@@ -14888,6 +15163,8 @@
         {
           "id": "120242000492140685",
           "name": "Reklama | engagement | FB+IG | Vlastní cílení | Substrát na jahody",
+          "status": "ended",
+          "end_date": "2026-05-07",
           "period_reach": null,
           "daily": [
             {
@@ -14979,6 +15256,8 @@
         {
           "id": "120242000323790685",
           "name": "Příspěvek | engagement | FB | Vlastní cílení | Substrát na jahody",
+          "status": "ended",
+          "end_date": "2026-05-07",
           "period_reach": null,
           "daily": [
             {
@@ -15070,6 +15349,8 @@
         {
           "id": "120241999905790685",
           "name": "Příspěvek | engagement | IG | Vlastní cílení | Substrát na jahody",
+          "status": "ended",
+          "end_date": "2026-05-07",
           "period_reach": null,
           "daily": [
             {
@@ -15161,6 +15442,8 @@
         {
           "id": "120241999511350685",
           "name": "Reklama | engagement | FB+IG | Vlastní cílení | Černozemní - pro celou zahradu",
+          "status": "ended",
+          "end_date": "2026-05-05",
           "period_reach": null,
           "daily": [
             {
@@ -15238,6 +15521,8 @@
         {
           "id": "120241999250430685",
           "name": "Příspěvek | engagement | FB | Vlastní cílení | Černozemní - pro celou zahradu",
+          "status": "ended",
+          "end_date": "2026-05-05",
           "period_reach": null,
           "daily": [
             {
@@ -15315,6 +15600,8 @@
         {
           "id": "120241999080260685",
           "name": "Příspěvek | engagement | IG | Vlastní cílení | Černozemní - pro celou zahradu",
+          "status": "ended",
+          "end_date": "2026-05-05",
           "period_reach": null,
           "daily": [
             {
@@ -15392,6 +15679,8 @@
         {
           "id": "120241721752560685",
           "name": "Příspěvek | engagement | FB | Vlastní cílení | Substrát Výsev-reel",
+          "status": "ended",
+          "end_date": "2026-05-05",
           "period_reach": null,
           "daily": [
             {
@@ -15490,6 +15779,8 @@
         {
           "id": "120241721623420685",
           "name": "Příspěvek | engagement | IG | Vlastní cílení | Substrát Výsev-reels",
+          "status": "ended",
+          "end_date": "2026-05-05",
           "period_reach": null,
           "daily": [
             {
@@ -15588,6 +15879,8 @@
         {
           "id": "120241721532250685",
           "name": "Reklama | engagement | FB+IG | Vlastní cílení | Trávníkové hnojivoe",
+          "status": "ended",
+          "end_date": "2026-05-12",
           "period_reach": null,
           "daily": [
             {
@@ -15728,6 +16021,8 @@
         {
           "id": "120241721421590685",
           "name": "Příspěvek | engagement | IG | Vlastní cílení | Trávníkové hnojivo",
+          "status": "ended",
+          "end_date": "2026-05-12",
           "period_reach": null,
           "daily": [
             {
@@ -15875,6 +16170,8 @@
         {
           "id": "120241721173520685",
           "name": "Příspěvek | engagement | FB | Vlastní cílení | Trávníkové hnojivo",
+          "status": "ended",
+          "end_date": "2026-05-12",
           "period_reach": null,
           "daily": [
             {
@@ -16008,6 +16305,8 @@
         {
           "id": "120241719910600685",
           "name": "Reklama | engagement | FB+IG | Vlastní cílení | Cererit Hobby GOLD s guánem",
+          "status": "ended",
+          "end_date": "2026-05-19",
           "period_reach": null,
           "daily": [
             {
@@ -16197,6 +16496,8 @@
         {
           "id": "120241719733410685",
           "name": "Příspěvek | engagement | FB | Vlastní cílení | Cererit Hobby GOLD s guánem",
+          "status": "ended",
+          "end_date": "2026-05-18",
           "period_reach": null,
           "daily": [
             {
@@ -16386,6 +16687,8 @@
         {
           "id": "120241632518560685",
           "name": "Příspěvek | engagement | IG | Vlastní cílení | Cererit Hobby GOLD s guánem",
+          "status": "ended",
+          "end_date": "2026-05-18",
           "period_reach": null,
           "daily": [
             {
@@ -16582,6 +16885,8 @@
         {
           "id": "120241631130130685",
           "name": "Reklama | engagement | FB | Vlastní cílení | Rašelina",
+          "status": "ended",
+          "end_date": "2026-04-30",
           "period_reach": null,
           "daily": [
             {
@@ -16652,6 +16957,8 @@
         {
           "id": "120241631078870685",
           "name": "Příspěvek | engagement | FB | Vlastní cílení | Rašelina",
+          "status": "ended",
+          "end_date": "2026-04-30",
           "period_reach": null,
           "daily": [
             {
@@ -16722,6 +17029,8 @@
         {
           "id": "120241630944700685",
           "name": "Příspěvek | engagement | IG | Vlastní cílení | Rašelina",
+          "status": "ended",
+          "end_date": "2026-04-30",
           "period_reach": null,
           "daily": [
             {
@@ -16792,6 +17101,8 @@
         {
           "id": "120241400454610685",
           "name": "Reklama | engagement | FB+IG | Vlastní cílení | Zahradnický substrát",
+          "status": "ended",
+          "end_date": "2026-05-08",
           "period_reach": null,
           "daily": [
             {
@@ -16918,6 +17229,8 @@
         {
           "id": "120241229594610685",
           "name": "Příspěvek | engagement | IG | Vlastní cílení | Mech-stop",
+          "status": "ended",
+          "end_date": "2026-04-30",
           "period_reach": null,
           "daily": [
             {
@@ -17009,6 +17322,8 @@
         {
           "id": "120241229444330685",
           "name": "Příspěvek | engagement | IG | Vlastní cílení | Substrát na borůvky",
+          "status": "ended",
+          "end_date": "2026-04-23",
           "period_reach": null,
           "daily": [
             {
@@ -17065,12 +17380,16 @@
         {
           "id": "120241229444320685",
           "name": "Příspěvek | engagement | FB | Vlastní cílení | Mech-stop",
+          "status": "ended",
+          "end_date": "2026-04-30",
           "period_reach": null,
           "daily": []
         },
         {
           "id": "120241229258410685",
           "name": "Příspěvek | engagement | FB | Vlastní cílení | Mech-stop",
+          "status": "ended",
+          "end_date": "2026-04-30",
           "period_reach": null,
           "daily": [
             {
@@ -17162,6 +17481,8 @@
         {
           "id": "120241229063420685",
           "name": "Příspěvek | engagement | IG | Vlastní cílení | Zahradnický substrát",
+          "status": "ended",
+          "end_date": "2026-05-05",
           "period_reach": null,
           "daily": [
             {
@@ -17288,6 +17609,8 @@
         {
           "id": "120241228628990685",
           "name": "Příspěvek | engagement | FB | Vlastní cílení | Zahradnický substrát",
+          "status": "ended",
+          "end_date": "2026-05-05",
           "period_reach": null,
           "daily": [
             {
@@ -17414,6 +17737,8 @@
         {
           "id": "120241122964620685",
           "name": "Příspěvek | engagement | FB | Vlastní cílení | Substrát na borůvky",
+          "status": "ended",
+          "end_date": "2026-04-23",
           "period_reach": null,
           "daily": [
             {
@@ -17477,6 +17802,8 @@
         {
           "id": "120241122598860685",
           "name": "Příspěvek | engagement | IG | Vlastní cílení | Substrát na borůvky",
+          "status": "ended",
+          "end_date": "2026-04-23",
           "period_reach": null,
           "daily": [
             {
@@ -17540,6 +17867,8 @@
         {
           "id": "120239436785250685",
           "name": "Reklama | engagement | FB | Vlastní cílení | Přírodní hnoje",
+          "status": "ended",
+          "end_date": "2026-03-28",
           "period_reach": null,
           "daily": [
             {
@@ -17610,6 +17939,8 @@
         {
           "id": "120239436663710685",
           "name": "Příspěvek | engagement | IG | Vlastní cílení | Přírodní hnoje",
+          "status": "ended",
+          "end_date": "2026-03-28",
           "period_reach": null,
           "daily": [
             {
@@ -17680,36 +18011,48 @@
         {
           "id": "120239436523930685",
           "name": "Příspěvek | engagement | FB | Vlastní cílení | Přírodní hnoje",
+          "status": "ended",
+          "end_date": "2026-03-28",
           "period_reach": null,
           "daily": []
         },
         {
           "id": "120239436523920685",
           "name": "Reklama | engagement | FB | Vlastní cílení | přírodní hnoje – kopie",
+          "status": "ended",
+          "end_date": "2026-04-28",
           "period_reach": null,
           "daily": []
         },
         {
           "id": "120239436464460685",
           "name": "Reklama | engagement | FB | Vlastní cílení | přírodní hnoje",
+          "status": "ended",
+          "end_date": "2026-04-28",
           "period_reach": null,
           "daily": []
         },
         {
           "id": "120238894980560685",
           "name": "MAX To se mi líbí | TH Start | FB+IG",
+          "status": "ended",
+          "end_date": "2026-03-20",
           "period_reach": null,
           "daily": []
         },
         {
           "id": "120238894928390685",
           "name": "MAX líbí se",
+          "status": "paused",
+          "end_date": null,
           "period_reach": null,
           "daily": []
         },
         {
           "id": "120238811078130685",
           "name": "Max počet návštěv | Substrát výsevu A | FB+IG",
+          "status": "ended",
+          "end_date": "2026-04-29",
           "period_reach": null,
           "daily": [
             {
@@ -17913,6 +18256,8 @@
         {
           "id": "120238810297270685",
           "name": "Reklama | engagement | FB | Vlastní cílení | Substrát výsev",
+          "status": "ended",
+          "end_date": "2026-03-17",
           "period_reach": null,
           "daily": [
             {
@@ -18004,12 +18349,16 @@
         {
           "id": "120238809955430685",
           "name": "Příspěvek | engagement | FB | Soutěž o výsev",
+          "status": "ended",
+          "end_date": "2026-03-31",
           "period_reach": null,
           "daily": []
         },
         {
           "id": "120238809595630685",
           "name": "Příspěvek | engagement | IG | Vlastní cílení | Substrát výsev",
+          "status": "ended",
+          "end_date": "2026-03-17",
           "period_reach": null,
           "daily": [
             {
@@ -18101,6 +18450,8 @@
         {
           "id": "120238710966220685",
           "name": "Příspěvek | engagement | FB | Vlastní cílení | TH Start",
+          "status": "ended",
+          "end_date": "2026-03-16",
           "period_reach": null,
           "daily": [
             {
@@ -18185,6 +18536,8 @@
         {
           "id": "120238709799990685",
           "name": "Příspěvek | engagement | IG | Vlastní cílení | TH Start",
+          "status": "ended",
+          "end_date": "2026-03-16",
           "period_reach": null,
           "daily": [
             {
@@ -18800,6 +19153,8 @@
     {
       "id": "120238895095960685",
       "name": "VL | KRISTALON | Příspěvky | Projevený zájem | 3/26",
+      "status": "ended",
+      "end_date": "2026-10-04",
       "objective": "OUTCOME_ENGAGEMENT",
       "result_type": "Zájem o příspěvek",
       "period_reach": null,
@@ -18807,6 +19162,8 @@
         {
           "id": "120249365112080685",
           "name": "Příspěvek | engagement | FB | Vlastní cílení | KRISTALON Podzim",
+          "status": "ended",
+          "end_date": "2026-10-04",
           "period_reach": null,
           "daily": [
             {
@@ -18947,6 +19304,8 @@
         {
           "id": "120249365056980685",
           "name": "Příspěvek | engagement | IG | Vlastní cílení | KRISTALON Podzim",
+          "status": "ended",
+          "end_date": "2026-10-04",
           "period_reach": null,
           "daily": [
             {
@@ -19094,6 +19453,8 @@
         {
           "id": "120248354504960685",
           "name": "MAX počet \"To se mi líbí\" | IG+FB | Vlastní cílení | Rajče a paprika | červenec",
+          "status": "ended",
+          "end_date": "2026-08-10",
           "period_reach": null,
           "daily": [
             {
@@ -19199,6 +19560,8 @@
         {
           "id": "120248354496770685",
           "name": "Příspěvek | engagement | IG | Vlastní cílení | Rajče a paprika",
+          "status": "ended",
+          "end_date": "2026-08-10",
           "period_reach": null,
           "daily": [
             {
@@ -19304,6 +19667,8 @@
         {
           "id": "120248354480700685",
           "name": "Příspěvek | engagement | FB | Vlastní cílení | Rajče a paprika",
+          "status": "ended",
+          "end_date": "2026-08-10",
           "period_reach": null,
           "daily": [
             {
@@ -19409,6 +19774,8 @@
         {
           "id": "120247601876610685",
           "name": "Příspěvek | engagement | IG | Vlastní cílení | Muškát",
+          "status": "ended",
+          "end_date": "2026-07-16",
           "period_reach": null,
           "daily": [
             {
@@ -19514,6 +19881,8 @@
         {
           "id": "120247601778930685",
           "name": "Příspěvek | engagement | FB | Vlastní cílení | Muškát",
+          "status": "ended",
+          "end_date": "2026-07-16",
           "period_reach": null,
           "daily": [
             {
@@ -19619,6 +19988,8 @@
         {
           "id": "120247601709740685",
           "name": "MAX počet \"To se mi líbí\" | IG+FB | Vlastní cílení | GOLD",
+          "status": "ended",
+          "end_date": "2026-07-12",
           "period_reach": null,
           "daily": [
             {
@@ -19689,6 +20060,8 @@
         {
           "id": "120247601686100685",
           "name": "Příspěvek | engagement | IG | Vlastní cílení | GOLD",
+          "status": "ended",
+          "end_date": "2026-07-12",
           "period_reach": null,
           "daily": [
             {
@@ -19766,6 +20139,8 @@
         {
           "id": "120247601662450685",
           "name": "Příspěvek | engagement | FB | Vlastní cílení | GOLD",
+          "status": "ended",
+          "end_date": "2026-07-12",
           "period_reach": null,
           "daily": [
             {
@@ -19843,6 +20218,8 @@
         {
           "id": "120247160883460685",
           "name": "MAX počet \"To se mi líbí\" | IG+FB | Vlastní cílení | Muškát kapalný",
+          "status": "ended",
+          "end_date": "2026-07-16",
           "period_reach": null,
           "daily": [
             {
@@ -19990,6 +20367,8 @@
         {
           "id": "120247160830800685",
           "name": "Příspěvek | engagement | FB | Vlastní cílení | Muškát kapalný",
+          "status": "ended",
+          "end_date": "2026-07-16",
           "period_reach": null,
           "daily": [
             {
@@ -20137,6 +20516,8 @@
         {
           "id": "120247160721210685",
           "name": "Příspěvek | engagement | IG | Vlastní cílení | Muškát kapalný",
+          "status": "ended",
+          "end_date": "2026-07-16",
           "period_reach": null,
           "daily": [
             {
@@ -20284,18 +20665,24 @@
         {
           "id": "120247160709950685",
           "name": "MAX počet \"To se mi líbí\" | IG+FB | Vlastní cílení | Plod a květ kapalný – kopie",
+          "status": "ended",
+          "end_date": "2026-07-12",
           "period_reach": null,
           "daily": []
         },
         {
           "id": "120247160709940685",
           "name": "Příspěvek | engagement | IG | Vlastní cílení | Rajče a paprika – kopie",
+          "status": "ended",
+          "end_date": "2026-07-08",
           "period_reach": null,
           "daily": []
         },
         {
           "id": "120246992653760685",
           "name": "MAX počet \"To se mi líbí\" | IG+FB | Vlastní cílení | Plod a květ kapalný",
+          "status": "ended",
+          "end_date": "2026-07-12",
           "period_reach": null,
           "daily": [
             {
@@ -20422,6 +20809,8 @@
         {
           "id": "120246991445570685",
           "name": "Příspěvek | engagement | FB | Vlastní cílení | Plod a květ kapalný",
+          "status": "ended",
+          "end_date": "2026-07-12",
           "period_reach": null,
           "daily": [
             {
@@ -20555,6 +20944,8 @@
         {
           "id": "120246990637760685",
           "name": "Příspěvek | engagement | IG | Vlastní cílení | Plod a květ kapalný",
+          "status": "ended",
+          "end_date": "2026-07-12",
           "period_reach": null,
           "daily": [
             {
@@ -20688,6 +21079,8 @@
         {
           "id": "120246362656200685",
           "name": "MAX počet \"To se mi líbí\" | IG+FB | Vlastní cílení | Rajče a paprika",
+          "status": "ended",
+          "end_date": "2026-07-01",
           "period_reach": null,
           "daily": [
             {
@@ -20793,6 +21186,8 @@
         {
           "id": "120246362519040685",
           "name": "Příspěvek | engagement | IG | Vlastní cílení | Rajče a paprika",
+          "status": "ended",
+          "end_date": "2026-07-08",
           "period_reach": null,
           "daily": [
             {
@@ -20947,6 +21342,8 @@
         {
           "id": "120246362451230685",
           "name": "Příspěvek | engagement | FB | Vlastní cílení | Rajče a paprika",
+          "status": "ended",
+          "end_date": "2026-07-08",
           "period_reach": null,
           "daily": [
             {
@@ -21101,6 +21498,8 @@
         {
           "id": "120246361719180685",
           "name": "MAX počet \"To se mi líbí\" | IG+FB | Vlastní cílení | Trávník",
+          "status": "ended",
+          "end_date": "2026-07-05",
           "period_reach": null,
           "daily": [
             {
@@ -21227,6 +21626,8 @@
         {
           "id": "120246201208800685",
           "name": "Příspěvek | engagement | FB | Vlastní cílení | Trávník",
+          "status": "ended",
+          "end_date": "2026-07-05",
           "period_reach": null,
           "daily": [
             {
@@ -21374,6 +21775,8 @@
         {
           "id": "120246201208600685",
           "name": "Příspěvek | engagement | FB | Vlastní cílení | Muškát",
+          "status": "ended",
+          "end_date": "2026-06-18",
           "period_reach": null,
           "daily": [
             {
@@ -21388,6 +21791,8 @@
         {
           "id": "120246201085100685",
           "name": "Příspěvek | engagement | IG | Vlastní cílení | Trávník",
+          "status": "ended",
+          "end_date": "2026-07-05",
           "period_reach": null,
           "daily": [
             {
@@ -21535,6 +21940,8 @@
         {
           "id": "120246192390360685",
           "name": "MAX počet \"To se mi líbí\" | IG+FB | Vlastní cílení | Plod a květ| A+B",
+          "status": "ended",
+          "end_date": "2026-06-22",
           "period_reach": null,
           "daily": [
             {
@@ -21591,6 +21998,8 @@
         {
           "id": "120246192330790685",
           "name": "Příspěvek | engagement | FB | Vlastní cílení | Plod a květ",
+          "status": "ended",
+          "end_date": "2026-06-29",
           "period_reach": null,
           "daily": [
             {
@@ -21696,6 +22105,8 @@
         {
           "id": "120246135622270685",
           "name": "Příspěvek | engagement | IG | Vlastní cílení | Plod a květ",
+          "status": "ended",
+          "end_date": "2026-06-29",
           "period_reach": null,
           "daily": [
             {
@@ -21801,6 +22212,8 @@
         {
           "id": "120245356563490685",
           "name": "MAX počet \"To se mi líbí\" | IG+FB | Vlastní cílení | Muškát",
+          "status": "ended",
+          "end_date": "2026-07-16",
           "period_reach": null,
           "daily": [
             {
@@ -21990,6 +22403,8 @@
         {
           "id": "120245356515660685",
           "name": "Příspěvek | engagement | IG | Vlastní cílení | Muškát",
+          "status": "ended",
+          "end_date": "2026-06-18",
           "period_reach": null,
           "daily": [
             {
@@ -22081,6 +22496,8 @@
         {
           "id": "120245356445110685",
           "name": "Příspěvek | engagement | FB | Vlastní cílení | Muškát",
+          "status": "ended",
+          "end_date": "2026-06-18",
           "period_reach": null,
           "daily": [
             {
@@ -22172,6 +22589,8 @@
         {
           "id": "120245354613310685",
           "name": "MAX počet \"To se mi líbí\" | IG+FB | Vlastní cílení | Jahoda | B",
+          "status": "ended",
+          "end_date": "2026-06-16",
           "period_reach": null,
           "daily": [
             {
@@ -22249,6 +22668,8 @@
         {
           "id": "120245354551140685",
           "name": "Příspěvek | engagement | IG | Vlastní cílení | Jahoda",
+          "status": "ended",
+          "end_date": "2026-06-16",
           "period_reach": null,
           "daily": [
             {
@@ -22326,6 +22747,8 @@
         {
           "id": "120245354450960685",
           "name": "Příspěvek | engagement | FB | Vlastní cílení | Jahoda",
+          "status": "ended",
+          "end_date": "2026-06-16",
           "period_reach": null,
           "daily": [
             {
@@ -22403,6 +22826,8 @@
         {
           "id": "120244778208050685",
           "name": "MAX počet \"To se mi líbí\" | IG+FB | Vlastní cílení | Jahoda",
+          "status": "ended",
+          "end_date": "2026-06-09",
           "period_reach": null,
           "daily": [
             {
@@ -22480,6 +22905,8 @@
         {
           "id": "120244739612450685",
           "name": "Příspěvek | engagement | FB | Vlastní cílení | Kapalný vápník",
+          "status": "ended",
+          "end_date": "2026-06-11",
           "period_reach": null,
           "daily": [
             {
@@ -22578,6 +23005,8 @@
         {
           "id": "120244739552070685",
           "name": "Příspěvek | engagement | IG | Vlastní cílení | Kapalný vápník",
+          "status": "ended",
+          "end_date": "2026-06-11",
           "period_reach": null,
           "daily": [
             {
@@ -22676,6 +23105,8 @@
         {
           "id": "120244739225010685",
           "name": "MAX počet \"To se mi líbí\" | FB+IG | Vlastní cílení | GOLD",
+          "status": "ended",
+          "end_date": "2026-06-08",
           "period_reach": null,
           "daily": [
             {
@@ -22746,6 +23177,8 @@
         {
           "id": "120244738890730685",
           "name": "Příspěvek | engagement | FB | Vlastní cílení | GOLD",
+          "status": "ended",
+          "end_date": "2026-06-15",
           "period_reach": null,
           "daily": [
             {
@@ -22872,6 +23305,8 @@
         {
           "id": "120244738857770685",
           "name": "Příspěvek | engagement | IG | Vlastní cílení | GOLD",
+          "status": "ended",
+          "end_date": "2026-06-15",
           "period_reach": null,
           "daily": [
             {
@@ -22998,6 +23433,8 @@
         {
           "id": "120239016352840685",
           "name": "MAX počet \"To se mi líbí\" | IG | Vlastní cílení | Start",
+          "status": "ended",
+          "end_date": "2026-03-19",
           "period_reach": null,
           "daily": [
             {
@@ -23075,6 +23512,8 @@
         {
           "id": "120238895324010685",
           "name": "MAX počet \"To se mi líbí\" | FB | Vlastní cílení | Start",
+          "status": "ended",
+          "end_date": "2026-03-19",
           "period_reach": null,
           "daily": [
             {
@@ -23152,6 +23591,8 @@
         {
           "id": "120238895275080685",
           "name": "Příspěvek | engagement | IG | Vlastní cílení | Start kapalný",
+          "status": "ended",
+          "end_date": "2026-03-18",
           "period_reach": null,
           "daily": [
             {
@@ -23229,6 +23670,8 @@
         {
           "id": "120238895095940685",
           "name": "Příspěvek | engagement | FB | Vlastní cílení | Start kapalný",
+          "status": "ended",
+          "end_date": "2026-03-18",
           "period_reach": null,
           "daily": [
             {
@@ -24054,6 +24497,8 @@
     {
       "id": "120240089466820685",
       "name": "VL | NATURA | Příspěvek | Substrát pro vyvýšené záhony",
+      "status": "ended",
+      "end_date": "2026-04-14",
       "objective": "OUTCOME_AWARENESS",
       "result_type": "Dosah (za 1 000 úč.)",
       "period_reach": 152142,
@@ -24061,6 +24506,8 @@
         {
           "id": "120240089466830685",
           "name": "FB | Substrát pro vyvýšené záhony | Počet zobrazení",
+          "status": "ended",
+          "end_date": "2026-04-14",
           "period_reach": 152142,
           "daily": [
             {
@@ -24312,6 +24759,8 @@
     {
       "id": "120240091339870685",
       "name": "VL | FLORIA | Příspěvek | Zahradnický substrát",
+      "status": "ended",
+      "end_date": "2026-04-25",
       "objective": "OUTCOME_AWARENESS",
       "result_type": "Dosah (za 1 000 úč.)",
       "period_reach": 138136,
@@ -24319,12 +24768,16 @@
         {
           "id": "120240091339910685",
           "name": "IG | Zahradnický substrát | Počet zobrazení",
+          "status": "ended",
+          "end_date": "2026-04-25",
           "period_reach": null,
           "daily": []
         },
         {
           "id": "120240091339890685",
           "name": "FB | Zahradnický substrát | Počet zobrazení",
+          "status": "ended",
+          "end_date": "2026-04-25",
           "period_reach": 138136,
           "daily": [
             {
@@ -24696,6 +25149,8 @@
     {
       "id": "120240293477430685",
       "name": "VL | FLORIA | CAROUSEL | TS + TH pro robotické sekání | Povědomí",
+      "status": "ended",
+      "end_date": "2026-04-13",
       "objective": "OUTCOME_TRAFFIC",
       "result_type": "Zobrazení cílové str.",
       "period_reach": null,
@@ -24703,6 +25158,8 @@
         {
           "id": "120240293477420685",
           "name": "TS + TH pro robotické sekání",
+          "status": "ended",
+          "end_date": "2026-04-13",
           "period_reach": null,
           "daily": [
             {
@@ -24909,6 +25366,8 @@
     {
       "id": "120240514772510685",
       "name": "VL | AGRO | Pokojovky | Banner | Povědomí",
+      "status": "ended",
+      "end_date": "2026-04-21",
       "objective": "OUTCOME_AWARENESS",
       "result_type": "Dosah (za 1 000 úč.)",
       "period_reach": 120928,
@@ -24916,6 +25375,8 @@
         {
           "id": "120240516851700685",
           "name": "AGRO | Pokojovky | IG | Max počet zobrazení | Povědomí",
+          "status": "ended",
+          "end_date": "2026-04-21",
           "period_reach": 57514,
           "daily": [
             {
@@ -25042,6 +25503,8 @@
         {
           "id": "120240514772490685",
           "name": "AGRO | Pokojovky | FB | Max počet zobrazení | Povědomí",
+          "status": "ended",
+          "end_date": "2026-04-21",
           "period_reach": 69227,
           "daily": [
             {
@@ -25308,6 +25771,8 @@
     {
       "id": "120240517277390685",
       "name": "VL | FLORIA | Příspěvek | Substrát pro rajčata a papriky | Povědomí",
+      "status": "ended",
+      "end_date": "2026-04-29",
       "objective": "OUTCOME_AWARENESS",
       "result_type": "Dosah (za 1 000 úč.)",
       "period_reach": 385950,
@@ -25315,6 +25780,8 @@
         {
           "id": "120240517747740685",
           "name": "Substrát pro rajčata a papriky | IG | Max počet zobrazení",
+          "status": "ended",
+          "end_date": "2026-04-29",
           "period_reach": 159621,
           "daily": [
             {
@@ -25490,6 +25957,8 @@
         {
           "id": "120240517277400685",
           "name": "Substrát pro rajčata a papriky | FB | Max počet zobrazení",
+          "status": "ended",
+          "end_date": "2026-04-29",
           "period_reach": 253369,
           "daily": [
             {
@@ -25861,6 +26330,8 @@
     {
       "id": "120240703068250685",
       "name": "VL | FLORIA | Příspěvek |  Substrát pro středomořské rostliny | Povědomí",
+      "status": "ended",
+      "end_date": "2026-05-03",
       "objective": "OUTCOME_AWARENESS",
       "result_type": "Dosah (za 1 000 úč.)",
       "period_reach": 394980,
@@ -25868,6 +26339,8 @@
         {
           "id": "120240703068270685",
           "name": "Substrát pro středomořské rostliny | FB | Max počet zobrazení",
+          "status": "ended",
+          "end_date": "2026-05-03",
           "period_reach": 255700,
           "daily": [
             {
@@ -26043,6 +26516,8 @@
         {
           "id": "120240703068260685",
           "name": "Substrát pro středomořské rostliny | IG | Max počet zobrazení",
+          "status": "ended",
+          "end_date": "2026-05-03",
           "period_reach": 156669,
           "daily": [
             {
@@ -26414,6 +26889,8 @@
     {
       "id": "120240704437660685",
       "name": "VL | NATURA | Příspěvek |  Substrát bylinková zahrádka | Povědomí",
+      "status": "ended",
+      "end_date": "2026-04-30",
       "objective": "OUTCOME_AWARENESS",
       "result_type": "Dosah (za 1 000 úč.)",
       "period_reach": 275483,
@@ -26421,6 +26898,8 @@
         {
           "id": "120240704437680685",
           "name": "Substrát bylinková zahrádka | IG | Max počet zobrazení",
+          "status": "ended",
+          "end_date": "2026-04-30",
           "period_reach": 95323,
           "daily": [
             {
@@ -26575,6 +27054,8 @@
         {
           "id": "120240704437650685",
           "name": "Substrát bylinková zahrádka | FB | Max počet zobrazení",
+          "status": "ended",
+          "end_date": "2026-04-30",
           "period_reach": 185810,
           "daily": [
             {
@@ -26880,6 +27361,8 @@
     {
       "id": "120240704635390685",
       "name": "VL | FLORIA | Vertikutační směs |  Substrát pro středomořské rostliny | Povědomí",
+      "status": "ended",
+      "end_date": "2026-05-01",
       "objective": "OUTCOME_AWARENESS",
       "result_type": "Dosah (za 1 000 úč.)",
       "period_reach": 361807,
@@ -26887,6 +27370,8 @@
         {
           "id": "120240704635420685",
           "name": "Vertikutační směs | FB | Max počet zobrazení",
+          "status": "ended",
+          "end_date": "2026-05-01",
           "period_reach": 229105,
           "daily": [
             {
@@ -27048,6 +27533,8 @@
         {
           "id": "120240704635380685",
           "name": "Vertikutační směs | IG | Max počet zobrazení",
+          "status": "ended",
+          "end_date": "2026-05-01",
           "period_reach": 148217,
           "daily": [
             {
@@ -27368,6 +27855,8 @@
     {
       "id": "120240915012560685",
       "name": "VL | AGRO | TH Start | Banner | Povědomí",
+      "status": "ended",
+      "end_date": "2026-04-19",
       "objective": "OUTCOME_AWARENESS",
       "result_type": "Dosah (za 1 000 úč.)",
       "period_reach": 55466,
@@ -27375,6 +27864,8 @@
         {
           "id": "120240915012530685",
           "name": "AGRO | TH Start | IG | Max počet zobrazení | Povědomí",
+          "status": "ended",
+          "end_date": "2026-04-19",
           "period_reach": 20564,
           "daily": [
             {
@@ -27431,6 +27922,8 @@
         {
           "id": "120240915012520685",
           "name": "AGRO | TH Start | FB | Max počet zobrazení | Povědomí",
+          "status": "ended",
+          "end_date": "2026-04-19",
           "period_reach": 35172,
           "daily": [
             {
@@ -27547,6 +28040,8 @@
     {
       "id": "120240915448890685",
       "name": "VL | AGRO | Příspěvek | Zahradnický kompost",
+      "status": "ended",
+      "end_date": "2026-04-23",
       "objective": "OUTCOME_AWARENESS",
       "result_type": "Dosah (za 1 000 úč.)",
       "period_reach": 137659,
@@ -27554,6 +28049,8 @@
         {
           "id": "120240915448940685",
           "name": "IG | Zahradnický kompost | Počet zobrazení",
+          "status": "ended",
+          "end_date": "2026-04-23",
           "period_reach": 63520,
           "daily": [
             {
@@ -27638,6 +28135,8 @@
         {
           "id": "120240915448920685",
           "name": "FB | Zahradnický kompost | Počet zobrazení",
+          "status": "ended",
+          "end_date": "2026-04-23",
           "period_reach": 79825,
           "daily": [
             {
@@ -27814,6 +28313,8 @@
     {
       "id": "120240915793580685",
       "name": "VL | NATURA | Příspěvek |  Substrát pro celou zahradu | Povědomí",
+      "status": "ended",
+      "end_date": "2026-05-11",
       "objective": "OUTCOME_AWARENESS",
       "result_type": "Dosah (za 1 000 úč.)",
       "period_reach": 459572,
@@ -27821,6 +28322,8 @@
         {
           "id": "120240915793600685",
           "name": "Substrát pro celou zahradu | IG | Max počet zobrazení",
+          "status": "ended",
+          "end_date": "2026-05-11",
           "period_reach": 169705,
           "daily": [
             {
@@ -28024,6 +28527,8 @@
         {
           "id": "120240915793590685",
           "name": "Substrát pro celou zahradu | FB | Max počet zobrazení",
+          "status": "ended",
+          "end_date": "2026-05-11",
           "period_reach": 289104,
           "daily": [
             {
@@ -28455,6 +28960,8 @@
     {
       "id": "120240915974330685",
       "name": "VL | NATURA | Příspěvek |  Substrát pro jahody | Povědomí",
+      "status": "ended",
+      "end_date": "2026-05-02",
       "objective": "OUTCOME_AWARENESS",
       "result_type": "Dosah (za 1 000 úč.)",
       "period_reach": 378343,
@@ -28462,6 +28969,8 @@
         {
           "id": "120240915974370685",
           "name": "Substrát pro jahody | FB | Max počet zobrazení",
+          "status": "ended",
+          "end_date": "2026-05-02",
           "period_reach": 252334,
           "daily": [
             {
@@ -28602,6 +29111,8 @@
         {
           "id": "120240915974360685",
           "name": "Substrát pro jahody | IG | Max počet zobrazení",
+          "status": "ended",
+          "end_date": "2026-05-02",
           "period_reach": 136761,
           "daily": [
             {
@@ -28898,6 +29409,8 @@
     {
       "id": "120240090774400685",
       "name": "VL | AGRO | Příspěvek | Pokojovky",
+      "status": "ended",
+      "end_date": "2026-05-04",
       "objective": "OUTCOME_AWARENESS",
       "result_type": "Dosah (za 1 000 úč.)",
       "period_reach": 108248,
@@ -28905,6 +29418,8 @@
         {
           "id": "120240090774380685",
           "name": "IG | Pokojovky | Počet zobrazení",
+          "status": "ended",
+          "end_date": "2026-05-04",
           "period_reach": 49232,
           "daily": [
             {
@@ -29031,6 +29546,8 @@
         {
           "id": "120240090774360685",
           "name": "FB | Pokojovky | Počet zobrazení",
+          "status": "ended",
+          "end_date": "2026-05-04",
           "period_reach": 59986,
           "daily": [
             {
@@ -29297,14 +29814,18 @@
     {
       "id": "120243236942900685",
       "name": "VL | FLORIA | Příspěveky | Povědomí",
+      "status": "active",
+      "end_date": "2026-10-31",
       "objective": "OUTCOME_AWARENESS",
       "result_type": "Dosah (za 1 000 úč.)",
-      "period_reach": 1597144,
+      "period_reach": 1597556,
       "adsets": [
         {
           "id": "120249562098430685",
           "name": "Stop mechu | IG | Max počet zobrazení",
-          "period_reach": 34364,
+          "status": "active",
+          "end_date": "2026-10-16",
+          "period_reach": 36272,
           "daily": [
             {
               "date": "2026-09-27",
@@ -29368,13 +29889,22 @@
               "impressions": 11191,
               "spend_czk": 176.85,
               "results": 6856
+            },
+            {
+              "date": "2026-10-06",
+              "clicks": 0,
+              "impressions": 10114,
+              "spend_czk": 162.25,
+              "results": 6481
             }
           ]
         },
         {
           "id": "120249562085280685",
           "name": "Stop mechu | FB | Max počet zobrazení",
-          "period_reach": 59378,
+          "status": "active",
+          "end_date": "2026-10-16",
+          "period_reach": 63191,
           "daily": [
             {
               "date": "2026-09-27",
@@ -29438,13 +29968,22 @@
               "impressions": 13043,
               "spend_czk": 172.08,
               "results": 10580
+            },
+            {
+              "date": "2026-10-06",
+              "clicks": 14,
+              "impressions": 12392,
+              "spend_czk": 161.75,
+              "results": 9907
             }
           ]
         },
         {
           "id": "120249530791680685",
           "name": "Trávníková náplast 3 v 1 | FB | Max počet zobrazení",
-          "period_reach": 76034,
+          "status": "ended",
+          "end_date": "2026-10-06",
+          "period_reach": 77784,
           "daily": [
             {
               "date": "2026-09-25",
@@ -29519,16 +30058,25 @@
             {
               "date": "2026-10-05",
               "clicks": 49,
-              "impressions": 18523,
+              "impressions": 18527,
               "spend_czk": 262.81,
               "results": 12222
+            },
+            {
+              "date": "2026-10-06",
+              "clicks": 5,
+              "impressions": 4825,
+              "spend_czk": 71.29,
+              "results": 4293
             }
           ]
         },
         {
           "id": "120249530767480685",
           "name": "Trávníková náplast 3 v 1 | IG | Max počet zobrazení",
-          "period_reach": 59454,
+          "status": "ended",
+          "end_date": "2026-10-06",
+          "period_reach": 60173,
           "daily": [
             {
               "date": "2026-09-25",
@@ -29606,12 +30154,21 @@
               "impressions": 17074,
               "spend_czk": 273.66,
               "results": 12052
+            },
+            {
+              "date": "2026-10-06",
+              "clicks": 1,
+              "impressions": 5558,
+              "spend_czk": 89.88,
+              "results": 4389
             }
           ]
         },
         {
           "id": "120249240077710685",
           "name": "Vertikutační směs | IG | Max počet zobrazení",
+          "status": "ended",
+          "end_date": "2026-09-28",
           "period_reach": 65486,
           "daily": [
             {
@@ -29766,6 +30323,8 @@
         {
           "id": "120249239915590685",
           "name": "Vertikutační směs | FB | Max počet zobrazení",
+          "status": "ended",
+          "end_date": "2026-09-28",
           "period_reach": 99538,
           "daily": [
             {
@@ -29920,7 +30479,9 @@
         {
           "id": "120249239789810685",
           "name": "Podzimní trávníkové hnojivo | IG | Max počet zobrazení",
-          "period_reach": 88921,
+          "status": "active",
+          "end_date": "2026-10-31",
+          "period_reach": 90719,
           "daily": [
             {
               "date": "2026-09-08",
@@ -30117,13 +30678,22 @@
               "impressions": 14528,
               "spend_czk": 228.47,
               "results": 10140
+            },
+            {
+              "date": "2026-10-06",
+              "clicks": 1,
+              "impressions": 13054,
+              "spend_czk": 208.12,
+              "results": 9293
             }
           ]
         },
         {
           "id": "120249239673380685",
           "name": "Podzimní trávníkové hnojivo | FB | Max počet zobrazení",
-          "period_reach": 150796,
+          "status": "active",
+          "end_date": "2026-10-31",
+          "period_reach": 155683,
           "daily": [
             {
               "date": "2026-09-08",
@@ -30320,12 +30890,21 @@
               "impressions": 15468,
               "spend_czk": 219.89,
               "results": 12914
+            },
+            {
+              "date": "2026-10-06",
+              "clicks": 14,
+              "impressions": 15125,
+              "spend_czk": 209.75,
+              "results": 11895
             }
           ]
         },
         {
           "id": "120248586173780685",
           "name": "WEB | IG+FB | CAROUSEL | produktová řada interiér",
+          "status": "ended",
+          "end_date": "2026-08-16",
           "period_reach": 210587,
           "daily": [
             {
@@ -30410,6 +30989,8 @@
         {
           "id": "120248321530380685",
           "name": "WEB | IG+FB | CAROUSEL | Produktová řada okrasná zahrada",
+          "status": "ended",
+          "end_date": "2026-08-02",
           "period_reach": 223289,
           "daily": [
             {
@@ -30473,6 +31054,8 @@
         {
           "id": "120247601524140685",
           "name": "WEB | IG+FB | CAROUSEL | produktová řada květinová",
+          "status": "ended",
+          "end_date": "2026-07-12",
           "period_reach": 189064,
           "daily": [
             {
@@ -30550,6 +31133,8 @@
         {
           "id": "120246368983760685",
           "name": "WEB | IG+FB | CAROUSEL | Produktová řada kapalná hnojiva",
+          "status": "ended",
+          "end_date": "2026-07-05",
           "period_reach": 185331,
           "daily": [
             {
@@ -30655,6 +31240,8 @@
         {
           "id": "120246361914560685",
           "name": "WEB | IG+FB | CAROUSEL | Produktová řada kyselomilné",
+          "status": "ended",
+          "end_date": "2026-06-28",
           "period_reach": 176635,
           "daily": [
             {
@@ -30739,6 +31326,8 @@
         {
           "id": "120246194939500685",
           "name": "WEB | IG+FB | CAROUSEL | produktová řada substráty",
+          "status": "ended",
+          "end_date": "2026-06-22",
           "period_reach": 179932,
           "daily": [
             {
@@ -30795,6 +31384,8 @@
         {
           "id": "120245758944360685",
           "name": "Okyselovač a KH kyselomilné | IG | Max počet zobrazení",
+          "status": "ended",
+          "end_date": "2026-07-08",
           "period_reach": 202616,
           "daily": [
             {
@@ -30991,6 +31582,8 @@
         {
           "id": "120245758890910685",
           "name": "Okyselovač a KH kyselomilné | FB | Max počet zobrazení – kopie",
+          "status": "ended",
+          "end_date": "2026-07-08",
           "period_reach": 322020,
           "daily": [
             {
@@ -31194,6 +31787,8 @@
         {
           "id": "120245356023070685",
           "name": "WEB | IG+FB | CAROUSEL | Produktová řada celá zahrada",
+          "status": "ended",
+          "end_date": "2026-06-16",
           "period_reach": 178911,
           "daily": [
             {
@@ -31271,6 +31866,8 @@
         {
           "id": "120245355887910685",
           "name": "Dlouhodobě působící TH | FB | Max počet zobrazení",
+          "status": "ended",
+          "end_date": "2026-07-01",
           "period_reach": 274856,
           "daily": [
             {
@@ -31453,6 +32050,8 @@
         {
           "id": "120245355796160685",
           "name": "Dlouhodobě působící TH | IG | Max počet zobrazení",
+          "status": "ended",
+          "end_date": "2026-07-01",
           "period_reach": 202668,
           "daily": [
             {
@@ -31635,6 +32234,8 @@
         {
           "id": "120244029869970685",
           "name": "WEB | IG+FB | CAROUSEL | Travin - TV spot",
+          "status": "ended",
+          "end_date": "2026-06-20",
           "period_reach": 379569,
           "daily": [
             {
@@ -31845,6 +32446,8 @@
         {
           "id": "120243715431030685",
           "name": "WEB | IG+FB | CAROUSEL | Travin",
+          "status": "ended",
+          "end_date": "2026-06-11",
           "period_reach": 577550,
           "daily": [
             {
@@ -32020,6 +32623,8 @@
         {
           "id": "120243464440210685",
           "name": "Travin - TV spot | IG+FB | Max počet zobrazení",
+          "status": "ended",
+          "end_date": "2026-07-13",
           "period_reach": 205584,
           "daily": [
             {
@@ -32433,6 +33038,8 @@
         {
           "id": "120243463738430685",
           "name": "Piniová dekorační kůra | FB | Max počet zobrazení",
+          "status": "ended",
+          "end_date": "2026-06-14",
           "period_reach": 211740,
           "daily": [
             {
@@ -32650,6 +33257,8 @@
         {
           "id": "120243463343530685",
           "name": "Piniová dekorační kůra | IG | Max počet zobrazení",
+          "status": "ended",
+          "end_date": "2026-06-14",
           "period_reach": 182048,
           "daily": [
             {
@@ -32867,6 +33476,8 @@
         {
           "id": "120243236942930685",
           "name": "TS  Sucho | FB | Max počet zobrazení",
+          "status": "ended",
+          "end_date": "2026-05-31",
           "period_reach": 132104,
           "daily": [
             {
@@ -32986,6 +33597,8 @@
         {
           "id": "120243236942910685",
           "name": "TS  Sucho | IG | Max počet zobrazení",
+          "status": "ended",
+          "end_date": "2026-05-31",
           "period_reach": 139640,
           "daily": [
             {
@@ -33992,23 +34605,67 @@
         {
           "date": "2026-10-05",
           "clicks": 88,
-          "impressions": 89824,
+          "impressions": 89831,
           "spend_czk": 1333.76,
           "results": 56502,
           "cost_per_result": 23.61
+        },
+        {
+          "date": "2026-10-06",
+          "clicks": 35,
+          "impressions": 61068,
+          "spend_czk": 903.04,
+          "results": 40021,
+          "cost_per_result": 22.56
         }
       ]
     },
     {
       "id": "120243713150410685",
       "name": "VL | AGRO | Příspěvky | Projevený zájem | 5/26",
+      "status": "active",
+      "end_date": null,
       "objective": "OUTCOME_ENGAGEMENT",
       "result_type": "Zájem o příspěvek",
       "period_reach": null,
       "adsets": [
         {
+          "id": "120249714906670685",
+          "name": "Příspěvek | engagement | FB | vlastní cílení | Mech-stop",
+          "status": "active",
+          "end_date": "2026-10-25",
+          "period_reach": null,
+          "daily": []
+        },
+        {
+          "id": "120249714890070685",
+          "name": "Příspěvek | engagement | IG | vlastní cílení | Mech-stop",
+          "status": "active",
+          "end_date": "2026-10-25",
+          "period_reach": null,
+          "daily": []
+        },
+        {
+          "id": "120249714878220685",
+          "name": "Příspěvek | engagement | FB | vlastní cílení | Substrát okrasné dřeviny",
+          "status": "active",
+          "end_date": "2026-10-21",
+          "period_reach": null,
+          "daily": []
+        },
+        {
+          "id": "120249714855070685",
+          "name": "Příspěvek | engagement | IG | vlastní cílení | Substrát okrasné dřeviny",
+          "status": "active",
+          "end_date": "2026-10-21",
+          "period_reach": null,
+          "daily": []
+        },
+        {
           "id": "120249561994080685",
           "name": "Reklama | IG+FB | Trávníkové podzimní hnojivo",
+          "status": "active",
+          "end_date": "2026-10-11",
           "period_reach": null,
           "daily": [
             {
@@ -34070,51 +34727,104 @@
             {
               "date": "2026-10-05",
               "clicks": 29,
-              "impressions": 197619,
+              "impressions": 197620,
               "spend_czk": 650.14,
               "results": 29
+            },
+            {
+              "date": "2026-10-06",
+              "clicks": 32,
+              "impressions": 161740,
+              "spend_czk": 502.6,
+              "results": 32
             }
           ]
         },
         {
           "id": "120249530856080685",
           "name": "Příspěvek | engagement | IG | vlastní cílení | Trávníkové podzimní hnojivo",
+          "status": "active",
+          "end_date": "2026-10-11",
           "period_reach": null,
-          "daily": []
+          "daily": [
+            {
+              "date": "2026-10-06",
+              "clicks": 2,
+              "impressions": 845,
+              "spend_czk": 268.34,
+              "results": 40
+            }
+          ]
         },
         {
           "id": "120249530849260685",
           "name": "Příspěvek | engagement | FB | vlastní cílení | Trávníkové podzimní hnojivo",
+          "status": "active",
+          "end_date": "2026-10-11",
           "period_reach": null,
-          "daily": []
+          "daily": [
+            {
+              "date": "2026-10-06",
+              "clicks": 39,
+              "impressions": 4002,
+              "spend_czk": 297.88,
+              "results": 39
+            }
+          ]
         },
         {
           "id": "120249530844720685",
           "name": "Příspěvek | engagement | IG | vlastní cílení | Substrát na vřesy",
+          "status": "active",
+          "end_date": "2026-10-13",
           "period_reach": null,
-          "daily": []
+          "daily": [
+            {
+              "date": "2026-10-06",
+              "clicks": 3,
+              "impressions": 2352,
+              "spend_czk": 468.32,
+              "results": 51
+            }
+          ]
         },
         {
           "id": "120249530832060685",
           "name": "Příspěvek | engagement | FB | vlastní cílení | Substrát na vřesy",
+          "status": "active",
+          "end_date": "2026-10-08",
           "period_reach": null,
-          "daily": []
+          "daily": [
+            {
+              "date": "2026-10-06",
+              "clicks": 239,
+              "impressions": 28812,
+              "spend_czk": 1498.84,
+              "results": 196
+            }
+          ]
         },
         {
           "id": "120249365242190685",
           "name": "Příspěvek | engagement | FB | vlastní cílení | Trávníkový substrát",
+          "status": "ended",
+          "end_date": "2026-10-04",
           "period_reach": null,
           "daily": []
         },
         {
           "id": "120249365179360685",
           "name": "Příspěvek | engagement | IG | vlastní cílení | Trávníkový substrát",
+          "status": "ended",
+          "end_date": "2026-10-04",
           "period_reach": null,
           "daily": []
         },
         {
           "id": "120247532724300685",
           "name": "Příspěvek | engagement | FB | vlastní cílení | OM na okurky",
+          "status": "ended",
+          "end_date": "2026-07-18",
           "period_reach": null,
           "daily": [
             {
@@ -34248,6 +34958,8 @@
         {
           "id": "120247532320590685",
           "name": "Příspěvek | engagement | IG | vlastní cílení | OM na okurky",
+          "status": "ended",
+          "end_date": "2026-07-18",
           "period_reach": null,
           "daily": [
             {
@@ -34381,6 +35093,8 @@
         {
           "id": "120246995321610685",
           "name": "Příspěvek | engagement | IG | vlastní cílení | OM na muškáty",
+          "status": "ended",
+          "end_date": "2026-07-12",
           "period_reach": null,
           "daily": [
             {
@@ -34514,6 +35228,8 @@
         {
           "id": "120246994923540685",
           "name": "Příspěvek | engagement | FB | vlastní cílení | OM na muškáty",
+          "status": "ended",
+          "end_date": "2026-07-12",
           "period_reach": null,
           "daily": [
             {
@@ -34647,6 +35363,8 @@
         {
           "id": "120246200916780685",
           "name": "Příspěvek | engagement | FB | vlastní cílení | OM na rajčata",
+          "status": "ended",
+          "end_date": "2026-07-04",
           "period_reach": null,
           "daily": [
             {
@@ -34787,6 +35505,8 @@
         {
           "id": "120246200857720685",
           "name": "Příspěvek | engagement | IG | vlastní cílení | OM na rajčata",
+          "status": "ended",
+          "end_date": "2026-07-04",
           "period_reach": null,
           "daily": [
             {
@@ -34927,6 +35647,8 @@
         {
           "id": "120246194580960685",
           "name": "Příspěvek | engagement | IG | vlastní cílení | OM na azalky",
+          "status": "ended",
+          "end_date": "2026-06-24",
           "period_reach": null,
           "daily": [
             {
@@ -34997,6 +35719,8 @@
         {
           "id": "120246194411750685",
           "name": "Příspěvek | engagement | FB | vlastní cílení | OM na azalky",
+          "status": "ended",
+          "end_date": "2026-06-24",
           "period_reach": null,
           "daily": [
             {
@@ -35067,6 +35791,8 @@
         {
           "id": "120245930149560685",
           "name": "Příspěvek | engagement | FB | vlastní cílení | Kapalný vápník",
+          "status": "ended",
+          "end_date": "2026-06-27",
           "period_reach": null,
           "daily": [
             {
@@ -35179,6 +35905,8 @@
         {
           "id": "120245873172220685",
           "name": "Příspěvek | engagement | IG | vlastní cílení | Kapalný vápník",
+          "status": "ended",
+          "end_date": "2026-06-27",
           "period_reach": null,
           "daily": [
             {
@@ -35291,12 +36019,16 @@
         {
           "id": "120245357425690685",
           "name": "Příspěvek | engagement | IG | vlastní cílení | Kapalný vápník",
+          "status": "ended",
+          "end_date": "2026-06-27",
           "period_reach": null,
           "daily": []
         },
         {
           "id": "120245356387410685",
           "name": "Příspěvek | engagement | IG | vlastní cílení | OM na borůvky",
+          "status": "ended",
+          "end_date": "2026-06-18",
           "period_reach": null,
           "daily": [
             {
@@ -35381,6 +36113,8 @@
         {
           "id": "120245356307020685",
           "name": "Příspěvek | engagement | FB | vlastní cílení | OM na borůvky",
+          "status": "ended",
+          "end_date": "2026-06-18",
           "period_reach": null,
           "daily": [
             {
@@ -35472,6 +36206,8 @@
         {
           "id": "120244788902130685",
           "name": "Příspěvek | engagement | FB | vlastní cílení | OM na okrasné dřeviny",
+          "status": "ended",
+          "end_date": "2026-06-12",
           "period_reach": null,
           "daily": [
             {
@@ -35570,6 +36306,8 @@
         {
           "id": "120244788831280685",
           "name": "Příspěvek | engagement | IG | vlastní cílení | OM na okrasné dřeviny",
+          "status": "ended",
+          "end_date": "2026-06-12",
           "period_reach": null,
           "daily": [
             {
@@ -35668,6 +36406,8 @@
         {
           "id": "120244737953320685",
           "name": "Reklama | IG+FB | Plážový písek",
+          "status": "ended",
+          "end_date": "2026-06-19",
           "period_reach": null,
           "daily": [
             {
@@ -35822,6 +36562,8 @@
         {
           "id": "120244250080860685",
           "name": "Příspěvek | engagement | IG | vlastní cílení | OM na jahody",
+          "status": "ended",
+          "end_date": "2026-06-06",
           "period_reach": null,
           "daily": [
             {
@@ -35920,6 +36662,8 @@
         {
           "id": "120244249986740685",
           "name": "Příspěvek | engagement | FB | vlastní cílení | OM na jahody",
+          "status": "ended",
+          "end_date": "2026-06-06",
           "period_reach": null,
           "daily": [
             {
@@ -36018,6 +36762,8 @@
         {
           "id": "120244248977010685",
           "name": "Příspěvek | engagement | IG | vlastní cílení | OM na rajčata",
+          "status": "ended",
+          "end_date": "2026-06-06",
           "period_reach": null,
           "daily": [
             {
@@ -36116,6 +36862,8 @@
         {
           "id": "120244248943990685",
           "name": "Příspěvek | engagement | FB | vlastní cílení | OM na rajčata",
+          "status": "ended",
+          "end_date": "2026-06-06",
           "period_reach": null,
           "daily": [
             {
@@ -36214,6 +36962,8 @@
         {
           "id": "120244248863190685",
           "name": "Příspěvek | engagement | IG | vlastní cílení | Plážový písek",
+          "status": "ended",
+          "end_date": "2026-06-07",
           "period_reach": null,
           "daily": [
             {
@@ -36319,6 +37069,8 @@
         {
           "id": "120244248632900685",
           "name": "Příspěvek | engagement | FB | vlastní cílení | Plážový písek",
+          "status": "ended",
+          "end_date": "2026-06-07",
           "period_reach": null,
           "daily": [
             {
@@ -36424,6 +37176,8 @@
         {
           "id": "120243714191350685",
           "name": "Příspěvek | engagement | FB | vlastní cílení | OM na  cibuli a česnek",
+          "status": "ended",
+          "end_date": "2026-05-31",
           "period_reach": null,
           "daily": [
             {
@@ -36515,6 +37269,8 @@
         {
           "id": "120243714143980685",
           "name": "Příspěvek | engagement | IG | vlastní cílení | OM na  cibuli a česnek",
+          "status": "ended",
+          "end_date": "2026-05-31",
           "period_reach": null,
           "daily": [
             {
@@ -36613,6 +37369,8 @@
         {
           "id": "120243713862410685",
           "name": "Reklama | IG+FB | Trávníkový písek",
+          "status": "ended",
+          "end_date": "2026-05-31",
           "period_reach": null,
           "daily": [
             {
@@ -36669,6 +37427,8 @@
         {
           "id": "120243713506150685",
           "name": "Příspěvek | engagement | IG | vlastní cílení | Trávníkový písek",
+          "status": "ended",
+          "end_date": "2026-05-31",
           "period_reach": null,
           "daily": [
             {
@@ -36767,6 +37527,8 @@
         {
           "id": "120243713318670685",
           "name": "Příspěvek | engagement | FB | vlastní cílení | Trávníkový písek",
+          "status": "ended",
+          "end_date": "2026-05-31",
           "period_reach": null,
           "daily": [
             {
@@ -36865,162 +37627,216 @@
         {
           "id": "120243713150830685",
           "name": "Příspěvek | engagement | IG | vlastní cílení | Substrát pro borůvky",
+          "status": "ended",
+          "end_date": "2026-06-10",
           "period_reach": null,
           "daily": []
         },
         {
           "id": "120243713150820685",
           "name": "WEB | IG+FB | CAROUSEL | Substrát bylinková zahrádka",
+          "status": "ended",
+          "end_date": "2026-06-07",
           "period_reach": null,
           "daily": []
         },
         {
           "id": "120243713150810685",
           "name": "WEB | IG+FB | CAROUSEL | Substrát pro celou zahradu",
+          "status": "ended",
+          "end_date": "2026-06-09",
           "period_reach": null,
           "daily": []
         },
         {
           "id": "120243713150800685",
           "name": "Příspěvek | engagement | FB | vlastní cílení | PRESTO slimáci",
+          "status": "ended",
+          "end_date": "2026-06-09",
           "period_reach": null,
           "daily": []
         },
         {
           "id": "120243713150660685",
           "name": "Příspěvek | engagement | FB | vlastní cílení | čistič půdy",
+          "status": "ended",
+          "end_date": "2026-06-16",
           "period_reach": null,
           "daily": []
         },
         {
           "id": "120243713150650685",
           "name": "WEB | IG+FB | CAROUSEL | Přezimující škůdci",
+          "status": "ended",
+          "end_date": "2026-06-01",
           "period_reach": null,
           "daily": []
         },
         {
           "id": "120243713150640685",
           "name": "Příspěvek | engagement | IG | vlastní cílení | PRESTO slimáci",
+          "status": "ended",
+          "end_date": "2026-06-09",
           "period_reach": null,
           "daily": []
         },
         {
           "id": "120243713150630685",
           "name": "Příspěvek | engagement | FB | vlastní cílení | PRESTO slimáci TV spot",
+          "status": "ended",
+          "end_date": "2026-06-15",
           "period_reach": null,
           "daily": []
         },
         {
           "id": "120243713150570685",
           "name": "Příspěvek | engagement | IG | Vlastní cílení | výsev",
+          "status": "ended",
+          "end_date": "2026-06-20",
           "period_reach": null,
           "daily": []
         },
         {
           "id": "120243713150560685",
           "name": "Příspěvek | engagement | IG | vlastní cílení | přezimující škůdci",
+          "status": "ended",
+          "end_date": "2026-06-13",
           "period_reach": null,
           "daily": []
         },
         {
           "id": "120243713150550685",
           "name": "Příspěvek | engagement | IG | vlastní cílení | společný banner vyvýšené záhony",
+          "status": "ended",
+          "end_date": "2026-06-21",
           "period_reach": null,
           "daily": []
         },
         {
           "id": "120243713150540685",
           "name": "Příspěvek | engagement | FB | vlastní cílení | Kompost pro vyvýšené záhony",
+          "status": "ended",
+          "end_date": "2026-06-08",
           "period_reach": null,
           "daily": []
         },
         {
           "id": "120243713150530685",
           "name": "Příspěvek | engagement | FB | vlastní cílení | Substrát pro borůvky",
+          "status": "ended",
+          "end_date": "2026-06-10",
           "period_reach": null,
           "daily": []
         },
         {
           "id": "120243713150520685",
           "name": "Příspěvek | engagement | FB | vlastní cílení | Substrát pro rajčata, okurky a papriky",
+          "status": "ended",
+          "end_date": "2026-06-10",
           "period_reach": null,
           "daily": []
         },
         {
           "id": "120243713150510685",
           "name": "Příspěvek | engagement | IG | vlastní cílení | PRESTO slimáci TV spot",
+          "status": "ended",
+          "end_date": "2026-06-15",
           "period_reach": null,
           "daily": []
         },
         {
           "id": "120243713150500685",
           "name": "Příspěvek | engagement | IG | vlastní cílení | Substrát pro rajčata, okurky a papriky",
+          "status": "ended",
+          "end_date": "2026-06-10",
           "period_reach": null,
           "daily": []
         },
         {
           "id": "120243713150450685",
           "name": "Příspěvek | engagement | IG | vlastní cílení | Kompost pro vyvýšené záhony",
+          "status": "ended",
+          "end_date": "2026-06-08",
           "period_reach": null,
           "daily": []
         },
         {
           "id": "120243713150400685",
           "name": "Příspěvek | engagement | IG | vlastní cílení | čistič půdy",
+          "status": "ended",
+          "end_date": "2026-06-16",
           "period_reach": null,
           "daily": []
         },
         {
           "id": "120243713150390685",
           "name": "Max počet to se mi líbí stránky | FB | Výsev",
+          "status": "ended",
+          "end_date": "2026-06-20",
           "period_reach": null,
           "daily": []
         },
         {
           "id": "120243713150380685",
           "name": "Max počet to se mi líbí stránky | FB | Smutnice",
+          "status": "ended",
+          "end_date": "2026-05-31",
           "period_reach": null,
           "daily": []
         },
         {
           "id": "120243713150370685",
           "name": "Příspěvek | engagement | FB | vlastní cílení | přezimující škůdci",
+          "status": "ended",
+          "end_date": "2026-06-12",
           "period_reach": null,
           "daily": []
         },
         {
           "id": "120243713150360685",
           "name": "TEST",
+          "status": "paused",
+          "end_date": null,
           "period_reach": null,
           "daily": []
         },
         {
           "id": "120243713150350685",
           "name": "Nová sada reklam pro účel Projevený zájem",
+          "status": "paused",
+          "end_date": null,
           "period_reach": null,
           "daily": []
         },
         {
           "id": "120243713150340685",
           "name": "WEB | FB | CAROUSEL | Smutnice",
+          "status": "ended",
+          "end_date": "2026-06-04",
           "period_reach": null,
           "daily": []
         },
         {
           "id": "120243713150330685",
           "name": "Příspěvek | engagement | FB | vlastní cílení | společný banner vyvýšené záhony",
+          "status": "ended",
+          "end_date": "2026-06-21",
           "period_reach": null,
           "daily": []
         },
         {
           "id": "120243713150320685",
           "name": "WEB | IG | CAROUSEL | Smutnice",
+          "status": "ended",
+          "end_date": "2026-06-05",
           "period_reach": null,
           "daily": []
         },
         {
           "id": "120243713150300685",
           "name": "Příspěvek | engagement | IG | vlastní cílení | Smutnice",
+          "status": "ended",
+          "end_date": "2026-06-01",
           "period_reach": null,
           "daily": []
         }
@@ -37581,16 +38397,26 @@
         {
           "date": "2026-10-05",
           "clicks": 29,
-          "impressions": 197619,
+          "impressions": 197620,
           "spend_czk": 650.14,
           "results": 29,
           "cost_per_result": 22.42
+        },
+        {
+          "date": "2026-10-06",
+          "clicks": 315,
+          "impressions": 197751,
+          "spend_czk": 3035.98,
+          "results": 358,
+          "cost_per_result": 8.48
         }
       ]
     },
     {
       "id": "120244783282640685",
       "name": "VL | AGRO | Příspěvky | Projevený zájem | 5/26 – kopie",
+      "status": "active",
+      "end_date": null,
       "objective": "",
       "result_type": "Zájem o příspěvek",
       "period_reach": null,
@@ -37609,6 +38435,8 @@
     {
       "id": "120244783282690685",
       "name": "VL | VITALITY KOMPLEX | Příspěvky | Projevený zájem | 5/26",
+      "status": "ended",
+      "end_date": "2026-07-07",
       "objective": "OUTCOME_ENGAGEMENT",
       "result_type": "Zájem o příspěvek",
       "period_reach": null,
@@ -37616,6 +38444,8 @@
         {
           "id": "120246996930080685",
           "name": "WEB | IG+FB | Banner | Rajče a paprika",
+          "status": "ended",
+          "end_date": "2026-07-07",
           "period_reach": null,
           "daily": [
             {
@@ -37714,6 +38544,8 @@
         {
           "id": "120246996659980685",
           "name": "Příspěvek | engagement | IG | Vlastní cílení | Rajče a paprika",
+          "status": "ended",
+          "end_date": "2026-07-07",
           "period_reach": null,
           "daily": [
             {
@@ -37812,6 +38644,8 @@
         {
           "id": "120246995728370685",
           "name": "Příspěvek | engagement | FB | vlastní cílení | Rajče a paprika",
+          "status": "ended",
+          "end_date": "2026-07-07",
           "period_reach": null,
           "daily": [
             {
@@ -37910,6 +38744,8 @@
         {
           "id": "120246066684010685",
           "name": "WEB | IG+FB | Banner | Muškát a surfinie",
+          "status": "ended",
+          "end_date": "2026-06-24",
           "period_reach": null,
           "daily": [
             {
@@ -37987,6 +38823,8 @@
         {
           "id": "120245934876050685",
           "name": "Příspěvek | engagement | FB | vlastní cílení | Muškát a surfinie",
+          "status": "ended",
+          "end_date": "2026-06-21",
           "period_reach": null,
           "daily": [
             {
@@ -38057,6 +38895,8 @@
         {
           "id": "120245932800170685",
           "name": "Příspěvek | engagement | IG | Vlastní cílení | Muškát a surfinie",
+          "status": "ended",
+          "end_date": "2026-06-21",
           "period_reach": null,
           "daily": [
             {
@@ -38127,6 +38967,8 @@
         {
           "id": "120245354825820685",
           "name": "WEB | IG+FB | Banner | Borůvka",
+          "status": "ended",
+          "end_date": "2026-06-17",
           "period_reach": null,
           "daily": [
             {
@@ -38211,6 +39053,8 @@
         {
           "id": "120245354649310685",
           "name": "Příspěvek | engagement | IG | Vlastní cílení | Borůvka",
+          "status": "ended",
+          "end_date": "2026-06-15",
           "period_reach": null,
           "daily": [
             {
@@ -38281,6 +39125,8 @@
         {
           "id": "120245354628370685",
           "name": "Příspěvek | engagement | FB | vlastní cílení | Borůvka",
+          "status": "ended",
+          "end_date": "2026-06-15",
           "period_reach": null,
           "daily": [
             {
@@ -38351,6 +39197,8 @@
         {
           "id": "120244788521680685",
           "name": "WEB | IG+FB | Banner | Univerzál",
+          "status": "ended",
+          "end_date": "2026-06-10",
           "period_reach": null,
           "daily": [
             {
@@ -38435,6 +39283,8 @@
         {
           "id": "120244788495070685",
           "name": "Příspěvek | engagement | FB | vlastní cílení | Univerzál",
+          "status": "ended",
+          "end_date": "2026-06-07",
           "period_reach": null,
           "daily": [
             {
@@ -38498,6 +39348,8 @@
         {
           "id": "120244788350060685",
           "name": "Příspěvek | engagement | IG | Vlastní cílení | Univerzál",
+          "status": "ended",
+          "end_date": "2026-06-10",
           "period_reach": null,
           "daily": [
             {
@@ -38582,18 +39434,24 @@
         {
           "id": "120244783283920685",
           "name": "Příspěvek | engagement | IG | Vlastní cílení | výsev",
+          "status": "ended",
+          "end_date": "2026-07-01",
           "period_reach": null,
           "daily": []
         },
         {
           "id": "120244783283690685",
           "name": "Příspěvek | engagement | FB | vlastní cílení | PRESTO slimáci",
+          "status": "ended",
+          "end_date": "2026-06-21",
           "period_reach": null,
           "daily": []
         },
         {
           "id": "120244783283620685",
           "name": "WEB | IG+FB | CAROUSEL | Přezimující škůdci",
+          "status": "ended",
+          "end_date": "2026-06-13",
           "period_reach": null,
           "daily": [
             {
