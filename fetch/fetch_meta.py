@@ -1,8 +1,10 @@
 import json
 import os
+import time
 from datetime import date, timedelta
 from facebook_business.api import FacebookAdsApi
 from facebook_business.adobjects.adaccount import AdAccount
+from facebook_business.exceptions import FacebookRequestError
 
 AD_ACCOUNT_ID = os.environ["META_AD_ACCOUNT_ID"]
 FacebookAdsApi.init(
@@ -58,6 +60,28 @@ def get_result(actions_list, reach, objective):
         return label, reach
 
     return label, action_map.get(action_key, 0)
+
+
+def month_ranges(date_from, date_to):
+    """[(od, do)] po kalendářních měsících v rozsahu date_from–date_to (ISO stringy)."""
+    d, end, out = date.fromisoformat(date_from), date.fromisoformat(date_to), []
+    while d <= end:
+        nxt = (d.replace(day=28) + timedelta(days=4)).replace(day=1)
+        out.append((d.isoformat(), min(nxt - timedelta(days=1), end).isoformat()))
+        d = nxt
+    return out
+
+
+def insights_with_retry(account, params, attempts=4):
+    """Stáhne všechny řádky insights; při dočasné chybě Meta API to zkusí znovu."""
+    for i in range(attempts):
+        try:
+            return list(account.get_insights(params=params))
+        except FacebookRequestError as e:
+            if i == attempts - 1:
+                raise
+            print(f"  Meta API chyba ({e.api_error_message()}), zkouším znovu…")
+            time.sleep(15 * (i + 1))
 
 
 # effective_status z Meta → active / paused / ended
@@ -171,17 +195,20 @@ def fetch():
             adset_period_reach[row.get("adset_id")] = int(row.get("reach", 0))
 
     # 4b. Denní insights na úrovni sestav (= jednotlivé produkty / kampaně v rámci značky)
-    adset_params = {
-        "time_range":     {"since": date_from, "until": date_to},
-        "time_increment": 1,
-        "level":          "adset",
-        "fields": [
-            "campaign_id", "adset_id", "adset_name",
-            "impressions", "clicks", "spend", "reach", "actions",
-        ],
-    }
+    #     Po měsících + opakování – celoroční dotaz Meta občas odmítne ("Service temporarily unavailable")
+    adset_rows = []
+    for m_from, m_to in month_ranges(date_from, date_to):
+        adset_rows += insights_with_retry(account, {
+            "time_range":     {"since": m_from, "until": m_to},
+            "time_increment": 1,
+            "level":          "adset",
+            "fields": [
+                "campaign_id", "adset_id", "adset_name",
+                "impressions", "clicks", "spend", "reach", "actions",
+            ],
+        })
     adset_daily = {}  # adset_id → [daily]
-    for row in account.get_insights(params=adset_params):
+    for row in adset_rows:
         cid = row.get("campaign_id")
         if cid not in camp_objectives:
             continue
