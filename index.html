@@ -123,8 +123,12 @@ header {
 /* SUMMARY TABLE */
 .data-table-wrap {
   background: var(--card); border: 1px solid var(--border); border-radius: 8px;
-  margin-bottom: 1.5rem; overflow-x: auto;
+  margin-bottom: 1.5rem; overflow: clip;   /* clip (ne auto/hidden) – jinak nefunguje sticky hlavička */
 }
+/* Hlavička tabulky drží nahoře při sjíždění stránky */
+thead th { position: sticky; top: 0; z-index: 2; }
+/* Na úzkých displejích radši vodorovné posouvání tabulky (sticky pak drží jen v rámci tabulky) */
+@media (max-width: 900px) { .data-table-wrap { overflow-x: auto; } }
 table { width: 100%; border-collapse: collapse; }
 thead th {
   background: var(--card2); color: var(--muted); font-weight: 400;
