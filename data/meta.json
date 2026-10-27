@@ -1,8 +1,8 @@
 {
-  "updated": "2026-10-26",
+  "updated": "2026-10-27",
   "period": {
     "from": "2026-01-01",
-    "to": "2026-10-25"
+    "to": "2026-10-26"
   },
   "campaigns": [
     {
@@ -510,9 +510,16 @@
             {
               "date": "2026-10-25",
               "clicks": 678,
-              "impressions": 10448,
-              "spend_czk": 563.58,
+              "impressions": 10459,
+              "spend_czk": 564.8,
               "results": 324
+            },
+            {
+              "date": "2026-10-26",
+              "clicks": 1438,
+              "impressions": 16428,
+              "spend_czk": 1488.11,
+              "results": 1299
             }
           ]
         },
@@ -527,7 +534,7 @@
         {
           "id": "120249901474530685",
           "name": "WEB | IG+FB | CAROUSEL | A | čistič půdy a moření česneku",
-          "status": "active",
+          "status": "paused",
           "end_date": "2026-11-01",
           "period_reach": null,
           "daily": [
@@ -575,17 +582,24 @@
             },
             {
               "date": "2026-10-25",
-              "clicks": 958,
-              "impressions": 8221,
-              "spend_czk": 568.03,
-              "results": 709
+              "clicks": 959,
+              "impressions": 8234,
+              "spend_czk": 568.67,
+              "results": 710
+            },
+            {
+              "date": "2026-10-26",
+              "clicks": 318,
+              "impressions": 2839,
+              "spend_czk": 214.45,
+              "results": 253
             }
           ]
         },
         {
           "id": "120249715023800685",
           "name": "WEB | IG+FB | CAROUSEL | zelené hnojivo - karusel",
-          "status": "active",
+          "status": "paused",
           "end_date": "2026-11-03",
           "period_reach": null,
           "daily": [
@@ -725,9 +739,16 @@
             {
               "date": "2026-10-25",
               "clicks": 120,
-              "impressions": 4974,
-              "spend_czk": 332.48,
+              "impressions": 4984,
+              "spend_czk": 333.26,
               "results": 118
+            },
+            {
+              "date": "2026-10-26",
+              "clicks": 37,
+              "impressions": 1465,
+              "spend_czk": 98.4,
+              "results": 36
             }
           ]
         },
@@ -867,9 +888,16 @@
             {
               "date": "2026-10-25",
               "clicks": 34,
-              "impressions": 2280,
-              "spend_czk": 169.85,
+              "impressions": 2283,
+              "spend_czk": 170.36,
               "results": 23
+            },
+            {
+              "date": "2026-10-26",
+              "clicks": 26,
+              "impressions": 2015,
+              "spend_czk": 130.62,
+              "results": 17
             }
           ]
         },
@@ -1012,6 +1040,13 @@
               "impressions": 1091,
               "spend_czk": 166.71,
               "results": 17
+            },
+            {
+              "date": "2026-10-26",
+              "clicks": 2,
+              "impressions": 834,
+              "spend_czk": 137.65,
+              "results": 9
             }
           ]
         },
@@ -14159,11 +14194,19 @@
         },
         {
           "date": "2026-10-25",
-          "clicks": 1792,
-          "impressions": 27013,
-          "spend_czk": 1800.63,
-          "results": 1191,
+          "clicks": 1793,
+          "impressions": 27051,
+          "spend_czk": 1803.8,
+          "results": 1192,
           "cost_per_result": 1.51
+        },
+        {
+          "date": "2026-10-26",
+          "clicks": 1821,
+          "impressions": 23581,
+          "spend_czk": 2069.23,
+          "results": 1614,
+          "cost_per_result": 1.28
         }
       ]
     },
@@ -31557,7 +31600,7 @@
           "name": "Podzimní trávníkové hnojivo | IG | Max počet zobrazení",
           "status": "active",
           "end_date": "2026-10-31",
-          "period_reach": 124113,
+          "period_reach": 126005,
           "daily": [
             {
               "date": "2026-09-08",
@@ -31891,9 +31934,16 @@
             {
               "date": "2026-10-25",
               "clicks": 1,
-              "impressions": 12802,
-              "spend_czk": 236.51,
+              "impressions": 12803,
+              "spend_czk": 236.53,
               "results": 11146
+            },
+            {
+              "date": "2026-10-26",
+              "clicks": 1,
+              "impressions": 12140,
+              "spend_czk": 218.05,
+              "results": 11191
             }
           ]
         },
@@ -31902,7 +31952,7 @@
           "name": "Podzimní trávníkové hnojivo | FB | Max počet zobrazení",
           "status": "active",
           "end_date": "2026-10-31",
-          "period_reach": 225538,
+          "period_reach": 228758,
           "daily": [
             {
               "date": "2026-09-08",
@@ -32236,9 +32286,16 @@
             {
               "date": "2026-10-25",
               "clicks": 19,
-              "impressions": 16822,
-              "spend_czk": 242.62,
-              "results": 12982
+              "impressions": 16864,
+              "spend_czk": 243.02,
+              "results": 13007
+            },
+            {
+              "date": "2026-10-26",
+              "clicks": 20,
+              "impressions": 15100,
+              "spend_czk": 216.35,
+              "results": 11814
             }
           ]
         },
@@ -36107,10 +36164,18 @@
         {
           "date": "2026-10-25",
           "clicks": 20,
-          "impressions": 29623,
-          "spend_czk": 479.12,
-          "results": 24683,
-          "cost_per_result": 19.41
+          "impressions": 29667,
+          "spend_czk": 479.55,
+          "results": 24696,
+          "cost_per_result": 19.42
+        },
+        {
+          "date": "2026-10-26",
+          "clicks": 21,
+          "impressions": 27240,
+          "spend_czk": 434.4,
+          "results": 22585,
+          "cost_per_result": 19.23
         }
       ]
     },
