@@ -1,8 +1,8 @@
 {
-  "updated": "2026-10-30",
+  "updated": "2026-10-31",
   "period": {
     "from": "2026-01-01",
-    "to": "2026-10-29"
+    "to": "2026-10-30"
   },
   "campaigns": [
     {
@@ -537,10 +537,17 @@
             },
             {
               "date": "2026-10-29",
-              "clicks": 571,
-              "impressions": 6704,
-              "spend_czk": 447.08,
-              "results": 559
+              "clicks": 572,
+              "impressions": 6707,
+              "spend_czk": 447.52,
+              "results": 560
+            },
+            {
+              "date": "2026-10-30",
+              "clicks": 339,
+              "impressions": 3783,
+              "spend_czk": 221.06,
+              "results": 335
             }
           ]
         },
@@ -624,10 +631,17 @@
             },
             {
               "date": "2026-10-29",
-              "clicks": 530,
-              "impressions": 3929,
-              "spend_czk": 241.41,
-              "results": 368
+              "clicks": 532,
+              "impressions": 3937,
+              "spend_czk": 242.17,
+              "results": 369
+            },
+            {
+              "date": "2026-10-30",
+              "clicks": 641,
+              "impressions": 4688,
+              "spend_czk": 341.46,
+              "results": 491
             }
           ]
         },
@@ -787,10 +801,17 @@
             },
             {
               "date": "2026-10-29",
-              "clicks": 154,
-              "impressions": 7694,
-              "spend_czk": 382.38,
-              "results": 148
+              "clicks": 155,
+              "impressions": 7712,
+              "spend_czk": 383.65,
+              "results": 149
+            },
+            {
+              "date": "2026-10-30",
+              "clicks": 317,
+              "impressions": 3740,
+              "spend_czk": 545.05,
+              "results": 355
             }
           ]
         },
@@ -958,9 +979,16 @@
             {
               "date": "2026-10-29",
               "clicks": 58,
-              "impressions": 1454,
-              "spend_czk": 205.33,
+              "impressions": 1455,
+              "spend_czk": 205.39,
               "results": 50
+            },
+            {
+              "date": "2026-10-30",
+              "clicks": 62,
+              "impressions": 1331,
+              "spend_czk": 159.38,
+              "results": 57
             }
           ]
         },
@@ -1131,6 +1159,13 @@
               "impressions": 458,
               "spend_czk": 202.7,
               "results": 38
+            },
+            {
+              "date": "2026-10-30",
+              "clicks": 0,
+              "impressions": 269,
+              "spend_czk": 168.24,
+              "results": 32
             }
           ]
         },
@@ -14310,11 +14345,19 @@
         },
         {
           "date": "2026-10-29",
-          "clicks": 1314,
-          "impressions": 20238,
-          "spend_czk": 1478.86,
-          "results": 1163,
+          "clicks": 1318,
+          "impressions": 20269,
+          "spend_czk": 1481.43,
+          "results": 1166,
           "cost_per_result": 1.27
+        },
+        {
+          "date": "2026-10-30",
+          "clicks": 1359,
+          "impressions": 13811,
+          "spend_czk": 1435.19,
+          "results": 1270,
+          "cost_per_result": 1.13
         }
       ]
     },
@@ -30905,7 +30948,7 @@
       "end_date": "2026-10-31",
       "objective": "OUTCOME_AWARENESS",
       "result_type": "Dosah (za 1 000 úč.)",
-      "period_reach": 1634666,
+      "period_reach": 1635313,
       "adsets": [
         {
           "id": "120249562098430685",
@@ -31708,7 +31751,7 @@
           "name": "Podzimní trávníkové hnojivo | IG | Max počet zobrazení",
           "status": "active",
           "end_date": "2026-10-31",
-          "period_reach": 128699,
+          "period_reach": 130654,
           "daily": [
             {
               "date": "2026-09-08",
@@ -32070,9 +32113,16 @@
             {
               "date": "2026-10-29",
               "clicks": 2,
-              "impressions": 11922,
-              "spend_czk": 210.15,
-              "results": 11001
+              "impressions": 11923,
+              "spend_czk": 210.17,
+              "results": 11005
+            },
+            {
+              "date": "2026-10-30",
+              "clicks": 0,
+              "impressions": 11969,
+              "spend_czk": 211.54,
+              "results": 10995
             }
           ]
         },
@@ -32081,7 +32131,7 @@
           "name": "Podzimní trávníkové hnojivo | FB | Max počet zobrazení",
           "status": "active",
           "end_date": "2026-10-31",
-          "period_reach": 239535,
+          "period_reach": 243304,
           "daily": [
             {
               "date": "2026-09-08",
@@ -32443,9 +32493,16 @@
             {
               "date": "2026-10-29",
               "clicks": 30,
-              "impressions": 15640,
-              "spend_czk": 213.2,
-              "results": 11549
+              "impressions": 15666,
+              "spend_czk": 213.4,
+              "results": 11555
+            },
+            {
+              "date": "2026-10-30",
+              "clicks": 41,
+              "impressions": 17599,
+              "spend_czk": 216.25,
+              "results": 13347
             }
           ]
         },
@@ -36346,10 +36403,18 @@
         {
           "date": "2026-10-29",
           "clicks": 32,
-          "impressions": 27562,
-          "spend_czk": 423.35,
-          "results": 22678,
-          "cost_per_result": 18.67
+          "impressions": 27589,
+          "spend_czk": 423.57,
+          "results": 22702,
+          "cost_per_result": 18.66
+        },
+        {
+          "date": "2026-10-30",
+          "clicks": 41,
+          "impressions": 29567,
+          "spend_czk": 427.79,
+          "results": 23657,
+          "cost_per_result": 18.08
         }
       ]
     },
