@@ -1,8 +1,8 @@
 {
-  "updated": "2026-11-02",
+  "updated": "2026-11-03",
   "period": {
     "from": "2026-01-01",
-    "to": "2026-11-01"
+    "to": "2026-11-02"
   },
   "campaigns": [
     {
@@ -851,9 +851,16 @@
             {
               "date": "2026-11-01",
               "clicks": 207,
-              "impressions": 7834,
-              "spend_czk": 484.18,
+              "impressions": 7842,
+              "spend_czk": 484.65,
               "results": 184
+            },
+            {
+              "date": "2026-11-02",
+              "clicks": 182,
+              "impressions": 8090,
+              "spend_czk": 449.42,
+              "results": 165
             }
           ]
         },
@@ -1042,9 +1049,16 @@
             {
               "date": "2026-11-01",
               "clicks": 51,
-              "impressions": 1369,
-              "spend_czk": 141.85,
+              "impressions": 1371,
+              "spend_czk": 141.86,
               "results": 42
+            },
+            {
+              "date": "2026-11-02",
+              "clicks": 31,
+              "impressions": 1470,
+              "spend_czk": 121.36,
+              "results": 28
             }
           ]
         },
@@ -1236,6 +1250,13 @@
               "impressions": 353,
               "spend_czk": 131.76,
               "results": 41
+            },
+            {
+              "date": "2026-11-02",
+              "clicks": 0,
+              "impressions": 313,
+              "spend_czk": 120.45,
+              "results": 27
             }
           ]
         },
@@ -14440,10 +14461,18 @@
         {
           "date": "2026-11-01",
           "clicks": 288,
-          "impressions": 9877,
-          "spend_czk": 773.97,
+          "impressions": 9887,
+          "spend_czk": 774.45,
           "results": 293,
           "cost_per_result": 2.64
+        },
+        {
+          "date": "2026-11-02",
+          "clicks": 213,
+          "impressions": 9873,
+          "spend_czk": 691.23,
+          "results": 220,
+          "cost_per_result": 3.14
         }
       ]
     },
