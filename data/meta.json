@@ -1,8 +1,8 @@
 {
-  "updated": "2026-11-03",
+  "updated": "2026-11-04",
   "period": {
     "from": "2026-01-01",
-    "to": "2026-11-02"
+    "to": "2026-11-03"
   },
   "campaigns": [
     {
@@ -676,7 +676,7 @@
         {
           "id": "120249715023800685",
           "name": "WEB | IG+FB | CAROUSEL | zelené hnojivo - karusel",
-          "status": "active",
+          "status": "ended",
           "end_date": "2026-11-03",
           "period_reach": null,
           "daily": [
@@ -857,10 +857,17 @@
             },
             {
               "date": "2026-11-02",
-              "clicks": 182,
-              "impressions": 8090,
-              "spend_czk": 449.42,
-              "results": 165
+              "clicks": 183,
+              "impressions": 8107,
+              "spend_czk": 450.02,
+              "results": 166
+            },
+            {
+              "date": "2026-11-03",
+              "clicks": 6,
+              "impressions": 415,
+              "spend_czk": 21.9,
+              "results": 5
             }
           ]
         },
@@ -1055,10 +1062,17 @@
             },
             {
               "date": "2026-11-02",
-              "clicks": 31,
-              "impressions": 1470,
-              "spend_czk": 121.36,
-              "results": 28
+              "clicks": 33,
+              "impressions": 1474,
+              "spend_czk": 122.36,
+              "results": 29
+            },
+            {
+              "date": "2026-11-03",
+              "clicks": 50,
+              "impressions": 1609,
+              "spend_czk": 141.99,
+              "results": 45
             }
           ]
         },
@@ -1257,6 +1271,13 @@
               "impressions": 313,
               "spend_czk": 120.45,
               "results": 27
+            },
+            {
+              "date": "2026-11-03",
+              "clicks": 1,
+              "impressions": 252,
+              "spend_czk": 110.49,
+              "results": 26
             }
           ]
         },
@@ -14468,11 +14489,19 @@
         },
         {
           "date": "2026-11-02",
-          "clicks": 213,
-          "impressions": 9873,
-          "spend_czk": 691.23,
-          "results": 220,
-          "cost_per_result": 3.14
+          "clicks": 216,
+          "impressions": 9894,
+          "spend_czk": 692.83,
+          "results": 222,
+          "cost_per_result": 3.12
+        },
+        {
+          "date": "2026-11-03",
+          "clicks": 57,
+          "impressions": 2276,
+          "spend_czk": 274.38,
+          "results": 76,
+          "cost_per_result": 3.61
         }
       ]
     },
@@ -42503,6 +42532,107 @@
           "spend_czk": 360.79,
           "results": 24,
           "cost_per_result": 15.03
+        }
+      ]
+    },
+    {
+      "id": "120241181602690685",
+      "name": "VL | FLORIA | Příspěvky | projevený zájem | 3/26 – kopie",
+      "status": "active",
+      "end_date": "2026-12-02",
+      "objective": "OUTCOME_ENGAGEMENT",
+      "result_type": "Zájem o příspěvek",
+      "period_reach": null,
+      "adsets": [
+        {
+          "id": "120250129972970685",
+          "name": "WEB | FB+IG | CAROUSEL | Interiér",
+          "status": "active",
+          "end_date": "2026-12-02",
+          "period_reach": null,
+          "daily": [
+            {
+              "date": "2026-11-03",
+              "clicks": 79,
+              "impressions": 981,
+              "spend_czk": 128.32,
+              "results": 68
+            }
+          ]
+        },
+        {
+          "id": "120241181602720685",
+          "name": "WEB | FB+IG | CAROUSEL | Substrát orchideje",
+          "status": "ended",
+          "end_date": "2026-04-30",
+          "period_reach": null,
+          "daily": []
+        },
+        {
+          "id": "120241181602710685",
+          "name": "MAX Počet \"To se mi líbí\" | FB+IG | TS pro robotické sekání",
+          "status": "ended",
+          "end_date": "2026-05-12",
+          "period_reach": null,
+          "daily": []
+        },
+        {
+          "id": "120241181602620685",
+          "name": "Příspěvek | engagement | IG | Vlastní cílení | TS pro robotické sekání",
+          "status": "ended",
+          "end_date": "2026-05-12",
+          "period_reach": null,
+          "daily": []
+        },
+        {
+          "id": "120241181602610685",
+          "name": "Příspěvek | engagement | FB | Vlastní cílení | TS pro robotické sekání",
+          "status": "ended",
+          "end_date": "2026-05-12",
+          "period_reach": null,
+          "daily": []
+        },
+        {
+          "id": "120241181602600685",
+          "name": "Příspěvek | engagement | FB | Vlastní cílení | Stop mechu",
+          "status": "ended",
+          "end_date": "2026-04-20",
+          "period_reach": null,
+          "daily": []
+        },
+        {
+          "id": "120241181602590685",
+          "name": "Příspěvek | engagement | IG | Vlastní cílení | Stop mechu",
+          "status": "ended",
+          "end_date": "2026-04-20",
+          "period_reach": null,
+          "daily": []
+        },
+        {
+          "id": "120241181602580685",
+          "name": "Příspěvek | engagement | IG | Vlastní cílení | Substrát orchideje",
+          "status": "ended",
+          "end_date": "2026-04-27",
+          "period_reach": null,
+          "daily": []
+        },
+        {
+          "id": "120241181602560685",
+          "name": "Max počet to se mi líbí stránky | FB | Substrát orchideje",
+          "status": "ended",
+          "end_date": "2026-04-27",
+          "period_reach": null,
+          "daily": []
+        }
+      ],
+      "daily": [
+        {
+          "date": "2026-11-03",
+          "clicks": 79,
+          "impressions": 981,
+          "spend_czk": 128.32,
+          "results": 68,
+          "cost_per_result": 1.89
         }
       ]
     }
