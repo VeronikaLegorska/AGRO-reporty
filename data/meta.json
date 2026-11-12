@@ -1,8 +1,8 @@
 {
-  "updated": "2026-11-11",
+  "updated": "2026-11-12",
   "period": {
     "from": "2026-01-01",
-    "to": "2026-11-10"
+    "to": "2026-11-11"
   },
   "campaigns": [
     {
@@ -452,12 +452,36 @@
     {
       "id": "120238623445790685",
       "name": "VL | NATURA | Příspěvky | Projevený zájem | 3/26",
-      "status": "paused",
+      "status": "active",
       "end_date": null,
       "objective": "OUTCOME_ENGAGEMENT",
       "result_type": "Zájem o příspěvek",
       "period_reach": null,
       "adsets": [
+        {
+          "id": "120250267224240685",
+          "name": "Příspěvek | engagement | IG | vlastní cílení | Smutnice | A",
+          "status": "active",
+          "end_date": "2026-11-20",
+          "period_reach": null,
+          "daily": []
+        },
+        {
+          "id": "120250267195030685",
+          "name": "Testovací - Příspěvek | engagement | FB | vlastní cílení | smutnice | B",
+          "status": "active",
+          "end_date": "2026-11-21",
+          "period_reach": null,
+          "daily": []
+        },
+        {
+          "id": "120250267067950685",
+          "name": "Příspěvek | engagement | FB | vlastní cílení | smutnice | A",
+          "status": "active",
+          "end_date": "2026-11-21",
+          "period_reach": null,
+          "daily": []
+        },
         {
           "id": "120249901795830685",
           "name": "WEB | IG+FB | CAROUSEL | B | čistič půdy a moření česneku",
@@ -42646,10 +42670,17 @@
             },
             {
               "date": "2026-11-10",
-              "clicks": 328,
-              "impressions": 4669,
-              "spend_czk": 506.23,
-              "results": 291
+              "clicks": 330,
+              "impressions": 4676,
+              "spend_czk": 507.19,
+              "results": 293
+            },
+            {
+              "date": "2026-11-11",
+              "clicks": 356,
+              "impressions": 4457,
+              "spend_czk": 515.48,
+              "results": 298
             }
           ]
         },
@@ -42777,11 +42808,19 @@
         },
         {
           "date": "2026-11-10",
-          "clicks": 328,
-          "impressions": 4669,
-          "spend_czk": 506.23,
-          "results": 291,
-          "cost_per_result": 1.74
+          "clicks": 330,
+          "impressions": 4676,
+          "spend_czk": 507.19,
+          "results": 293,
+          "cost_per_result": 1.73
+        },
+        {
+          "date": "2026-11-11",
+          "clicks": 356,
+          "impressions": 4457,
+          "spend_czk": 515.48,
+          "results": 298,
+          "cost_per_result": 1.73
         }
       ]
     }
