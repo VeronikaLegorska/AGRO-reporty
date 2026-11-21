@@ -1,8 +1,8 @@
 {
-  "updated": "2026-11-20",
+  "updated": "2026-11-21",
   "period": {
     "from": "2026-01-01",
-    "to": "2026-11-19"
+    "to": "2026-11-20"
   },
   "campaigns": [
     {
@@ -461,7 +461,7 @@
         {
           "id": "120250267224240685",
           "name": "Příspěvek | engagement | IG | vlastní cílení | Smutnice | A",
-          "status": "active",
+          "status": "ended",
           "end_date": "2026-11-20",
           "period_reach": null,
           "daily": [
@@ -520,6 +520,13 @@
               "impressions": 413,
               "spend_czk": 192.53,
               "results": 27
+            },
+            {
+              "date": "2026-11-20",
+              "clicks": 0,
+              "impressions": 104,
+              "spend_czk": 32.22,
+              "results": 4
             }
           ]
         },
@@ -585,6 +592,13 @@
               "impressions": 2053,
               "spend_czk": 181.38,
               "results": 31
+            },
+            {
+              "date": "2026-11-20",
+              "clicks": 26,
+              "impressions": 1264,
+              "spend_czk": 124.24,
+              "results": 26
             }
           ]
         },
@@ -640,8 +654,8 @@
             {
               "date": "2026-11-18",
               "clicks": 38,
-              "impressions": 2132,
-              "spend_czk": 146.53,
+              "impressions": 2133,
+              "spend_czk": 146.58,
               "results": 37
             },
             {
@@ -650,6 +664,13 @@
               "impressions": 2198,
               "spend_czk": 180.01,
               "results": 23
+            },
+            {
+              "date": "2026-11-20",
+              "clicks": 32,
+              "impressions": 1668,
+              "spend_czk": 157.65,
+              "results": 28
             }
           ]
         },
@@ -14793,8 +14814,8 @@
         {
           "date": "2026-11-18",
           "clicks": 89,
-          "impressions": 4349,
-          "spend_czk": 479.37,
+          "impressions": 4350,
+          "spend_czk": 479.42,
           "results": 107,
           "cost_per_result": 4.48
         },
@@ -14805,6 +14826,14 @@
           "spend_czk": 553.92,
           "results": 81,
           "cost_per_result": 6.84
+        },
+        {
+          "date": "2026-11-20",
+          "clicks": 58,
+          "impressions": 3036,
+          "spend_czk": 314.11,
+          "results": 58,
+          "cost_per_result": 5.42
         }
       ]
     },
@@ -42969,9 +42998,16 @@
             {
               "date": "2026-11-19",
               "clicks": 275,
-              "impressions": 3927,
-              "spend_czk": 464.06,
+              "impressions": 3932,
+              "spend_czk": 464.37,
               "results": 233
+            },
+            {
+              "date": "2026-11-20",
+              "clicks": 249,
+              "impressions": 3653,
+              "spend_czk": 496.01,
+              "results": 209
             }
           ]
         },
@@ -43172,10 +43208,18 @@
         {
           "date": "2026-11-19",
           "clicks": 275,
-          "impressions": 3927,
-          "spend_czk": 464.06,
+          "impressions": 3932,
+          "spend_czk": 464.37,
           "results": 233,
           "cost_per_result": 1.99
+        },
+        {
+          "date": "2026-11-20",
+          "clicks": 249,
+          "impressions": 3653,
+          "spend_czk": 496.01,
+          "results": 209,
+          "cost_per_result": 2.37
         }
       ]
     }
