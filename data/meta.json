@@ -1,8 +1,8 @@
 {
-  "updated": "2026-11-21",
+  "updated": "2026-11-22",
   "period": {
     "from": "2026-01-01",
-    "to": "2026-11-20"
+    "to": "2026-11-21"
   },
   "campaigns": [
     {
@@ -452,7 +452,7 @@
     {
       "id": "120238623445790685",
       "name": "VL | NATURA | Příspěvky | Projevený zájem | 3/26",
-      "status": "active",
+      "status": "paused",
       "end_date": null,
       "objective": "OUTCOME_ENGAGEMENT",
       "result_type": "Zájem o příspěvek",
@@ -533,7 +533,7 @@
         {
           "id": "120250267195030685",
           "name": "Testovací - Příspěvek | engagement | FB | vlastní cílení | smutnice | B",
-          "status": "active",
+          "status": "ended",
           "end_date": "2026-11-21",
           "period_reach": null,
           "daily": [
@@ -599,13 +599,20 @@
               "impressions": 1264,
               "spend_czk": 124.24,
               "results": 26
+            },
+            {
+              "date": "2026-11-21",
+              "clicks": 0,
+              "impressions": 11,
+              "spend_czk": 0.76,
+              "results": 0
             }
           ]
         },
         {
           "id": "120250267067950685",
           "name": "Příspěvek | engagement | FB | vlastní cílení | smutnice | A",
-          "status": "active",
+          "status": "ended",
           "end_date": "2026-11-21",
           "period_reach": null,
           "daily": [
@@ -668,9 +675,16 @@
             {
               "date": "2026-11-20",
               "clicks": 32,
-              "impressions": 1668,
-              "spend_czk": 157.65,
+              "impressions": 1670,
+              "spend_czk": 158.33,
               "results": 28
+            },
+            {
+              "date": "2026-11-21",
+              "clicks": 0,
+              "impressions": 15,
+              "spend_czk": 1.01,
+              "results": 0
             }
           ]
         },
@@ -14830,10 +14844,18 @@
         {
           "date": "2026-11-20",
           "clicks": 58,
-          "impressions": 3036,
-          "spend_czk": 314.11,
+          "impressions": 3038,
+          "spend_czk": 314.79,
           "results": 58,
-          "cost_per_result": 5.42
+          "cost_per_result": 5.43
+        },
+        {
+          "date": "2026-11-21",
+          "clicks": 0,
+          "impressions": 26,
+          "spend_czk": 1.77,
+          "results": 0,
+          "cost_per_result": 0
         }
       ]
     },
@@ -43004,10 +43026,17 @@
             },
             {
               "date": "2026-11-20",
-              "clicks": 249,
-              "impressions": 3653,
-              "spend_czk": 496.01,
-              "results": 209
+              "clicks": 250,
+              "impressions": 3661,
+              "spend_czk": 497.26,
+              "results": 210
+            },
+            {
+              "date": "2026-11-21",
+              "clicks": 296,
+              "impressions": 4516,
+              "spend_czk": 570.68,
+              "results": 244
             }
           ]
         },
@@ -43215,11 +43244,19 @@
         },
         {
           "date": "2026-11-20",
-          "clicks": 249,
-          "impressions": 3653,
-          "spend_czk": 496.01,
-          "results": 209,
+          "clicks": 250,
+          "impressions": 3661,
+          "spend_czk": 497.26,
+          "results": 210,
           "cost_per_result": 2.37
+        },
+        {
+          "date": "2026-11-21",
+          "clicks": 296,
+          "impressions": 4514,
+          "spend_czk": 570.44,
+          "results": 244,
+          "cost_per_result": 2.34
         }
       ]
     }
