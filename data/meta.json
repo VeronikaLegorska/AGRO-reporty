@@ -1,8 +1,8 @@
 {
-  "updated": "2026-11-25",
+  "updated": "2026-11-26",
   "period": {
     "from": "2026-01-01",
-    "to": "2026-11-24"
+    "to": "2026-11-25"
   },
   "campaigns": [
     {
@@ -798,7 +798,7 @@
         {
           "id": "120249901735080685",
           "name": "WEB | IG+FB | CAROUSEL | společný banner vyvýšené záhony – kopie",
-          "status": "paused",
+          "status": "ended",
           "end_date": "2026-11-25",
           "period_reach": null,
           "daily": []
@@ -43055,9 +43055,16 @@
             {
               "date": "2026-11-24",
               "clicks": 264,
-              "impressions": 3883,
-              "spend_czk": 513.38,
+              "impressions": 3889,
+              "spend_czk": 514.13,
               "results": 206
+            },
+            {
+              "date": "2026-11-25",
+              "clicks": 237,
+              "impressions": 3784,
+              "spend_czk": 520.94,
+              "results": 203
             }
           ]
         },
@@ -43298,10 +43305,18 @@
         {
           "date": "2026-11-24",
           "clicks": 264,
-          "impressions": 3883,
-          "spend_czk": 513.38,
+          "impressions": 3889,
+          "spend_czk": 514.13,
           "results": 206,
-          "cost_per_result": 2.49
+          "cost_per_result": 2.5
+        },
+        {
+          "date": "2026-11-25",
+          "clicks": 237,
+          "impressions": 3784,
+          "spend_czk": 520.94,
+          "results": 202,
+          "cost_per_result": 2.58
         }
       ]
     }
