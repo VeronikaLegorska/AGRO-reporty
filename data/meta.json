@@ -1,8 +1,8 @@
 {
-  "updated": "2026-11-27",
+  "updated": "2026-11-28",
   "period": {
     "from": "2026-01-01",
-    "to": "2026-11-26"
+    "to": "2026-11-27"
   },
   "campaigns": [
     {
@@ -43069,9 +43069,16 @@
             {
               "date": "2026-11-26",
               "clicks": 243,
-              "impressions": 4159,
-              "spend_czk": 483.43,
+              "impressions": 4162,
+              "spend_czk": 483.8,
               "results": 194
+            },
+            {
+              "date": "2026-11-27",
+              "clicks": 247,
+              "impressions": 3956,
+              "spend_czk": 483.98,
+              "results": 197
             }
           ]
         },
@@ -43328,10 +43335,18 @@
         {
           "date": "2026-11-26",
           "clicks": 243,
-          "impressions": 4159,
-          "spend_czk": 483.43,
+          "impressions": 4162,
+          "spend_czk": 483.8,
           "results": 194,
           "cost_per_result": 2.49
+        },
+        {
+          "date": "2026-11-27",
+          "clicks": 247,
+          "impressions": 3956,
+          "spend_czk": 483.98,
+          "results": 197,
+          "cost_per_result": 2.46
         }
       ]
     }
